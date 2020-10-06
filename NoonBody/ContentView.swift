@@ -27,10 +27,12 @@ struct ContentView: View {
             
             NoonBodyMyPageMain()
                 .tabItem {
-                    Image(systemName: "list.dash")
+                    Image(systemName: "person.crop.circle")
                     Text("마이페이지")
                 }
         }
+        
+        
     }
 }
 
