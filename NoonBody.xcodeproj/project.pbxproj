@@ -47,6 +47,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4509B7E325306D05006C3A0C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4574DB28252C681A0058660B /* NoonbodyStart.swift */,
+				45F1FBF0252B1C3900A30D97 /* ContentView.swift */,
+				4574DB2F252D7C6A0058660B /* NoonBodyWriteImageCameraView.swift */,
+				4574DB26252C681A0058660B /* NoonBodyCollectionMain.swift */,
+				4574DB29252C681A0058660B /* NoonBodyMyPageMain.swift */,
+				4574DB27252C681A0058660B /* NoonBodyWriteMain.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		45F1FBE0252B1C3900A30D97 = {
 			isa = PBXGroup;
 			children = (
@@ -66,14 +79,9 @@
 		45F1FBEB252B1C3900A30D97 /* NoonBody */ = {
 			isa = PBXGroup;
 			children = (
+				4509B7E325306D05006C3A0C /* UI */,
 				45F1FBEC252B1C3900A30D97 /* AppDelegate.swift */,
 				45F1FBEE252B1C3900A30D97 /* SceneDelegate.swift */,
-				45F1FBF0252B1C3900A30D97 /* ContentView.swift */,
-				4574DB2F252D7C6A0058660B /* NoonBodyWriteImageCameraView.swift */,
-				4574DB26252C681A0058660B /* NoonBodyCollectionMain.swift */,
-				4574DB29252C681A0058660B /* NoonBodyMyPageMain.swift */,
-				4574DB28252C681A0058660B /* NoonbodyStart.swift */,
-				4574DB27252C681A0058660B /* NoonBodyWriteMain.swift */,
 				45F1FBF2252B1C3A00A30D97 /* Assets.xcassets */,
 				45F1FBF7252B1C3A00A30D97 /* LaunchScreen.storyboard */,
 				45F1FBFA252B1C3A00A30D97 /* Info.plist */,
