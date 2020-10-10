@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		4574DB2C252C681B0058660B /* NoonbodyStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4574DB28252C681A0058660B /* NoonbodyStart.swift */; };
 		4574DB2D252C681B0058660B /* NoonBodyMyPageMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4574DB29252C681A0058660B /* NoonBodyMyPageMain.swift */; };
 		4574DB30252D7C6A0058660B /* NoonBodyWriteImageCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4574DB2F252D7C6A0058660B /* NoonBodyWriteImageCameraView.swift */; };
+		45AA5DA42531D01300BFD479 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 45AA5DA32531D01300BFD479 /* SwiftUIX */; };
 		45F1FBED252B1C3900A30D97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F1FBEC252B1C3900A30D97 /* AppDelegate.swift */; };
 		45F1FBEF252B1C3900A30D97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F1FBEE252B1C3900A30D97 /* SceneDelegate.swift */; };
 		45F1FBF1252B1C3900A30D97 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F1FBF0252B1C3900A30D97 /* ContentView.swift */; };
@@ -41,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45AA5DA42531D01300BFD479 /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +116,9 @@
 			dependencies = (
 			);
 			name = NoonBody;
+			packageProductDependencies = (
+				45AA5DA32531D01300BFD479 /* SwiftUIX */,
+			);
 			productName = NoonBody;
 			productReference = 45F1FBE9252B1C3900A30D97 /* NoonBody.app */;
 			productType = "com.apple.product-type.application";
@@ -141,6 +146,9 @@
 				Base,
 			);
 			mainGroup = 45F1FBE0252B1C3900A30D97;
+			packageReferences = (
+				45AA5DA22531D01300BFD479 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+			);
 			productRefGroup = 45F1FBEA252B1C3900A30D97 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -371,6 +379,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		45AA5DA22531D01300BFD479 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		45AA5DA32531D01300BFD479 /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 45AA5DA22531D01300BFD479 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 45F1FBE1252B1C3900A30D97 /* Project object */;
 }
