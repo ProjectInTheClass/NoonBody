@@ -18,11 +18,15 @@
 		45024C392532EB0F00D619C5 /* TabbedRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45024C382532EB0F00D619C5 /* TabbedRootView.swift */; };
 		45024C412532EB9B00D619C5 /* NoonbodyStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45024C402532EB9B00D619C5 /* NoonbodyStart.swift */; };
 		45024C462532EBA200D619C5 /* NoonBodyCollectionMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45024C452532EBA200D619C5 /* NoonBodyCollectionMain.swift */; };
-		45024C4B2532EBA700D619C5 /* NoonBodyMyPageMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45024C4A2532EBA700D619C5 /* NoonBodyMyPageMain.swift */; };
 		45024C512532EBB000D619C5 /* NoonBodyWriteMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45024C4F2532EBB000D619C5 /* NoonBodyWriteMain.swift */; };
 		45024C522532EBB000D619C5 /* NoonBodyWriteImageCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45024C502532EBB000D619C5 /* NoonBodyWriteImageCameraView.swift */; };
 		45024C582532EC0F00D619C5 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 45024C572532EC0F00D619C5 /* SwiftUIX */; };
 		4527B86A25331CA700949553 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 4527B86925331CA700949553 /* YPImagePicker */; };
+		4527B8792533221400949553 /* NoonBodySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8742533221400949553 /* NoonBodySettings.swift */; };
+		4527B87A2533221400949553 /* SettingsAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8752533221400949553 /* SettingsAbout.swift */; };
+		4527B87B2533221400949553 /* SettingsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8762533221400949553 /* SettingsPhoto.swift */; };
+		4527B87C2533221400949553 /* SettingsProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8772533221400949553 /* SettingsProfile.swift */; };
+		4527B87D2533221400949553 /* SettingsNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8782533221400949553 /* SettingsNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,10 +64,14 @@
 		45024C382532EB0F00D619C5 /* TabbedRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedRootView.swift; sourceTree = "<group>"; };
 		45024C402532EB9B00D619C5 /* NoonbodyStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonbodyStart.swift; sourceTree = "<group>"; };
 		45024C452532EBA200D619C5 /* NoonBodyCollectionMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBodyCollectionMain.swift; sourceTree = "<group>"; };
-		45024C4A2532EBA700D619C5 /* NoonBodyMyPageMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBodyMyPageMain.swift; sourceTree = "<group>"; };
 		45024C4F2532EBB000D619C5 /* NoonBodyWriteMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBodyWriteMain.swift; sourceTree = "<group>"; };
 		45024C502532EBB000D619C5 /* NoonBodyWriteImageCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBodyWriteImageCameraView.swift; sourceTree = "<group>"; };
 		45024C9C2532F01B00D619C5 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		4527B8742533221400949553 /* NoonBodySettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoonBodySettings.swift; path = NoonBody/Settings/NoonBodySettings.swift; sourceTree = SOURCE_ROOT; };
+		4527B8752533221400949553 /* SettingsAbout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsAbout.swift; path = NoonBody/Settings/SettingsAbout.swift; sourceTree = SOURCE_ROOT; };
+		4527B8762533221400949553 /* SettingsPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsPhoto.swift; path = NoonBody/Settings/SettingsPhoto.swift; sourceTree = SOURCE_ROOT; };
+		4527B8772533221400949553 /* SettingsProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsProfile.swift; path = NoonBody/Settings/SettingsProfile.swift; sourceTree = SOURCE_ROOT; };
+		4527B8782533221400949553 /* SettingsNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsNotification.swift; path = NoonBody/Settings/SettingsNotification.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,12 +184,24 @@
 		45024CB32532F0F600D619C5 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				4527B8732533220000949553 /* Settings */,
 				45024C452532EBA200D619C5 /* NoonBodyCollectionMain.swift */,
-				45024C4A2532EBA700D619C5 /* NoonBodyMyPageMain.swift */,
 				45024C502532EBB000D619C5 /* NoonBodyWriteImageCameraView.swift */,
 				45024C4F2532EBB000D619C5 /* NoonBodyWriteMain.swift */,
 			);
 			path = Tabs;
+			sourceTree = "<group>";
+		};
+		4527B8732533220000949553 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4527B8742533221400949553 /* NoonBodySettings.swift */,
+				4527B8752533221400949553 /* SettingsAbout.swift */,
+				4527B8782533221400949553 /* SettingsNotification.swift */,
+				4527B8762533221400949553 /* SettingsPhoto.swift */,
+				4527B8772533221400949553 /* SettingsProfile.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,15 +342,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4527B87A2533221400949553 /* SettingsAbout.swift in Sources */,
 				45024C462532EBA200D619C5 /* NoonBodyCollectionMain.swift in Sources */,
 				45024BFB2532EA0B00D619C5 /* AppDelegate.swift in Sources */,
+				4527B87C2533221400949553 /* SettingsProfile.swift in Sources */,
 				45024C512532EBB000D619C5 /* NoonBodyWriteMain.swift in Sources */,
+				4527B87D2533221400949553 /* SettingsNotification.swift in Sources */,
 				45024C522532EBB000D619C5 /* NoonBodyWriteImageCameraView.swift in Sources */,
 				45024C412532EB9B00D619C5 /* NoonbodyStart.swift in Sources */,
 				45024C022532EA0B00D619C5 /* NoonBody.xcdatamodeld in Sources */,
+				4527B8792533221400949553 /* NoonBodySettings.swift in Sources */,
 				45024C392532EB0F00D619C5 /* TabbedRootView.swift in Sources */,
+				4527B87B2533221400949553 /* SettingsPhoto.swift in Sources */,
 				45024BFD2532EA0B00D619C5 /* SceneDelegate.swift in Sources */,
-				45024C4B2532EBA700D619C5 /* NoonBodyMyPageMain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

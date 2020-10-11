@@ -31,7 +31,7 @@ struct TabbedRootView: View {
                     Text("커뮤니티")
                 }
             
-            NoonBodyMyPageMain()
+            NoonBodySettings()
                 .tabItem {
                     Image(systemName: "person.crop.circle")
                     Text("마이페이지")
