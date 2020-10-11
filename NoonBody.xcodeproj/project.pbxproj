@@ -22,6 +22,7 @@
 		45024C512532EBB000D619C5 /* NoonBodyWriteMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45024C4F2532EBB000D619C5 /* NoonBodyWriteMain.swift */; };
 		45024C522532EBB000D619C5 /* NoonBodyWriteImageCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45024C502532EBB000D619C5 /* NoonBodyWriteImageCameraView.swift */; };
 		45024C582532EC0F00D619C5 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 45024C572532EC0F00D619C5 /* SwiftUIX */; };
+		4527B86A25331CA700949553 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 4527B86925331CA700949553 /* YPImagePicker */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45024C582532EC0F00D619C5 /* SwiftUIX in Frameworks */,
+				4527B86A25331CA700949553 /* YPImagePicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +202,7 @@
 			name = NoonBody;
 			packageProductDependencies = (
 				45024C572532EC0F00D619C5 /* SwiftUIX */,
+				4527B86925331CA700949553 /* YPImagePicker */,
 			);
 			productName = NoonBody;
 			productReference = 45024BF72532EA0B00D619C5 /* NoonBody.app */;
@@ -274,6 +277,7 @@
 			mainGroup = 45024BEE2532EA0B00D619C5;
 			packageReferences = (
 				45024C562532EC0F00D619C5 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+				4527B86825331CA700949553 /* XCRemoteSwiftPackageReference "YPImagePicker" */,
 			);
 			productRefGroup = 45024BF82532EA0B00D619C5 /* Products */;
 			projectDirPath = "";
@@ -659,6 +663,14 @@
 				kind = branch;
 			};
 		};
+		4527B86825331CA700949553 /* XCRemoteSwiftPackageReference "YPImagePicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Yummypets/YPImagePicker";
+			requirement = {
+				branch = spm;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -666,6 +678,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 45024C562532EC0F00D619C5 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
 			productName = SwiftUIX;
+		};
+		4527B86925331CA700949553 /* YPImagePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4527B86825331CA700949553 /* XCRemoteSwiftPackageReference "YPImagePicker" */;
+			productName = YPImagePicker;
 		};
 /* End XCSwiftPackageProductDependency section */
 
