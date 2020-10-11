@@ -16,13 +16,19 @@ struct TabbedRootView: View {
                 //image는 sf symbols값을 넣음
                 .tabItem {
                     Image(systemName: "square.and.pencil")
-                    Text("기록하기")
+                    Text("눈바디")
                 }
             
             NoonBodyCollectionMain()
                 .tabItem {
-                    Image(systemName: "list.dash")
-                    Text("모아보기")
+                    Image(systemName: "square.and.pencil")
+                    Text("식단")
+                }
+            
+            NoonBodyCollectionMain()
+                .tabItem {
+                    Image(systemName: "person.3.fill")
+                    Text("커뮤니티")
                 }
             
             NoonBodyMyPageMain()
