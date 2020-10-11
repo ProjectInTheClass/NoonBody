@@ -2,14 +2,14 @@
 //  NoonBodyCollectionMain.swift
 //  NoonBody
 //
-//  Created by 윤진영 on 2020/10/11.
+//  Created by 윤진영 on 2020/10/06.
 //
 
 import SwiftUI
 
 struct NoonBodyCollectionMain: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("모아보기")
     }
 }
 

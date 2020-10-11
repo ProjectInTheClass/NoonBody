@@ -1,8 +1,8 @@
 //
-//  TabbedRootView.swift
+//  ContentView.swift
 //  NoonBody
 //
-//  Created by 윤진영 on 2020/10/11.
+//  Created by 윤진영 on 2020/10/05.
 //
 
 import SwiftUI
