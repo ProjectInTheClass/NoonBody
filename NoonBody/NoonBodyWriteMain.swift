@@ -2,14 +2,14 @@
 //  NoonBodyWriteMain.swift
 //  NoonBody
 //
-//  Created by 윤진영 on 2020/10/06.
+//  Created by 윤진영 on 2020/10/11.
 //
 
 import SwiftUI
 
 struct NoonBodyWriteMain: View {
     var body: some View {
-        Text("기록하기")
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
