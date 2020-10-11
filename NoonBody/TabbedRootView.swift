@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct TabbedRootView: View {
     var body: some View {
         
         TabView{
@@ -36,8 +36,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct TabbedRootView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        TabbedRootView()
     }
 }
