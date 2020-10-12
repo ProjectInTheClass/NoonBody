@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct NoonBodyWriteMain: View {
+struct GalleryView: View {
     var body: some View {
         Text("기록하기")
     }
 }
 
-struct NoonBodyWriteMain_Previews: PreviewProvider {
+struct GalleryView_Previews: PreviewProvider {
     static var previews: some View {
-        NoonBodyWriteMain()
+        GalleryView()
     }
 }
