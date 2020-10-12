@@ -8,10 +8,34 @@
 import SwiftUI
 
 struct CompareView: View {
+    @State var date = Date()
+    
     var body: some View {
-        Text("비교하기")
+            
+            HStack{
+                VStack{
+                    Text("어제")
+                    
+                    Image("food1")
+                        .resizable()
+                        .frame(width: 200, height: 400, alignment: .trailing)
+                }
+                VStack{
+                    Text("오늘")
+                        
+                    Image("food2")
+                        .resizable()
+                        .frame(width: 200, height: 400, alignment: .trailing)
+                    
+                }
+                
+                
+            }
+            
+        }
+        
     }
-}
+
 
 struct CompareView_Previews: PreviewProvider {
     static var previews: some View {
