@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NoonBodyCollectionMain: View {
+struct DietTab: View {
     
     @State var date = Date()
     @State var show = false
@@ -16,11 +16,15 @@ struct NoonBodyCollectionMain: View {
     
     @State var selectedDateText: String = "Date"
     
+    init(){
+            UITableView.appearance().backgroundColor = .clear
+        }
+    
     var body: some View {
         
         NavigationView {
             VStack{
-                
+            
                 Button(action: {
                    
                 }, label: {
@@ -95,7 +99,7 @@ struct NoonBodyCollectionMain: View {
                         }
                     }
                 }
-            }
+            }.background(Color("secondaryOrange"))
             
             
                 
@@ -126,7 +130,7 @@ struct NoonBodyCollectionMain: View {
 //                self.show.toggle()
 //
 //            })
-            .navigationBarTitle("식단")
+            .navigationTitle("식단")
             
         }
     }
@@ -171,8 +175,8 @@ struct CustomActionSheet: View {
     }
 }
 
-struct NoonBodyCollectionMain_Previews: PreviewProvider {
+struct DietTab_Previews: PreviewProvider {
     static var previews: some View {
-        NoonBodyCollectionMain()
+        DietTab()
     }
 }
