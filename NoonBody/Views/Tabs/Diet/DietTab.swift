@@ -52,10 +52,10 @@ struct DietTab: View {
                         HStack{
                             VStack(alignment: .leading){
                                 Text("아침")
-                                    .font(.system(size: 30))
+                                    .font(.system(size: 20))
                                     .bold()
                                 Text("09:30 AM")
-                                    .font(.system(size: 20))
+                                    .font(.system(size: 15))
                                     .bold()
                                 Text("~ 먹음")
                             }
@@ -70,10 +70,10 @@ struct DietTab: View {
                         HStack{
                             VStack(alignment: .leading){
                                 Text("점심")
-                                    .font(.system(size: 30))
+                                    .font(.system(size:20))
                                     .bold()
                                 Text("12:30 PM")
-                                    .font(.system(size: 20))
+                                    .font(.system(size: 15))
                                     .bold()
                                 Text("~ 먹음")
                             }
@@ -88,10 +88,10 @@ struct DietTab: View {
                         HStack{
                             VStack(alignment: .leading){
                                 Text("저녁")
-                                    .font(.system(size: 30))
+                                    .font(.system(size: 20))
                                     .bold()
                                 Text("06:30 PM")
-                                    .font(.system(size: 20))
+                                    .font(.system(size: 15))
                                     .bold()
                                 Text("~ 먹음")
                             }
