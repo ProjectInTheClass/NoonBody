@@ -23,18 +23,20 @@ struct NoonBodyTab: View {
         NavigationView {
             VStack {
                 
-                Button(action: {
-
-                }, label: {
-
-                    HStack{
+                NavigationLink(destination: NoonBodyWrite()) {
+                    HStack {
                         Image(systemName: "square.and.pencil")
                             .font(.system(size: 30))
                         Text("눈바디 기록하기")
                             .bold()
                             .font(.system(size: 30))
-                    }
-                }).buttonStyle(MyButtonStyle())
+                    }.frame(minWidth: 0, maxWidth: 250)
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color("primaryOrange"))
+                    .cornerRadius(40)
+                    .padding(.horizontal, 20)
+                }
                 
                 
                 VStack(alignment: .leading) {
