@@ -40,6 +40,8 @@
 		45DDD8E425342524004C18FE /* ButtonSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD8E325342524004C18FE /* ButtonSelected.swift */; };
 		45DDD8E925342543004C18FE /* ButtonNonSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD8E825342543004C18FE /* ButtonNonSelected.swift */; };
 		45DDD8EF25343CC6004C18FE /* SlidingTabView in Frameworks */ = {isa = PBXBuildFile; productRef = 45DDD8EE25343CC6004C18FE /* SlidingTabView */; };
+		45DDD8F425344285004C18FE /* NoonBodyWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD8F325344285004C18FE /* NoonBodyWrite.swift */; };
+		45DDD8F92534447A004C18FE /* DietWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD8F82534447A004C18FE /* DietWrite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		45DDD8D425341F8D004C18FE /* MyButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButtonStyle.swift; sourceTree = "<group>"; };
 		45DDD8E325342524004C18FE /* ButtonSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSelected.swift; sourceTree = "<group>"; };
 		45DDD8E825342543004C18FE /* ButtonNonSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNonSelected.swift; sourceTree = "<group>"; };
+		45DDD8F325344285004C18FE /* NoonBodyWrite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBodyWrite.swift; sourceTree = "<group>"; };
+		45DDD8F82534447A004C18FE /* DietWrite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietWrite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				45024C452532EBA200D619C5 /* DietTab.swift */,
+				45DDD8F82534447A004C18FE /* DietWrite.swift */,
 			);
 			path = Diet;
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 				45DDD88C25340CF2004C18FE /* NoonBodyTab.swift */,
 				45DDD891253410F8004C18FE /* CompareView.swift */,
 				45DDD89625341106004C18FE /* CollectionView.swift */,
+				45DDD8F325344285004C18FE /* NoonBodyWrite.swift */,
 			);
 			path = NoonBody;
 			sourceTree = "<group>";
@@ -444,6 +450,7 @@
 				4527B87D2533221400949553 /* SettingsNotification.swift in Sources */,
 				45DDD8D525341F8D004C18FE /* MyButtonStyle.swift in Sources */,
 				45DDD86F2533F187004C18FE /* DietStore.swift in Sources */,
+				45DDD8F92534447A004C18FE /* DietWrite.swift in Sources */,
 				45024C522532EBB000D619C5 /* NoonBodyWriteImageCameraView.swift in Sources */,
 				45DDD85D2533F142004C18FE /* NoonBody.swift in Sources */,
 				45024C412532EB9B00D619C5 /* NoonbodyStart.swift in Sources */,
@@ -453,6 +460,7 @@
 				45024C392532EB0F00D619C5 /* TabbedRootView.swift in Sources */,
 				45DDD8652533F158004C18FE /* NoonBodyStore.swift in Sources */,
 				4527B87B2533221400949553 /* SettingsPhoto.swift in Sources */,
+				45DDD8F425344285004C18FE /* NoonBodyWrite.swift in Sources */,
 				45DDD892253410F8004C18FE /* CompareView.swift in Sources */,
 				45024BFD2532EA0B00D619C5 /* SceneDelegate.swift in Sources */,
 			);
