@@ -27,6 +27,10 @@
 		4527B87B2533221400949553 /* SettingsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8762533221400949553 /* SettingsPhoto.swift */; };
 		4527B87C2533221400949553 /* SettingsProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8772533221400949553 /* SettingsProfile.swift */; };
 		4527B87D2533221400949553 /* SettingsNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8782533221400949553 /* SettingsNotification.swift */; };
+		45DDD85D2533F142004C18FE /* NoonBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD85C2533F142004C18FE /* NoonBody.swift */; };
+		45DDD8652533F158004C18FE /* NoonBodyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD8642533F158004C18FE /* NoonBodyStore.swift */; };
+		45DDD86A2533F17F004C18FE /* Diet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD8692533F17F004C18FE /* Diet.swift */; };
+		45DDD86F2533F187004C18FE /* DietStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD86E2533F187004C18FE /* DietStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,10 @@
 		4527B8762533221400949553 /* SettingsPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsPhoto.swift; path = NoonBody/Settings/SettingsPhoto.swift; sourceTree = SOURCE_ROOT; };
 		4527B8772533221400949553 /* SettingsProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsProfile.swift; path = NoonBody/Settings/SettingsProfile.swift; sourceTree = SOURCE_ROOT; };
 		4527B8782533221400949553 /* SettingsNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsNotification.swift; path = NoonBody/Settings/SettingsNotification.swift; sourceTree = SOURCE_ROOT; };
+		45DDD85C2533F142004C18FE /* NoonBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBody.swift; sourceTree = "<group>"; };
+		45DDD8642533F158004C18FE /* NoonBodyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBodyStore.swift; sourceTree = "<group>"; };
+		45DDD8692533F17F004C18FE /* Diet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diet.swift; sourceTree = "<group>"; };
+		45DDD86E2533F187004C18FE /* DietStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +134,7 @@
 			children = (
 				45024BFA2532EA0B00D619C5 /* AppDelegate.swift */,
 				45024BFC2532EA0B00D619C5 /* SceneDelegate.swift */,
+				45DDD85B2533F0F8004C18FE /* Model */,
 				45024CAF2532F09900D619C5 /* Views */,
 				45024C032532EA0B00D619C5 /* Assets.xcassets */,
 				45024C082532EA0B00D619C5 /* LaunchScreen.storyboard */,
@@ -202,6 +211,17 @@
 				4527B8772533221400949553 /* SettingsProfile.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		45DDD85B2533F0F8004C18FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				45DDD85C2533F142004C18FE /* NoonBody.swift */,
+				45DDD8642533F158004C18FE /* NoonBodyStore.swift */,
+				45DDD8692533F17F004C18FE /* Diet.swift */,
+				45DDD86E2533F187004C18FE /* DietStore.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,11 +368,15 @@
 				4527B87C2533221400949553 /* SettingsProfile.swift in Sources */,
 				45024C512532EBB000D619C5 /* NoonBodyWriteMain.swift in Sources */,
 				4527B87D2533221400949553 /* SettingsNotification.swift in Sources */,
+				45DDD86F2533F187004C18FE /* DietStore.swift in Sources */,
 				45024C522532EBB000D619C5 /* NoonBodyWriteImageCameraView.swift in Sources */,
+				45DDD85D2533F142004C18FE /* NoonBody.swift in Sources */,
 				45024C412532EB9B00D619C5 /* NoonbodyStart.swift in Sources */,
 				45024C022532EA0B00D619C5 /* NoonBody.xcdatamodeld in Sources */,
 				4527B8792533221400949553 /* NoonBodySettings.swift in Sources */,
+				45DDD86A2533F17F004C18FE /* Diet.swift in Sources */,
 				45024C392532EB0F00D619C5 /* TabbedRootView.swift in Sources */,
+				45DDD8652533F158004C18FE /* NoonBodyStore.swift in Sources */,
 				4527B87B2533221400949553 /* SettingsPhoto.swift in Sources */,
 				45024BFD2532EA0B00D619C5 /* SceneDelegate.swift in Sources */,
 			);
