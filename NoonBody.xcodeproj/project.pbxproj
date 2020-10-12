@@ -35,6 +35,8 @@
 		45DDD892253410F8004C18FE /* CompareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD891253410F8004C18FE /* CompareView.swift */; };
 		45DDD89725341106004C18FE /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD89625341106004C18FE /* CollectionView.swift */; };
 		45DDD8A0253412E1004C18FE /* CommunityTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD89F253412E1004C18FE /* CommunityTab.swift */; };
+		45DDD8CD25341F4D004C18FE /* NavigationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD8CC25341F4D004C18FE /* NavigationConfigurator.swift */; };
+		45DDD8D525341F8D004C18FE /* MyButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD8D425341F8D004C18FE /* MyButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		45DDD891253410F8004C18FE /* CompareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareView.swift; sourceTree = "<group>"; };
 		45DDD89625341106004C18FE /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		45DDD89F253412E1004C18FE /* CommunityTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityTab.swift; sourceTree = "<group>"; };
+		45DDD8CC25341F4D004C18FE /* NavigationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfigurator.swift; sourceTree = "<group>"; };
+		45DDD8D425341F8D004C18FE /* MyButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,7 @@
 			children = (
 				45024BFA2532EA0B00D619C5 /* AppDelegate.swift */,
 				45024BFC2532EA0B00D619C5 /* SceneDelegate.swift */,
+				45DDD8DC25341FBB004C18FE /* Style */,
 				45DDD85B2533F0F8004C18FE /* Model */,
 				45024CAF2532F09900D619C5 /* Views */,
 				45024C032532EA0B00D619C5 /* Assets.xcassets */,
@@ -266,6 +271,15 @@
 				45024C4F2532EBB000D619C5 /* GalleryView.swift */,
 			);
 			path = WriteContents;
+			sourceTree = "<group>";
+		};
+		45DDD8DC25341FBB004C18FE /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				45DDD8CC25341F4D004C18FE /* NavigationConfigurator.swift */,
+				45DDD8D425341F8D004C18FE /* MyButtonStyle.swift */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4527B87A2533221400949553 /* SettingsAbout.swift in Sources */,
+				45DDD8CD25341F4D004C18FE /* NavigationConfigurator.swift in Sources */,
 				45024C462532EBA200D619C5 /* DietTab.swift in Sources */,
 				45DDD8A0253412E1004C18FE /* CommunityTab.swift in Sources */,
 				45024BFB2532EA0B00D619C5 /* AppDelegate.swift in Sources */,
@@ -415,6 +430,7 @@
 				45024C512532EBB000D619C5 /* GalleryView.swift in Sources */,
 				45DDD89725341106004C18FE /* CollectionView.swift in Sources */,
 				4527B87D2533221400949553 /* SettingsNotification.swift in Sources */,
+				45DDD8D525341F8D004C18FE /* MyButtonStyle.swift in Sources */,
 				45DDD86F2533F187004C18FE /* DietStore.swift in Sources */,
 				45024C522532EBB000D619C5 /* NoonBodyWriteImageCameraView.swift in Sources */,
 				45DDD85D2533F142004C18FE /* NoonBody.swift in Sources */,
