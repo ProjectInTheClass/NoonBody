@@ -25,18 +25,20 @@ struct DietTab: View {
         NavigationView {
             VStack{
             
-                Button(action: {
-                   
-                }, label: {
-                    
-                    HStack{
+                NavigationLink(destination: DietWrite()) {
+                    HStack {
                         Image(systemName: "square.and.pencil")
                             .font(.system(size: 30))
                         Text("식단 기록하기")
                             .bold()
                             .font(.system(size: 30))
-                    }
-                }).buttonStyle(MyButtonStyle())
+                    }.frame(minWidth: 0, maxWidth: 250)
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color("primaryOrange"))
+                    .cornerRadius(40)
+                    .padding(.horizontal, 20)
+                }
                 
                 Spacer()
                 Spacer()
