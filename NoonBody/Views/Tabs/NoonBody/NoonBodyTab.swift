@@ -6,24 +6,27 @@
 //
 
 import SwiftUI
+import SlidingTabView
 
 struct NoonBodyTab: View {
     
     init(){
-            UITableView.appearance().backgroundColor = .clear
+        UITableView.appearance().backgroundColor = .clear
         }
     
     @State private var index = 0
-    var contents = ["비교하기", "모아보기"]
+    @State var condition = false
+    
+    @State private var selectedTabIndex = 0
 
     var body: some View {
         NavigationView {
             VStack {
                 
                 Button(action: {
-                   
+
                 }, label: {
-                    
+
                     HStack{
                         Image(systemName: "square.and.pencil")
                             .font(.system(size: 30))
@@ -33,28 +36,72 @@ struct NoonBodyTab: View {
                     }
                 }).buttonStyle(MyButtonStyle())
                 
-                Spacer()
-                Spacer()
-                Spacer()
                 
-                Picker(selection: $index, label: Text("")) {
-                    ForEach(0..<contents.count) { index in
-                        Text(self.contents[index]).tag(index)
-                    }
-                }.pickerStyle(SegmentedPickerStyle())
-                
-                Form{
-                    if index == 0{
+                VStack(alignment: .leading) {
+                    SlidingTabView(selection: self.$selectedTabIndex, tabs: ["비교하기", "모아보기"])
+                    if selectedTabIndex == 0{
                         CompareView()
                     }else{
                         CollectionView()
                     }
                     
+                    Spacer()
                 }
+                    .animation(.none)
+                
+//                HStack {
+//                    Button(action: {
+//                        index = 0
+//                    }, label: {
+//
+//                        HStack{
+//                            Text("비교하기")
+//                                .bold()
+//                                .font(.system(size: 30))
+//                        }
+//
+//                    })
+//
+//                    .buttonStyle(ButtonSelected())
+//
+//
+//                    Button(action: {
+//
+//                        index = 1
+//
+//                    }, label: {
+//
+//                        HStack{
+//                            Text("모아보기")
+//                                .bold()
+//                                .font(.system(size: 30))
+//                        }
+//
+//                    }).buttonStyle(ButtonNonSelected())
+//                }
+                
+                Divider().background(Color(.gray))
+                
+//                Picker(selection: $index, label: Text("")) {
+//                    ForEach(0..<contents.count) { index in
+//                        Text(self.contents[index]).tag(index)
+//                    }
+//                }.pickerStyle(SegmentedPickerStyle())
+//                .frame(height: 100)
+                
+//                Form{
+//                    if index == 0{
+//                        CompareView()
+//                    }else{
+//                        CollectionView()
+//                    }
+//
+//                }
 
                     
             }.background(Color("secondaryOrange"))
             .navigationTitle("눈바디")
+            
         }
     }
 }
@@ -64,4 +111,40 @@ struct NoonBodyTab_Previews: PreviewProvider {
         NoonBodyTab()
     }
 }
+
+
+//fileprivate struct SelectedButton: View{
+//    @Binding var condition: Bool
+//
+//    var body: some View{
+//        Button(action: {
+//            self.condition = false
+//        }, label: {
+//            Text("취소")
+//                .bold()
+//                .font(.system(size: 30))
+//        })
+//        .frame(minWidth: 0, maxWidth: .infinity)
+//        .padding()
+//        .foregroundColor(Color("primaryOrange"))
+//    }
+//}
+//
+//fileprivate struct NonSelectedButton: View{
+//    @Binding var condition: Bool
+//
+//    var body: some View{
+//        Button(action: {
+//            self.condition = false
+//        }, label: {
+//            Text("저장")
+//                .bold()
+//                .font(.system(size: 30))
+//        })
+//        .frame(minWidth: 0, maxWidth: .infinity)
+//        .padding()
+//        .foregroundColor(.gray)
+//    }
+//}
+
 
