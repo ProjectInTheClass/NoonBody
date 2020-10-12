@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "SlidingTabView",
+        "repositoryURL": "https://github.com/QuynhNguyen/SlidingTabView",
+        "state": {
+          "branch": "master",
+          "revision": "b0f0662977418824d50546b2850a523dcd793bb0",
+          "version": null
+        }
+      },
+      {
         "package": "Stevia",
         "repositoryURL": "https://github.com/freshOS/Stevia",
         "state": {
