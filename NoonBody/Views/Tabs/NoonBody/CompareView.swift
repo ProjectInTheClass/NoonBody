@@ -12,25 +12,27 @@ struct CompareView: View {
     
     var body: some View {
             
+        ScrollView {
             HStack{
-                VStack{
-                    Text("어제")
-                    
-                    Image("food1")
-                        .resizable()
-                        .frame(width: 200, height: 400, alignment: .trailing)
-                }
-                VStack{
-                    Text("오늘")
+                    VStack{
+                        Text("어제")
                         
-                    Image("food2")
-                        .resizable()
-                        .frame(width: 200, height: 400, alignment: .trailing)
+                        Image("food1")
+                            .resizable()
+                            .frame(width: 180, height: 400, alignment: .trailing)
+                    }
+                    VStack{
+                        Text("오늘")
+                            
+                        Image("food2")
+                            .resizable()
+                            .frame(width: 180, height: 400, alignment: .trailing)
+                        
+                    }
                     
-                }
-                
-                
+                    
             }
+        }
             
         }
         

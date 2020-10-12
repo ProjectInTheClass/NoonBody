@@ -13,21 +13,21 @@ struct CollectionView: View {
     var body: some View {
             
         ScrollView {
-            VStack (alignment: .leading){
+            VStack{
                 HStack{
                         VStack{
                             Text("어제")
                                 
                             Image("food1")
                                 .resizable()
-                                .frame(width: 200, height: 400, alignment: .trailing)
+                                .frame(width: 180, height: 400, alignment: .trailing)
                         }
                         VStack{
                             Text("오늘")
                                 
                             Image("food2")
                                 .resizable()
-                                .frame(width: 200, height: 400, alignment: .trailing)
+                                .frame(width: 180, height: 400, alignment: .trailing)
                             
                         }
                           
@@ -36,7 +36,7 @@ struct CollectionView: View {
                 HStack{
                     Text("과거의 나")
                         .font(.system(size: 20))
-                        .padding(.trailing, 200)
+                        .padding(.trailing, 150)
                         
                     
                     DatePicker("", selection: $date, displayedComponents: .date)
@@ -47,7 +47,7 @@ struct CollectionView: View {
                 }.padding(.top, 40)
                 
                 
-                //갤러리
+                //과거 사진 이미지들
                 
                 
             }

@@ -23,20 +23,20 @@ struct NoonBodyTab: View {
         NavigationView {
             VStack {
                 
-                NavigationLink(destination: NoonBodyWrite()) {
-                    HStack {
-                        Image(systemName: "square.and.pencil")
-                            .font(.system(size: 30))
-                        Text("눈바디 기록하기")
-                            .bold()
-                            .font(.system(size: 30))
-                    }.frame(minWidth: 0, maxWidth: 250)
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(Color("primaryOrange"))
-                    .cornerRadius(40)
-                    .padding(.horizontal, 20)
-                }
+//                NavigationLink(destination: NoonBodyWrite()) {
+//                    HStack {
+//                        Image(systemName: "square.and.pencil")
+//                            .font(.system(size: 30))
+//                        Text("눈바디 기록하기")
+//                            .bold()
+//                            .font(.system(size: 30))
+//                    }.frame(minWidth: 0, maxWidth: 250)
+//                    .padding()
+//                    .foregroundColor(.white)
+//                    .background(Color("primaryOrange"))
+//                    .cornerRadius(40)
+//                    .padding(.horizontal, 20)
+//                }
                 
                 
                 VStack(alignment: .leading) {
@@ -103,6 +103,7 @@ struct NoonBodyTab: View {
                     
             }.background(Color("secondaryOrange"))
             .navigationTitle("눈바디")
+            .navigationBarItems(trailing: WriteButton())
             
         }
     }
@@ -114,6 +115,26 @@ struct NoonBodyTab_Previews: PreviewProvider {
     }
 }
 
+fileprivate struct WriteButton: View{
+    
+    var body: some View{
+        
+        NavigationLink(destination: NoonBodyWrite()) {
+            HStack {
+                Image(systemName: "square.and.pencil")
+                    .font(.system(size: 20))
+                Text("기록하기")
+                    .bold()
+                    .font(.system(size: 20))
+            }.frame(minWidth: 0, maxWidth: 250)
+            .padding()
+            .foregroundColor(Color("primaryOrange"))
+//            .background(Color("primaryOrange"))
+            .cornerRadius(40)
+        }
+    
+    }
+}
 
 //fileprivate struct SelectedButton: View{
 //    @Binding var condition: Bool
