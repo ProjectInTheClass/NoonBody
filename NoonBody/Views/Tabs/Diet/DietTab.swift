@@ -18,6 +18,7 @@ struct DietTab: View {
     
     init(){
             UITableView.appearance().backgroundColor = .clear
+            UITableView.appearance().tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: Double.leastNonzeroMagnitude))
         }
     
     var body: some View {
@@ -25,31 +26,26 @@ struct DietTab: View {
         NavigationView {
             VStack{
             
-                NavigationLink(destination: DietWrite()) {
-                    HStack {
-                        Image(systemName: "square.and.pencil")
-                            .font(.system(size: 30))
-                        Text("식단 기록하기")
-                            .bold()
-                            .font(.system(size: 30))
-                    }.frame(minWidth: 0, maxWidth: 250)
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(Color("primaryOrange"))
-                    .cornerRadius(40)
-                    .padding(.horizontal, 20)
-                }
-                
-                Spacer()
-                Spacer()
-                Spacer()
-                Spacer()
-                Spacer()
+//                NavigationLink(destination: DietWrite()) {
+//                    HStack {
+//                        Image(systemName: "square.and.pencil")
+//                            .font(.system(size: 30))
+//                        Text("식단 기록하기")
+//                            .bold()
+//                            .font(.system(size: 30))
+//                    }.frame(minWidth: 0, maxWidth: 250)
+//                    .padding()
+//                    .foregroundColor(.white)
+//                    .background(Color("primaryOrange"))
+//                    .cornerRadius(40)
+//                    .padding(.horizontal, 20)
+//                }
                 
                 DatePicker("", selection: $date, displayedComponents: .date)
                     .datePickerStyle(DefaultDatePickerStyle())
                     .labelsHidden()
                     .frame(maxHeight: .none)
+                    .padding(.top, 10)
                 
                 Form{
                     Section{
@@ -70,9 +66,7 @@ struct DietTab: View {
                                 .resizable()
                                 .frame(width: 100, height: 100, alignment: .trailing)
                         }
-                    }
-                    
-                    Section{
+                        
                         HStack{
                             VStack(alignment: .leading){
                                 Text("점심")
@@ -90,9 +84,7 @@ struct DietTab: View {
                                 .resizable()
                                 .frame(width: 100, height: 100, alignment: .trailing)
                         }
-                    }
-                    
-                    Section{
+                        
                         HStack{
                             VStack(alignment: .leading){
                                 Text("저녁")
@@ -111,7 +103,9 @@ struct DietTab: View {
                                 .frame(width: 100, height: 100, alignment: .trailing)
                         }
                     }
+                            
                 }
+                    
             }.background(Color("secondaryOrange"))
             
             
@@ -144,6 +138,7 @@ struct DietTab: View {
 //
 //            })
             .navigationTitle("식단")
+            .navigationBarItems(trailing: WriteButton())
             
         }
     }
@@ -191,6 +186,27 @@ struct CustomActionSheet: View {
 struct DietTab_Previews: PreviewProvider {
     static var previews: some View {
         DietTab()
+    }
+}
+
+fileprivate struct WriteButton: View{
+    
+    var body: some View{
+        
+        NavigationLink(destination: DietWrite()) {
+            HStack {
+                Image(systemName: "square.and.pencil")
+                    .font(.system(size: 20))
+                Text("기록하기")
+                    .bold()
+                    .font(.system(size: 20))
+            }.frame(minWidth: 0, maxWidth: 250)
+            .padding()
+            .foregroundColor(Color("primaryOrange"))
+//            .background(Color("primaryOrange"))
+            .cornerRadius(40)
+        }
+    
     }
 }
 
