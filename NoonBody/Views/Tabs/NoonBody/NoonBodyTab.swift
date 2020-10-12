@@ -19,6 +19,24 @@ struct NoonBodyTab: View {
     var body: some View {
         NavigationView {
             VStack {
+                
+                Button(action: {
+                   
+                }, label: {
+                    
+                    HStack{
+                        Image(systemName: "square.and.pencil")
+                            .font(.system(size: 30))
+                        Text("눈바디 기록하기")
+                            .bold()
+                            .font(.system(size: 30))
+                    }
+                }).buttonStyle(MyButtonStyle())
+                
+                Spacer()
+                Spacer()
+                Spacer()
+                
                 Picker(selection: $index, label: Text("")) {
                     ForEach(0..<contents.count) { index in
                         Text(self.contents[index]).tag(index)
@@ -46,3 +64,4 @@ struct NoonBodyTab_Previews: PreviewProvider {
         NoonBodyTab()
     }
 }
+
