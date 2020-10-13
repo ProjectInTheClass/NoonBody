@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         //구현한 눈바디 저장소를 custom 공유데이터로 등록
         //NoonBodyStore instance 생성
-        let noonBody = NoonBodyStore()
+//        let noonBody = NoonBodyStore()
 
         // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
         // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
@@ -31,7 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             //MemoListScene에 등록
             //이렇게 하면 MemoListScene과 이어지는 화면에 동일한 객체를 쉽게 주입할 수 있음
             //연결된 view와 거기에 포함된 child view에 자동으로 주입됨
-            .environmentObject(noonBody)
+//            .environmentObject(noonBody)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
