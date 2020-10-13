@@ -47,7 +47,7 @@ struct NoonBodyTab: View {
 //                }
                 
                 
-                VStack(alignment: .leading) {
+                VStack(alignment: .center) {
                     SlidingTabView(selection: self.$selectedTabIndex, tabs: ["비교하기", "모아보기"])
                     if selectedTabIndex == 0{
                         CompareView()
