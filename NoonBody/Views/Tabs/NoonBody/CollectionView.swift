@@ -18,16 +18,16 @@ struct CollectionView: View {
                         VStack{
                             Text("어제")
                                 
-                            Image("food1")
+                            Image("body1")
                                 .resizable()
-                                .frame(width: 180, height: 400, alignment: .trailing)
+                                .frame(width: 180, height: 300, alignment: .trailing)
                         }
                         VStack{
                             Text("오늘")
                                 
-                            Image("food2")
+                            Image("body2")
                                 .resizable()
-                                .frame(width: 180, height: 400, alignment: .trailing)
+                                .frame(width: 180, height: 300, alignment: .trailing)
                             
                         }
                           
@@ -48,6 +48,10 @@ struct CollectionView: View {
                 
                 
                 //과거 사진 이미지들
+                images()
+                images()
+                
+                
                 
                 
             }
@@ -61,4 +65,37 @@ struct CollectionView_Previews: PreviewProvider {
     static var previews: some View {
         CollectionView()
     }
+}
+
+struct images: View {
+    
+    var body: some View{
+        VStack {
+            HStack{
+                Image("body1")
+                    .resizable()
+                    .frame(width: 120, height: 120, alignment: .trailing)
+                Image("body2")
+                    .resizable()
+                    .frame(width: 120, height: 120, alignment: .trailing)
+                Image("body3")
+                    .resizable()
+                    .frame(width: 120, height: 120, alignment: .trailing)
+            }
+            
+            HStack{
+                Image("body2")
+                    .resizable()
+                    .frame(width: 120, height: 120, alignment: .trailing)
+                Image("body3")
+                    .resizable()
+                    .frame(width: 120, height: 120, alignment: .trailing)
+                Image("body1")
+                    .resizable()
+                    .frame(width: 120, height: 120, alignment: .trailing)
+            }
+        }
+    }
+    
+    
 }

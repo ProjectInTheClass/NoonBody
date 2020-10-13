@@ -17,16 +17,16 @@ struct CompareView: View {
                     VStack{
                         Text("어제")
                         
-                        Image("food1")
+                        Image("body1")
                             .resizable()
-                            .frame(width: 180, height: 400, alignment: .trailing)
+                            .frame(width: 180, height: 300, alignment: .trailing)
                     }
                     VStack{
                         Text("오늘")
                             
-                        Image("food2")
+                        Image("body2")
                             .resizable()
-                            .frame(width: 180, height: 400, alignment: .trailing)
+                            .frame(width: 180, height: 300, alignment: .trailing)
                         
                     }
                     
