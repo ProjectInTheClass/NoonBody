@@ -16,9 +16,13 @@ struct DietTab: View {
     
     @State var selectedDateText: String = "Date"
     
+    
     init(){
-            UITableView.appearance().backgroundColor = .clear
-            UITableView.appearance().tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: Double.leastNonzeroMagnitude))
+        UITableView.appearance().backgroundColor = .clear
+        UITableView.appearance().tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: Double.leastNonzeroMagnitude))
+        
+        let secondaryOrange = UIColor.init(netHex: 0xFFEFEA)
+        UINavigationBar.appearance().backgroundColor = secondaryOrange
         }
     
     var body: some View {
@@ -144,44 +148,44 @@ struct DietTab: View {
     }
 }
 
-struct CustomActionSheet: View {
-    @State var date = Date()
-    @State var selectedDateText: String = "Date"
-    
-    var selectedDate: Binding<Date> {
-        Binding<Date>(get: { self.date}, set : {
-            self.date = $0
-            self.setDateString()
-        })
-      } // This private var I found… somewhere. I wish I could remember where
-
-      // To take the selected date and store it as a string for the text field
-    func setDateString() {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMMM dd, yyyy"
-
-        self.selectedDateText = formatter.string(from: self.date)
-      }
-    
-    var body: some View{
-        
-        VStack(spacing: 15){
-            
-            DatePicker("", selection: selectedDate, displayedComponents: .date)
-                .datePickerStyle(GraphicalDatePickerStyle())
-                .labelsHidden()
-                .frame(maxHeight: .none)
-            
-        }.background(Color.white)
-        .padding(.horizontal)
-        .padding(.top, 20)
-        .cornerRadius(25)
-        .edgesIgnoringSafeArea(.bottom)
-        
-        
-        
-    }
-}
+//struct CustomActionSheet: View {
+//    @State var date = Date()
+//    @State var selectedDateText: String = "Date"
+//
+//    var selectedDate: Binding<Date> {
+//        Binding<Date>(get: { self.date}, set : {
+//            self.date = $0
+//            self.setDateString()
+//        })
+//      } // This private var I found… somewhere. I wish I could remember where
+//
+//      // To take the selected date and store it as a string for the text field
+//    func setDateString() {
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "MMMM dd, yyyy"
+//
+//        self.selectedDateText = formatter.string(from: self.date)
+//      }
+//
+//    var body: some View{
+//
+//        VStack(spacing: 15){
+//
+//            DatePicker("", selection: selectedDate, displayedComponents: .date)
+//                .datePickerStyle(GraphicalDatePickerStyle())
+//                .labelsHidden()
+//                .frame(maxHeight: .none)
+//
+//        }.background(Color.white)
+//        .padding(.horizontal)
+//        .padding(.top, 20)
+//        .cornerRadius(25)
+//        .edgesIgnoringSafeArea(.bottom)
+//
+//
+//
+//    }
+//}
 
 struct DietTab_Previews: PreviewProvider {
     static var previews: some View {

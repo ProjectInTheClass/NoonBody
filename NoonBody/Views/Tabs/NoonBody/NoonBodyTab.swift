@@ -11,7 +11,15 @@ import SlidingTabView
 struct NoonBodyTab: View {
     
     init(){
+        
         UITableView.appearance().backgroundColor = .clear
+        
+        let secondaryOrange = UIColor.init(netHex: 0xFFEFEA)
+        UINavigationBar.appearance().backgroundColor = secondaryOrange
+//        UINavigationBar.appearance().tintColor = .green
+//        UINavigationBar.appearance().barTintColor = .yellow
+//        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.red]
+//        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.red]
         }
     
     @State private var index = 0
@@ -82,7 +90,7 @@ struct NoonBodyTab: View {
 //                    }).buttonStyle(ButtonNonSelected())
 //                }
                 
-                Divider().background(Color(.gray))
+//                Divider().background(Color(.gray))
                 
 //                Picker(selection: $index, label: Text("")) {
 //                    ForEach(0..<contents.count) { index in
