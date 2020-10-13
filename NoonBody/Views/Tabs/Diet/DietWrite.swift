@@ -80,10 +80,10 @@ struct DietWrite: View {
                     .animation(.easeInOut(duration: 0.3))
                 
             }
-            .onTapGesture {
-
-                  self.endTextEditing()
-            }
+//            .onTapGesture {
+//
+//                  self.endTextEditing()
+//            }
             .background(Color("secondaryOrange"))
             .navigationBarTitle("식단 기록하기", displayMode: .inline)
             .navigationBarItems(trailing: Text("저장"))

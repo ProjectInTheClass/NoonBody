@@ -68,10 +68,10 @@ struct NoonBodyWrite: View {
                     .animation(.easeInOut(duration: 0.3))
                 
             }
-            .onTapGesture {
-
-                  self.endTextEditing()
-            }
+//            .onTapGesture {
+//
+//                  self.endTextEditing()
+//            }
             .background(Color("secondaryOrange"))
             .navigationBarTitle("눈바디 기록하기", displayMode: .inline)
             .navigationBarItems(trailing: Text("저장"))
