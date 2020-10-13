@@ -31,7 +31,7 @@ struct DietWrite: View {
                 
                 Image(uiImage: image ?? UIImage(systemName: "photo")!)
                     .resizable()
-                    .frame(width: 200, height: 200)
+                    .frame(width: 100, height: 100)
                 
                 
                 Button("사진 선택"){
@@ -80,7 +80,11 @@ struct DietWrite: View {
                     .animation(.easeInOut(duration: 0.3))
                 
             }
-            
+            .onTapGesture {
+
+                  self.endTextEditing()
+            }
+            .background(Color("secondaryOrange"))
             .navigationBarTitle("식단 기록하기", displayMode: .inline)
             .navigationBarItems(trailing: Text("저장"))
             
@@ -95,3 +99,11 @@ struct DietWrite_Previews: PreviewProvider {
         DietWrite()
     }
 }
+
+extension View {
+  func endTextEditing() {
+    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder),
+        to: nil, from: nil, for: nil)
+  }
+}
+

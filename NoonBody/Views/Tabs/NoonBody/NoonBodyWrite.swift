@@ -29,7 +29,7 @@ struct NoonBodyWrite: View {
                 
                 Image(uiImage: image ?? UIImage(systemName: "photo")!)
                     .resizable()
-                    .frame(width: 300, height: 300)
+                    .frame(width: 100, height: 100)
                 
                 
                 Button("사진 선택"){
@@ -68,7 +68,11 @@ struct NoonBodyWrite: View {
                     .animation(.easeInOut(duration: 0.3))
                 
             }
-            
+            .onTapGesture {
+
+                  self.endTextEditing()
+            }
+            .background(Color("secondaryOrange"))
             .navigationBarTitle("눈바디 기록하기", displayMode: .inline)
             .navigationBarItems(trailing: Text("저장"))
             
@@ -83,3 +87,5 @@ struct NoonBodyWrite_Previews: PreviewProvider {
         NoonBodyWrite()
     }
 }
+
+
