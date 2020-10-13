@@ -8,8 +8,48 @@
 import SwiftUI
 
 struct NoonBodyWrite: View {
+    
+    @State private var showSheet:Bool = false
+    @State private var showImagePicker:Bool = false
+    @State private var sourceType:UIImagePickerController.SourceType = .camera
+    
+    @State private var image: UIImage?
+    
     var body: some View {
-        Text("눈바디 입력")
+        NavigationView{
+            
+            VStack{
+                
+                Image(uiImage: image ?? UIImage(named: "placeholder")!)
+                    .resizable()
+                    .frame(width: 300, height: 300)
+                
+                
+                Button("Choose Picture"){
+                    self.showSheet = true
+                }.padding()
+                .actionSheet(isPresented: $showSheet, content: {
+                    ActionSheet(title: Text("Select Photo"),
+                                message: Text("Choose"), buttons: [
+                                    .default(Text("Photo Library")){
+                                        self.showImagePicker = true
+                                        self.sourceType = .photoLibrary
+                                    },
+                                    .default(Text("Camera")){
+                                        self.showImagePicker = true
+                                        self.sourceType = .camera
+                                    },
+                                    .cancel()
+                                ])
+                })
+                
+            }
+            
+            .navigationTitle("CameraDemo")
+            
+        }.sheet(isPresented: $showImagePicker, content: {
+            ImagePicker(image: self.$image, isShown: self.$showImagePicker, sourceType: self.sourceType)
+        })
     }
 }
 
