@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUIX
 
 struct NoonBodyWrite: View {
     
@@ -15,17 +16,23 @@ struct NoonBodyWrite: View {
     
     @State private var image: UIImage?
     
+    @State private var showChooseIndex = 0
+    var showChoose = ["공개", "비공개"]
+    
+    @State private var content: String = ""
+
+    
     var body: some View {
-        NavigationView{
+      
             
             VStack{
                 
-                Image(uiImage: image ?? UIImage(named: "placeholder")!)
+                Image(uiImage: image ?? UIImage(systemName: "photo")!)
                     .resizable()
                     .frame(width: 300, height: 300)
                 
                 
-                Button("Choose Picture"){
+                Button("사진 선택"){
                     self.showSheet = true
                 }.padding()
                 .actionSheet(isPresented: $showSheet, content: {
@@ -43,11 +50,29 @@ struct NoonBodyWrite: View {
                                 ])
                 })
                 
+                VStack {
+                    Picker(selection: $showChooseIndex, label: Text("What is your favorite color?")) {
+                        ForEach(0..<showChoose.count) { index in
+                            Text(self.showChoose[index]).tag(index)
+                        }
+                    }.pickerStyle(SegmentedPickerStyle())
+
+//                    Text("Value: \(showChoose[showChooseIndex])")
+                }
+                
+                TextView(text: $content)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    //context 속성은 published 특성으로 선언했으므로
+                    //속성에 저장된 값이 업데이트되면 padding도 함께 업데이트 됨
+                    .padding(.keyboard)
+                    .animation(.easeInOut(duration: 0.3))
+                
             }
             
-            .navigationTitle("CameraDemo")
+            .navigationBarTitle("눈바디 기록하기", displayMode: .inline)
+            .navigationBarItems(trailing: Text("저장"))
             
-        }.sheet(isPresented: $showImagePicker, content: {
+        .sheet(isPresented: $showImagePicker, content: {
             ImagePicker(image: self.$image, isShown: self.$showImagePicker, sourceType: self.sourceType)
         })
     }
