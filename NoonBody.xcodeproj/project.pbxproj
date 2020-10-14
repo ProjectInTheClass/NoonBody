@@ -20,6 +20,8 @@
 		45024C462532EBA200D619C5 /* DietTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45024C452532EBA200D619C5 /* DietTab.swift */; };
 		45024C512532EBB000D619C5 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45024C4F2532EBB000D619C5 /* ImagePicker.swift */; };
 		45024C582532EC0F00D619C5 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 45024C572532EC0F00D619C5 /* SwiftUIX */; };
+		450A92262536AC830082B5EF /* DateFormatter+Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A92252536AC830082B5EF /* DateFormatter+Memo.swift */; };
+		450A922B2536AD640082B5EF /* NoonBodyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A922A2536AD640082B5EF /* NoonBodyCell.swift */; };
 		4527B86A25331CA700949553 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 4527B86925331CA700949553 /* YPImagePicker */; };
 		4527B8792533221400949553 /* NoonBodySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8742533221400949553 /* NoonBodySettings.swift */; };
 		4527B87A2533221400949553 /* SettingsAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8752533221400949553 /* SettingsAbout.swift */; };
@@ -80,6 +82,8 @@
 		45024C452532EBA200D619C5 /* DietTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietTab.swift; sourceTree = "<group>"; };
 		45024C4F2532EBB000D619C5 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		45024C9C2532F01B00D619C5 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		450A92252536AC830082B5EF /* DateFormatter+Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Memo.swift"; sourceTree = "<group>"; };
+		450A922A2536AD640082B5EF /* NoonBodyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBodyCell.swift; sourceTree = "<group>"; };
 		4527B8742533221400949553 /* NoonBodySettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoonBodySettings.swift; path = NoonBody/Settings/NoonBodySettings.swift; sourceTree = SOURCE_ROOT; };
 		4527B8752533221400949553 /* SettingsAbout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsAbout.swift; path = NoonBody/Settings/SettingsAbout.swift; sourceTree = SOURCE_ROOT; };
 		4527B8762533221400949553 /* SettingsPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsPhoto.swift; path = NoonBody/Settings/SettingsPhoto.swift; sourceTree = SOURCE_ROOT; };
@@ -278,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				45024C4F2532EBB000D619C5 /* ImagePicker.swift */,
+				450A922A2536AD640082B5EF /* NoonBodyCell.swift */,
 			);
 			path = WriteContents;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 				45DDD8E325342524004C18FE /* ButtonSelected.swift */,
 				45DDD8E825342543004C18FE /* ButtonNonSelected.swift */,
 				45C6E41D253487D400C3012B /* UIColor.swift */,
+				450A92252536AC830082B5EF /* DateFormatter+Memo.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -433,6 +439,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				450A92262536AC830082B5EF /* DateFormatter+Memo.swift in Sources */,
+				450A922B2536AD640082B5EF /* NoonBodyCell.swift in Sources */,
 				4527B87A2533221400949553 /* SettingsAbout.swift in Sources */,
 				45024C462532EBA200D619C5 /* DietTab.swift in Sources */,
 				45DDD8A0253412E1004C18FE /* CommunityTab.swift in Sources */,
