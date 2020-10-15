@@ -15,6 +15,14 @@ struct NoonBodySettings: View {
     @State private var previewIndex = 0
     var previewOptions = ["Always", "When Unlocked", "Never"]
     
+    @State private var showSites = false
+    let sites = ["Site 1", "Site 2", "Site 3", "Site4"]
+    
+    init(){
+                UITableView.appearance().backgroundColor = .clear
+                
+            }
+    
     var body: some View {
             NavigationView {
 
@@ -41,14 +49,32 @@ struct NoonBodySettings: View {
                 
                     
                     Section {
-                        NavigationLink(destination: SettingsNotification()) {
-                            HStack {
-                                ZStack {
-                                    Image(systemName: "app.badge").font(.callout)
-                                }.frame(width: 28, height: 28).background(Color.white).cornerRadius(6)
-                                Text("알림 설정")
+                        DisclosureGroup(
+                            isExpanded: $showSites,
+                            content: {
+                                ForEach(sites, id: \.self){site in
+                                    Text(site)
+                                }
+                            },
+                            label: {
+                                HStack {
+                                    ZStack {
+                                        Image(systemName: "app.badge").font(.callout)
+                                    }.frame(width: 28, height: 28).background(Color.white).cornerRadius(6)
+                                    Text("알림 설정")
+                                }
                             }
-                        }
+                        ).padding(.all, 10)
+                        
+                        
+//                        NavigationLink(destination: SettingsNotification()) {
+//                            HStack {
+//                                ZStack {
+//                                    Image(systemName: "app.badge").font(.callout)
+//                                }.frame(width: 28, height: 28).background(Color.white).cornerRadius(6)
+//                                Text("알림 설정")
+//                            }
+//                        }
                         
                         NavigationLink(destination: SettingsPhoto()) {
                             HStack {
@@ -68,8 +94,9 @@ struct NoonBodySettings: View {
                             }
                         }
                     }
-                }
+                }.background(Color("secondaryOrange"))
                 .navigationTitle("마이페이지")
+                
 
                 .listStyle(GroupedListStyle())
             }
