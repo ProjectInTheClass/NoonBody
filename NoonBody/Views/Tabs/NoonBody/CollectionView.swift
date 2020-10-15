@@ -22,6 +22,8 @@ struct CollectionView: View {
     //store 속성과 마찬가지로 view가 생성되는 시점에 자동으로 초기화 됨
     @EnvironmentObject var formatter: DateFormatter
     
+    @State private var choosedImage1: UIImage?
+    
     var body: some View {
             
         ScrollView {
@@ -33,6 +35,10 @@ struct CollectionView: View {
                             Image("body1")
                                 .resizable()
                                 .frame(width: 180, height: 300, alignment: .trailing)
+                            
+//                            Image(uiImage: choosedImage1 ?? UIImage(systemName: "photo")!)
+//                                .resizable()
+//                                .frame(width: 180, height: 180)
                         }
                         VStack{
                             Text("오늘")
@@ -91,6 +97,7 @@ struct CollectionView_Previews: PreviewProvider {
 }
 
 struct images: View {
+    @State private var choosedImage1: UIImage?
 
     var body: some View{
         VStack {
@@ -98,12 +105,18 @@ struct images: View {
                 Image("body1")
                     .resizable()
                     .frame(width: 120, height: 120, alignment: .trailing)
+                    .onTapGesture(perform: {
+                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Code@*/ /*@END_MENU_TOKEN@*/
+                    })
                 Image("body2")
                     .resizable()
                     .frame(width: 120, height: 120, alignment: .trailing)
                 Image("body3")
                     .resizable()
                     .frame(width: 120, height: 120, alignment: .trailing)
+                    .onTapGesture(perform: {
+//                        self._choosedImage1 =  UIImage(imageLiteralResourceName: "body1")
+                    })
             }
 
             HStack{
