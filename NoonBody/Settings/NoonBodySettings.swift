@@ -15,8 +15,15 @@ struct NoonBodySettings: View {
     @State private var previewIndex = 0
     var previewOptions = ["Always", "When Unlocked", "Never"]
     
-    @State private var showSites = false
+    @State private var isExpanded = false
     let sites = ["Site 1", "Site 2", "Site 3", "Site4"]
+    @State private var isToggleNoonBody = true
+    @State private var isToggleDiet = true
+    @State private var isToggleFriend = false
+    
+    @State private var isToggleBreakfast = true
+    @State private var isToggleLunch = false
+    @State private var isToggleDinner = false
     
     init(){
                 UITableView.appearance().backgroundColor = .clear
@@ -50,21 +57,31 @@ struct NoonBodySettings: View {
                     
                     Section {
                         DisclosureGroup(
-                            isExpanded: $showSites,
+                            isExpanded: $isExpanded,
                             content: {
-                                ForEach(sites, id: \.self){site in
-                                    Text(site)
+                                Toggle("눈바디 알림 수신", isOn: $isToggleNoonBody)
+                                Toggle("식단 알림 수신", isOn: $isToggleDiet)
+                                if isToggleDiet{
+                                    Toggle("아침 알림 수신", isOn: $isToggleBreakfast)
+                                    Toggle("점심 알림 수신", isOn: $isToggleLunch)
+                                    Toggle("저녁 알림 수신", isOn: $isToggleDinner)
                                 }
+                                Toggle("친구 소식 알림 수신", isOn: $isToggleFriend)
+                                
+//                                ForEach(sites, id: \.self){site in
+//                                    Text(site)
+//                                }
                             },
                             label: {
                                 HStack {
                                     ZStack {
                                         Image(systemName: "app.badge").font(.callout)
                                     }.frame(width: 28, height: 28).background(Color.white).cornerRadius(6)
-                                    Text("알림 설정")
+                                    Text("알림 수신 설정")
                                 }
                             }
                         ).padding(.all, 10)
+                        
                         
                         
 //                        NavigationLink(destination: SettingsNotification()) {
@@ -81,7 +98,7 @@ struct NoonBodySettings: View {
                                 ZStack {
                                     Image(systemName: "camera").font(.callout)
                                 }.frame(width: 28, height: 28).background(Color.white).cornerRadius(6)
-                                Text("사진 설정")
+                                Text("사진 자동 저장")
                             }
                         }
                         
