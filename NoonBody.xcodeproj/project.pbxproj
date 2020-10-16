@@ -43,6 +43,10 @@
 		45DDD8EF25343CC6004C18FE /* SlidingTabView in Frameworks */ = {isa = PBXBuildFile; productRef = 45DDD8EE25343CC6004C18FE /* SlidingTabView */; };
 		45DDD8F425344285004C18FE /* NoonBodyWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD8F325344285004C18FE /* NoonBodyWrite.swift */; };
 		45DDD8F92534447A004C18FE /* DietWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD8F82534447A004C18FE /* DietWrite.swift */; };
+		45F940F32539A1EC000D4AE0 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F940F22539A1EC000D4AE0 /* PostView.swift */; };
+		45F940FB2539A29A000D4AE0 /* CommunityPostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F940FA2539A29A000D4AE0 /* CommunityPostsView.swift */; };
+		45F941002539A2A7000D4AE0 /* CommunityFriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F940FF2539A2A7000D4AE0 /* CommunityFriendsView.swift */; };
+		45F941052539A2EF000D4AE0 /* Structs_Enums_Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F941042539A2EF000D4AE0 /* Structs_Enums_Classes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +107,10 @@
 		45DDD8E825342543004C18FE /* ButtonNonSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNonSelected.swift; sourceTree = "<group>"; };
 		45DDD8F325344285004C18FE /* NoonBodyWrite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBodyWrite.swift; sourceTree = "<group>"; };
 		45DDD8F82534447A004C18FE /* DietWrite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietWrite.swift; sourceTree = "<group>"; };
+		45F940F22539A1EC000D4AE0 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		45F940FA2539A29A000D4AE0 /* CommunityPostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityPostsView.swift; sourceTree = "<group>"; };
+		45F940FF2539A2A7000D4AE0 /* CommunityFriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityFriendsView.swift; sourceTree = "<group>"; };
+		45F941042539A2EF000D4AE0 /* Structs_Enums_Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs_Enums_Classes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +166,7 @@
 			children = (
 				45024BFA2532EA0B00D619C5 /* AppDelegate.swift */,
 				45024BFC2532EA0B00D619C5 /* SceneDelegate.swift */,
+				45F941042539A2EF000D4AE0 /* Structs_Enums_Classes.swift */,
 				45DDD8DC25341FBB004C18FE /* Style */,
 				45DDD85B2533F0F8004C18FE /* Model */,
 				45024CAF2532F09900D619C5 /* Views */,
@@ -218,6 +227,7 @@
 		45024CB32532F0F600D619C5 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				45F940F12539A1D6000D4AE0 /* ReusableViews */,
 				45DDD8A7253413FB004C18FE /* WriteContents */,
 				45DDD8772533F5DE004C18FE /* NoonBody */,
 				45DDD8762533F5B7004C18FE /* Diet */,
@@ -274,6 +284,8 @@
 			isa = PBXGroup;
 			children = (
 				45DDD89F253412E1004C18FE /* CommunityTab.swift */,
+				45F940FA2539A29A000D4AE0 /* CommunityPostsView.swift */,
+				45F940FF2539A2A7000D4AE0 /* CommunityFriendsView.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -297,6 +309,14 @@
 				450A92252536AC830082B5EF /* DateFormatter+Memo.swift */,
 			);
 			path = Style;
+			sourceTree = "<group>";
+		};
+		45F940F12539A1D6000D4AE0 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				45F940F22539A1EC000D4AE0 /* PostView.swift */,
+			);
+			path = ReusableViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,6 +461,7 @@
 			files = (
 				450A92262536AC830082B5EF /* DateFormatter+Memo.swift in Sources */,
 				450A922B2536AD640082B5EF /* NoonBodyCell.swift in Sources */,
+				45F941052539A2EF000D4AE0 /* Structs_Enums_Classes.swift in Sources */,
 				4527B87A2533221400949553 /* SettingsAbout.swift in Sources */,
 				45024C462532EBA200D619C5 /* DietTab.swift in Sources */,
 				45DDD8A0253412E1004C18FE /* CommunityTab.swift in Sources */,
@@ -453,12 +474,15 @@
 				45DDD89725341106004C18FE /* CollectionView.swift in Sources */,
 				4527B87D2533221400949553 /* SettingsNotification.swift in Sources */,
 				45DDD8D525341F8D004C18FE /* MyButtonStyle.swift in Sources */,
+				45F940FB2539A29A000D4AE0 /* CommunityPostsView.swift in Sources */,
 				45DDD86F2533F187004C18FE /* DietStore.swift in Sources */,
 				45DDD8F92534447A004C18FE /* DietWrite.swift in Sources */,
 				45DDD85D2533F142004C18FE /* NoonBody.swift in Sources */,
 				45024C412532EB9B00D619C5 /* NoonbodyStart.swift in Sources */,
+				45F940F32539A1EC000D4AE0 /* PostView.swift in Sources */,
 				45024C022532EA0B00D619C5 /* NoonBody.xcdatamodeld in Sources */,
 				4527B8792533221400949553 /* NoonBodySettings.swift in Sources */,
+				45F941002539A2A7000D4AE0 /* CommunityFriendsView.swift in Sources */,
 				45DDD86A2533F17F004C18FE /* Diet.swift in Sources */,
 				45024C392532EB0F00D619C5 /* TabbedRootView.swift in Sources */,
 				45DDD8652533F158004C18FE /* NoonBodyStore.swift in Sources */,
