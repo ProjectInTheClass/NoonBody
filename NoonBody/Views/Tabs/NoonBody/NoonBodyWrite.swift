@@ -40,6 +40,7 @@ struct NoonBodyWrite: View {
                         self.showSheet = true
                     }) {
                         Image(systemName: "plus")
+                            .foregroundColor(Color.gray)
                     }.padding()
                     .actionSheet(isPresented: $showSheet, content: {
                         ActionSheet(title: Text("Select Photo"),
