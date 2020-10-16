@@ -15,13 +15,15 @@ struct DietWrite: View {
     
     @State private var image: UIImage?
     
-    @State private var showChooseIndex = 0
-    var showChoose = ["공개", "비공개"]
+//    @State private var showChooseIndex = 0
+//    var showChoose = ["공개", "비공개"]
     
     @State private var timeIndex = 0
     var time = ["아침", "점심", "저녁", "간식"]
     
-    @State private var content: String = ""
+    @State private var content: String = "소감 한마디! (선택)"
+    
+    @State private var showGreeting = true
 
     
     var body: some View {
@@ -29,28 +31,33 @@ struct DietWrite: View {
             
             VStack{
                 
-                Image(uiImage: image ?? UIImage(systemName: "photo")!)
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                
-                
-                Button("사진 선택"){
-                    self.showSheet = true
-                }.padding()
-                .actionSheet(isPresented: $showSheet, content: {
-                    ActionSheet(title: Text("Select Photo"),
-                                message: Text("Choose"), buttons: [
-                                    .default(Text("Photo Library")){
-                                        self.showImagePicker = true
-                                        self.sourceType = .photoLibrary
-                                    },
-                                    .default(Text("Camera")){
-                                        self.showImagePicker = true
-                                        self.sourceType = .camera
-                                    },
-                                    .cancel()
-                                ])
-                })
+                ZStack{
+                    Image(uiImage: image ?? UIImage(imageLiteralResourceName: "gray_background"))
+                        .resizable()
+                        .frame(width: 300, height: 300)
+                    
+                    
+                    Button(action: {
+                        self.showSheet = true
+                    }) {
+                        Image(systemName: "plus")
+                            .foregroundColor(Color.gray)
+                    }.padding()
+                    .actionSheet(isPresented: $showSheet, content: {
+                        ActionSheet(title: Text("Select Photo"),
+                                    message: Text("Choose"), buttons: [
+                                        .default(Text("Photo Library")){
+                                            self.showImagePicker = true
+                                            self.sourceType = .photoLibrary
+                                        },
+                                        .default(Text("Camera")){
+                                            self.showImagePicker = true
+                                            self.sourceType = .camera
+                                        },
+                                        .cancel()
+                                    ])
+                    })
+                }
                 
                 VStack {
                     Picker(selection: $timeIndex, label: Text("What is your favorite color?")) {
@@ -62,15 +69,6 @@ struct DietWrite: View {
 //                    Text("Value: \(time[timeIndex])")
                 }
                 
-                VStack {
-                    Picker(selection: $showChooseIndex, label: Text("What is your favorite color?")) {
-                        ForEach(0..<showChoose.count) { index in
-                            Text(self.showChoose[index]).tag(index)
-                        }
-                    }.pickerStyle(SegmentedPickerStyle())
-
-//                    Text("Value: \(showChoose[showChooseIndex])")
-                }
                 
                 TextView(text: $content)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -78,6 +76,25 @@ struct DietWrite: View {
                     //속성에 저장된 값이 업데이트되면 padding도 함께 업데이트 됨
                     .padding(.keyboard)
                     .animation(.easeInOut(duration: 0.3))
+                
+                VStack {
+                    Toggle(isOn: $showGreeting) {
+                                    Text("공개")
+                                }.padding()
+
+                                if showGreeting {
+//                                    Text("공개")
+                                }
+                    
+//                    Picker(selection: $showChooseIndex, label: Text("What is your favorite color?")) {
+//                        ForEach(0..<showChoose.count) { index in
+//                            Text(self.showChoose[index]).tag(index)
+//                        }
+//                    }.pickerStyle(SegmentedPickerStyle())
+
+//                    Text("Value: \(showChoose[showChooseIndex])")
+                }
+                
                 
             }
 //            .onTapGesture {
