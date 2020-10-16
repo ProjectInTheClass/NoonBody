@@ -16,12 +16,12 @@ struct CommunityPostsView: View {
     var body: some View {
         
         VStack{
-            ScrollView(.horizontal, showsIndicators:false){
-                HStack{
-                    Text("This is scrollable to the right and left")
-                    Text("This is scrollable to the right and left")
-                }.frame(height: 80)
-            }.background(Color.red)
+//            ScrollView(.horizontal, showsIndicators:false){
+//                HStack{
+//                    Text("This is scrollable to the right and left")
+//                    Text("This is scrollable to the right and left")
+//                }.frame(height: 80)
+//            }.background(Color.red)
             ScrollView{
                 ForEach(0..<10){_ in
                     PostView()

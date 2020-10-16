@@ -219,6 +219,7 @@
 				45024C9B2532F01B00D619C5 /* View */,
 				45024C402532EB9B00D619C5 /* NoonbodyStart.swift */,
 				45024C382532EB0F00D619C5 /* TabbedRootView.swift */,
+				45F940F12539A1D6000D4AE0 /* ReusableViews */,
 				45024CB32532F0F600D619C5 /* Tabs */,
 			);
 			path = Views;
@@ -227,7 +228,6 @@
 		45024CB32532F0F600D619C5 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
-				45F940F12539A1D6000D4AE0 /* ReusableViews */,
 				45DDD8A7253413FB004C18FE /* WriteContents */,
 				45DDD8772533F5DE004C18FE /* NoonBody */,
 				45DDD8762533F5B7004C18FE /* Diet */,
