@@ -16,7 +16,7 @@ struct NoonBodySettings: View {
     var previewOptions = ["Always", "When Unlocked", "Never"]
     
     @State private var isExpanded = false
-    let sites = ["Site 1", "Site 2", "Site 3", "Site4"]
+//    let sites = ["Site 1", "Site 2", "Site 3", "Site4"]
     @State private var isToggleNoonBody = true
     @State private var isToggleDiet = true
     @State private var isToggleFriend = false
@@ -24,6 +24,8 @@ struct NoonBodySettings: View {
     @State private var isToggleBreakfast = true
     @State private var isToggleLunch = false
     @State private var isToggleDinner = false
+    
+    @State private var isTogglePicture = false
     
     init(){
                 UITableView.appearance().backgroundColor = .clear
@@ -93,23 +95,27 @@ struct NoonBodySettings: View {
 //                            }
 //                        }
                         
-                        NavigationLink(destination: SettingsPhoto()) {
-                            HStack {
-                                ZStack {
-                                    Image(systemName: "camera").font(.callout)
-                                }.frame(width: 28, height: 28).background(Color.white).cornerRadius(6)
-                                Text("사진 자동 저장")
-                            }
-                        }
+                        ContentView()
                         
-                        NavigationLink(destination: SettingsAbout()) {
-                            HStack {
-                                ZStack {
-                                    Image(systemName: "gear").font(.callout)
-                                }.frame(width: 28, height: 28).background(Color.white).cornerRadius(6)
-                                Text("눈바디 1.0")
-                            }
-                        }
+//                        NavigationLink(destination: SettingsPhoto()) {
+//                            HStack {
+//                                ZStack {
+//                                    Image(systemName: "camera").font(.callout)
+//                                }.frame(width: 28, height: 28).background(Color.white).cornerRadius(6)
+//                                Text("사진 자동 저장")
+//                            }
+//                        }
+                        
+                       
+                        
+//                        NavigationLink(destination: SettingsAbout()) {
+//                            HStack {
+//                                ZStack {
+//                                    Image(systemName: "gear").font(.callout)
+//                                }.frame(width: 28, height: 28).background(Color.white).cornerRadius(6)
+//                                Text("눈바디 1.0")
+//                            }
+//                        }
                     }
                 }.background(Color("secondaryOrange"))
                 .navigationTitle("마이페이지")
@@ -124,6 +130,21 @@ struct NoonBodySettings: View {
 struct NoonBodySettings_Previews: PreviewProvider {
     static var previews: some View {
         NoonBodySettings()
+    }
+}
+
+struct ContentView: View {
+    @State private var isTogglePicture = true
+
+    var body: some View {
+        Toggle(isOn: $isTogglePicture) {
+            HStack {
+                ZStack {
+                    Image(systemName: "camera").font(.callout)
+                }.frame(width: 28, height: 28).background(Color.white).cornerRadius(6)
+                Text("사진 자동 저장")
+            }.padding(.all, 10)
+        }
     }
 }
 
