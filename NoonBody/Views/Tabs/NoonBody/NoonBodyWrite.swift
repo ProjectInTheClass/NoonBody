@@ -19,7 +19,7 @@ struct NoonBodyWrite: View {
 //    @State private var showChooseIndex = 0
 //    var showChoose = ["공개", "비공개"]
     
-    @State private var content: String = "소감 한마디! (선택)"
+    @State private var content: String = ""
     
     @State private var showGreeting = true
 
@@ -34,6 +34,8 @@ struct NoonBodyWrite: View {
                     Image(uiImage: image ?? UIImage(imageLiteralResourceName: "gray_background"))
                         .resizable()
                         .frame(width: 300, height: 300)
+                        .padding(.top, 10)
+                        .cornerRadius(30)
                     
                     
                     Button(action: {
@@ -58,14 +60,19 @@ struct NoonBodyWrite: View {
                     })
                 }
                 
+                Divider()
+                    .padding(.top, 10)
                 
-                TextView(text: $content)
+                TextView("소감 한마디! (선택)", text: $content)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     //context 속성은 published 특성으로 선언했으므로
                     //속성에 저장된 값이 업데이트되면 padding도 함께 업데이트 됨
                     .padding(.keyboard)
+                    .padding(.init(top: 10, leading: 10, bottom: 0, trailing: 10))
                     .animation(.easeInOut(duration: 0.3))
+                    
                 
+                Divider()
                 
                 VStack {
                     Toggle(isOn: $showGreeting) {
