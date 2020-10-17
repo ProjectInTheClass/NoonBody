@@ -21,7 +21,7 @@ struct DietWrite: View {
     @State private var timeIndex = 0
     var time = ["아침", "점심", "저녁", "간식"]
     
-    @State private var content: String = "소감 한마디! (선택)"
+    @State private var content: String = ""
     
     @State private var showGreeting = true
 
@@ -35,6 +35,8 @@ struct DietWrite: View {
                     Image(uiImage: image ?? UIImage(imageLiteralResourceName: "gray_background"))
                         .resizable()
                         .frame(width: 300, height: 300)
+                        .padding(.top, 10)
+                        .cornerRadius(30)
                     
                     
                     Button(action: {
@@ -59,6 +61,8 @@ struct DietWrite: View {
                     })
                 }
                 
+                Divider()
+                
                 VStack {
                     Picker(selection: $timeIndex, label: Text("What is your favorite color?")) {
                         ForEach(0..<time.count) { index in
@@ -69,13 +73,16 @@ struct DietWrite: View {
 //                    Text("Value: \(time[timeIndex])")
                 }
                 
+                Divider()
                 
-                TextView(text: $content)
+                TextView("소감 한마디! (선택)", text: $content)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     //context 속성은 published 특성으로 선언했으므로
                     //속성에 저장된 값이 업데이트되면 padding도 함께 업데이트 됨
                     .padding(.keyboard)
                     .animation(.easeInOut(duration: 0.3))
+                
+                Divider()
                 
                 VStack {
                     Toggle(isOn: $showGreeting) {
