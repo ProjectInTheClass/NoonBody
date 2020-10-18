@@ -26,6 +26,9 @@ struct NoonBodyWrite: View {
     
     @State private var showGreeting = true
 
+    @State var weight: String = ""
+    @State var muscle : String = ""
+    @State var fat: String = ""
 
     
     var body: some View {
@@ -112,7 +115,8 @@ struct NoonBodyWrite: View {
                         HStack{
                             Text("몸무게")
                             Spacer()
-                            Text("0.00kg")
+                            TextField("0.00kg", text: $weight)
+                                .frame(width: 70)
                         }
                         
                         Divider()
@@ -120,7 +124,8 @@ struct NoonBodyWrite: View {
                         HStack{
                             Text("골격근량")
                             Spacer()
-                            Text("0.00kg")
+                            TextField("0.00kg", text: $muscle)
+                                .frame(width: 70)
                         }
                         
                         Divider()
@@ -128,7 +133,8 @@ struct NoonBodyWrite: View {
                         HStack{
                             Text("체지방량")
                             Spacer()
-                            Text("0.00kg")
+                            TextField("0.00kg", text: $fat)
+                                .frame(width: 70)
                         }
                         
                     }.padding(.leading)
