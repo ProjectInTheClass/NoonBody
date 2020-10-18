@@ -16,8 +16,11 @@ struct NoonBodyWrite: View {
     
     @State private var image: UIImage?
     
-//    @State private var showChooseIndex = 0
-//    var showChoose = ["공개", "비공개"]
+    @State private var showChooseIndex = 0
+    var showChoose = ["공개", "비공개"]
+    
+    @State private var showChooseIsFullIndex = 0
+    var showChooseIsFull = ["공복", "식후"]
     
     @State private var content: String = ""
     
@@ -60,8 +63,77 @@ struct NoonBodyWrite: View {
                     })
                 }
                 
+//                Divider()
+//                    .padding(.top, 10)
+                
+                VStack {
+//                    Toggle(isOn: $showGreeting) {
+//                                    Text("공개")
+//                                }.padding()
+//
+//                                if showGreeting {
+////                                    Text("공개")
+//                                }
+                    Picker(selection: $showChooseIndex, label: Text("What is your favorite color?")) {
+                        ForEach(0..<showChoose.count) { index in
+                            Text(self.showChoose[index]).tag(index)
+                        }
+                    }.pickerStyle(SegmentedPickerStyle())
+                    .padding(.leading)
+                    .padding(.trailing)
+                    .padding(.top)
+
+//                    Text("Value: \(showChoose[showChooseIndex])")
+                }
+                
+                VStack {
+//                    Toggle(isOn: $showGreeting) {
+//                                    Text("공개")
+//                                }.padding()
+//
+//                                if showGreeting {
+////                                    Text("공개")
+//                                }
+                    Picker(selection: $showChooseIsFullIndex, label: Text("What is your favorite color?")) {
+                        ForEach(0..<showChooseIsFull.count) { index in
+                            Text(self.showChooseIsFull[index]).tag(index)
+                        }
+                    }.pickerStyle(SegmentedPickerStyle())
+                    .padding(.leading)
+                    .padding(.trailing)
+
+//                    Text("Value: \(showChoose[showChooseIndex])")
+                }
+                
+                Divider().padding(.top)
+                
+                VStack(alignment: .leading){
+                    HStack{
+                        Text("몸무게")
+                        Spacer()
+                        Text("0.00kg")
+                    }
+                    
+                    Divider()
+                    
+                    HStack{
+                        Text("골격근량")
+                        Spacer()
+                        Text("0.00kg")
+                    }
+                    
+                    Divider()
+                    
+                    HStack{
+                        Text("체지방량")
+                        Spacer()
+                        Text("0.00kg")
+                    }
+                    
+                }.padding(.leading)
+                .padding(.trailing)
+                
                 Divider()
-                    .padding(.top, 10)
                 
                 TextView("소감 한마디! (선택)", text: $content)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -77,26 +149,7 @@ struct NoonBodyWrite: View {
 //                    .onTapGesture {
 //                                hideKeyboard()
 //                            }
-                    
-                
-                Divider()
-                
-                VStack {
-                    Toggle(isOn: $showGreeting) {
-                                    Text("공개")
-                                }.padding()
-
-                                if showGreeting {
-//                                    Text("공개")
-                                }
-//                    Picker(selection: $showChooseIndex, label: Text("What is your favorite color?")) {
-//                        ForEach(0..<showChoose.count) { index in
-//                            Text(self.showChoose[index]).tag(index)
-//                        }
-//                    }.pickerStyle(SegmentedPickerStyle())
-
-//                    Text("Value: \(showChoose[showChooseIndex])")
-                }
+               
                 
             }
 //            .onTapGesture {
