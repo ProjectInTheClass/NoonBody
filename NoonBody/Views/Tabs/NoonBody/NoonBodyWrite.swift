@@ -29,12 +29,12 @@ struct NoonBodyWrite: View {
       
             
             VStack{
+                Spacer()
                 
                 ZStack{
                     Image(uiImage: image ?? UIImage(imageLiteralResourceName: "gray_background"))
                         .resizable()
                         .frame(width: 300, height: 300)
-                        .padding(.top, 10)
                         .cornerRadius(30)
                     
                     
@@ -70,6 +70,13 @@ struct NoonBodyWrite: View {
                     .padding(.keyboard)
                     .padding(.init(top: 10, leading: 10, bottom: 0, trailing: 10))
                     .animation(.easeInOut(duration: 0.3))
+                    .onTapGesture {
+                                self.endEditing(true)
+                                
+                             }
+//                    .onTapGesture {
+//                                hideKeyboard()
+//                            }
                     
                 
                 Divider()
@@ -112,4 +119,16 @@ struct NoonBodyWrite_Previews: PreviewProvider {
     }
 }
 
+//#if canImport(UIKit)
+//extension View {
+//    func hideKeyboard() {
+//        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+//    }
+//}
+//#endif
 
+extension View {
+        func endEditing(_ force: Bool) {
+            UIApplication.shared.windows.forEach { $0.endEditing(force)}
+        }
+}
