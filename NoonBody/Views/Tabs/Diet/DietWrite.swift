@@ -30,12 +30,12 @@ struct DietWrite: View {
       
             
             VStack{
+                Spacer()
                 
                 ZStack{
                     Image(uiImage: image ?? UIImage(imageLiteralResourceName: "gray_background"))
                         .resizable()
                         .frame(width: 300, height: 300)
-                        .padding(.top, 10)
                         .cornerRadius(30)
                     
                     
@@ -81,6 +81,10 @@ struct DietWrite: View {
                     //속성에 저장된 값이 업데이트되면 padding도 함께 업데이트 됨
                     .padding(.keyboard)
                     .animation(.easeInOut(duration: 0.3))
+                    .onTapGesture {
+                                self.endEditing(true)
+                                
+                             }
                 
                 Divider()
                 
