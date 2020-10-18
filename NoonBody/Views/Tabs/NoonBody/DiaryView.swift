@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CompareView: View {
+struct DiaryView: View {
     @State var date = Date()
     
     var body: some View {
@@ -39,8 +39,8 @@ struct CompareView: View {
     }
 
 
-struct CompareView_Previews: PreviewProvider {
+struct DiaryView_Previews: PreviewProvider {
     static var previews: some View {
-        CompareView()
+        DiaryView()
     }
 }
