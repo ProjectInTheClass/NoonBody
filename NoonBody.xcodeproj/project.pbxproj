@@ -47,6 +47,8 @@
 		45F940FB2539A29A000D4AE0 /* CommunityPostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F940FA2539A29A000D4AE0 /* CommunityPostsView.swift */; };
 		45F941002539A2A7000D4AE0 /* CommunityFriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F940FF2539A2A7000D4AE0 /* CommunityFriendsView.swift */; };
 		45F941052539A2EF000D4AE0 /* Structs_Enums_Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F941042539A2EF000D4AE0 /* Structs_Enums_Classes.swift */; };
+		45FCC335253C7C64006E47CC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FCC334253C7C64006E47CC /* LoginView.swift */; };
+		45FCC33A253C7C6D006E47CC /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FCC339253C7C6D006E47CC /* SignUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,8 @@
 		45F940FA2539A29A000D4AE0 /* CommunityPostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityPostsView.swift; sourceTree = "<group>"; };
 		45F940FF2539A2A7000D4AE0 /* CommunityFriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityFriendsView.swift; sourceTree = "<group>"; };
 		45F941042539A2EF000D4AE0 /* Structs_Enums_Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs_Enums_Classes.swift; sourceTree = "<group>"; };
+		45FCC334253C7C64006E47CC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		45FCC339253C7C6D006E47CC /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +223,8 @@
 				45024C9B2532F01B00D619C5 /* View */,
 				45024C402532EB9B00D619C5 /* NoonbodyStart.swift */,
 				45024C382532EB0F00D619C5 /* TabbedRootView.swift */,
+				45FCC334253C7C64006E47CC /* LoginView.swift */,
+				45FCC339253C7C6D006E47CC /* SignUp.swift */,
 				45F940F12539A1D6000D4AE0 /* ReusableViews */,
 				45024CB32532F0F600D619C5 /* Tabs */,
 			);
@@ -489,8 +495,10 @@
 				4527B87B2533221400949553 /* SettingsPhoto.swift in Sources */,
 				45DDD8F425344285004C18FE /* NoonBodyWrite.swift in Sources */,
 				45C6E41E253487D400C3012B /* UIColor.swift in Sources */,
+				45FCC335253C7C64006E47CC /* LoginView.swift in Sources */,
 				45DDD892253410F8004C18FE /* DiaryView.swift in Sources */,
 				45024BFD2532EA0B00D619C5 /* SceneDelegate.swift in Sources */,
+				45FCC33A253C7C6D006E47CC /* SignUp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
