@@ -15,8 +15,8 @@ struct DietWrite: View {
     
     @State private var image: UIImage?
     
-//    @State private var showChooseIndex = 0
-//    var showChoose = ["공개", "비공개"]
+    @State private var showChooseIndex = 0
+    var showChoose = ["공개", "비공개"]
     
     @State private var timeIndex = 0
     var time = ["아침", "점심", "저녁", "간식"]
@@ -61,6 +61,29 @@ struct DietWrite: View {
                     })
                 }
                 
+
+                
+                VStack {
+//                    Toggle(isOn: $showGreeting) {
+//                                    Text("공개")
+//                                }.padding()
+//
+//                                if showGreeting {
+////                                    Text("공개")
+//                                }
+                    
+                    Picker(selection: $showChooseIndex, label: Text("What is your favorite color?")) {
+                        ForEach(0..<showChoose.count) { index in
+                            Text(self.showChoose[index]).tag(index)
+                        }
+                    }.pickerStyle(SegmentedPickerStyle())
+                    .padding(.leading)
+                    .padding(.trailing)
+                    .padding(.top)
+
+//                    Text("Value: \(showChoose[showChooseIndex])")
+                }
+                
                 Divider()
                 
                 VStack {
@@ -88,23 +111,7 @@ struct DietWrite: View {
                 
                 Divider()
                 
-                VStack {
-                    Toggle(isOn: $showGreeting) {
-                                    Text("공개")
-                                }.padding()
-
-                                if showGreeting {
-//                                    Text("공개")
-                                }
-                    
-//                    Picker(selection: $showChooseIndex, label: Text("What is your favorite color?")) {
-//                        ForEach(0..<showChoose.count) { index in
-//                            Text(self.showChoose[index]).tag(index)
-//                        }
-//                    }.pickerStyle(SegmentedPickerStyle())
-
-//                    Text("Value: \(showChoose[showChooseIndex])")
-                }
+                
                 
                 
             }
