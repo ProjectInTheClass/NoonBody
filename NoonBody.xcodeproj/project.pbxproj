@@ -34,7 +34,7 @@
 		45DDD86A2533F17F004C18FE /* Diet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD8692533F17F004C18FE /* Diet.swift */; };
 		45DDD86F2533F187004C18FE /* DietStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD86E2533F187004C18FE /* DietStore.swift */; };
 		45DDD88D25340CF2004C18FE /* NoonBodyTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD88C25340CF2004C18FE /* NoonBodyTab.swift */; };
-		45DDD892253410F8004C18FE /* CompareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD891253410F8004C18FE /* CompareView.swift */; };
+		45DDD892253410F8004C18FE /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD891253410F8004C18FE /* DiaryView.swift */; };
 		45DDD89725341106004C18FE /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD89625341106004C18FE /* CollectionView.swift */; };
 		45DDD8A0253412E1004C18FE /* CommunityTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD89F253412E1004C18FE /* CommunityTab.swift */; };
 		45DDD8D525341F8D004C18FE /* MyButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD8D425341F8D004C18FE /* MyButtonStyle.swift */; };
@@ -99,7 +99,7 @@
 		45DDD8692533F17F004C18FE /* Diet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diet.swift; sourceTree = "<group>"; };
 		45DDD86E2533F187004C18FE /* DietStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietStore.swift; sourceTree = "<group>"; };
 		45DDD88C25340CF2004C18FE /* NoonBodyTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBodyTab.swift; sourceTree = "<group>"; };
-		45DDD891253410F8004C18FE /* CompareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareView.swift; sourceTree = "<group>"; };
+		45DDD891253410F8004C18FE /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 		45DDD89625341106004C18FE /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		45DDD89F253412E1004C18FE /* CommunityTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityTab.swift; sourceTree = "<group>"; };
 		45DDD8D425341F8D004C18FE /* MyButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButtonStyle.swift; sourceTree = "<group>"; };
@@ -273,7 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				45DDD88C25340CF2004C18FE /* NoonBodyTab.swift */,
-				45DDD891253410F8004C18FE /* CompareView.swift */,
+				45DDD891253410F8004C18FE /* DiaryView.swift */,
 				45DDD89625341106004C18FE /* CollectionView.swift */,
 				45DDD8F325344285004C18FE /* NoonBodyWrite.swift */,
 			);
@@ -489,7 +489,7 @@
 				4527B87B2533221400949553 /* SettingsPhoto.swift in Sources */,
 				45DDD8F425344285004C18FE /* NoonBodyWrite.swift in Sources */,
 				45C6E41E253487D400C3012B /* UIColor.swift in Sources */,
-				45DDD892253410F8004C18FE /* CompareView.swift in Sources */,
+				45DDD892253410F8004C18FE /* DiaryView.swift in Sources */,
 				45024BFD2532EA0B00D619C5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -48,9 +48,9 @@ struct NoonBodyTab: View {
                 
                 
                 VStack(alignment: .center) {
-                    SlidingTabView(selection: self.$selectedTabIndex, tabs: ["비교하기", "모아보기"])
+                    SlidingTabView(selection: self.$selectedTabIndex, tabs: ["눈바디 일지", "모아보기"])
                     if selectedTabIndex == 0{
-                        CompareView()
+                        DiaryView()
                     }else{
                         CollectionView()
                     }
