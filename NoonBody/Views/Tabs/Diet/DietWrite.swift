@@ -29,103 +29,104 @@ struct DietWrite: View {
     var body: some View {
       
             
+        ScrollView {
             VStack{
-                Spacer()
-                
-                ZStack{
-                    Image(uiImage: image ?? UIImage(imageLiteralResourceName: "gray_background"))
-                        .resizable()
-                        .frame(width: 300, height: 300)
-                        .cornerRadius(30)
+                    Spacer()
+                    
+                    ZStack{
+                        Image(uiImage: image ?? UIImage(imageLiteralResourceName: "gray_background"))
+                            .resizable()
+                            .frame(width: 300, height: 250)
+                            .cornerRadius(30)
+                        
+                        
+                        Button(action: {
+                            self.showSheet = true
+                        }) {
+                            Image(systemName: "plus")
+                                .foregroundColor(Color.gray)
+                        }.padding()
+                        .actionSheet(isPresented: $showSheet, content: {
+                            ActionSheet(title: Text("Select Photo"),
+                                        message: Text("Choose"), buttons: [
+                                            .default(Text("Photo Library")){
+                                                self.showImagePicker = true
+                                                self.sourceType = .photoLibrary
+                                            },
+                                            .default(Text("Camera")){
+                                                self.showImagePicker = true
+                                                self.sourceType = .camera
+                                            },
+                                            .cancel()
+                                        ])
+                        })
+                    }
+                    
+
+                    
+                    VStack {
+    //                    Toggle(isOn: $showGreeting) {
+    //                                    Text("공개")
+    //                                }.padding()
+    //
+    //                                if showGreeting {
+    ////                                    Text("공개")
+    //                                }
+                        
+                        Picker(selection: $showChooseIndex, label: Text("What is your favorite color?")) {
+                            ForEach(0..<showChoose.count) { index in
+                                Text(self.showChoose[index]).tag(index)
+                            }
+                        }.pickerStyle(SegmentedPickerStyle())
+                        .padding(.leading)
+                        .padding(.trailing)
+                        .padding(.top)
+
+    //                    Text("Value: \(showChoose[showChooseIndex])")
+                    }
+                    
+                    Divider()
+                    
+                    VStack {
+                        Picker(selection: $timeIndex, label: Text("What is your favorite color?")) {
+                            ForEach(0..<time.count) { index in
+                                Text(self.time[index]).tag(index)
+                            }
+                        }.pickerStyle(SegmentedPickerStyle())
+
+    //                    Text("Value: \(time[timeIndex])")
+                    }
+                    
+                    Divider()
+                    
+                    TextView("소감 한마디! (선택)", text: $content)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        //context 속성은 published 특성으로 선언했으므로
+                        //속성에 저장된 값이 업데이트되면 padding도 함께 업데이트 됨
+                        .padding(.keyboard)
+                        .animation(.easeInOut(duration: 0.3))
+                        .onTapGesture {
+                                    self.endEditing(true)
+                                    
+                                 }
                     
                     
-                    Button(action: {
-                        self.showSheet = true
-                    }) {
-                        Image(systemName: "plus")
-                            .foregroundColor(Color.gray)
-                    }.padding()
-                    .actionSheet(isPresented: $showSheet, content: {
-                        ActionSheet(title: Text("Select Photo"),
-                                    message: Text("Choose"), buttons: [
-                                        .default(Text("Photo Library")){
-                                            self.showImagePicker = true
-                                            self.sourceType = .photoLibrary
-                                        },
-                                        .default(Text("Camera")){
-                                            self.showImagePicker = true
-                                            self.sourceType = .camera
-                                        },
-                                        .cancel()
-                                    ])
-                    })
-                }
-                
-
-                
-                VStack {
-//                    Toggle(isOn: $showGreeting) {
-//                                    Text("공개")
-//                                }.padding()
-//
-//                                if showGreeting {
-////                                    Text("공개")
-//                                }
                     
-                    Picker(selection: $showChooseIndex, label: Text("What is your favorite color?")) {
-                        ForEach(0..<showChoose.count) { index in
-                            Text(self.showChoose[index]).tag(index)
-                        }
-                    }.pickerStyle(SegmentedPickerStyle())
-                    .padding(.leading)
-                    .padding(.trailing)
-                    .padding(.top)
-
-//                    Text("Value: \(showChoose[showChooseIndex])")
+                    
+                    
                 }
+    //            .onTapGesture {
+    //
+    //                  self.endTextEditing()
+    //            }
                 
-                Divider()
+                .navigationBarTitle("식단 기록하기", displayMode: .inline)
+                .navigationBarItems(trailing: Text("저장"))
                 
-                VStack {
-                    Picker(selection: $timeIndex, label: Text("What is your favorite color?")) {
-                        ForEach(0..<time.count) { index in
-                            Text(self.time[index]).tag(index)
-                        }
-                    }.pickerStyle(SegmentedPickerStyle())
-
-//                    Text("Value: \(time[timeIndex])")
-                }
-                
-                Divider()
-                
-                TextView("소감 한마디! (선택)", text: $content)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    //context 속성은 published 특성으로 선언했으므로
-                    //속성에 저장된 값이 업데이트되면 padding도 함께 업데이트 됨
-                    .padding(.keyboard)
-                    .animation(.easeInOut(duration: 0.3))
-                    .onTapGesture {
-                                self.endEditing(true)
-                                
-                             }
-                
-                Divider()
-                
-                
-                
-                
-            }
-//            .onTapGesture {
-//
-//                  self.endTextEditing()
-//            }
-            .background(Color("secondaryOrange"))
-            .navigationBarTitle("식단 기록하기", displayMode: .inline)
-            .navigationBarItems(trailing: Text("저장"))
-            
-        .sheet(isPresented: $showImagePicker, content: {
-            ImagePicker(image: self.$image, isShown: self.$showImagePicker, sourceType: self.sourceType)
+            .sheet(isPresented: $showImagePicker, content: {
+                ImagePicker(image: self.$image, isShown: self.$showImagePicker, sourceType: self.sourceType)
         })
+        }.background(Color("secondaryOrange"))
     }
 }
 
