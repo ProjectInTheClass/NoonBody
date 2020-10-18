@@ -36,9 +36,40 @@ struct CollectionView: View {
                                 .resizable()
                                 .frame(width: 180, height: 300, alignment: .trailing)
                             
-//                            Image(uiImage: choosedImage1 ?? UIImage(systemName: "photo")!)
-//                                .resizable()
-//                                .frame(width: 180, height: 180)
+                            VStack(alignment: .leading){
+                                HStack{
+                                    Text("몸무게")
+                                    Spacer()
+                                    Text("0.00kg")
+            //                        TextField("0.00kg", text: $weight)
+            //                            .frame(width: 70)
+                                }
+                                
+                                Divider()
+                                
+                                HStack{
+                                    Text("골격근량")
+                                    Spacer()
+                                    Text("0.00kg")
+            //                        TextField("0.00kg", text: $muscle)
+            //                            .frame(width: 70)
+                                }
+                                
+                                Divider()
+                                
+                                HStack{
+                                    Text("체지방량")
+                                    Spacer()
+                                    Text("0.00kg")
+            //                        TextField("0.00kg", text: $fat)
+            //                            .frame(width: 70)
+                                }
+                                
+                            }.padding(.leading)
+                            .padding(.trailing)
+                            
+                            Divider()
+                            
                         }
                         VStack{
                             Text("오늘")
@@ -46,6 +77,40 @@ struct CollectionView: View {
                             Image("body2")
                                 .resizable()
                                 .frame(width: 180, height: 300, alignment: .trailing)
+                            
+                            VStack(alignment: .leading){
+                                HStack{
+                                    Text("몸무게")
+                                    Spacer()
+                                    Text("0.00kg")
+            //                        TextField("0.00kg", text: $weight)
+            //                            .frame(width: 70)
+                                }
+                                
+                                Divider()
+                                
+                                HStack{
+                                    Text("골격근량")
+                                    Spacer()
+                                    Text("0.00kg")
+            //                        TextField("0.00kg", text: $muscle)
+            //                            .frame(width: 70)
+                                }
+                                
+                                Divider()
+                                
+                                HStack{
+                                    Text("체지방량")
+                                    Spacer()
+                                    Text("0.00kg")
+            //                        TextField("0.00kg", text: $fat)
+            //                            .frame(width: 70)
+                                }
+                                
+                            }.padding(.leading)
+                            .padding(.trailing)
+                            
+                            Divider()
                             
                         }
                           
