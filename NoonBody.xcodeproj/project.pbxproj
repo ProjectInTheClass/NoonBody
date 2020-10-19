@@ -21,7 +21,6 @@
 		45024C582532EC0F00D619C5 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 45024C572532EC0F00D619C5 /* SwiftUIX */; };
 		450A92262536AC830082B5EF /* DateFormatter+Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A92252536AC830082B5EF /* DateFormatter+Memo.swift */; };
 		450A922B2536AD640082B5EF /* NoonBodyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A922A2536AD640082B5EF /* NoonBodyCell.swift */; };
-		4527B86A25331CA700949553 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 4527B86925331CA700949553 /* YPImagePicker */; };
 		4527B8792533221400949553 /* NoonBodySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8742533221400949553 /* NoonBodySettings.swift */; };
 		4527B87A2533221400949553 /* SettingsAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8752533221400949553 /* SettingsAbout.swift */; };
 		4527B87B2533221400949553 /* SettingsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8762533221400949553 /* SettingsPhoto.swift */; };
@@ -115,7 +114,6 @@
 			files = (
 				45DDD8EF25343CC6004C18FE /* SlidingTabView in Frameworks */,
 				45024C582532EC0F00D619C5 /* SwiftUIX in Frameworks */,
-				4527B86A25331CA700949553 /* YPImagePicker in Frameworks */,
 				0729C0A208BB6160D148E5C9 /* Pods_NoonBody.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,7 +345,6 @@
 			name = NoonBody;
 			packageProductDependencies = (
 				45024C572532EC0F00D619C5 /* SwiftUIX */,
-				4527B86925331CA700949553 /* YPImagePicker */,
 				45DDD8EE25343CC6004C18FE /* SlidingTabView */,
 			);
 			productName = NoonBody;
@@ -379,7 +376,6 @@
 			mainGroup = 45024BEE2532EA0B00D619C5;
 			packageReferences = (
 				45024C562532EC0F00D619C5 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
-				4527B86825331CA700949553 /* XCRemoteSwiftPackageReference "YPImagePicker" */,
 				45DDD8ED25343CC5004C18FE /* XCRemoteSwiftPackageReference "SlidingTabView" */,
 			);
 			productRefGroup = 45024BF82532EA0B00D619C5 /* Products */;
@@ -695,14 +691,6 @@
 				kind = branch;
 			};
 		};
-		4527B86825331CA700949553 /* XCRemoteSwiftPackageReference "YPImagePicker" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Yummypets/YPImagePicker";
-			requirement = {
-				branch = spm;
-				kind = branch;
-			};
-		};
 		45DDD8ED25343CC5004C18FE /* XCRemoteSwiftPackageReference "SlidingTabView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/QuynhNguyen/SlidingTabView";
@@ -718,11 +706,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 45024C562532EC0F00D619C5 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
 			productName = SwiftUIX;
-		};
-		4527B86925331CA700949553 /* YPImagePicker */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4527B86825331CA700949553 /* XCRemoteSwiftPackageReference "YPImagePicker" */;
-			productName = YPImagePicker;
 		};
 		45DDD8EE25343CC6004C18FE /* SlidingTabView */ = {
 			isa = XCSwiftPackageProductDependency;
