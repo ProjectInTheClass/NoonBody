@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0729C0A208BB6160D148E5C9 /* Pods_NoonBody.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C7C7B8ACC56D413E28697B /* Pods_NoonBody.framework */; };
 		45024BFB2532EA0B00D619C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45024BFA2532EA0B00D619C5 /* AppDelegate.swift */; };
 		45024BFD2532EA0B00D619C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45024BFC2532EA0B00D619C5 /* SceneDelegate.swift */; };
 		45024C022532EA0B00D619C5 /* NoonBody.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45024C002532EA0B00D619C5 /* NoonBody.xcdatamodeld */; };
 		45024C042532EA0B00D619C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45024C032532EA0B00D619C5 /* Assets.xcassets */; };
 		45024C072532EA0B00D619C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45024C062532EA0B00D619C5 /* Preview Assets.xcassets */; };
 		45024C0A2532EA0B00D619C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45024C082532EA0B00D619C5 /* LaunchScreen.storyboard */; };
-		45024C152532EA0C00D619C5 /* NoonBodyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45024C142532EA0C00D619C5 /* NoonBodyTests.swift */; };
-		45024C202532EA0C00D619C5 /* NoonBodyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45024C1F2532EA0C00D619C5 /* NoonBodyUITests.swift */; };
 		45024C392532EB0F00D619C5 /* TabbedRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45024C382532EB0F00D619C5 /* TabbedRootView.swift */; };
 		45024C412532EB9B00D619C5 /* NoonbodyStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45024C402532EB9B00D619C5 /* NoonbodyStart.swift */; };
 		45024C462532EBA200D619C5 /* DietTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45024C452532EBA200D619C5 /* DietTab.swift */; };
@@ -28,6 +27,7 @@
 		4527B87B2533221400949553 /* SettingsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8762533221400949553 /* SettingsPhoto.swift */; };
 		4527B87C2533221400949553 /* SettingsProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8772533221400949553 /* SettingsProfile.swift */; };
 		4527B87D2533221400949553 /* SettingsNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8782533221400949553 /* SettingsNotification.swift */; };
+		458138FA253D873100745975 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 458138F9253D873100745975 /* GoogleService-Info.plist */; };
 		45C6E41E253487D400C3012B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C6E41D253487D400C3012B /* UIColor.swift */; };
 		45DDD85D2533F142004C18FE /* NoonBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD85C2533F142004C18FE /* NoonBody.swift */; };
 		45DDD8652533F158004C18FE /* NoonBodyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD8642533F158004C18FE /* NoonBodyStore.swift */; };
@@ -51,24 +51,8 @@
 		45FCC33A253C7C6D006E47CC /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FCC339253C7C6D006E47CC /* SignUp.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		45024C112532EA0C00D619C5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 45024BEF2532EA0B00D619C5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 45024BF62532EA0B00D619C5;
-			remoteInfo = NoonBody;
-		};
-		45024C1C2532EA0C00D619C5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 45024BEF2532EA0B00D619C5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 45024BF62532EA0B00D619C5;
-			remoteInfo = NoonBody;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		1F88C3793390D0215FA59E06 /* Pods_NoonBodyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoonBodyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45024BF72532EA0B00D619C5 /* NoonBody.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoonBody.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45024BFA2532EA0B00D619C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45024BFC2532EA0B00D619C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,10 +61,8 @@
 		45024C062532EA0B00D619C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		45024C092532EA0B00D619C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45024C0B2532EA0B00D619C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		45024C102532EA0C00D619C5 /* NoonBodyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoonBodyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45024C142532EA0C00D619C5 /* NoonBodyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBodyTests.swift; sourceTree = "<group>"; };
 		45024C162532EA0C00D619C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		45024C1B2532EA0C00D619C5 /* NoonBodyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoonBodyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45024C1F2532EA0C00D619C5 /* NoonBodyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBodyUITests.swift; sourceTree = "<group>"; };
 		45024C212532EA0C00D619C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45024C382532EB0F00D619C5 /* TabbedRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedRootView.swift; sourceTree = "<group>"; };
@@ -95,6 +77,7 @@
 		4527B8762533221400949553 /* SettingsPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsPhoto.swift; path = NoonBody/Settings/SettingsPhoto.swift; sourceTree = SOURCE_ROOT; };
 		4527B8772533221400949553 /* SettingsProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsProfile.swift; path = NoonBody/Settings/SettingsProfile.swift; sourceTree = SOURCE_ROOT; };
 		4527B8782533221400949553 /* SettingsNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsNotification.swift; path = NoonBody/Settings/SettingsNotification.swift; sourceTree = SOURCE_ROOT; };
+		458138F9253D873100745975 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		45C6E41D253487D400C3012B /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		45DDD85C2533F142004C18FE /* NoonBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBody.swift; sourceTree = "<group>"; };
 		45DDD8642533F158004C18FE /* NoonBodyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBodyStore.swift; sourceTree = "<group>"; };
@@ -115,6 +98,14 @@
 		45F941042539A2EF000D4AE0 /* Structs_Enums_Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs_Enums_Classes.swift; sourceTree = "<group>"; };
 		45FCC334253C7C64006E47CC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		45FCC339253C7C6D006E47CC /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		5A0C59CC0FA1893081605175 /* Pods-NoonBodyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoonBodyTests.debug.xcconfig"; path = "Target Support Files/Pods-NoonBodyTests/Pods-NoonBodyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		695A1F3E697826FB1B491C2F /* Pods-NoonBody-NoonBodyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoonBody-NoonBodyUITests.release.xcconfig"; path = "Target Support Files/Pods-NoonBody-NoonBodyUITests/Pods-NoonBody-NoonBodyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		73C7C7B8ACC56D413E28697B /* Pods_NoonBody.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoonBody.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87D200BFD248951BF5D1ACBB /* Pods-NoonBodyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoonBodyTests.release.xcconfig"; path = "Target Support Files/Pods-NoonBodyTests/Pods-NoonBodyTests.release.xcconfig"; sourceTree = "<group>"; };
+		89D50BB97DDD7AEDFDAF192A /* Pods-NoonBody-NoonBodyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoonBody-NoonBodyUITests.debug.xcconfig"; path = "Target Support Files/Pods-NoonBody-NoonBodyUITests/Pods-NoonBody-NoonBodyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A0C345D921216194086DD96 /* Pods_NoonBody_NoonBodyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoonBody_NoonBodyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9FE527E4D505B6B157E3B45 /* Pods-NoonBody.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoonBody.debug.xcconfig"; path = "Target Support Files/Pods-NoonBody/Pods-NoonBody.debug.xcconfig"; sourceTree = "<group>"; };
+		B1C00379C5D7F9683B997790 /* Pods-NoonBody.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoonBody.release.xcconfig"; path = "Target Support Files/Pods-NoonBody/Pods-NoonBody.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,26 +116,26 @@
 				45DDD8EF25343CC6004C18FE /* SlidingTabView in Frameworks */,
 				45024C582532EC0F00D619C5 /* SwiftUIX in Frameworks */,
 				4527B86A25331CA700949553 /* YPImagePicker in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		45024C0D2532EA0C00D619C5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		45024C182532EA0C00D619C5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				0729C0A208BB6160D148E5C9 /* Pods_NoonBody.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0094AF5A477E6B8C757CE9E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9FE527E4D505B6B157E3B45 /* Pods-NoonBody.debug.xcconfig */,
+				B1C00379C5D7F9683B997790 /* Pods-NoonBody.release.xcconfig */,
+				89D50BB97DDD7AEDFDAF192A /* Pods-NoonBody-NoonBodyUITests.debug.xcconfig */,
+				695A1F3E697826FB1B491C2F /* Pods-NoonBody-NoonBodyUITests.release.xcconfig */,
+				5A0C59CC0FA1893081605175 /* Pods-NoonBodyTests.debug.xcconfig */,
+				87D200BFD248951BF5D1ACBB /* Pods-NoonBodyTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		45024BEE2532EA0B00D619C5 = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +143,8 @@
 				45024C132532EA0C00D619C5 /* NoonBodyTests */,
 				45024C1E2532EA0C00D619C5 /* NoonBodyUITests */,
 				45024BF82532EA0B00D619C5 /* Products */,
+				0094AF5A477E6B8C757CE9E5 /* Pods */,
+				83ACA1E655A7C90F3502933E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,8 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				45024BF72532EA0B00D619C5 /* NoonBody.app */,
-				45024C102532EA0C00D619C5 /* NoonBodyTests.xctest */,
-				45024C1B2532EA0C00D619C5 /* NoonBodyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,6 +167,7 @@
 				45024CAF2532F09900D619C5 /* Views */,
 				45024C032532EA0B00D619C5 /* Assets.xcassets */,
 				45024C082532EA0B00D619C5 /* LaunchScreen.storyboard */,
+				458138F9253D873100745975 /* GoogleService-Info.plist */,
 				45024C0B2532EA0B00D619C5 /* Info.plist */,
 				45024C002532EA0B00D619C5 /* NoonBody.xcdatamodeld */,
 				45024C052532EA0B00D619C5 /* Preview Content */,
@@ -325,6 +317,16 @@
 			path = ReusableViews;
 			sourceTree = "<group>";
 		};
+		83ACA1E655A7C90F3502933E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73C7C7B8ACC56D413E28697B /* Pods_NoonBody.framework */,
+				9A0C345D921216194086DD96 /* Pods_NoonBody_NoonBodyUITests.framework */,
+				1F88C3793390D0215FA59E06 /* Pods_NoonBodyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -332,9 +334,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45024C242532EA0C00D619C5 /* Build configuration list for PBXNativeTarget "NoonBody" */;
 			buildPhases = (
+				14ADD298E4E67AABA9DE5C9C /* [CP] Check Pods Manifest.lock */,
 				45024BF32532EA0B00D619C5 /* Sources */,
 				45024BF42532EA0B00D619C5 /* Frameworks */,
 				45024BF52532EA0B00D619C5 /* Resources */,
+				65E3F837480ABEB07DB3B321 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -350,42 +354,6 @@
 			productReference = 45024BF72532EA0B00D619C5 /* NoonBody.app */;
 			productType = "com.apple.product-type.application";
 		};
-		45024C0F2532EA0C00D619C5 /* NoonBodyTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 45024C272532EA0C00D619C5 /* Build configuration list for PBXNativeTarget "NoonBodyTests" */;
-			buildPhases = (
-				45024C0C2532EA0C00D619C5 /* Sources */,
-				45024C0D2532EA0C00D619C5 /* Frameworks */,
-				45024C0E2532EA0C00D619C5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				45024C122532EA0C00D619C5 /* PBXTargetDependency */,
-			);
-			name = NoonBodyTests;
-			productName = NoonBodyTests;
-			productReference = 45024C102532EA0C00D619C5 /* NoonBodyTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		45024C1A2532EA0C00D619C5 /* NoonBodyUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 45024C2A2532EA0C00D619C5 /* Build configuration list for PBXNativeTarget "NoonBodyUITests" */;
-			buildPhases = (
-				45024C172532EA0C00D619C5 /* Sources */,
-				45024C182532EA0C00D619C5 /* Frameworks */,
-				45024C192532EA0C00D619C5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				45024C1D2532EA0C00D619C5 /* PBXTargetDependency */,
-			);
-			name = NoonBodyUITests;
-			productName = NoonBodyUITests;
-			productReference = 45024C1B2532EA0C00D619C5 /* NoonBodyUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -397,14 +365,6 @@
 				TargetAttributes = {
 					45024BF62532EA0B00D619C5 = {
 						CreatedOnToolsVersion = 12.0.1;
-					};
-					45024C0F2532EA0C00D619C5 = {
-						CreatedOnToolsVersion = 12.0.1;
-						TestTargetID = 45024BF62532EA0B00D619C5;
-					};
-					45024C1A2532EA0C00D619C5 = {
-						CreatedOnToolsVersion = 12.0.1;
-						TestTargetID = 45024BF62532EA0B00D619C5;
 					};
 				};
 			};
@@ -427,8 +387,6 @@
 			projectRoot = "";
 			targets = (
 				45024BF62532EA0B00D619C5 /* NoonBody */,
-				45024C0F2532EA0C00D619C5 /* NoonBodyTests */,
-				45024C1A2532EA0C00D619C5 /* NoonBodyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -439,26 +397,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				45024C0A2532EA0B00D619C5 /* LaunchScreen.storyboard in Resources */,
+				458138FA253D873100745975 /* GoogleService-Info.plist in Resources */,
 				45024C072532EA0B00D619C5 /* Preview Assets.xcassets in Resources */,
 				45024C042532EA0B00D619C5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		45024C0E2532EA0C00D619C5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		45024C192532EA0C00D619C5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14ADD298E4E67AABA9DE5C9C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NoonBody-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65E3F837480ABEB07DB3B321 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NoonBody/Pods-NoonBody-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NoonBody/Pods-NoonBody-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NoonBody/Pods-NoonBody-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		45024BF32532EA0B00D619C5 /* Sources */ = {
@@ -502,36 +489,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		45024C0C2532EA0C00D619C5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				45024C152532EA0C00D619C5 /* NoonBodyTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		45024C172532EA0C00D619C5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				45024C202532EA0C00D619C5 /* NoonBodyUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		45024C122532EA0C00D619C5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 45024BF62532EA0B00D619C5 /* NoonBody */;
-			targetProxy = 45024C112532EA0C00D619C5 /* PBXContainerItemProxy */;
-		};
-		45024C1D2532EA0C00D619C5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 45024BF62532EA0B00D619C5 /* NoonBody */;
-			targetProxy = 45024C1C2532EA0C00D619C5 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		45024C082532EA0B00D619C5 /* LaunchScreen.storyboard */ = {
@@ -663,6 +621,7 @@
 		};
 		45024C252532EA0C00D619C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9FE527E4D505B6B157E3B45 /* Pods-NoonBody.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -684,6 +643,7 @@
 		};
 		45024C262532EA0C00D619C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1C00379C5D7F9683B997790 /* Pods-NoonBody.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -700,86 +660,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		45024C282532EA0C00D619C5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NoonBodyTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jin0yoon.NoonBodyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NoonBody.app/NoonBody";
-			};
-			name = Debug;
-		};
-		45024C292532EA0C00D619C5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NoonBodyTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jin0yoon.NoonBodyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NoonBody.app/NoonBody";
-			};
-			name = Release;
-		};
-		45024C2B2532EA0C00D619C5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NoonBodyUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jin0yoon.NoonBodyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NoonBody;
-			};
-			name = Debug;
-		};
-		45024C2C2532EA0C00D619C5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NoonBodyUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jin0yoon.NoonBodyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NoonBody;
 			};
 			name = Release;
 		};
@@ -800,24 +680,6 @@
 			buildConfigurations = (
 				45024C252532EA0C00D619C5 /* Debug */,
 				45024C262532EA0C00D619C5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		45024C272532EA0C00D619C5 /* Build configuration list for PBXNativeTarget "NoonBodyTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				45024C282532EA0C00D619C5 /* Debug */,
-				45024C292532EA0C00D619C5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		45024C2A2532EA0C00D619C5 /* Build configuration list for PBXNativeTarget "NoonBodyUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				45024C2B2532EA0C00D619C5 /* Debug */,
-				45024C2C2532EA0C00D619C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
