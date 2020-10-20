@@ -10,14 +10,16 @@ import SwiftUI
 struct MyImageView: View {
     
     @State var isChoosed: Bool = false
+    var passed_myImage: Image
     
     var body: some View {
         
-        VStack{
-            Image("body2")
+        VStack (spacing:0){
+            
+            passed_myImage
                 .resizable()
                 .frame(width: 120, height: 120, alignment: .trailing)
-                .overlay(Rectangle().stroke(Color.black, lineWidth:5))
+                .overlay(Rectangle().stroke(Color.black, lineWidth:3))
             
             ZStack{
                 Rectangle()
@@ -36,6 +38,6 @@ struct MyImageView: View {
 
 struct MyImageView_Previews: PreviewProvider {
     static var previews: some View {
-        MyImageView()
+        MyImageView(passed_myImage: Image("body3"))
     }
 }
