@@ -26,6 +26,7 @@
 		4527B87B2533221400949553 /* SettingsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8762533221400949553 /* SettingsPhoto.swift */; };
 		4527B87C2533221400949553 /* SettingsProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8772533221400949553 /* SettingsProfile.swift */; };
 		4527B87D2533221400949553 /* SettingsNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8782533221400949553 /* SettingsNotification.swift */; };
+		45324158253E889700AD1199 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45324157253E889700AD1199 /* FriendsView.swift */; };
 		458138FA253D873100745975 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 458138F9253D873100745975 /* GoogleService-Info.plist */; };
 		45C6E41E253487D400C3012B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C6E41D253487D400C3012B /* UIColor.swift */; };
 		45DDD85D2533F142004C18FE /* NoonBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD85C2533F142004C18FE /* NoonBody.swift */; };
@@ -76,6 +77,7 @@
 		4527B8762533221400949553 /* SettingsPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsPhoto.swift; path = NoonBody/Settings/SettingsPhoto.swift; sourceTree = SOURCE_ROOT; };
 		4527B8772533221400949553 /* SettingsProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsProfile.swift; path = NoonBody/Settings/SettingsProfile.swift; sourceTree = SOURCE_ROOT; };
 		4527B8782533221400949553 /* SettingsNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsNotification.swift; path = NoonBody/Settings/SettingsNotification.swift; sourceTree = SOURCE_ROOT; };
+		45324157253E889700AD1199 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
 		458138F9253D873100745975 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		45C6E41D253487D400C3012B /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		45DDD85C2533F142004C18FE /* NoonBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBody.swift; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				45F940F22539A1EC000D4AE0 /* PostView.swift */,
+				45324157253E889700AD1199 /* FriendsView.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45324158253E889700AD1199 /* FriendsView.swift in Sources */,
 				450A92262536AC830082B5EF /* DateFormatter+Memo.swift in Sources */,
 				450A922B2536AD640082B5EF /* NoonBodyCell.swift in Sources */,
 				45F941052539A2EF000D4AE0 /* Structs_Enums_Classes.swift in Sources */,

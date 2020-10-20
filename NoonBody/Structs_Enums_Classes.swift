@@ -16,3 +16,12 @@ struct recipePost: Identifiable {
     var numberOfLikes: Int
     var image: Image
 }
+
+struct friendsPost: Identifiable {
+    var id = UUID()
+    
+    var friendName: String
+    var friendDescription: String
+    var friendNumberOfLikes: Int
+    var friendImage: Image
+}
