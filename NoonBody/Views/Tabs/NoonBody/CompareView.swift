@@ -18,40 +18,6 @@ struct CompareView: View {
                             .resizable()
                             .frame(width: 180, height: 300, alignment: .trailing)
                         
-                        VStack(alignment: .leading){
-                            HStack{
-                                Text("몸무게")
-                                Spacer()
-                                Text("0.00kg")
-        //                        TextField("0.00kg", text: $weight)
-        //                            .frame(width: 70)
-                            }
-                            
-                            Divider()
-                            
-                            HStack{
-                                Text("골격근량")
-                                Spacer()
-                                Text("0.00kg")
-        //                        TextField("0.00kg", text: $muscle)
-        //                            .frame(width: 70)
-                            }
-                            
-                            Divider()
-                            
-                            HStack{
-                                Text("체지방량")
-                                Spacer()
-                                Text("0.00kg")
-        //                        TextField("0.00kg", text: $fat)
-        //                            .frame(width: 70)
-                            }
-                            
-                        }.padding(.leading)
-                        .padding(.trailing)
-                        
-                        Divider()
-                        
                     }
                     VStack{
                         Text(getDate(num: 0))
@@ -60,43 +26,52 @@ struct CompareView: View {
                             .resizable()
                             .frame(width: 180, height: 300, alignment: .trailing)
                         
-                        VStack(alignment: .leading){
-                            HStack{
-                                Text("몸무게")
-                                Spacer()
-                                Text("0.00kg")
-        //                        TextField("0.00kg", text: $weight)
-        //                            .frame(width: 70)
-                            }
-                            
-                            Divider()
-                            
-                            HStack{
-                                Text("골격근량")
-                                Spacer()
-                                Text("0.00kg")
-        //                        TextField("0.00kg", text: $muscle)
-        //                            .frame(width: 70)
-                            }
-                            
-                            Divider()
-                            
-                            HStack{
-                                Text("체지방량")
-                                Spacer()
-                                Text("0.00kg")
-        //                        TextField("0.00kg", text: $fat)
-        //                            .frame(width: 70)
-                            }
-                            
-                        }.padding(.leading)
-                        .padding(.trailing)
-                        
-                        Divider()
-                        
                     }
                       
             }
+            
+            VStack(alignment: .leading){
+                HStack{
+                    
+                    Text("0.00kg")
+                    Spacer()
+                    Text("몸무게")
+                    Spacer()
+                    Text("0.00kg")
+//                        TextField("0.00kg", text: $weight)
+//                            .frame(width: 70)
+                }
+                
+                Divider()
+                
+                HStack{
+                    
+                    Text("0.00kg")
+                    Spacer()
+                    Text("골격근량")
+                    Spacer()
+                    Text("0.00kg")
+//                        TextField("0.00kg", text: $muscle)
+//                            .frame(width: 70)
+                }
+                
+                Divider()
+                
+                HStack{
+                    Text("0.00kg")
+                    Spacer()
+                    Text("체지방량")
+                    Spacer()
+                    Text("0.00kg")
+//                        TextField("0.00kg", text: $fat)
+//                            .frame(width: 70)
+                }
+                
+            }.padding(.leading)
+            .padding(.trailing)
+            
+            Divider()
+            
         }
     }
 }
