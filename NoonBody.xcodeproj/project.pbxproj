@@ -27,6 +27,7 @@
 		4527B87C2533221400949553 /* SettingsProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8772533221400949553 /* SettingsProfile.swift */; };
 		4527B87D2533221400949553 /* SettingsNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8782533221400949553 /* SettingsNotification.swift */; };
 		45324158253E889700AD1199 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45324157253E889700AD1199 /* FriendsView.swift */; };
+		453363B3253EE42400DC2FDB /* CompareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453363B2253EE42400DC2FDB /* CompareView.swift */; };
 		458138FA253D873100745975 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 458138F9253D873100745975 /* GoogleService-Info.plist */; };
 		45C6E41E253487D400C3012B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C6E41D253487D400C3012B /* UIColor.swift */; };
 		45DDD85D2533F142004C18FE /* NoonBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD85C2533F142004C18FE /* NoonBody.swift */; };
@@ -78,6 +79,7 @@
 		4527B8772533221400949553 /* SettingsProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsProfile.swift; path = NoonBody/Settings/SettingsProfile.swift; sourceTree = SOURCE_ROOT; };
 		4527B8782533221400949553 /* SettingsNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsNotification.swift; path = NoonBody/Settings/SettingsNotification.swift; sourceTree = SOURCE_ROOT; };
 		45324157253E889700AD1199 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
+		453363B2253EE42400DC2FDB /* CompareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareView.swift; sourceTree = "<group>"; };
 		458138F9253D873100745975 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		45C6E41D253487D400C3012B /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		45DDD85C2533F142004C18FE /* NoonBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBody.swift; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 				45DDD891253410F8004C18FE /* DiaryView.swift */,
 				45DDD89625341106004C18FE /* CollectionView.swift */,
 				45DDD8F325344285004C18FE /* NoonBodyWrite.swift */,
+				453363B2253EE42400DC2FDB /* CompareView.swift */,
 			);
 			path = NoonBody;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				4527B8792533221400949553 /* NoonBodySettings.swift in Sources */,
 				45F941002539A2A7000D4AE0 /* CommunityFriendsView.swift in Sources */,
 				45DDD86A2533F17F004C18FE /* Diet.swift in Sources */,
+				453363B3253EE42400DC2FDB /* CompareView.swift in Sources */,
 				45024C392532EB0F00D619C5 /* TabbedRootView.swift in Sources */,
 				45DDD8652533F158004C18FE /* NoonBodyStore.swift in Sources */,
 				4527B87B2533221400949553 /* SettingsPhoto.swift in Sources */,
