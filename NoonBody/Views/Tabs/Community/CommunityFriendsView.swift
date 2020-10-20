@@ -18,16 +18,16 @@ struct CommunityFriendsView: View {
     
     var body: some View {
         
-        
         VStack{
-
                 List {
                     ForEach(FriendLists, id: \.id){ post in
                         FriendsView(passed_friendUser: post.friendName, passed_friendDescription: post.friendDescription, passed_friendNumberOfLikes: post.friendNumberOfLikes, passed_friendImage: post.friendImage)
+                            .listRowBackground(Color("secondaryOrange"))
                     }
                     
                     .onDelete(perform: delete)
                 }.background(Color.clear)
+            
         }
 
     }

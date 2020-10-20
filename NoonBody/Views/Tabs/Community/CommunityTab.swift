@@ -18,24 +18,24 @@ struct CommunityTab: View {
     
     var body: some View {
         NavigationView {
-            ScrollView() { // hides  arrow
+//            ScrollView() { // hides  arrow
                 
                 Section {
                     VStack(alignment: .leading) {
-                                        SlidingTabView(selection: self.$selectedTabIndex, tabs: ["친구소식", "친구목록"])
-                                        if selectedTabIndex == 0{
-                                            CommunityPostsView()
-                                        }else{
-                                            CommunityFriendsView()
-                                        }
-                                        
-                                        Spacer()
-                                    }
-                                        .animation(.none)
+                        SlidingTabView(selection: self.$selectedTabIndex, tabs: ["친구소식", "친구목록"])
+                        if selectedTabIndex == 0{
+                            CommunityPostsView()
+                        }else{
+                            CommunityFriendsView()
+                        }
+                        
+                        Spacer()
+                    }
+                        .animation(.none)
                 }
                 
            
-            } // Scroll View Ends
+//            } // Scroll View Ends
             .background(Color("secondaryOrange"))
             .navigationBarTitle("커뮤니티")
             }
