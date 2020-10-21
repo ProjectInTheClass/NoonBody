@@ -18,24 +18,37 @@ struct CollectionView: View {
     @State private var choosedImage1: UIImage?
     
     var body: some View {
-            
-        ScrollView {
-            VStack(alignment: .leading){
-                
-                HStack{
-                    Text("9월 3주차")
-                        .font(.system(size: 20))
+
+        VStack{
+            ScrollView(.horizontal, showsIndicators: false){
+                HStack(alignment: .bottom){
+                    ForEach(percents){ i in
                         
-                }.padding(.top, 40)
-                .padding(.leading, 20)
-                
-                
-                //과거 사진 이미지들
-                showImages()
-                
-                
+                        Bar(percent: i.percent, day: i.day)
+                    }
+                }.frame(height: 150)
+                .padding()
+            }
+            
+            ScrollView {
+                VStack(alignment: .leading){
+                    
+                    HStack{
+                        Text("9월 3주차")
+                            .font(.system(size: 20))
+                            
+                    }
+                    .padding(.leading, 20)
+                    
+                    
+                    //과거 사진 이미지들
+                    showImages()
+                    
+                    
+                }
             }
         }
+        
             
         }
         
@@ -49,6 +62,57 @@ struct CollectionView_Previews: PreviewProvider {
                 .environmentObject(DateFormatter.memoDateFormatter)
     }
 }
+
+struct Bar: View {
+    
+    var percent : CGFloat = 0
+    var day = ""
+    
+    var body: some View{
+        
+        VStack{
+            ZStack{
+                
+                Rectangle().fill(Color("primaryGray")).frame(width: UIScreen.main.bounds.width / 5 - 12, height: getHeight())
+                
+                Text(String(format: "%.1f", Double(percent)) + "kg").foregroundColor(Color.white)
+                    .padding(.bottom, 50)
+                    .font(.system(size: 10, weight: .bold))
+            }
+            
+            
+            Text(day).foregroundColor(Color.black.opacity(0.5))
+        }
+        
+        
+        
+    }
+    
+    func getHeight() -> CGFloat {
+        
+        return 200 / 100 * percent
+    }
+}
+
+//Sample Datas
+
+struct type: Identifiable {
+    
+    var id: Int
+    var percent: CGFloat
+    var day: String
+}
+
+var percents = [
+    type(id: 0, percent: 50, day: "8월 3주"),
+    type(id: 1, percent: 49.5, day: "8월 4주"),
+    type(id: 2, percent: 49.6, day: "9월 1주"),
+    type(id: 3, percent: 49.5, day: "9월 2주"),
+    type(id: 4, percent: 49.4, day: "9월 3주"),
+    type(id: 5, percent: 49, day: "9월 4주"),
+    type(id: 6, percent: 49.2, day: "10월 1주")
+]
+
 
 struct showImages: View {
     @State private var choosedImage1: UIImage?
