@@ -13,7 +13,7 @@ struct CommunityFriendsView: View {
         friendsPost(friendName: "현아", friendDescription: "나는 현아", friendNumberOfLikes: 10, friendImage: Image("body1").resizable()),
         friendsPost(friendName: "혜리", friendDescription: "나는 혜리", friendNumberOfLikes: 20, friendImage: Image("body2").resizable()),
         friendsPost(friendName: "지현", friendDescription: "나는 지현", friendNumberOfLikes: 30, friendImage: Image("body3").resizable()),
-        friendsPost(friendName: "수빈", friendDescription: "나는 수빈", friendNumberOfLikes: 40, friendImage: Image("food1").resizable()),
+        friendsPost(friendName: "수빈", friendDescription: "나는 수빈", friendNumberOfLikes: 40, friendImage: Image("food1").resizable())
     ]
     
     var body: some View {
