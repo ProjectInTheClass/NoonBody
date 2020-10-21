@@ -87,17 +87,7 @@ struct DiaryView: View {
 //    }
 
 
-func getDate(num:Int) -> String {
-    var dayComponent = DateComponents()
-    dayComponent.day = -num
-    let calendar = Calendar.current
-    let Day =  calendar.date(byAdding: dayComponent, to: Date())!
-    let formatter = DateFormatter()
-    formatter.locale = Locale(identifier: "Ko_KR")
-    formatter.dateFormat = "YYYY.MM.DD"
-    formatter.dateStyle = .medium
-    return formatter.string(from: Day) //Output is "March 6, 2020
-}
+
 
 struct DiaryView_Previews: PreviewProvider {
     static var previews: some View {
