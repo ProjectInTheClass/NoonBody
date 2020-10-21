@@ -277,8 +277,8 @@
 				45DDD88C25340CF2004C18FE /* NoonBodyTab.swift */,
 				45DDD891253410F8004C18FE /* DiaryView.swift */,
 				45DDD89625341106004C18FE /* CollectionView.swift */,
-				45DDD8F325344285004C18FE /* NoonBodyWrite.swift */,
 				453363B2253EE42400DC2FDB /* CompareView.swift */,
+				45DDD8F325344285004C18FE /* NoonBodyWrite.swift */,
 			);
 			path = NoonBody;
 			sourceTree = "<group>";
