@@ -11,6 +11,7 @@ struct MyImageView: View {
     
     @State var isChoosed: Bool = false
     var passed_myImage: Image
+    var passed_myWeight: Double
     
     var body: some View {
         
@@ -18,15 +19,15 @@ struct MyImageView: View {
             
             passed_myImage
                 .resizable()
-                .frame(width: 120, height: 120, alignment: .trailing)
+                .frame(width: 170, height: 200, alignment: .trailing)
                 .overlay(Rectangle().stroke(Color.black, lineWidth:3))
             
             ZStack{
                 Rectangle()
-                    .frame(width: 120, height: 50)
+                    .frame(width: 170, height: 50)
                     .overlay(Rectangle().stroke(Color.black, lineWidth:3))
                 
-                Text("60kg")
+                Text("\(passed_myWeight, specifier: "%.2f")kg")
                     .foregroundColor(.white)
             }
             
@@ -38,6 +39,6 @@ struct MyImageView: View {
 
 struct MyImageView_Previews: PreviewProvider {
     static var previews: some View {
-        MyImageView(passed_myImage: Image("body3"))
+        MyImageView(passed_myImage: Image("body3"), passed_myWeight: 60)
     }
 }

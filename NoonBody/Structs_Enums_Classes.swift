@@ -30,4 +30,5 @@ struct myImagePost: Identifiable {
     var id = UUID()
     
     var myImage: Image
+    var myWeight: Double
 }
