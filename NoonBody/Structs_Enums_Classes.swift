@@ -41,3 +41,15 @@ struct dietPost: Identifiable {
     var dietText: String
     var dietImage: Image
 }
+
+struct diaryPost: Identifiable {
+    var id = UUID()
+    
+    var diaryDate: String
+    var diaryFull: String
+    var diaryShare: String
+    var diaryWeight: Double
+    var diaryMuscle: Double
+    var diaryFat: Double
+    var diaryImage: Image
+}

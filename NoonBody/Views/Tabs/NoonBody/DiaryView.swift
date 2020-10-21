@@ -8,67 +8,18 @@
 import SwiftUI
 
 struct DiaryView: View {
-    @State var date = Date()
+    
+    var DiaryPosts: [diaryPost] = [
+        diaryPost(diaryDate: getDate(num: 0), diaryFull: "식후", diaryShare: "공개", diaryWeight: 62.4, diaryMuscle: 25.1, diaryFat: 23, diaryImage: Image("body2")),
+        
+    ]
+    
     
     var body: some View {
             
         ScrollView {
-            VStack{
-                Text(getDate(num: 0))
-                    
-                Image("body2")
-                    .resizable()
-                    .frame(width: .infinity, height: 300, alignment: .trailing)
-                    .padding(.leading)
-                    .padding(.trailing)
-                
-                HStack{
-                    Text("공복")
-                        .frame(width: 50, height: 30)
-                        .background(Color.white)
-                    Text("공개")
-                        .frame(width: 50, height: 30)
-                        .background(Color.white)
-                    Spacer()
-                }.padding()
-                
-                
-                Divider()
-                
-                VStack(alignment: .leading){
-                    HStack{
-                        Text("몸무게")
-                        Spacer()
-                        Text("0.00kg")
-//                        TextField("0.00kg", text: $weight)
-//                            .frame(width: 70)
-                    }
-                    
-                    Divider()
-                    
-                    HStack{
-                        Text("골격근량")
-                        Spacer()
-                        Text("0.00kg")
-//                        TextField("0.00kg", text: $muscle)
-//                            .frame(width: 70)
-                    }
-                    
-                    Divider()
-                    
-                    HStack{
-                        Text("체지방량")
-                        Spacer()
-                        Text("0.00kg")
-//                        TextField("0.00kg", text: $fat)
-//                            .frame(width: 70)
-                    }
-                    
-                }.padding(.leading)
-                .padding(.trailing)
-                
-                Divider()
-                
+            ForEach(DiaryPosts, id: \.id){ post in
+                DiaryPostView(passed_diaryDate: post.diaryDate, passed_diaryFull: post.diaryFull, passed_diaryShare: post.diaryShare, passed_diaryWeight: post.diaryWeight, passed_diaryMuscle: post.diaryMuscle, passed_diaryFat: post.diaryFat, passed_diaryImage: post.diaryImage)
             }
         }
             
