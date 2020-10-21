@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct CollectionView: View {
+    
+    
+    
     @State var date = Date()
     
     //EnvironmentObject 특성을 추가
@@ -54,7 +57,6 @@ struct CollectionView: View {
 //                }
                 
                 images()
-                images()
                 
                 
                 
@@ -77,38 +79,45 @@ struct CollectionView_Previews: PreviewProvider {
 
 struct images: View {
     @State private var choosedImage1: UIImage?
-
+    
+    var MyImagePosts: [myImagePost] = [
+        myImagePost(myImage: Image("food1").resizable()),
+        myImagePost(myImage: Image("food2").resizable()),
+        myImagePost(myImage: Image("food3").resizable()),
+        myImagePost(myImage: Image("food2").resizable()),
+        myImagePost(myImage: Image("food3").resizable()),
+        myImagePost(myImage: Image("food1").resizable())
+    ]
+    
+    private var columns: [GridItem] = [
+            GridItem(.fixed(100), spacing: 16),
+            GridItem(.fixed(100), spacing: 16),
+            GridItem(.fixed(100), spacing: 16)
+        ]
+    
     var body: some View{
-        VStack {
-            HStack{
-                Image("body1")
-                    .resizable()
-                    .frame(width: 120, height: 120, alignment: .trailing)
-                    .onTapGesture(perform: {
-                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Code@*/ /*@END_MENU_TOKEN@*/
-                    })
-                Image("body2")
-                    .resizable()
-                    .frame(width: 120, height: 120, alignment: .trailing)
-                Image("body3")
-                    .resizable()
-                    .frame(width: 120, height: 120, alignment: .trailing)
-                    .onTapGesture(perform: {
-//                        self._choosedImage1 =  UIImage(imageLiteralResourceName: "body1")
-                    })
-            }
-
-            HStack{
-                Image("body2")
-                    .resizable()
-                    .frame(width: 120, height: 120, alignment: .trailing)
-                Image("body3")
-                    .resizable()
-                    .frame(width: 120, height: 120, alignment: .trailing)
-                Image("body1")
-                    .resizable()
-                    .frame(width: 120, height: 120, alignment: .trailing)
-            }
+        VStack{
+            
+            ScrollView {
+                        LazyVGrid(
+                            columns: columns,
+                            alignment: .center,
+                            spacing: 16,
+                            pinnedViews: [.sectionHeaders, .sectionFooters]
+                        ) {
+                            ForEach(MyImagePosts, id: \.id){ post in
+                                MyImageView(passed_myImage: post.myImage)
+                            }
+                        }
+                    }
+//            ScrollView{
+//
+//                ForEach(MyImagePosts, id: \.id){ post in
+//                    MyImageView(passed_myImage: post.myImage)
+//                }
+//
+//
+//            }.background(Color.clear)
         }
     }
 
