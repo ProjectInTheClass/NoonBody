@@ -16,6 +16,8 @@ struct DietTab: View {
     
     @State var selectedDateText: String = "Date"
     
+    @State var day: Int = 0
+    
     
     init(){
         UITableView.appearance().backgroundColor = .clear
@@ -45,11 +47,36 @@ struct DietTab: View {
 //                    .padding(.horizontal, 20)
 //                }
                 
-                DatePicker("", selection: $date, displayedComponents: .date)
-                    .datePickerStyle(DefaultDatePickerStyle())
-                    .labelsHidden()
-                    .frame(maxHeight: .none)
-                    .padding(.top, 10)
+//                DatePicker("", selection: $date, displayedComponents: .date)
+//                    .datePickerStyle(DefaultDatePickerStyle())
+//                    .labelsHidden()
+//                    .frame(maxHeight: .none)
+//                    .padding(.top, 10)
+                
+                HStack{
+                    Button(action: {
+                        self.day -= self.day
+//                        Text(getDate(num: day))
+                    }) {
+                        Image(systemName: "chevron.left")
+                    }
+                    
+                    Spacer().frame(width: 100)
+                    //오늘 날짜
+                    Text(getDate(num: day))
+                    
+                    Spacer().frame(width: 100)
+                    
+                    Button(action: {
+                        self.day += self.day
+//                        Text(getDate(num: day))
+                    }) {
+                        Image(systemName: "chevron.right")
+                    }
+                    
+                    
+                }.padding(.top, 20)
+                
                 
                 Form{
                     Section{
