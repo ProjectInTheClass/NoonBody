@@ -32,3 +32,12 @@ struct myImagePost: Identifiable {
     var myImage: Image
     var myWeight: Double
 }
+
+struct dietPost: Identifiable {
+    var id = UUID()
+    
+    var dietWhen: String
+    var dietTime: String
+    var dietText: String
+    var dietImage: Image
+}

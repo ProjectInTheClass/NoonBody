@@ -9,6 +9,8 @@ import SwiftUI
 
 struct DietTab: View {
     
+    
+    
     @State var date = Date()
     @State var show = false
     
@@ -77,97 +79,14 @@ struct DietTab: View {
                     
                 }.padding(.top, 20)
                 
+                showDiets()
                 
-                Form{
-                    Section{
-                        HStack{
-                            VStack(alignment: .leading){
-                                Text("아침")
-                                    .font(.system(size: 20))
-                                    .bold()
-                                Text("09:30 AM")
-                                    .font(.system(size: 15))
-                                    .bold()
-                                Text("~ 먹음")
-                            }
-                            
-                            Spacer()
-                            
-                            Image("food1")
-                                .resizable()
-                                .frame(width: 100, height: 100, alignment: .trailing)
-                        }
-                        
-                        HStack{
-                            VStack(alignment: .leading){
-                                Text("점심")
-                                    .font(.system(size:20))
-                                    .bold()
-                                Text("12:30 PM")
-                                    .font(.system(size: 15))
-                                    .bold()
-                                Text("~ 먹음")
-                            }
-                            
-                            Spacer()
-                            
-                            Image("food2")
-                                .resizable()
-                                .frame(width: 100, height: 100, alignment: .trailing)
-                        }
-                        
-                        HStack{
-                            VStack(alignment: .leading){
-                                Text("저녁")
-                                    .font(.system(size: 20))
-                                    .bold()
-                                Text("06:30 PM")
-                                    .font(.system(size: 15))
-                                    .bold()
-                                Text("~ 먹음")
-                            }
-                            
-                            Spacer()
-                            
-                            Image("food3")
-                                .resizable()
-                                .frame(width: 100, height: 100, alignment: .trailing)
-                        }
-                    }
-                            
-                }
                     
             }.background(Color("secondaryOrange"))
             
             
                 
-//                Button(action: {
-//
-//                    self.show.toggle()
-//
-//                }, label: {
-//                    VStack{
-//                        Text(selectedDateText)
-//                        Divider()
-//                    }
-//                })
-//
-//                ZStack{
-//
-//                    VStack{
-//                        Spacer()
-//
-//                        CustomActionSheet().offset(y: self.show ? 0 : UIScreen.main.bounds.height)
-//
-//                    }
-//                    .edgesIgnoringSafeArea(.bottom)
-//                }
-//
-//            }.background((self.show ? Color.black.opacity(0.3) : Color.clear).edgesIgnoringSafeArea(.all).onTapGesture{
-//
-//                self.show.toggle()
-//
-//            })
+
             .navigationTitle("식단")
             .navigationBarItems(trailing: WriteButton())
             
@@ -175,44 +94,36 @@ struct DietTab: View {
     }
 }
 
-//struct CustomActionSheet: View {
-//    @State var date = Date()
-//    @State var selectedDateText: String = "Date"
-//
-//    var selectedDate: Binding<Date> {
-//        Binding<Date>(get: { self.date}, set : {
-//            self.date = $0
-//            self.setDateString()
-//        })
-//      } // This private var I found… somewhere. I wish I could remember where
-//
-//      // To take the selected date and store it as a string for the text field
-//    func setDateString() {
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "MMMM dd, yyyy"
-//
-//        self.selectedDateText = formatter.string(from: self.date)
-//      }
-//
-//    var body: some View{
-//
-//        VStack(spacing: 15){
-//
-//            DatePicker("", selection: selectedDate, displayedComponents: .date)
-//                .datePickerStyle(GraphicalDatePickerStyle())
-//                .labelsHidden()
-//                .frame(maxHeight: .none)
-//
-//        }.background(Color.white)
-//        .padding(.horizontal)
-//        .padding(.top, 20)
-//        .cornerRadius(25)
-//        .edgesIgnoringSafeArea(.bottom)
-//
-//
-//
-//    }
-//}
+struct showDiets: View {
+    
+    @State var DietLists: [dietPost] = [
+        dietPost(dietWhen: "아침", dietTime: "9시 30분", dietText: "아침 먹음", dietImage: Image("food1")),
+        dietPost(dietWhen: "점심", dietTime: "12시 30분", dietText: "점심 먹음", dietImage: Image("food2")),
+        dietPost(dietWhen: "저녁", dietTime: "6시 30분", dietText: "저녁 먹음", dietImage: Image("food3"))
+    ]
+    
+    var body: some View{
+        VStack{
+                List {
+                    ForEach(DietLists, id: \.id){ post in
+                        DietPostView(passed_dietWhen: post.dietWhen, passed_dietTime: post.dietTime, passed_dietText: post.dietText, passed_dietImage: post.dietImage)
+                            .listRowBackground(Color("secondaryOrange"))
+                    }.onDelete(perform: delete)
+                    
+                    
+                }.background(Color.clear)
+            
+        }
+    }
+
+    func delete(at offsets: IndexSet){
+        if let first = offsets.first{
+            DietLists.remove(at: first)
+        }
+    }
+
+}
+
 
 struct DietTab_Previews: PreviewProvider {
     static var previews: some View {

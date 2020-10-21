@@ -30,6 +30,7 @@
 		453363B3253EE42400DC2FDB /* CompareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453363B2253EE42400DC2FDB /* CompareView.swift */; };
 		453363B6253EE82800DC2FDB /* MyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453363B5253EE82800DC2FDB /* MyImageView.swift */; };
 		45666F82253FF629000B5516 /* GetDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45666F81253FF629000B5516 /* GetDate.swift */; };
+		45666F85253FF780000B5516 /* DietPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45666F84253FF780000B5516 /* DietPostView.swift */; };
 		458138FA253D873100745975 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 458138F9253D873100745975 /* GoogleService-Info.plist */; };
 		45C6E41E253487D400C3012B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C6E41D253487D400C3012B /* UIColor.swift */; };
 		45DDD85D2533F142004C18FE /* NoonBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD85C2533F142004C18FE /* NoonBody.swift */; };
@@ -84,6 +85,7 @@
 		453363B2253EE42400DC2FDB /* CompareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareView.swift; sourceTree = "<group>"; };
 		453363B5253EE82800DC2FDB /* MyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImageView.swift; sourceTree = "<group>"; };
 		45666F81253FF629000B5516 /* GetDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDate.swift; sourceTree = "<group>"; };
+		45666F84253FF780000B5516 /* DietPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPostView.swift; sourceTree = "<group>"; };
 		458138F9253D873100745975 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		45C6E41D253487D400C3012B /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		45DDD85C2533F142004C18FE /* NoonBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBody.swift; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 				45F940F22539A1EC000D4AE0 /* PostView.swift */,
 				45324157253E889700AD1199 /* FriendsView.swift */,
 				453363B5253EE82800DC2FDB /* MyImageView.swift */,
+				45666F84253FF780000B5516 /* DietPostView.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				45DDD8E425342524004C18FE /* ButtonSelected.swift in Sources */,
 				45024BFB2532EA0B00D619C5 /* AppDelegate.swift in Sources */,
 				45DDD88D25340CF2004C18FE /* NoonBodyTab.swift in Sources */,
+				45666F85253FF780000B5516 /* DietPostView.swift in Sources */,
 				45DDD8E925342543004C18FE /* ButtonNonSelected.swift in Sources */,
 				4527B87C2533221400949553 /* SettingsProfile.swift in Sources */,
 				45024C512532EBB000D619C5 /* ImagePicker.swift in Sources */,
