@@ -31,7 +31,7 @@ struct CollectionView: View {
                 
                 
                 //과거 사진 이미지들
-                images()
+                showImages()
                 
                 
             }
@@ -50,7 +50,7 @@ struct CollectionView_Previews: PreviewProvider {
     }
 }
 
-struct images: View {
+struct showImages: View {
     @State private var choosedImage1: UIImage?
     
     var MyImagePosts: [myImagePost] = [
