@@ -25,3 +25,9 @@ struct friendsPost: Identifiable {
     var friendNumberOfLikes: Int
     var friendImage: Image
 }
+
+struct myImagePost: Identifiable {
+    var id = UUID()
+    
+    var myImage: Image
+}
