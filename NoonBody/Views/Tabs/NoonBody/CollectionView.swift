@@ -76,6 +76,7 @@ struct Bar: View {
     var weight : CGFloat = 0
     var day = ""
     @State var myColor: String = "primaryGray"
+    @State var isChoosed: Bool = false
     
     var body: some View{
         
@@ -89,7 +90,14 @@ struct Bar: View {
                     .font(.system(size: 10, weight: .bold))
                 
             }.onTapGesture(count: 1, perform: {
-                self.myColor = "primaryOrange"
+                self.isChoosed.toggle()
+                
+                if isChoosed{
+                    self.myColor = "primaryOrange"
+                }else{
+                    self.myColor = "primaryGray"
+                }
+                
             })
             
             
