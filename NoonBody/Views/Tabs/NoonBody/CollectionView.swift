@@ -75,18 +75,22 @@ struct Bar: View {
     
     var weight : CGFloat = 0
     var day = ""
+    @State var myColor: String = "primaryGray"
     
     var body: some View{
         
         VStack{
             ZStack{
                 
-                Rectangle().fill(Color("primaryGray")).frame(width: UIScreen.main.bounds.width / 5 - 12, height: getHeight()).cornerRadius(10)
+                Rectangle().fill(Color(myColor)).frame(width: UIScreen.main.bounds.width / 5 - 12, height: getHeight()).cornerRadius(10)
                 
                 Text(String(format: "%.1f", Double(weight)) + "kg").foregroundColor(Color.white)
                     .padding(.bottom, 50)
                     .font(.system(size: 10, weight: .bold))
-            }
+                
+            }.onTapGesture(count: 1, perform: {
+                self.myColor = "primaryOrange"
+            })
             
             
             Text(day).foregroundColor(Color.black.opacity(0.5))
