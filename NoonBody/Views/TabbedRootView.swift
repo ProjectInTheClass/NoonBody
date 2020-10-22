@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TabbedRootView: View {
+    @EnvironmentObject var env: GlobalEnvironment
+    
     var body: some View {
         
         TabView{
@@ -17,6 +19,7 @@ struct TabbedRootView: View {
                 .tabItem {
                     Image(systemName: "square.and.pencil")
                     Text("눈바디")
+//                    Text("\(env.currentUser.username)")
                 }
             
             DietTab()
