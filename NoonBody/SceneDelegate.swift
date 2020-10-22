@@ -11,6 +11,7 @@ import SwiftUI
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    @ObservedObject var env = GlobalEnvironment()
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -27,18 +28,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
         // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
-        let signUpView = SignUp().environment(\.managedObjectContext, context)
+        let loginView = LoginView().environment(\.managedObjectContext, context)
             //MemoListScene에 등록
             //이렇게 하면 MemoListScene과 이어지는 화면에 동일한 객체를 쉽게 주입할 수 있음
             //연결된 view와 거기에 포함된 child view에 자동으로 주입됨
             .environmentObject(noonBody)
             //DateFormatter를 custom 공유데이터에 추가
             .environmentObject(DateFormatter.memoDateFormatter)
+            .environmentObject(GlobalEnvironment())
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: signUpView)
+            window.rootViewController = UIHostingController(rootView: loginView)
             self.window = window
             window.makeKeyAndVisible()
         }
