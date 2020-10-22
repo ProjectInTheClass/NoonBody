@@ -28,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
         // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
-        let loginView = LoginView().environment(\.managedObjectContext, context)
+        let tabbedRootView = LoginView().environment(\.managedObjectContext, context)
             //MemoListScene에 등록
             //이렇게 하면 MemoListScene과 이어지는 화면에 동일한 객체를 쉽게 주입할 수 있음
             //연결된 view와 거기에 포함된 child view에 자동으로 주입됨
@@ -40,7 +40,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: loginView)
+            window.rootViewController = UIHostingController(rootView: tabbedRootView)
             self.window = window
             window.makeKeyAndVisible()
         }
