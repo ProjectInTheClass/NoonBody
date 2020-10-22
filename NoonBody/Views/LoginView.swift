@@ -19,6 +19,8 @@ struct LoginView: View {
     
     @State private var isLoggedIn = false
     
+    @State var isHidden: Bool = false
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -126,7 +128,8 @@ struct LoginView: View {
                     
                     Spacer()
                 }.background(Color.clear)
-            }
+            }.navigationBarTitle("").navigationBarHidden(isHidden)
+            .onAppear { self.isHidden = true }
         }
         
     }
