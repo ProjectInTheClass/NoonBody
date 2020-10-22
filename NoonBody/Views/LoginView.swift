@@ -47,7 +47,7 @@ struct LoginView: View {
                                 .stroke(lineWidth: 2)
                                 .foregroundColor(.white))
                         .padding()
-                        .foregroundColor(.white)
+                        
                     
                     SecureField("Password", text: $password)
                         .autocapitalization(.none)
@@ -107,7 +107,7 @@ struct LoginView: View {
                             }.frame(height: 50)
                             .frame(minWidth:0, maxWidth: .infinity)
                             
-                        }).background(lightBlue).cornerRadius(25)
+                        }).background(lightBlue).cornerRadius(25).padding()
                     }
                     
                     
@@ -127,7 +127,7 @@ struct LoginView: View {
                     })
                     
                     Spacer()
-                }.background(Color.clear)
+                }.background(Color.clear).foregroundColor(.white)
             }.navigationBarTitle("").navigationBarHidden(isHidden)
             .onAppear { self.isHidden = true }
         }
