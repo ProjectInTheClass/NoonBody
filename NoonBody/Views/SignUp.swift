@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Firebase
-import FirebaseFirestore
+import SPAlert
 
 struct SignUp: View {
     
@@ -76,6 +76,9 @@ struct SignUp: View {
                         if let error = error{
                             print("error = \(error)")
                         }else{
+                            let alertView = SPAlertView(title: "Account created successfully", message: "Your login query came back positive", preset: SPAlertPreset.done)
+                            alertView.duration = 3
+                            alertView.present()
                             print("no error")
                         }
                     }
@@ -93,7 +96,6 @@ struct SignUp: View {
         }
     }
 }
-
 struct SignUp_Previews: PreviewProvider {
     static var previews: some View {
         SignUp()
