@@ -89,7 +89,10 @@ struct LoginView: View {
                                                     name: document.data()["name"] as? String ?? "",
                                                     email: document.data()["email"] as? String ?? ""
                                                 )
-                                                isLoggedIn = true
+                                                
+                                                //Login happens here! - This is where you ar right before ou flip to the next screen
+                                                self.env.save_UserDefaults()
+                                                self.isLoggedIn = true
                                             }else{
                                                 let alertView = SPAlertView(title: "password doesn't match", message: nil, preset: SPAlertPreset.error)
                                                 alertView.duration = 3

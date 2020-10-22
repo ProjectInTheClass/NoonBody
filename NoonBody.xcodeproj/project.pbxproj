@@ -34,6 +34,7 @@
 		45666F88253FFBE3000B5516 /* DiaryPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45666F87253FFBE3000B5516 /* DiaryPostView.swift */; };
 		458138FA253D873100745975 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 458138F9253D873100745975 /* GoogleService-Info.plist */; };
 		45C6E41E253487D400C3012B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C6E41D253487D400C3012B /* UIColor.swift */; };
+		45D996B32541A26C005741FD /* HelperFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D996B22541A26C005741FD /* HelperFuncs.swift */; };
 		45DDD85D2533F142004C18FE /* NoonBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD85C2533F142004C18FE /* NoonBody.swift */; };
 		45DDD8652533F158004C18FE /* NoonBodyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD8642533F158004C18FE /* NoonBodyStore.swift */; };
 		45DDD86A2533F17F004C18FE /* Diet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD8692533F17F004C18FE /* Diet.swift */; };
@@ -90,6 +91,7 @@
 		45666F87253FFBE3000B5516 /* DiaryPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryPostView.swift; sourceTree = "<group>"; };
 		458138F9253D873100745975 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		45C6E41D253487D400C3012B /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		45D996B22541A26C005741FD /* HelperFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFuncs.swift; sourceTree = "<group>"; };
 		45DDD85C2533F142004C18FE /* NoonBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBody.swift; sourceTree = "<group>"; };
 		45DDD8642533F158004C18FE /* NoonBodyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBodyStore.swift; sourceTree = "<group>"; };
 		45DDD8692533F17F004C18FE /* Diet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diet.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				45024BFA2532EA0B00D619C5 /* AppDelegate.swift */,
 				45024BFC2532EA0B00D619C5 /* SceneDelegate.swift */,
 				45F941042539A2EF000D4AE0 /* Structs_Enums_Classes.swift */,
+				45D996B22541A26C005741FD /* HelperFuncs.swift */,
 				45DDD8DC25341FBB004C18FE /* Style */,
 				45DDD85B2533F0F8004C18FE /* Model */,
 				45024CAF2532F09900D619C5 /* Views */,
@@ -502,6 +505,7 @@
 				45C6E41E253487D400C3012B /* UIColor.swift in Sources */,
 				45FCC335253C7C64006E47CC /* LoginView.swift in Sources */,
 				45DDD892253410F8004C18FE /* DiaryView.swift in Sources */,
+				45D996B32541A26C005741FD /* HelperFuncs.swift in Sources */,
 				45666F82253FF629000B5516 /* GetDate.swift in Sources */,
 				45024BFD2532EA0B00D619C5 /* SceneDelegate.swift in Sources */,
 				45FCC33A253C7C6D006E47CC /* SignUp.swift in Sources */,
