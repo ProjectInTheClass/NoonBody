@@ -19,6 +19,8 @@ struct TabbedRootView: View {
             }.navigationBarTitle("", displayMode: .inline)
             .navigationBarHidden(isHidden)
             .onAppear { self.isHidden = true }
+            .edgesIgnoringSafeArea([.top, .bottom])
+            .navigationBarBackButtonHidden(true)
             
             TabView{
                 NoonBodyTab()
