@@ -10,6 +10,7 @@ import SwiftUI
 
 extension GlobalEnvironment{
     
+    //maintain who is logged in
     func save_UserDefaults(){
         
         let data_Dictionary:[String:Any?] = [
