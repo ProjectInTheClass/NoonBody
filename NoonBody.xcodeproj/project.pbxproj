@@ -21,17 +21,17 @@
 		45024C582532EC0F00D619C5 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 45024C572532EC0F00D619C5 /* SwiftUIX */; };
 		450A92262536AC830082B5EF /* DateFormatter+Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A92252536AC830082B5EF /* DateFormatter+Memo.swift */; };
 		450A922B2536AD640082B5EF /* NoonBodyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A922A2536AD640082B5EF /* NoonBodyCell.swift */; };
-		4527B8792533221400949553 /* NoonBodySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8742533221400949553 /* NoonBodySettings.swift */; };
-		4527B87A2533221400949553 /* SettingsAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8752533221400949553 /* SettingsAbout.swift */; };
-		4527B87B2533221400949553 /* SettingsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8762533221400949553 /* SettingsPhoto.swift */; };
-		4527B87C2533221400949553 /* SettingsProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8772533221400949553 /* SettingsProfile.swift */; };
-		4527B87D2533221400949553 /* SettingsNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527B8782533221400949553 /* SettingsNotification.swift */; };
 		45324158253E889700AD1199 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45324157253E889700AD1199 /* FriendsView.swift */; };
 		453363B3253EE42400DC2FDB /* CompareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453363B2253EE42400DC2FDB /* CompareView.swift */; };
 		453363B6253EE82800DC2FDB /* MyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453363B5253EE82800DC2FDB /* MyImageView.swift */; };
 		45666F82253FF629000B5516 /* GetDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45666F81253FF629000B5516 /* GetDate.swift */; };
 		45666F85253FF780000B5516 /* DietPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45666F84253FF780000B5516 /* DietPostView.swift */; };
 		45666F88253FFBE3000B5516 /* DiaryPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45666F87253FFBE3000B5516 /* DiaryPostView.swift */; };
+		45696798254281C600663FB7 /* SettingsProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45696793254281C600663FB7 /* SettingsProfile.swift */; };
+		45696799254281C600663FB7 /* SettingsAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45696794254281C600663FB7 /* SettingsAbout.swift */; };
+		4569679A254281C600663FB7 /* SettingsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45696795254281C600663FB7 /* SettingsPhoto.swift */; };
+		4569679B254281C600663FB7 /* SettingsNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45696796254281C600663FB7 /* SettingsNotification.swift */; };
+		4569679C254281C600663FB7 /* NoonBodySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45696797254281C600663FB7 /* NoonBodySettings.swift */; };
 		458138FA253D873100745975 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 458138F9253D873100745975 /* GoogleService-Info.plist */; };
 		45C6E41E253487D400C3012B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C6E41D253487D400C3012B /* UIColor.swift */; };
 		45D996B32541A26C005741FD /* HelperFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D996B22541A26C005741FD /* HelperFuncs.swift */; };
@@ -78,17 +78,17 @@
 		45024C9C2532F01B00D619C5 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		450A92252536AC830082B5EF /* DateFormatter+Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Memo.swift"; sourceTree = "<group>"; };
 		450A922A2536AD640082B5EF /* NoonBodyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBodyCell.swift; sourceTree = "<group>"; };
-		4527B8742533221400949553 /* NoonBodySettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoonBodySettings.swift; path = NoonBody/Settings/NoonBodySettings.swift; sourceTree = SOURCE_ROOT; };
-		4527B8752533221400949553 /* SettingsAbout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsAbout.swift; path = NoonBody/Settings/SettingsAbout.swift; sourceTree = SOURCE_ROOT; };
-		4527B8762533221400949553 /* SettingsPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsPhoto.swift; path = NoonBody/Settings/SettingsPhoto.swift; sourceTree = SOURCE_ROOT; };
-		4527B8772533221400949553 /* SettingsProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsProfile.swift; path = NoonBody/Settings/SettingsProfile.swift; sourceTree = SOURCE_ROOT; };
-		4527B8782533221400949553 /* SettingsNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsNotification.swift; path = NoonBody/Settings/SettingsNotification.swift; sourceTree = SOURCE_ROOT; };
 		45324157253E889700AD1199 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
 		453363B2253EE42400DC2FDB /* CompareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareView.swift; sourceTree = "<group>"; };
 		453363B5253EE82800DC2FDB /* MyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImageView.swift; sourceTree = "<group>"; };
 		45666F81253FF629000B5516 /* GetDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDate.swift; sourceTree = "<group>"; };
 		45666F84253FF780000B5516 /* DietPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPostView.swift; sourceTree = "<group>"; };
 		45666F87253FFBE3000B5516 /* DiaryPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryPostView.swift; sourceTree = "<group>"; };
+		45696793254281C600663FB7 /* SettingsProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsProfile.swift; sourceTree = "<group>"; };
+		45696794254281C600663FB7 /* SettingsAbout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsAbout.swift; sourceTree = "<group>"; };
+		45696795254281C600663FB7 /* SettingsPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPhoto.swift; sourceTree = "<group>"; };
+		45696796254281C600663FB7 /* SettingsNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsNotification.swift; sourceTree = "<group>"; };
+		45696797254281C600663FB7 /* NoonBodySettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoonBodySettings.swift; sourceTree = "<group>"; };
 		458138F9253D873100745975 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		45C6E41D253487D400C3012B /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		45D996B22541A26C005741FD /* HelperFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFuncs.swift; sourceTree = "<group>"; };
@@ -251,11 +251,11 @@
 		4527B8732533220000949553 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				4527B8742533221400949553 /* NoonBodySettings.swift */,
-				4527B8752533221400949553 /* SettingsAbout.swift */,
-				4527B8782533221400949553 /* SettingsNotification.swift */,
-				4527B8762533221400949553 /* SettingsPhoto.swift */,
-				4527B8772533221400949553 /* SettingsProfile.swift */,
+				45696797254281C600663FB7 /* NoonBodySettings.swift */,
+				45696794254281C600663FB7 /* SettingsAbout.swift */,
+				45696796254281C600663FB7 /* SettingsNotification.swift */,
+				45696795254281C600663FB7 /* SettingsPhoto.swift */,
+				45696793254281C600663FB7 /* SettingsProfile.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -472,19 +472,20 @@
 				45324158253E889700AD1199 /* FriendsView.swift in Sources */,
 				450A92262536AC830082B5EF /* DateFormatter+Memo.swift in Sources */,
 				450A922B2536AD640082B5EF /* NoonBodyCell.swift in Sources */,
+				45696798254281C600663FB7 /* SettingsProfile.swift in Sources */,
 				45F941052539A2EF000D4AE0 /* Structs_Enums_Classes.swift in Sources */,
-				4527B87A2533221400949553 /* SettingsAbout.swift in Sources */,
+				4569679B254281C600663FB7 /* SettingsNotification.swift in Sources */,
 				45024C462532EBA200D619C5 /* DietTab.swift in Sources */,
 				45DDD8A0253412E1004C18FE /* CommunityTab.swift in Sources */,
 				45DDD8E425342524004C18FE /* ButtonSelected.swift in Sources */,
 				45024BFB2532EA0B00D619C5 /* AppDelegate.swift in Sources */,
+				4569679A254281C600663FB7 /* SettingsPhoto.swift in Sources */,
 				45DDD88D25340CF2004C18FE /* NoonBodyTab.swift in Sources */,
 				45666F85253FF780000B5516 /* DietPostView.swift in Sources */,
 				45DDD8E925342543004C18FE /* ButtonNonSelected.swift in Sources */,
-				4527B87C2533221400949553 /* SettingsProfile.swift in Sources */,
+				45696799254281C600663FB7 /* SettingsAbout.swift in Sources */,
 				45024C512532EBB000D619C5 /* ImagePicker.swift in Sources */,
 				45DDD89725341106004C18FE /* CollectionView.swift in Sources */,
-				4527B87D2533221400949553 /* SettingsNotification.swift in Sources */,
 				45666F88253FFBE3000B5516 /* DiaryPostView.swift in Sources */,
 				45DDD8D525341F8D004C18FE /* MyButtonStyle.swift in Sources */,
 				45F940FB2539A29A000D4AE0 /* CommunityPostsView.swift in Sources */,
@@ -494,14 +495,13 @@
 				45024C412532EB9B00D619C5 /* NoonbodyStart.swift in Sources */,
 				45F940F32539A1EC000D4AE0 /* PostView.swift in Sources */,
 				45024C022532EA0B00D619C5 /* NoonBody.xcdatamodeld in Sources */,
-				4527B8792533221400949553 /* NoonBodySettings.swift in Sources */,
 				45F941002539A2A7000D4AE0 /* CommunityFriendsView.swift in Sources */,
 				45DDD86A2533F17F004C18FE /* Diet.swift in Sources */,
 				453363B3253EE42400DC2FDB /* CompareView.swift in Sources */,
 				45024C392532EB0F00D619C5 /* TabbedRootView.swift in Sources */,
 				45DDD8652533F158004C18FE /* NoonBodyStore.swift in Sources */,
-				4527B87B2533221400949553 /* SettingsPhoto.swift in Sources */,
 				45DDD8F425344285004C18FE /* NoonBodyWrite.swift in Sources */,
+				4569679C254281C600663FB7 /* NoonBodySettings.swift in Sources */,
 				45C6E41E253487D400C3012B /* UIColor.swift in Sources */,
 				45FCC335253C7C64006E47CC /* LoginView.swift in Sources */,
 				45DDD892253410F8004C18FE /* DiaryView.swift in Sources */,
