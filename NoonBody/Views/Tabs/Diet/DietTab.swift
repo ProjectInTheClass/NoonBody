@@ -90,7 +90,7 @@ struct DietTab: View {
             .navigationTitle("식단")
             .navigationBarItems(trailing: WriteButton())
             
-        }
+        }.navigationBarTitle("").navigationBarHidden(true)
     }
 }
 

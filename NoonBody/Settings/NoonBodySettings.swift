@@ -122,7 +122,7 @@ struct NoonBodySettings: View {
                 
 
                 .listStyle(GroupedListStyle())
-            }
+            }.navigationBarTitle("").navigationBarHidden(true)
             .navigationViewStyle(StackNavigationViewStyle())
         }
     }

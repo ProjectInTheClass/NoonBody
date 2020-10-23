@@ -38,7 +38,7 @@ struct CommunityTab: View {
 //            } // Scroll View Ends
             .background(Color("secondaryOrange"))
             .navigationBarTitle("커뮤니티")
-            }
+            }.navigationBarTitle("").navigationBarHidden(true)
     }
     
 }

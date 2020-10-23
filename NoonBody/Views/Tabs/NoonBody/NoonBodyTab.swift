@@ -113,7 +113,7 @@ struct NoonBodyTab: View {
             .navigationTitle("눈바디")
             .navigationBarItems(trailing: WriteButton())
             
-        }
+        }.navigationBarTitle("").navigationBarHidden(true)
     }
 }
 
