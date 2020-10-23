@@ -124,7 +124,15 @@ struct DietWrite: View {
                 .navigationBarItems(trailing: Text("저장"))
                 
             .sheet(isPresented: $showImagePicker, content: {
-                ImagePicker(image: self.$image, isShown: self.$showImagePicker, sourceType: self.sourceType)
+                VStack{
+                    Text("음식 사진을 선택해주세요.")
+                        .font(.title)
+                        .foregroundColor(Color("primaryOrange"))
+                        .padding()
+                    
+                    ImagePicker(image: self.$image, isShown: self.$showImagePicker, sourceType: self.sourceType)
+                }
+                
         })
         }.background(Color("secondaryOrange"))
     }
