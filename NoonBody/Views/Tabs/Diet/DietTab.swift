@@ -58,6 +58,7 @@ struct DietTab: View {
                 HStack{
                     Button(action: {
                         self.day -= self.day
+                        print("\(getDate(num: day))")
 //                        Text(getDate(num: day))
                     }) {
                         Image(systemName: "chevron.left")
@@ -71,6 +72,7 @@ struct DietTab: View {
                     
                     Button(action: {
                         self.day += self.day
+                        print("\(getDate(num: day))")
 //                        Text(getDate(num: day))
                     }) {
                         Image(systemName: "chevron.right")
