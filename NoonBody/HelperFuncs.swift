@@ -14,8 +14,9 @@ extension GlobalEnvironment{
     func save_UserDefaults(){
         
         let data_Dictionary:[String:Any?] = [
-            "lastLogin_username":currentUser.username,
-            "lastLogin_password":currentUser.password,
+            "lastLogin_user":currentUser,
+//            "lastLogin_username":currentUser.username,
+//            "lastLogin_password":currentUser.password,
         ]
 
         let save_UserDefaults = UserDefaults.standard

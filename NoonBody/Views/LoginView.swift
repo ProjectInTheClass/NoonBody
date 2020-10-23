@@ -9,6 +9,17 @@ import SwiftUI
 import Firebase
 import SPAlert
 
+//VStack(spacing:0){
+//    VStack {
+//        Text("체중보단 눈바디")
+//            .padding(15)
+//            .foregroundColor(Color("primaryOrange"))
+//        Text("NOONBODY")
+//            .font(.largeTitle)
+//            .foregroundColor(Color("primaryOrange"))
+//            .fontWeight(.bold)
+//    }.frame(height: 200)
+    
 struct LoginView: View {
     @EnvironmentObject var env: GlobalEnvironment
     
@@ -47,7 +58,7 @@ struct LoginView: View {
                                 .stroke(lineWidth: 2)
                                 .foregroundColor(.white))
                         .padding()
-                        
+                        .foregroundColor(.white)
                     
                     SecureField("Password", text: $password)
                         .autocapitalization(.none)
@@ -57,12 +68,12 @@ struct LoginView: View {
                         .overlay(
                             Capsule()
                                 .stroke(lineWidth: 2)
-                                .foregroundColor(.white))
+                                
+                        )
                         .padding()
                     
-                    NavigationLink(
-                        destination: TabbedRootView(),
-                        isActive: $isLoggedIn){
+                        
+                    NavigationLink(destination: TabbedRootView(), isActive: $isLoggedIn){
                         
                         Button(action: {
                             Firestore.firestore().collection("users").whereField("username", isEqualTo: self.username).getDocuments(){ (querySnapshot, err) in
@@ -87,8 +98,10 @@ struct LoginView: View {
                                                     username: document.data()["username"] as? String ?? "",
                                                     password: document.data()["password"] as? String ?? "",
                                                     name: document.data()["name"] as? String ?? "",
-                                                    email: document.data()["email"] as? String ?? ""
+                                                    email: document.data()["email"] as? String ?? "",
+                                                    document.documentID
                                                 )
+                                                
                                                 
                                                 //Login happens here! - This is where you ar right before ou flip to the next screen
                                                 self.env.save_UserDefaults()
@@ -115,7 +128,20 @@ struct LoginView: View {
                         
                         if let lastLogin_objects = UserDefaults.standard.object(forKey: "lastLogin_objects") as? Data{
                             do{
-                                if let lastSession = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(lastLogin_objects) as? [String:Any?]{
+                                if let lastSession = try
+                                    NSKeyedUnarchiver
+                                    .unarchiveTopLevelObjectWithData(lastLogin_objects) as?
+                                    [String:Any?]{
+                                    
+                                    if let rememberedUser = lastSession["lastLogin_user"] as? user {
+                                        print("logged in successful whit rememvered user")
+                                        print(rememberedUser)
+                                        self.env.currentUser = rememberedUser
+                                    }else{
+                                        print("couldn't unwrap user")
+                                        print(lastSession)
+                                        print(lastSession["lastLogin_user"])
+                                    }
                                     
                                     self.isLoggedIn = true
                                     print("logged in successfully")
@@ -146,9 +172,10 @@ struct LoginView: View {
                     
                     Spacer()
                 }.background(Color.clear).foregroundColor(.white)
-            }.navigationBarTitle("").navigationBarHidden(isHidden).navigationBarBackButtonHidden(true)
-            .onAppear { self.isHidden = true }
-        }
+            }.navigationBarTitle("").navigationBarHidden(isHidden)
+            .onAppear { self.isHidden = true }.navigationBarBackButtonHidden(true)
+            
+        }.navigationBarTitle("").navigationBarHidden(true)
         
     }
 }
