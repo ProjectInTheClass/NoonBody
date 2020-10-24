@@ -40,6 +40,7 @@ struct dietPost: Identifiable {
     var dietTime: String
     var dietText: String
     var dietImage: Image
+    var dietDate: String
 }
 
 struct diaryPost: Identifiable {
