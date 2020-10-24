@@ -32,6 +32,9 @@ struct DietTab: View {
     @State var choosedDate: String = "2020. 10. 24"
     
     @State var dateString: String = ""
+    
+    @State var myColor: String = "secondaryOrange"
+    @State var isChoosed: Bool = false
 
     
     
@@ -53,16 +56,46 @@ struct DietTab: View {
                         Spacer().frame(width:10)
                         
                         Text("2020. 10. 22")
+                            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 1)
+                            .background(Color(myColor))
                             .onTapGesture(count: 1, perform: {
                                 choosedDate = "2020. 10. 22"
+                                
+                                self.isChoosed.toggle()
+                                
+                                if isChoosed{
+                                    self.myColor = "primaryOrange"
+                                }else{
+                                    self.myColor = "secondaryOrange"
+                                }
                             })
                         Text("2020. 10. 23")
+                            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 1)
+                            .background(Color(myColor))
                             .onTapGesture(count: 1, perform: {
                                 choosedDate = "2020. 10. 23"
+                                
+                                self.isChoosed.toggle()
+                                
+                                if isChoosed{
+                                    self.myColor = "primaryOrange"
+                                }else{
+                                    self.myColor = "secondaryOrange"
+                                }
                             })
                         Text("2020. 10. 24")
+                            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 1)
+                            .background(Color(myColor))
                             .onTapGesture(count: 1, perform: {
                                 choosedDate = "2020. 10. 24"
+                                
+                                self.isChoosed.toggle()
+                                
+                                if isChoosed{
+                                    self.myColor = "primaryOrange"
+                                }else{
+                                    self.myColor = "secondaryOrange"
+                                }
                             })
                         
 //                        ForEach(DietLists, id: \.id){ post in
