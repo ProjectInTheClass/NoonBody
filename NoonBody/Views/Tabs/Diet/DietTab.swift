@@ -15,7 +15,9 @@ struct DietTab: View {
         dietPost(dietWhen: "저녁", dietTime: "6시 30분", dietText: "저녁 먹음", dietImage: Image("food3"), dietDate: "2020. 10. 24"),
         dietPost(dietWhen: "아침", dietTime: "9시 30분", dietText: "아침 먹음", dietImage: Image("body1"), dietDate: "2020. 10. 23"),
         dietPost(dietWhen: "점심", dietTime: "12시 30분", dietText: "점심 먹음", dietImage: Image("body2"), dietDate: "2020. 10. 23"),
-        dietPost(dietWhen: "저녁", dietTime: "6시 30분", dietText: "저녁 먹음", dietImage: Image("body3"), dietDate: "2020. 10. 23")
+        dietPost(dietWhen: "저녁", dietTime: "6시 30분", dietText: "저녁 먹음", dietImage: Image("body3"), dietDate: "2020. 10. 23"),
+        dietPost(dietWhen: "아침", dietTime: "9시 30분", dietText: "아침 먹음", dietImage: Image("food1"), dietDate: "2020. 10. 22"),
+        dietPost(dietWhen: "저녁", dietTime: "6시 30분", dietText: "저녁 먹음", dietImage: Image("food3"), dietDate: "2020. 10. 22")
     ]
     
     @State var date = Date()
@@ -29,7 +31,7 @@ struct DietTab: View {
     
     @State var choosedDate: String = "2020. 10. 24"
     
-    var dateArray = [String]()
+    @State var dateString: String = ""
 
     
     
@@ -47,22 +49,39 @@ struct DietTab: View {
         NavigationView {
             VStack{
                 ScrollView(.horizontal, showsIndicators:false){
-                    HStack{
+                    HStack(alignment: .center){
                         Spacer().frame(width:10)
-                        ForEach(DietLists, id: \.id){ post in
-                           
-                            Text("\(post.dietDate)")
-                                .onTapGesture(count: 1, perform: {
-                                    choosedDate = "\(post.dietDate)"
-                                })
-                            }
                         
-//                        ForEach(0..<DietLists.count){_ in
+                        Text("2020. 10. 22")
+                            .onTapGesture(count: 1, perform: {
+                                choosedDate = "2020. 10. 22"
+                            })
+                        Text("2020. 10. 23")
+                            .onTapGesture(count: 1, perform: {
+                                choosedDate = "2020. 10. 23"
+                            })
+                        Text("2020. 10. 24")
+                            .onTapGesture(count: 1, perform: {
+                                choosedDate = "2020. 10. 24"
+                            })
+                        
+//                        ForEach(DietLists, id: \.id){ post in
+//                            dateString = "\(post.dietDate)"
+//                            if post.dietDate != dateString{
+//                                Text("\(post.dietDate)")
+//                                    .onTapGesture(count: 1, perform: {
+//                                        choosedDate = "\(post.dietDate)"
+//                                    })
+//                            }
 //
-//                        }
+//                            }
+                        
+//
                         Spacer().frame(width:10)
                     }.frame(height: 80)
                 }.background(Color.clear)
+                .padding(.leading)
+                .padding(.trailing)
                 
                 VStack{
                         List {
