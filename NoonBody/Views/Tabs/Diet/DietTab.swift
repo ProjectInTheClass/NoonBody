@@ -99,6 +99,7 @@ struct DietTab: View {
                             })
                         
 //                        ForEach(DietLists, id: \.id){ post in
+//
 //                            dateString = "\(post.dietDate)"
 //                            if post.dietDate != dateString{
 //                                Text("\(post.dietDate)")
@@ -108,6 +109,11 @@ struct DietTab: View {
 //                            }
 //
 //                            }
+//
+//                        ForEach(0..<DietLists.count){_ in
+//                            dateString = "\(DietLists[0].dietDate)"
+//
+//                        }
                         
 //
                         Spacer().frame(width:10)
@@ -131,33 +137,6 @@ struct DietTab: View {
                     
                 }
                 
-//                HStack{
-//
-//                    Button(action: {
-//                        self.day -= self.day
-//                        print("\(getDate(num: day))")
-////                        Text(getDate(num: day))
-//                    }) {
-//                        Image(systemName: "chevron.left")
-//                    }
-                    
-//                    Spacer().frame(width: 100)
-//                    //오늘 날짜
-//                    Text(getDate(num: day))
-//
-//                    Spacer().frame(width: 100)
-                    
-//                    Button(action: {
-//                        self.day += self.day
-//                        print("\(getDate(num: day))")
-////                        Text(getDate(num: day))
-//                    }) {
-//                        Image(systemName: "chevron.right")
-//                    }
-                    
-                    
-//                }.padding(.top, 20)
-                
                 
                 
                     
@@ -178,13 +157,7 @@ struct DietTab: View {
         }
     }
     
-//    func getDates(){
-//        ForEach(DietLists, id: \.id){ post in
-//            var dateArray: [String];.append(post.dietDate)
-//
-//            }
-//        return dateArray
-//    }
+
 }
 
 
