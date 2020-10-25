@@ -32,6 +32,8 @@
 		4569679B254281C600663FB7 /* SettingsNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45696796254281C600663FB7 /* SettingsNotification.swift */; };
 		4569679C254281C600663FB7 /* NoonBodySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45696797254281C600663FB7 /* NoonBodySettings.swift */; };
 		458138FA253D873100745975 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 458138F9253D873100745975 /* GoogleService-Info.plist */; };
+		459FAA3E25452EBC00C1E838 /* User_Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459FAA3D25452EBC00C1E838 /* User_Class.swift */; };
+		459FAA4125452EEA00C1E838 /* Custom_Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459FAA4025452EEA00C1E838 /* Custom_Colors.swift */; };
 		45C6E41E253487D400C3012B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C6E41D253487D400C3012B /* UIColor.swift */; };
 		45D996B32541A26C005741FD /* HelperFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D996B22541A26C005741FD /* HelperFuncs.swift */; };
 		45DDD88D25340CF2004C18FE /* NoonBodyTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD88C25340CF2004C18FE /* NoonBodyTab.swift */; };
@@ -47,7 +49,7 @@
 		45F940F32539A1EC000D4AE0 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F940F22539A1EC000D4AE0 /* PostView.swift */; };
 		45F940FB2539A29A000D4AE0 /* CommunityPostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F940FA2539A29A000D4AE0 /* CommunityPostsView.swift */; };
 		45F941002539A2A7000D4AE0 /* CommunityFriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F940FF2539A2A7000D4AE0 /* CommunityFriendsView.swift */; };
-		45F941052539A2EF000D4AE0 /* Structs_Enums_Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F941042539A2EF000D4AE0 /* Structs_Enums_Classes.swift */; };
+		45F941052539A2EF000D4AE0 /* Post_structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F941042539A2EF000D4AE0 /* Post_structs.swift */; };
 		45FCC335253C7C64006E47CC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FCC334253C7C64006E47CC /* LoginView.swift */; };
 		45FCC33A253C7C6D006E47CC /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FCC339253C7C6D006E47CC /* SignUp.swift */; };
 /* End PBXBuildFile section */
@@ -84,6 +86,8 @@
 		45696796254281C600663FB7 /* SettingsNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsNotification.swift; sourceTree = "<group>"; };
 		45696797254281C600663FB7 /* NoonBodySettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoonBodySettings.swift; sourceTree = "<group>"; };
 		458138F9253D873100745975 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		459FAA3D25452EBC00C1E838 /* User_Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User_Class.swift; sourceTree = "<group>"; };
+		459FAA4025452EEA00C1E838 /* Custom_Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom_Colors.swift; sourceTree = "<group>"; };
 		45C6E41D253487D400C3012B /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		45D996B22541A26C005741FD /* HelperFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFuncs.swift; sourceTree = "<group>"; };
 		45DDD88C25340CF2004C18FE /* NoonBodyTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBodyTab.swift; sourceTree = "<group>"; };
@@ -98,7 +102,7 @@
 		45F940F22539A1EC000D4AE0 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		45F940FA2539A29A000D4AE0 /* CommunityPostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityPostsView.swift; sourceTree = "<group>"; };
 		45F940FF2539A2A7000D4AE0 /* CommunityFriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityFriendsView.swift; sourceTree = "<group>"; };
-		45F941042539A2EF000D4AE0 /* Structs_Enums_Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs_Enums_Classes.swift; sourceTree = "<group>"; };
+		45F941042539A2EF000D4AE0 /* Post_structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post_structs.swift; sourceTree = "<group>"; };
 		45FCC334253C7C64006E47CC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		45FCC339253C7C6D006E47CC /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		5A0C59CC0FA1893081605175 /* Pods-NoonBodyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoonBodyTests.debug.xcconfig"; path = "Target Support Files/Pods-NoonBodyTests/Pods-NoonBodyTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -213,13 +217,12 @@
 		45024CAF2532F09900D619C5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				45024C9B2532F01B00D619C5 /* View */,
 				45024C402532EB9B00D619C5 /* NoonbodyStart.swift */,
 				45024C382532EB0F00D619C5 /* TabbedRootView.swift */,
-				45FCC334253C7C64006E47CC /* LoginView.swift */,
-				45FCC339253C7C6D006E47CC /* SignUp.swift */,
-				45F940F12539A1D6000D4AE0 /* ReusableViews */,
 				45024CB32532F0F600D619C5 /* Tabs */,
+				45F940F12539A1D6000D4AE0 /* ReusableViews */,
+				459FAA4425452FEF00C1E838 /* Login */,
+				45024C9B2532F01B00D619C5 /* View */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -248,10 +251,20 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		459FAA4425452FEF00C1E838 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				45FCC334253C7C64006E47CC /* LoginView.swift */,
+				45FCC339253C7C6D006E47CC /* SignUp.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		45DDD85B2533F0F8004C18FE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				45F941042539A2EF000D4AE0 /* Structs_Enums_Classes.swift */,
+				45F941042539A2EF000D4AE0 /* Post_structs.swift */,
+				459FAA3D25452EBC00C1E838 /* User_Class.swift */,
 				45D996B22541A26C005741FD /* HelperFuncs.swift */,
 			);
 			path = Model;
@@ -305,6 +318,7 @@
 				45C6E41D253487D400C3012B /* UIColor.swift */,
 				450A92252536AC830082B5EF /* DateFormatter.swift */,
 				45666F81253FF629000B5516 /* GetDate.swift */,
+				459FAA4025452EEA00C1E838 /* Custom_Colors.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -457,8 +471,9 @@
 				45324158253E889700AD1199 /* FriendsView.swift in Sources */,
 				450A92262536AC830082B5EF /* DateFormatter.swift in Sources */,
 				45696798254281C600663FB7 /* SettingsProfile.swift in Sources */,
-				45F941052539A2EF000D4AE0 /* Structs_Enums_Classes.swift in Sources */,
+				45F941052539A2EF000D4AE0 /* Post_structs.swift in Sources */,
 				4569679B254281C600663FB7 /* SettingsNotification.swift in Sources */,
+				459FAA3E25452EBC00C1E838 /* User_Class.swift in Sources */,
 				45024C462532EBA200D619C5 /* DietTab.swift in Sources */,
 				45DDD8A0253412E1004C18FE /* CommunityTab.swift in Sources */,
 				45DDD8E425342524004C18FE /* ButtonSelected.swift in Sources */,
@@ -479,6 +494,7 @@
 				45024C022532EA0B00D619C5 /* NoonBody.xcdatamodeld in Sources */,
 				45F941002539A2A7000D4AE0 /* CommunityFriendsView.swift in Sources */,
 				453363B3253EE42400DC2FDB /* CompareView.swift in Sources */,
+				459FAA4125452EEA00C1E838 /* Custom_Colors.swift in Sources */,
 				45024C392532EB0F00D619C5 /* TabbedRootView.swift in Sources */,
 				45DDD8F425344285004C18FE /* NoonBodyWrite.swift in Sources */,
 				4569679C254281C600663FB7 /* NoonBodySettings.swift in Sources */,
