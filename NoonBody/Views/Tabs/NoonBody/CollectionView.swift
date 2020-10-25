@@ -65,9 +65,6 @@ struct CollectionView: View {
 struct CollectionView_Previews: PreviewProvider {
     static var previews: some View {
         CollectionView()
-            //preview에서 사용할 MemoStore를 커스텀 공유데이터로 등록
-                .environmentObject(NoonBodyStore())
-                .environmentObject(DateFormatter.memoDateFormatter)
     }
 }
 
