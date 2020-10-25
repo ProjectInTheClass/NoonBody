@@ -7,6 +7,8 @@
 
 import Foundation
 import SwiftUI
+import Combine
+import Firebase
 
 extension GlobalEnvironment{
     
@@ -33,4 +35,22 @@ extension GlobalEnvironment{
     
 }
 
+}
+
+//funtion to submit data
+func firestoreSubmit_data(docRef_string:String, dataToSave:[String:Any], completion: @escaping (Any) -> Void, showDetails: Bool = false){
+    
+    let docRef = Firestore.firestore().document(docRef_string)
+    print("setting data")
+    docRef.setData(dataToSave){ (error) in
+        if let error = error {
+            print("error = \(error)")
+            completion(error)
+        }else{
+            print("data uploaded successfully")
+            if showDetails{
+                print("dataUploaded = \(dataToSave)")
+            }
+        }
+    }
 }

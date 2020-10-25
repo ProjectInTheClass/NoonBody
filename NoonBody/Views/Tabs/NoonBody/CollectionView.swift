@@ -135,13 +135,13 @@ var datas = [
 struct showImages: View {
     @State private var choosedImage1: UIImage?
     
-    var MyImagePosts: [myImagePost] = [
-        myImagePost(myImage: Image("body1").resizable(), myWeight: 61.57),
-        myImagePost(myImage: Image("body2").resizable(), myWeight: 61.56),
-        myImagePost(myImage: Image("body3").resizable(), myWeight: 61.55),
-        myImagePost(myImage: Image("body1").resizable(), myWeight: 61.54),
-        myImagePost(myImage: Image("body2").resizable(), myWeight: 61.53),
-        myImagePost(myImage: Image("body3").resizable(), myWeight: 61.52)
+    var MyImagePosts: [MyImagePost] = [
+        MyImagePost(myImage: Image("body1").resizable(), myWeight: 61.57),
+        MyImagePost(myImage: Image("body2").resizable(), myWeight: 61.56),
+        MyImagePost(myImage: Image("body3").resizable(), myWeight: 61.55),
+        MyImagePost(myImage: Image("body1").resizable(), myWeight: 61.54),
+        MyImagePost(myImage: Image("body2").resizable(), myWeight: 61.53),
+        MyImagePost(myImage: Image("body3").resizable(), myWeight: 61.52)
     ]
     
     private var columns: [GridItem] = [

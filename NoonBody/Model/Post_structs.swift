@@ -8,32 +8,60 @@
 import Foundation
 import SwiftUI
 
-struct recipePost: Identifiable {
+struct CommunityPost: Identifiable {
     var id = UUID()
     
     var postingUser: String
     var description: String
     var numberOfLikes: Int
     var image: Image
+    
+    var dictionary: [String: Any]{
+        return[
+            "id" : id.uuidString,
+            "postingUser" : postingUser,
+            "description" : description,
+            "numberOfLikes" : numberOfLikes
+            
+        ]
+    }
 }
 
-struct friendsPost: Identifiable {
+struct FriendsPost: Identifiable {
     var id = UUID()
     
     var friendName: String
     var friendDescription: String
     var friendNumberOfLikes: Int
     var friendImage: Image
+    
+    var dictionary: [String: Any]{
+        return[
+            "id" : id.uuidString,
+            "friendName" : friendName,
+            "friendDescription" : friendDescription,
+            "friendNumberOfLikes" : friendNumberOfLikes
+            
+        ]
+    }
 }
 
-struct myImagePost: Identifiable {
+struct MyImagePost: Identifiable {
     var id = UUID()
     
     var myImage: Image
     var myWeight: Double
+    
+    var dictionary: [String: Any]{
+        return[
+            "id" : id.uuidString,
+            "myWeight" : myWeight
+            
+        ]
+    }
 }
 
-struct dietPost: Identifiable {
+struct DietPost: Identifiable {
     var id = UUID()
     
     var dietWhen: String
@@ -41,9 +69,20 @@ struct dietPost: Identifiable {
     var dietText: String
     var dietImage: Image
     var dietDate: String
+    
+    var dictionary: [String: Any]{
+        return[
+            "id" : id.uuidString,
+            "dietWhen" : dietWhen,
+            "dietTime" : dietTime,
+            "dietText" : dietText,
+            "dietDate" : dietDate
+            
+        ]
+    }
 }
 
-struct diaryPost: Identifiable {
+struct DiaryPost: Identifiable {
     var id = UUID()
     
     var diaryDate: String
@@ -53,6 +92,18 @@ struct diaryPost: Identifiable {
     var diaryMuscle: Double
     var diaryFat: Double
     var diaryImage: Image
+    
+    var dictionary: [String: Any]{
+        return[
+            "id" : id.uuidString,
+            "diaryDate" : diaryDate,
+            "diaryFull" : diaryFull,
+            "diaryShare" : diaryShare,
+            "diaryWeight" : diaryWeight,
+            "diaryMuscle" : diaryMuscle,
+            "diaryFat" : diaryFat
+        ]
+    }
 }
 
 

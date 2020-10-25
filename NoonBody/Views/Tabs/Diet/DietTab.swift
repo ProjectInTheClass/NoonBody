@@ -9,15 +9,15 @@ import SwiftUI
 
 struct DietTab: View {
     
-    @State var DietLists: [dietPost] = [
-        dietPost(dietWhen: "아침", dietTime: "9시 30분", dietText: "아침 먹음", dietImage: Image("food1"), dietDate: "2020. 10. 24"),
-        dietPost(dietWhen: "점심", dietTime: "12시 30분", dietText: "점심 먹음", dietImage: Image("food2"), dietDate: "2020. 10. 24"),
-        dietPost(dietWhen: "저녁", dietTime: "6시 30분", dietText: "저녁 먹음", dietImage: Image("food3"), dietDate: "2020. 10. 24"),
-        dietPost(dietWhen: "아침", dietTime: "9시 30분", dietText: "아침 먹음", dietImage: Image("body1"), dietDate: "2020. 10. 23"),
-        dietPost(dietWhen: "점심", dietTime: "12시 30분", dietText: "점심 먹음", dietImage: Image("body2"), dietDate: "2020. 10. 23"),
-        dietPost(dietWhen: "저녁", dietTime: "6시 30분", dietText: "저녁 먹음", dietImage: Image("body3"), dietDate: "2020. 10. 23"),
-        dietPost(dietWhen: "아침", dietTime: "9시 30분", dietText: "아침 먹음", dietImage: Image("food1"), dietDate: "2020. 10. 22"),
-        dietPost(dietWhen: "저녁", dietTime: "6시 30분", dietText: "저녁 먹음", dietImage: Image("food3"), dietDate: "2020. 10. 22")
+    @State var DietLists: [DietPost] = [
+        DietPost(dietWhen: "아침", dietTime: "9시 30분", dietText: "아침 먹음", dietImage: Image("food1"), dietDate: "2020. 10. 24"),
+        DietPost(dietWhen: "점심", dietTime: "12시 30분", dietText: "점심 먹음", dietImage: Image("food2"), dietDate: "2020. 10. 24"),
+        DietPost(dietWhen: "저녁", dietTime: "6시 30분", dietText: "저녁 먹음", dietImage: Image("food3"), dietDate: "2020. 10. 24"),
+        DietPost(dietWhen: "아침", dietTime: "9시 30분", dietText: "아침 먹음", dietImage: Image("body1"), dietDate: "2020. 10. 23"),
+        DietPost(dietWhen: "점심", dietTime: "12시 30분", dietText: "점심 먹음", dietImage: Image("body2"), dietDate: "2020. 10. 23"),
+        DietPost(dietWhen: "저녁", dietTime: "6시 30분", dietText: "저녁 먹음", dietImage: Image("body3"), dietDate: "2020. 10. 23"),
+        DietPost(dietWhen: "아침", dietTime: "9시 30분", dietText: "아침 먹음", dietImage: Image("food1"), dietDate: "2020. 10. 22"),
+        DietPost(dietWhen: "저녁", dietTime: "6시 30분", dietText: "저녁 먹음", dietImage: Image("food3"), dietDate: "2020. 10. 22")
     ]
     
     @State var date = Date()

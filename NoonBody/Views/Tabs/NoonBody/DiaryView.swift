@@ -9,8 +9,8 @@ import SwiftUI
 
 struct DiaryView: View {
     
-    var DiaryPosts: [diaryPost] = [
-        diaryPost(diaryDate: getDate(num: 0), diaryFull: "식후", diaryShare: "공개", diaryWeight: 62.4, diaryMuscle: 25.1, diaryFat: 23, diaryImage: Image("body2")),
+    var DiaryPosts: [DiaryPost] = [
+        DiaryPost(diaryDate: getDate(num: 0), diaryFull: "식후", diaryShare: "공개", diaryWeight: 62.4, diaryMuscle: 25.1, diaryFat: 23, diaryImage: Image("body2")),
         
     ]
     
