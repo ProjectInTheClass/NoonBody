@@ -7,8 +7,11 @@
 
 import SwiftUI
 import SwiftUIX
+import SPAlert
 
 struct NoonBodyWrite: View {
+    
+    @EnvironmentObject var env: GlobalEnvironment
     
     @State private var showSheet:Bool = false
     @State private var showImagePicker:Bool = false
@@ -166,7 +169,32 @@ struct NoonBodyWrite: View {
     //            }
                 
                 .navigationBarTitle("눈바디 기록하기", displayMode: .inline)
-                .navigationBarItems(trailing: Text("저장"))
+                .navigationBarItems(trailing: Button(action: {
+                    
+                    if let thisImage = self.image {
+                        let thisNoonBodyPost = DiaryPost(diaryDate: getDate(num: 0),
+                                                         diaryFull: "공복",
+                                                         diaryShare: "공유",
+                                                         diaryWeight: 55.5,
+                                                         diaryMuscle: 25.3,
+                                                         diaryFat: 21.6,
+                                                         diaryImage: Image(uiImage: thisImage)
+                        
+                            
+                        )
+                        
+                        print(thisNoonBodyPost.dictionary)
+                        
+                        firestoreSubmit_data(docRef_string: "noonbodywrite/\(thisNoonBodyPost.id)", dataToSave: thisNoonBodyPost.dictionary, completion: {_ in })
+                    } else {
+                        let alertView = SPAlertView(title: "Add a photo", message: "You cannot submit a recipe without a photo", preset: SPAlertPreset.error)
+                        alertView.duration = 3
+                        alertView.present()
+                    }
+                    
+                }, label: {
+                    Text("저장")
+                }))
                 
             .sheet(isPresented: $showImagePicker, content: {
                 VStack{
@@ -182,6 +210,7 @@ struct NoonBodyWrite: View {
         }.background(Color("secondaryOrange"))
     }
 }
+
 
 struct NoonBodyWrite_Previews: PreviewProvider {
     static var previews: some View {
