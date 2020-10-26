@@ -138,6 +138,7 @@ struct LoginView: View {
                                         print("logged in successful whit rememvered user")
                                         print(rememberedUser)
                                         self.env.currentUser = rememberedUser
+                                        self.env.initializeListener_currentUser()
                                     }else{
                                         print("couldn't unwrap user")
                                         print(lastSession)

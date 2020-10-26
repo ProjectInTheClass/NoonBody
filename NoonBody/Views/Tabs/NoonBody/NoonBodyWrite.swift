@@ -178,7 +178,7 @@ struct NoonBodyWrite: View {
                         print("\(actionsCompleted)/\(actionsToComplete)")
                         if actionsCompleted == actionsToComplete {
                             //Add a function to clear all the data on this page
-                            let alertView = SPAlertView(title: "Recipe Submitted", message: "Recipe submitted successfully!", preset: SPAlertPreset.done)
+                            let alertView = SPAlertView(title: "NoonBody Submitted", message: "NoonBody submitted successfully!", preset: SPAlertPreset.done)
                             alertView.duration = 3
                             alertView.present()
                         }
