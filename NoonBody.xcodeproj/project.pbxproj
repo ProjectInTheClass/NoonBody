@@ -20,6 +20,7 @@
 		45024C512532EBB000D619C5 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45024C4F2532EBB000D619C5 /* ImagePicker.swift */; };
 		45024C582532EC0F00D619C5 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 45024C572532EC0F00D619C5 /* SwiftUIX */; };
 		4509A65C25467258005A0D50 /* BarChart in Frameworks */ = {isa = PBXBuildFile; productRef = 4509A65B25467258005A0D50 /* BarChart */; };
+		4509A6E62546F44C005A0D50 /* FirebaseFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4509A6E52546F44C005A0D50 /* FirebaseFuncs.swift */; };
 		450A92262536AC830082B5EF /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A92252536AC830082B5EF /* DateFormatter.swift */; };
 		45324158253E889700AD1199 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45324157253E889700AD1199 /* FriendsView.swift */; };
 		453363B3253EE42400DC2FDB /* CompareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453363B2253EE42400DC2FDB /* CompareView.swift */; };
@@ -36,7 +37,7 @@
 		459FAA3E25452EBC00C1E838 /* User_Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459FAA3D25452EBC00C1E838 /* User_Class.swift */; };
 		459FAA4125452EEA00C1E838 /* Custom_Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459FAA4025452EEA00C1E838 /* Custom_Colors.swift */; };
 		45C6E41E253487D400C3012B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C6E41D253487D400C3012B /* UIColor.swift */; };
-		45D996B32541A26C005741FD /* HelperFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D996B22541A26C005741FD /* HelperFuncs.swift */; };
+		45D996B32541A26C005741FD /* GlobalEnvironment_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D996B22541A26C005741FD /* GlobalEnvironment_extension.swift */; };
 		45DDD88D25340CF2004C18FE /* NoonBodyTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD88C25340CF2004C18FE /* NoonBodyTab.swift */; };
 		45DDD892253410F8004C18FE /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD891253410F8004C18FE /* DiaryView.swift */; };
 		45DDD89725341106004C18FE /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD89625341106004C18FE /* CollectionView.swift */; };
@@ -87,6 +88,7 @@
 		45024C452532EBA200D619C5 /* DietTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietTab.swift; sourceTree = "<group>"; };
 		45024C4F2532EBB000D619C5 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		45024C9C2532F01B00D619C5 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		4509A6E52546F44C005A0D50 /* FirebaseFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFuncs.swift; sourceTree = "<group>"; };
 		450A92252536AC830082B5EF /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		45324157253E889700AD1199 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
 		453363B2253EE42400DC2FDB /* CompareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareView.swift; sourceTree = "<group>"; };
@@ -103,7 +105,7 @@
 		459FAA3D25452EBC00C1E838 /* User_Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User_Class.swift; sourceTree = "<group>"; };
 		459FAA4025452EEA00C1E838 /* Custom_Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom_Colors.swift; sourceTree = "<group>"; };
 		45C6E41D253487D400C3012B /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		45D996B22541A26C005741FD /* HelperFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFuncs.swift; sourceTree = "<group>"; };
+		45D996B22541A26C005741FD /* GlobalEnvironment_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalEnvironment_extension.swift; sourceTree = "<group>"; };
 		45DDD88C25340CF2004C18FE /* NoonBodyTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBodyTab.swift; sourceTree = "<group>"; };
 		45DDD891253410F8004C18FE /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 		45DDD89625341106004C18FE /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
@@ -280,7 +282,8 @@
 			children = (
 				45F941042539A2EF000D4AE0 /* Post_structs.swift */,
 				459FAA3D25452EBC00C1E838 /* User_Class.swift */,
-				45D996B22541A26C005741FD /* HelperFuncs.swift */,
+				45D996B22541A26C005741FD /* GlobalEnvironment_extension.swift */,
+				4509A6E52546F44C005A0D50 /* FirebaseFuncs.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				45024C022532EA0B00D619C5 /* NoonBody.xcdatamodeld in Sources */,
 				45F941002539A2A7000D4AE0 /* CommunityFriendsView.swift in Sources */,
 				453363B3253EE42400DC2FDB /* CompareView.swift in Sources */,
+				4509A6E62546F44C005A0D50 /* FirebaseFuncs.swift in Sources */,
 				459FAA4125452EEA00C1E838 /* Custom_Colors.swift in Sources */,
 				45024C392532EB0F00D619C5 /* TabbedRootView.swift in Sources */,
 				45DDD8F425344285004C18FE /* NoonBodyWrite.swift in Sources */,
@@ -519,7 +523,7 @@
 				45C6E41E253487D400C3012B /* UIColor.swift in Sources */,
 				45FCC335253C7C64006E47CC /* LoginView.swift in Sources */,
 				45DDD892253410F8004C18FE /* DiaryView.swift in Sources */,
-				45D996B32541A26C005741FD /* HelperFuncs.swift in Sources */,
+				45D996B32541A26C005741FD /* GlobalEnvironment_extension.swift in Sources */,
 				45666F82253FF629000B5516 /* GetDate.swift in Sources */,
 				45024BFD2532EA0B00D619C5 /* SceneDelegate.swift in Sources */,
 				45FCC33A253C7C6D006E47CC /* SignUp.swift in Sources */,
