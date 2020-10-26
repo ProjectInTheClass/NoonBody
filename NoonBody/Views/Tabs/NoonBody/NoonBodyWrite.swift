@@ -186,6 +186,8 @@ struct NoonBodyWrite: View {
                         print(thisNoonBodyPost.dictionary)
                         
                         firestoreSubmit_data(docRef_string: "noonbodywrite/\(thisNoonBodyPost.id)", dataToSave: thisNoonBodyPost.dictionary, completion: {_ in })
+                        
+                        uploadImage("noonbodywrite_\(thisNoonBodyPost.id)_0", image: thisImage, completion: {_ in })
                     } else {
                         let alertView = SPAlertView(title: "Add a photo", message: "You cannot submit a recipe without a photo", preset: SPAlertPreset.error)
                         alertView.duration = 3

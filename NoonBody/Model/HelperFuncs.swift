@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Combine
+import FirebaseStorage
 import Firebase
 
 extension GlobalEnvironment{
@@ -53,4 +54,24 @@ func firestoreSubmit_data(docRef_string:String, dataToSave:[String:Any], complet
             }
         }
     }
+}
+
+func uploadImage(_ referenceString:String, image:UIImage, completion: @escaping (Any) -> Void, showDetails: Bool = false){
+    if let imageData = image.jpegData(compressionQuality: 1){
+        let storage = Storage.storage()
+        storage.reference().child(referenceString).putData(imageData, metadata: nil){
+            (strgMtdta, err) in
+            
+            if let err = err {
+                print("an error has occurred - \(err.localizedDescription)")
+                completion(err)
+            } else {
+                print("image uploaded successfully")
+            }
+        }
+    } else {
+        print("couldn't unwrap image as data")
+    }
+    
+    
 }
