@@ -11,6 +11,8 @@ import SPAlert
 
 struct NoonBodyWrite: View {
     
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
     @EnvironmentObject var env: GlobalEnvironment
     
     @State private var showSheet:Bool = false
@@ -171,7 +173,7 @@ struct NoonBodyWrite: View {
                 .navigationBarTitle("눈바디 기록하기", displayMode: .inline)
                 .navigationBarItems(trailing: Button(action: {
                     
-                    var actionsToComplete = 3
+                    var actionsToComplete = 2
                     var actionsCompleted = 0
                     
                     func check_success(){
@@ -181,6 +183,7 @@ struct NoonBodyWrite: View {
                             let alertView = SPAlertView(title: "NoonBody Submitted", message: "NoonBody submitted successfully!", preset: SPAlertPreset.done)
                             alertView.duration = 3
                             alertView.present()
+                            self.presentationMode.wrappedValue.dismiss()
                         }
                     }
                     
