@@ -18,12 +18,14 @@ class user : NSObject, Identifiable, NSCoding {
     var password: String
     var name: String
     var email: String
+    var publishedNoonBodys:[String] = []
     
-    init(username:String, password:String, name:String, email:String, _ establishedID:String?){
+    init(username:String, password:String, name:String, email:String, publishedNoonBodys: [String], _ establishedID:String?){
         self.username = username
         self.password = password
         self.name = name
         self.email = email
+        self.publishedNoonBodys = publishedNoonBodys
         
         if let establishedID = establishedID{    //not nil
             self.establishedID = establishedID
@@ -39,6 +41,7 @@ class user : NSObject, Identifiable, NSCoding {
         password = aDecoder.decodeObject(forKey: "password") as? String ?? ""
         name = aDecoder.decodeObject(forKey: "name") as? String ?? ""
         email = aDecoder.decodeObject(forKey: "email") as? String ?? ""
+        publishedNoonBodys = aDecoder.decodeObject(forKey: "publishedNoonBodys") as? [String] ?? []
         
     }
     func encode(with aCoder: NSCoder) {
@@ -48,10 +51,11 @@ class user : NSObject, Identifiable, NSCoding {
         aCoder.encode(password, forKey: "password")
         aCoder.encode(name, forKey: "name")
         aCoder.encode(email, forKey: "email")
+        aCoder.encode(publishedNoonBodys, forKey: "publishedNoonBodys")
     }
 }
 
 class GlobalEnvironment: ObservableObject{
     
-    @Published var currentUser: user = user.init(username: "", password: "", name: "", email: "", nil)
+    @Published var currentUser: user = user.init(username: "", password: "", name: "", email: "", publishedNoonBodys: [], nil)
 }

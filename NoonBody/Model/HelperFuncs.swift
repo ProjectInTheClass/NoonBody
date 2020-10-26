@@ -46,15 +46,35 @@ func firestoreSubmit_data(docRef_string:String, dataToSave:[String:Any], complet
     docRef.setData(dataToSave){ (error) in
         if let error = error {
             print("error = \(error)")
-            completion(error)
+            
         }else{
             print("data uploaded successfully")
             if showDetails{
                 print("dataUploaded = \(dataToSave)")
             }
+            completion(true)
         }
     }
 }
+
+func firestoreUpdate_data(docRef_string:String, dataToUpdate:[String:Any], completion: @escaping (Any) -> Void, showDetails: Bool = false){
+    
+    let docRef = Firestore.firestore().document(docRef_string)
+    print("updating data")
+    docRef.setData(dataToUpdate, merge: true){ (error) in
+        if let error = error {
+            print("error = \(error)")
+            
+        }else{
+            print("data uploaded successfully")
+            if showDetails{
+                print("dataUploaded = \(dataToUpdate)")
+            }
+            completion(true)
+        }
+    }
+}
+
 
 func uploadImage(_ referenceString:String, image:UIImage, completion: @escaping (Any) -> Void, showDetails: Bool = false){
     if let imageData = image.jpegData(compressionQuality: 1){
@@ -64,13 +84,14 @@ func uploadImage(_ referenceString:String, image:UIImage, completion: @escaping 
             
             if let err = err {
                 print("an error has occurred - \(err.localizedDescription)")
-                completion(err)
+                
             } else {
                 print("image uploaded successfully")
             }
         }
     } else {
         print("couldn't unwrap image as data")
+        completion(true)
     }
     
     
