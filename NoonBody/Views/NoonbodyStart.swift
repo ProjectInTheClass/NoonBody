@@ -67,9 +67,9 @@ struct NoonbodyStart: View {
                             if let error = error{
                                 print("error = \(error)")
                             }else{
-                                let alertView = SPAlertView(title: "Account created successfully", message: "Your login query came back positive", preset: SPAlertPreset.done)
-                                alertView.duration = 3
-                                alertView.present()
+//                                let alertView = SPAlertView(title: "Account created successfully", message: "Your login query came back positive", preset: SPAlertPreset.done)
+//                                alertView.duration = 3
+//                                alertView.present()
                                 print("no error")
                             }
                         }
@@ -81,13 +81,15 @@ struct NoonbodyStart: View {
                                 print("Error getting documents: \(err)")
                             }else{
                                 if querySnapshot!.documents.count <= 0{
-                                    let alertView = SPAlertView(title: "No users found", message: "No users have the username you entered", preset: SPAlertPreset.error)
-                                    alertView.duration = 3
-                                    alertView.present()
+                                    print("No users found")
+//                                    let alertView = SPAlertView(title: "No users found", message: "No users have the username you entered", preset: SPAlertPreset.error)
+//                                    alertView.duration = 3
+//                                    alertView.present()
                                 }else if querySnapshot!.documents.count > 1{
-                                    let alertView = SPAlertView(title: "Something went wrong", message: "Multiple accounts exist with this username", preset: SPAlertPreset.error)
-                                    alertView.duration = 3
-                                    alertView.present()
+                                    print("Multiple accounts exist with this username")
+//                                    let alertView = SPAlertView(title: "Something went wrong", message: "Multiple accounts exist with this username", preset: SPAlertPreset.error)
+//                                    alertView.duration = 3
+//                                    alertView.present()
                                 }else {
                                     
                                     for document in querySnapshot!.documents {
@@ -107,9 +109,10 @@ struct NoonbodyStart: View {
                                             self.env.save_UserDefaults()
                                             self.isLoggedIn = true
                                         }else{
-                                            let alertView = SPAlertView(title: "password doesn't match", message: nil, preset: SPAlertPreset.error)
-                                            alertView.duration = 3
-                                            alertView.present()
+//                                            let alertView = SPAlertView(title: "password doesn't match", message: nil, preset: SPAlertPreset.error)
+//                                            alertView.duration = 3
+//                                            alertView.present()
+                                            
                                         }
                                     }
                                 }
