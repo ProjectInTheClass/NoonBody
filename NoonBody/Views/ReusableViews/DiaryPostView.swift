@@ -23,7 +23,7 @@ struct DiaryPostView: View {
                 
             Image("body2")
                 .resizable()
-                .frame(width: .infinity, height: 300, alignment: .trailing)
+                .frame(width: UIScreen.main.bounds.width, height: 300, alignment: .trailing)
                 .padding(.leading)
                 .padding(.trailing)
             

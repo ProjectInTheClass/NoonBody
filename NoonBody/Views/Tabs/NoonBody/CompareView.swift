@@ -72,7 +72,8 @@ struct CompareView: View {
             
             Divider()
             
-        }
+        }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        .background(Color("secondaryOrange"))
     }
 }
 

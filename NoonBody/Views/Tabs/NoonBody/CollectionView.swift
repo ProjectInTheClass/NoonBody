@@ -17,6 +17,8 @@ struct CollectionView: View {
     
     @State private var choosedImage1: UIImage?
     
+    @State private var isChoosed = false
+    
     var body: some View {
 
         VStack{
@@ -38,23 +40,40 @@ struct CollectionView: View {
                 
             }
             
-            ScrollView {
-                VStack(alignment: .leading){
-                    
-                    HStack{
-                        Text("9월 3주차")
-                            .font(.system(size: 20))
-                            
+            ZStack{
+                ScrollView {
+                    VStack(alignment: .leading){
+                        
+                        HStack{
+                            Text("9월 3주차")
+                                .font(.system(size: 20))
+                                
+                        }
+                        .padding(.leading, 20)
+                        
+                        
+                        //과거 사진 이미지들
+                        showImages()
+                        
+                        
                     }
-                    .padding(.leading, 20)
-                    
-                    
-                    //과거 사진 이미지들
-                    showImages()
-                    
-                    
                 }
+                
+                NavigationLink(destination: CompareView(), isActive: $isChoosed) {
+                    Button(action: {
+                        self.isChoosed = true
+                    }, label: {
+                        HStack {
+                            Text("비교하기")
+                            
+                        }.frame(height: 50)
+                        .frame(minWidth:0, maxWidth: .infinity)
+                        .foregroundColor(Color.white)
+                        
+                    }).background(Color("primaryOrange")).cornerRadius(25).padding()
+                }.padding(.top, 350)
             }
+            
         }
         
             
@@ -139,9 +158,9 @@ struct showImages: View {
         MyImagePost(myImage: Image("body1").resizable(), myWeight: 61.57),
         MyImagePost(myImage: Image("body2").resizable(), myWeight: 61.56),
         MyImagePost(myImage: Image("body3").resizable(), myWeight: 61.55),
-        MyImagePost(myImage: Image("body1").resizable(), myWeight: 61.54),
-        MyImagePost(myImage: Image("body2").resizable(), myWeight: 61.53),
-        MyImagePost(myImage: Image("body3").resizable(), myWeight: 61.52)
+        MyImagePost(myImage: Image("body4").resizable(), myWeight: 61.54),
+        MyImagePost(myImage: Image("body5").resizable(), myWeight: 61.53),
+        MyImagePost(myImage: Image("body6").resizable(), myWeight: 61.52)
     ]
     
     private var columns: [GridItem] = [

@@ -27,16 +27,20 @@ struct PostView: View {
                     Image(systemName: "message")
                     Spacer()
 //                    Image(systemName: "bookmark")
-                }
+                }.padding(.bottom, 3)
                 
                 HStack{
                     Text("\(passed_postingUser)")
+                        .font(.system(size: 20))
                     Text("\(passed_numberOfLikes) likes")
+                        .font(.system(size: 15))
                         .foregroundColor(.gray)
                     Spacer()
                 }.font(.system(size: 12, weight: .bold))
+                
                 HStack{
                     Text("\(passed_description)")
+                        .font(.system(size: 15))
                     Spacer()
                 }.font(.system(size: 12, weight: .regular))
             }.padding()
