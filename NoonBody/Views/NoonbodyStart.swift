@@ -11,11 +11,13 @@ import SPAlert
 
 struct NoonbodyStart: View {
     
+    let number = Int.random(in: 0..<1000000)
+    
     //sign up
-    @State private var name:String = "test1"
-    @State private var username:String = "test1"
-    @State private var password:String = "test1"
-    @State private var email:String = "test1"
+    @State private var name:String = ""
+    @State private var username:String = ""
+    @State private var password:String = ""
+    @State private var email:String = ""
     
     @State private var docRef:DocumentReference!
     
@@ -54,10 +56,10 @@ struct NoonbodyStart: View {
                         
                         //sign up
                         let dataToSave:[String:Any] = [
-                            "username":self.username,
-                            "password":self.password,
-                            "name":self.name,
-                            "email":self.email
+                            "username":"test\(number)",
+                            "password":"test\(number)",
+                            "name":"test\(number)",
+                            "email":"test\(number)"
                         ]
                         print("setting ref")
                         self.docRef = Firestore.firestore().document("users/\(UUID().uuidString)")
@@ -75,7 +77,7 @@ struct NoonbodyStart: View {
                         }
                         
                         //login
-                        Firestore.firestore().collection("users").whereField("username", isEqualTo: self.username).getDocuments(){ (querySnapshot, err) in
+                        Firestore.firestore().collection("users").whereField("username", isEqualTo: "test\(number)").getDocuments(){ (querySnapshot, err) in
                             
                             if let err = err{
                                 print("Error getting documents: \(err)")
@@ -94,7 +96,7 @@ struct NoonbodyStart: View {
                                     
                                     for document in querySnapshot!.documents {
                                         print("\(document.documentID) => \(document.data())")
-                                        if document.data()["password"] as? String ?? "" == (self.password){
+                                        if document.data()["password"] as? String ?? "" == ("test\(number)"){
                                             self.env.currentUser = user(
                                                 username: document.data()["username"] as? String ?? "",
                                                 password: document.data()["password"] as? String ?? "",
