@@ -91,7 +91,7 @@ struct DiaryPost: Identifiable {
     var diaryWeight: Double
     var diaryMuscle: Double
     var diaryFat: Double
-    var diaryImage: Image
+//    var diaryImage: URL
     
     var dictionary: [String: Any]{
         return[
@@ -102,6 +102,8 @@ struct DiaryPost: Identifiable {
             "diaryWeight" : diaryWeight,
             "diaryMuscle" : diaryMuscle,
             "diaryFat" : diaryFat
+//            "diaryImage" : diaryImage
+            
         ]
     }
 }

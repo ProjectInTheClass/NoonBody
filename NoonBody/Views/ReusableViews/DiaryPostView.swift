@@ -15,13 +15,13 @@ struct DiaryPostView: View {
     var passed_diaryWeight: Double
     var passed_diaryMuscle: Double
     var passed_diaryFat: Double
-    var passed_diaryImage: Image
+//    var passed_diaryImage: Image
     
     var body: some View {
         VStack{
             Text("\(passed_diaryDate)")
                 
-            passed_diaryImage
+            Image("body2")
                 .resizable()
                 .frame(width: .infinity, height: 300, alignment: .trailing)
                 .padding(.leading)
@@ -80,6 +80,6 @@ struct DiaryPostView: View {
 
 struct DiaryPostView_Previews: PreviewProvider {
     static var previews: some View {
-        DiaryPostView(passed_diaryDate: getDate(num: 0), passed_diaryFull: "공복", passed_diaryShare: "공개", passed_diaryWeight: 62.4, passed_diaryMuscle: 25.1, passed_diaryFat: 23, passed_diaryImage: Image("body2"))
+        DiaryPostView(passed_diaryDate: getDate(num: 0), passed_diaryFull: "공복", passed_diaryShare: "공개", passed_diaryWeight: 62.4, passed_diaryMuscle: 25.1, passed_diaryFat: 23)
     }
 }

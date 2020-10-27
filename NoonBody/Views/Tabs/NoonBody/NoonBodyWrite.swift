@@ -173,55 +173,7 @@ struct NoonBodyWrite: View {
                 .navigationBarTitle("눈바디 기록하기", displayMode: .inline)
                 .navigationBarItems(trailing: Button(action: {
                     
-                    var actionsToComplete = 2
-                    var actionsCompleted = 0
-                    
-                    func check_success(){
-                        print("\(actionsCompleted)/\(actionsToComplete)")
-                        if actionsCompleted == actionsToComplete {
-                            //Add a function to clear all the data on this page
-                            let alertView = SPAlertView(title: "NoonBody Submitted", message: "NoonBody submitted successfully!", preset: SPAlertPreset.done)
-                            alertView.duration = 3
-                            alertView.present()
-                            self.presentationMode.wrappedValue.dismiss()
-                        }
-                    }
-                    
-                    if let thisImage = self.image {
-                        let thisNoonBodyPost = DiaryPost(diaryDate: getDate(num: 0),
-                                                         diaryFull: "공복",
-                                                         diaryShare: "공유",
-                                                         diaryWeight: 55.5,
-                                                         diaryMuscle: 25.3,
-                                                         diaryFat: 21.6,
-                                                         diaryImage: Image(uiImage: thisImage)
-                        
-                            
-                        )
-                        
-                        print(thisNoonBodyPost.dictionary)
-                        
-                        self.env.currentUser.publishedNoonBodys.append(thisNoonBodyPost.id.uuidString)
-                        
-                        firestoreSubmit_data(docRef_string: "noonbodywrite/\(thisNoonBodyPost.id)", dataToSave: thisNoonBodyPost.dictionary, completion: {_ in
-                            actionsCompleted += 1
-                            check_success()
-                        })
-                        
-                        firestoreUpdate_data(docRef_string: "users/\(self.env.currentUser.establishedID)", dataToUpdate: ["publishedNoonBodys": self.env.currentUser.publishedNoonBodys], completion: {_ in
-                            actionsCompleted += 1
-                            check_success()
-                        })
-                        
-                        uploadImage("noonbodywrite_\(thisNoonBodyPost.id)_0", image: thisImage, completion: {_ in
-                            actionsCompleted += 1
-                            check_success()
-                        })
-                    } else {
-                        let alertView = SPAlertView(title: "Add a photo", message: "You cannot submit a recipe without a photo", preset: SPAlertPreset.error)
-                        alertView.duration = 3
-                        alertView.present()
-                    }
+                    noonbodySubmitFirebase()
                     
                 }, label: {
                     Text("저장")
@@ -239,6 +191,64 @@ struct NoonBodyWrite: View {
                 
         })
         }.background(Color("secondaryOrange"))
+    }
+    
+    func noonbodySubmitFirebase(){
+        var actionsToComplete = 2
+        var actionsCompleted = 0
+        var imageUrl: URL!
+        
+        
+        func check_success(){
+            print("\(actionsCompleted)/\(actionsToComplete)")
+            if actionsCompleted == actionsToComplete {
+                //Add a function to clear all the data on this page
+                let alertView = SPAlertView(title: "NoonBody Submitted", message: "NoonBody submitted successfully!", preset: SPAlertPreset.done)
+                alertView.duration = 3
+                alertView.present()
+                self.presentationMode.wrappedValue.dismiss()
+                
+            }
+        }
+        
+        if let thisImage = self.image {
+            let thisNoonBodyPost = DiaryPost(diaryDate: getDate(num: 0),
+                                             diaryFull: "공복",
+                                             diaryShare: "공유",
+                                             diaryWeight: 55.5,
+                                             diaryMuscle: 25.3,
+                                             diaryFat: 21.6
+                                             
+            )
+            
+            print(thisNoonBodyPost.dictionary)
+            
+            self.env.currentUser.publishedNoonBodys.append(thisNoonBodyPost.id.uuidString)
+            
+            uploadImage("noonbodywrite_\(thisNoonBodyPost.id)_0", image: thisImage, completion: {url in
+                
+//                imageUrl = url as! URL
+//                print("uploaded image url: \(imageUrl)")
+                actionsCompleted += 1
+                check_success()
+            })
+            
+            firestoreSubmit_data(docRef_string: "noonbodywrite/\(thisNoonBodyPost.id)", dataToSave: thisNoonBodyPost.dictionary, completion: {_ in
+                actionsCompleted += 1
+                check_success()
+            })
+            
+            firestoreUpdate_data(docRef_string: "users/\(self.env.currentUser.establishedID)", dataToUpdate: ["publishedNoonBodys": self.env.currentUser.publishedNoonBodys], completion: {_ in
+                actionsCompleted += 1
+                check_success()
+            })
+            
+            
+        } else {
+            let alertView = SPAlertView(title: "Add a photo", message: "You cannot submit a recipe without a photo", preset: SPAlertPreset.error)
+            alertView.duration = 3
+            alertView.present()
+        }
     }
 }
 

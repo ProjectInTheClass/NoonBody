@@ -48,24 +48,43 @@ func firestoreUpdate_data(docRef_string:String, dataToUpdate:[String:Any], compl
     }
 }
 
+//func uploadMedia(completion: @escaping (_ url: String?) -> Void) {
+//    let storageRef = Storage.storage().reference().child("myImage.png")
+//    if let imageData = image.jpegData(compressionQuality: 1){
+//        storageRef.put(uploadData, metadata: nil) { (metadata, error) in
+//            if error != nil {
+//                print("error")
+//                completion(nil)
+//            } else {
+//                completion((metadata?.downloadURL()?.absoluteString)!))
+//                // your uploaded photo url.
+//            }
+//       }
+// }
 
 func uploadImage(_ referenceString:String, image:UIImage, completion: @escaping (Any) -> Void, showDetails: Bool = false){
     if let imageData = image.jpegData(compressionQuality: 1){
-        let storage = Storage.storage()
-        storage.reference().child(referenceString).putData(imageData, metadata: nil){
-            (strgMtdta, err) in
-            
-            if let err = err {
-                print("an error has occurred - \(err.localizedDescription)")
-                
-            } else {
-                print("image uploaded successfully")
-            }
-        }
+
+        FirebaseStorageManager().uploadImageData(data: imageData, serverFileName: "myimage.png") { (isSuccess, url) in
+                     print("uploadImageData: \(isSuccess), \(url)")
+                     completion(url)
+               }
+
+//        let storage = Storage.storage()
+//        storage.reference().child(referenceString).putData(imageData, metadata: nil){
+//            (strgMtdta, err) in
+//
+//            if let err = err {
+//                print("an error has occurred - \(err.localizedDescription)")
+//
+//            } else {
+//                print("image uploaded successfully")
+//            }
+//        }
     } else {
         print("couldn't unwrap image as data")
         completion(true)
     }
-    
-    
+
+
 }

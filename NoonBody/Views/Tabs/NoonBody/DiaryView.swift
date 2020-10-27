@@ -6,37 +6,46 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct DiaryView: View {
     
     var DiaryPosts: [DiaryPost] = [
-        DiaryPost(diaryDate: getDate(num: 0), diaryFull: "식후", diaryShare: "공개", diaryWeight: 62.4, diaryMuscle: 25.1, diaryFat: 23, diaryImage: Image("body2")),
+        DiaryPost(diaryDate: getDate(num: 0), diaryFull: "식후", diaryShare: "공개", diaryWeight: 62.4, diaryMuscle: 25.1, diaryFat: 23)
         
     ]
     
+    @ObservedObject var viewModel = NoonBodyViewModel() // (/1)
+    
     
     var body: some View {
+        
+//        if viewModel.isWrite == true{
+        ScrollView (.horizontal){
             
-        ScrollView {
-            ForEach(DiaryPosts, id: \.id){ post in
-                DiaryPostView(passed_diaryDate: post.diaryDate, passed_diaryFull: post.diaryFull, passed_diaryShare: post.diaryShare, passed_diaryWeight: post.diaryWeight, passed_diaryMuscle: post.diaryMuscle, passed_diaryFat: post.diaryFat, passed_diaryImage: post.diaryImage)
+                HStack(spacing:0){
+                    
+                    ForEach(viewModel.diaryPosts, id: \.id){ post in
+                        DiaryPostView(passed_diaryDate: post.diaryDate, passed_diaryFull: post.diaryFull, passed_diaryShare: post.diaryShare, passed_diaryWeight: post.diaryWeight, passed_diaryMuscle: post.diaryMuscle, passed_diaryFat: post.diaryFat)
+                    }
+                }
+            
+                
+                    
+                
+                
+            }.onAppear(){
+                self.viewModel.fetchData()
             }
-        }
+//        }else{
+//            Text("오늘의 눈바디를 기록하세요")
+//        }
+            
+        
             
         }
         
     }
-
-//func getDate(num:Int)->String{
-//     let time = Date()
-//     let timeFormatter = DateFormatter()
-//     timeFormatter.dateFormat = "YYYY.MM.DD"
-//    timeFormatter.dateStyle = .medium
-//    timeFormatter.locale = Locale(identifier: "Ko_KR")
-//     let stringDate = timeFormatter.string(from: time)
-//     return stringDate
-//    }
-
 
 
 
