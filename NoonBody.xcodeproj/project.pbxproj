@@ -38,6 +38,7 @@
 		459FAA4125452EEA00C1E838 /* Custom_Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459FAA4025452EEA00C1E838 /* Custom_Colors.swift */; };
 		45A484972547BEA00027BCA1 /* NoonBodyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A484962547BEA00027BCA1 /* NoonBodyViewModel.swift */; };
 		45A484AF2547C5920027BCA1 /* FirebaseStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A484AE2547C5920027BCA1 /* FirebaseStorageManager.swift */; };
+		45A484B12547FCB50027BCA1 /* DietViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A484B02547FCB50027BCA1 /* DietViewModel.swift */; };
 		45C6E41E253487D400C3012B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C6E41D253487D400C3012B /* UIColor.swift */; };
 		45D996B32541A26C005741FD /* GlobalEnvironment_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D996B22541A26C005741FD /* GlobalEnvironment_extension.swift */; };
 		45DDD88D25340CF2004C18FE /* NoonBodyTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD88C25340CF2004C18FE /* NoonBodyTab.swift */; };
@@ -108,6 +109,7 @@
 		459FAA4025452EEA00C1E838 /* Custom_Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom_Colors.swift; sourceTree = "<group>"; };
 		45A484962547BEA00027BCA1 /* NoonBodyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBodyViewModel.swift; sourceTree = "<group>"; };
 		45A484AE2547C5920027BCA1 /* FirebaseStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageManager.swift; sourceTree = "<group>"; };
+		45A484B02547FCB50027BCA1 /* DietViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietViewModel.swift; sourceTree = "<group>"; };
 		45C6E41D253487D400C3012B /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		45D996B22541A26C005741FD /* GlobalEnvironment_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalEnvironment_extension.swift; sourceTree = "<group>"; };
 		45DDD88C25340CF2004C18FE /* NoonBodyTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBodyTab.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				45A484962547BEA00027BCA1 /* NoonBodyViewModel.swift */,
+				45A484B02547FCB50027BCA1 /* DietViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 				45024C412532EB9B00D619C5 /* NoonbodyStart.swift in Sources */,
 				45F940F32539A1EC000D4AE0 /* PostView.swift in Sources */,
 				45024C022532EA0B00D619C5 /* NoonBody.xcdatamodeld in Sources */,
+				45A484B12547FCB50027BCA1 /* DietViewModel.swift in Sources */,
 				45F941002539A2A7000D4AE0 /* CommunityFriendsView.swift in Sources */,
 				453363B3253EE42400DC2FDB /* CompareView.swift in Sources */,
 				4509A6E62546F44C005A0D50 /* FirebaseFuncs.swift in Sources */,
