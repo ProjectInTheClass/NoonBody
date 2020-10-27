@@ -183,7 +183,7 @@ struct NoonBodyWrite: View {
             print("\(actionsCompleted)/\(actionsToComplete)")
             if actionsCompleted == actionsToComplete {
                 //Add a function to clear all the data on this page
-                let alertView = SPAlertView(title: "NoonBody Submitted", message: "NoonBody submitted successfully!", preset: SPAlertPreset.done)
+                let alertView = SPAlertView(title: "눈바디 작성 완료", message: "눈바디가 성공적으로 작성되었습니다!", preset: SPAlertPreset.done)
                 alertView.duration = 3
                 alertView.present()
                 self.presentationMode.wrappedValue.dismiss()
@@ -240,7 +240,7 @@ struct NoonBodyWrite: View {
             
             
         } else {
-            let alertView = SPAlertView(title: "Add a photo", message: "You cannot submit a recipe without a photo", preset: SPAlertPreset.error)
+            let alertView = SPAlertView(title: "사진을 추가하세요", message: "눈바디를 입력하기 위해서는 사진이 필요합니다.", preset: SPAlertPreset.error)
             alertView.duration = 3
             alertView.present()
         }

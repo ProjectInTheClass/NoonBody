@@ -123,7 +123,7 @@ struct NoonbodyStart: View {
                         }
                     }, label: {
                         HStack {
-                            Text("Login")
+                            Text("시작하기")
                             Image(systemName: "arrow.right")
                         }.frame(height: 50)
                         .frame(minWidth:0, maxWidth: .infinity)
