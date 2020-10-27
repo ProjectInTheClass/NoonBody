@@ -25,13 +25,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
         // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
-        let tabbedRootView = LoginView().environment(\.managedObjectContext, context)
+        let tabbedRootView = NoonbodyStart().environment(\.managedObjectContext, context)
             //DateFormatter를 custom 공유데이터에 추가
             .environmentObject(DateFormatter.memoDateFormatter)
             .environmentObject(GlobalEnvironment())
         
-//        let tabbedRootView = NoonbodyStart().environment(\.managedObjectContext, context)
-//            .environmentObject(GlobalEnvironment())
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
