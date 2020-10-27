@@ -74,7 +74,7 @@ struct DiaryPostView: View {
             
             Divider()
             
-        }
+        }.frame(width: UIScreen.main.bounds.size.width, height: .infinity)
     }
 }
 

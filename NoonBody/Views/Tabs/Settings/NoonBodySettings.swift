@@ -124,7 +124,7 @@ struct NoonBodySettings: View {
 
                     .listStyle(GroupedListStyle())
                     
-                    NavigationLink(destination: SettingsProfile(), isActive: $isLoggedIn) {
+                    NavigationLink(destination: LoginView(), isActive: $isLoggedIn) {
                         Button(action: {
                             self.isLoggedIn = true
                         }, label: {

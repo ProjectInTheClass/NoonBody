@@ -21,11 +21,16 @@ struct NoonBodyWrite: View {
     
     @State private var image: UIImage?
     
-    @State private var showChooseIndex = 0
-    var showChoose = ["공개", "비공개"]
+//    @State private var showChooseIndex = 0
+//    var showChoose = ["공개", "비공개"]
+//
+//    @State private var showChooseIsFullIndex = 0
+//    var showChooseIsFull = ["공복", "식후"]
+    @State var isFull = true
+    @State var isShow = true
     
-    @State private var showChooseIsFullIndex = 0
-    var showChooseIsFull = ["공복", "식후"]
+    @State var isFullString = ""
+    @State var isShowString = ""
     
     @State private var content: String = ""
     
@@ -76,45 +81,20 @@ struct NoonBodyWrite: View {
     //                    .padding(.top, 10)
                     
                     VStack {
-    //                    Toggle(isOn: $showGreeting) {
-    //                                    Text("공개")
-    //                                }.padding()
-    //
-    //                                if showGreeting {
-    ////                                    Text("공개")
-    //                                }
-                        Picker(selection: $showChooseIndex, label: Text("What is your favorite color?")) {
-                            ForEach(0..<showChoose.count) { index in
-                                Text(self.showChoose[index]).tag(index)
-                            }
-                        }.pickerStyle(SegmentedPickerStyle())
-                        .padding(.leading)
-                        .padding(.trailing)
-                        .padding(.top)
-
-    //                    Text("Value: \(showChoose[showChooseIndex])")
-                    }
+                        Divider()
+                        Toggle(isOn: $isFull) {
+                            Text("공복여부")
+                        }
+                        Divider()
+                        Toggle(isOn: $isShow) {
+                            Text("공개여부")
+                        }
+                        Divider()
+                    }.padding()
                     
-                    VStack {
-    //                    Toggle(isOn: $showGreeting) {
-    //                                    Text("공개")
-    //                                }.padding()
-    //
-    //                                if showGreeting {
-    ////                                    Text("공개")
-    //                                }
-                        Picker(selection: $showChooseIsFullIndex, label: Text("What is your favorite color?")) {
-                            ForEach(0..<showChooseIsFull.count) { index in
-                                Text(self.showChooseIsFull[index]).tag(index)
-                            }
-                        }.pickerStyle(SegmentedPickerStyle())
-                        .padding(.leading)
-                        .padding(.trailing)
-
-    //                    Text("Value: \(showChoose[showChooseIndex])")
-                    }
+                   
                     
-                    Divider().padding(.top)
+                    Divider().padding(.top, 3)
                     
                     VStack(alignment: .leading){
                         HStack{
@@ -211,13 +191,28 @@ struct NoonBodyWrite: View {
             }
         }
         
+        func isFullShowCheck(){
+            if isFull{
+                isFullString = "공복"
+            }else{
+                isFullString = "식후"
+            }
+            if isShow{
+                isShowString = "공개"
+            }else{
+                isShowString = "비공개"
+            }
+            
+        }
+        
         if let thisImage = self.image {
+            isFullShowCheck()
             let thisNoonBodyPost = DiaryPost(diaryDate: getDate(num: 0),
-                                             diaryFull: "공복",
-                                             diaryShare: "공유",
-                                             diaryWeight: 55.5,
-                                             diaryMuscle: 25.3,
-                                             diaryFat: 21.6
+                                             diaryFull: isFullString,
+                                             diaryShare: isShowString,
+                                             diaryWeight: Double(weight) ?? 0,
+                                             diaryMuscle: Double(muscle) ?? 0,
+                                             diaryFat: Double(fat) ?? 0
                                              
             )
             

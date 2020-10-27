@@ -17,29 +17,42 @@ struct DiaryView: View {
     
     @ObservedObject var viewModel = NoonBodyViewModel() // (/1)
     
+    init() {
+        self.viewModel.fetchData()
+    }
+    
     
     var body: some View {
-        
-//        if viewModel.isWrite == true{
-        ScrollView (.horizontal){
+        VStack{
+
+//            Button(action: {
+//                self.viewModel.fetchData()
+//            }) {
+//                Image(systemName: "arrow.clockwise.circle")
+//            }
             
-                HStack(spacing:0){
-                    
-                    ForEach(viewModel.diaryPosts, id: \.id){ post in
-                        DiaryPostView(passed_diaryDate: post.diaryDate, passed_diaryFull: post.diaryFull, passed_diaryShare: post.diaryShare, passed_diaryWeight: post.diaryWeight, passed_diaryMuscle: post.diaryMuscle, passed_diaryFat: post.diaryFat)
+            if viewModel.isWrite == true{
+            ScrollView (.horizontal, showsIndicators:false){
+                
+                    HStack(spacing:0){
+                        
+                        ForEach(viewModel.diaryPosts, id: \.id){ post in
+                            DiaryPostView(passed_diaryDate: post.diaryDate, passed_diaryFull: post.diaryFull, passed_diaryShare: post.diaryShare, passed_diaryWeight: post.diaryWeight, passed_diaryMuscle: post.diaryMuscle, passed_diaryFat: post.diaryFat)
+                        }
                     }
-                }
-            
-                
                     
-                
-                
-            }.onAppear(){
-                self.viewModel.fetchData()
             }
-//        }else{
-//            Text("오늘의 눈바디를 기록하세요")
-//        }
+            
+            }else{
+                Text("오늘의 눈바디를 기록하세요")
+                    
+            }
+            
+            
+        }.onAppear(){
+            self.viewModel.fetchData()
+        }
+        
             
         
             
