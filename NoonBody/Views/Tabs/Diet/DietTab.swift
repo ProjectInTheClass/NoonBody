@@ -52,50 +52,65 @@ struct DietTab: View {
         NavigationView {
             VStack{
                 ScrollView(.horizontal, showsIndicators:false){
-                    HStack(alignment: .center){
+                    ScrollViewReader { value in
+                        HStack(alignment: .center){
                         Spacer().frame(width:10)
                         
                         Text("2020. 10. 22")
-                            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 1)
+                            .padding()
+                            .font(.system(size:20, weight:.bold))
+                            .foregroundColor(.white)
+                            .background(Color("primaryOrange"))
                             .background(Color(myColor))
+                            .cornerRadius(12)
+                            
+                            
                             .onTapGesture(count: 1, perform: {
                                 choosedDate = "2020. 10. 22"
-                                
-                                self.isChoosed.toggle()
-                                
-                                if isChoosed{
-                                    self.myColor = "primaryOrange"
-                                }else{
-                                    self.myColor = "secondaryOrange"
-                                }
+
+//                                self.isChoosed.toggle()
+//
+//                                if isChoosed{
+//                                    self.myColor = "primaryOrange"
+//                                }else{
+//                                    self.myColor = "secondaryOrange"
+//                                }
                             })
                         Text("2020. 10. 23")
-                            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 1)
+                            .padding()
+                            .font(.system(size:20, weight:.bold))
+                            .foregroundColor(.white)
+                            .background(Color("primaryOrange"))
                             .background(Color(myColor))
+                            .cornerRadius(12)
                             .onTapGesture(count: 1, perform: {
                                 choosedDate = "2020. 10. 23"
-                                
-                                self.isChoosed.toggle()
-                                
-                                if isChoosed{
-                                    self.myColor = "primaryOrange"
-                                }else{
-                                    self.myColor = "secondaryOrange"
-                                }
+
+//                                self.isChoosed.toggle()
+//
+//                                if isChoosed{
+//                                    self.myColor = "primaryOrange"
+//                                }else{
+//                                    self.myColor = "secondaryOrange"
+//                                }
                             })
                         Text("2020. 10. 24")
-                            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 1)
+                            .padding()
+                            .font(.system(size:20, weight:.bold))
+                            .foregroundColor(.white)
+                            .background(Color("primaryOrange"))
                             .background(Color(myColor))
+                            .cornerRadius(12)
                             .onTapGesture(count: 1, perform: {
                                 choosedDate = "2020. 10. 24"
-                                
-                                self.isChoosed.toggle()
-                                
-                                if isChoosed{
-                                    self.myColor = "primaryOrange"
-                                }else{
-                                    self.myColor = "secondaryOrange"
-                                }
+
+//                                self.isChoosed.toggle()
+//
+//                                if isChoosed{
+//                                    self.myColor = "primaryOrange"
+//                                }else{
+//                                    self.myColor = "secondaryOrange"
+//                                }
                             })
                         
 //                        ForEach(DietLists, id: \.id){ post in
@@ -118,6 +133,11 @@ struct DietTab: View {
 //
                         Spacer().frame(width:10)
                     }.frame(height: 80)
+                        .onAppear {
+                            value.scrollTo(3, anchor: .trailing)
+                        }
+                    }
+                    
                 }.background(Color.clear)
                 .padding(.leading)
                 .padding(.trailing)

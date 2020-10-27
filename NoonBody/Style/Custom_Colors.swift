@@ -8,6 +8,8 @@
 import Foundation
 import SwiftUI
 
-var lightBlue = Color.init(red: 91/255, green: 152/255, blue: 198/255)
-var darkBlue = Color.init(red: 47/255, green: 75/255, blue: 135/255)
-var vDarkBlue = Color.init(red: 2/255, green: 51/255, blue: 92/255)
+var vLightBLue = Color.init(red: 130/255, green: 209/255, blue: 255/255)
+var lightBlue = Color.init(red: 117/255, green: 188/255, blue: 230/255)
+var mediumBlue = Color.init(red: 98/255, green: 157/255, blue: 191/255)
+var darkBlue = Color.init(red: 65/255, green: 105/255, blue: 128/255)
+var vDarkBlue = Color.init(red:33/255, green: 52/255, blue: 64/255)
