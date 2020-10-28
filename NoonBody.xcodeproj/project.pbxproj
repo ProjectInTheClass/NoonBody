@@ -38,7 +38,6 @@
 		459FAA3E25452EBC00C1E838 /* User_Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459FAA3D25452EBC00C1E838 /* User_Class.swift */; };
 		459FAA4125452EEA00C1E838 /* Custom_Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459FAA4025452EEA00C1E838 /* Custom_Colors.swift */; };
 		45A484972547BEA00027BCA1 /* NoonBodyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A484962547BEA00027BCA1 /* NoonBodyViewModel.swift */; };
-		45A484AF2547C5920027BCA1 /* FirebaseStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A484AE2547C5920027BCA1 /* FirebaseStorageManager.swift */; };
 		45A484B12547FCB50027BCA1 /* DietViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A484B02547FCB50027BCA1 /* DietViewModel.swift */; };
 		45C6E41E253487D400C3012B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C6E41D253487D400C3012B /* UIColor.swift */; };
 		45D996B32541A26C005741FD /* GlobalEnvironment_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D996B22541A26C005741FD /* GlobalEnvironment_extension.swift */; };
@@ -109,7 +108,6 @@
 		459FAA3D25452EBC00C1E838 /* User_Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User_Class.swift; sourceTree = "<group>"; };
 		459FAA4025452EEA00C1E838 /* Custom_Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom_Colors.swift; sourceTree = "<group>"; };
 		45A484962547BEA00027BCA1 /* NoonBodyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBodyViewModel.swift; sourceTree = "<group>"; };
-		45A484AE2547C5920027BCA1 /* FirebaseStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageManager.swift; sourceTree = "<group>"; };
 		45A484B02547FCB50027BCA1 /* DietViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietViewModel.swift; sourceTree = "<group>"; };
 		45C6E41D253487D400C3012B /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		45D996B22541A26C005741FD /* GlobalEnvironment_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalEnvironment_extension.swift; sourceTree = "<group>"; };
@@ -302,7 +300,6 @@
 				459FAA3D25452EBC00C1E838 /* User_Class.swift */,
 				45D996B22541A26C005741FD /* GlobalEnvironment_extension.swift */,
 				4509A6E52546F44C005A0D50 /* FirebaseFuncs.swift */,
-				45A484AE2547C5920027BCA1 /* FirebaseStorageManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -516,7 +513,6 @@
 				45F941052539A2EF000D4AE0 /* Post_structs.swift in Sources */,
 				4569679B254281C600663FB7 /* SettingsNotification.swift in Sources */,
 				459FAA3E25452EBC00C1E838 /* User_Class.swift in Sources */,
-				45A484AF2547C5920027BCA1 /* FirebaseStorageManager.swift in Sources */,
 				45024C462532EBA200D619C5 /* DietTab.swift in Sources */,
 				45DDD8A0253412E1004C18FE /* CommunityTab.swift in Sources */,
 				45DDD8E425342524004C18FE /* ButtonSelected.swift in Sources */,
