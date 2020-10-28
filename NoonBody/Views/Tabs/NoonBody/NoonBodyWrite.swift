@@ -174,9 +174,8 @@ struct NoonBodyWrite: View {
     }
     
     func noonbodySubmitFirebase(){
-        var actionsToComplete = 2
+        let actionsToComplete = 1
         var actionsCompleted = 0
-        var imageUrl: URL!
         
         
         func check_success(){
@@ -207,12 +206,13 @@ struct NoonBodyWrite: View {
         
         if let thisImage = self.image {
             isFullShowCheck()
-            let thisNoonBodyPost = DiaryPost(diaryDate: getDate(num: 0),
-                                             diaryFull: isFullString,
-                                             diaryShare: isShowString,
-                                             diaryWeight: Double(weight) ?? 0,
-                                             diaryMuscle: Double(muscle) ?? 0,
-                                             diaryFat: Double(fat) ?? 0
+            let thisNoonBodyPost = DiaryPostSubmit(diaryDate: getDate(num: 0),
+                                                 diaryFull: isFullString,
+                                                 diaryShare: isShowString,
+                                                 diaryWeight: Double(weight) ?? 0,
+                                                 diaryMuscle: Double(muscle) ?? 0,
+                                                 diaryFat: Double(fat) ?? 0,
+                                                 diaryImage: Image(uiImage: thisImage)
                                              
             )
             
@@ -220,18 +220,12 @@ struct NoonBodyWrite: View {
             
             self.env.currentUser.publishedNoonBodys.append(thisNoonBodyPost.id.uuidString)
             
-            uploadImage("noonbodywrite_\(thisNoonBodyPost.id)_0", image: thisImage, completion: {url in
+            FirebaseDataSubmit(storageRef_string: "NoonbodyWriteImages/\(thisNoonBodyPost.id)", docRef_string: "NoonbodyWrite/\(thisNoonBodyPost.id)", dataToSave: thisNoonBodyPost.dictionary, image: thisImage, completion: {_ in
                 
-//                imageUrl = url as! URL
-//                print("uploaded image url: \(imageUrl)")
                 actionsCompleted += 1
                 check_success()
             })
             
-            firestoreSubmit_data(docRef_string: "noonbodywrite/\(thisNoonBodyPost.id)", dataToSave: thisNoonBodyPost.dictionary, completion: {_ in
-                actionsCompleted += 1
-                check_success()
-            })
             
             firestoreUpdate_data(docRef_string: "users/\(self.env.currentUser.establishedID)", dataToUpdate: ["publishedNoonBodys": self.env.currentUser.publishedNoonBodys], completion: {_ in
                 actionsCompleted += 1

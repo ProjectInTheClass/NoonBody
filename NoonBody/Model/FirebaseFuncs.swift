@@ -12,23 +12,56 @@ import FirebaseStorage
 import Firebase
 
 //funtion to submit data
-func firestoreSubmit_data(docRef_string:String, dataToSave:[String:Any], completion: @escaping (Any) -> Void, showDetails: Bool = false){
+func FirebaseDataSubmit(storageRef_string:String, docRef_string:String, dataToSave:[String:Any], image : UIImage, completion : @escaping (Any)-> Void, showDetails: Bool = false){
     
-    let docRef = Firestore.firestore().document(docRef_string)
-    print("setting data")
-    docRef.setData(dataToSave){ (error) in
-        if let error = error {
-            print("error = \(error)")
+    let db = Firestore.firestore()
+    
+    let storage = Storage.storage().reference()
+    
+    let uid = GlobalEnvironment().currentUser.establishedID
+    
+    if let imageData = image.jpegData(compressionQuality: 1){
+    
+        storage.child(storageRef_string).child(getDate(num: 0)).putData(imageData, metadata: nil) { (_, err) in
             
-        }else{
-            print("data uploaded successfully")
-            if showDetails{
-                print("dataUploaded = \(dataToSave)")
+            if err != nil{
+                
+                print((err?.localizedDescription)!)
+                return
             }
-            completion(true)
+            
+            storage.child(storageRef_string).child(getDate(num: 0)).downloadURL { (url, err) in
+                
+                if err != nil{
+                    
+                    print((err?.localizedDescription)!)
+                    return
+                }
+                
+                db.document(docRef_string).setData(["dataToSave":dataToSave, "noonbodyPic":"\(url!)", "uid":uid]) { (err) in
+                    
+                    if err != nil{
+                        
+                        print((err?.localizedDescription)!)
+                        return
+                    }
+                    
+                    else{
+                        print("data uploaded successfully")
+                        if showDetails{
+                            print("dataUploaded = \(dataToSave)")
+                        }
+                        completion(true)
+                    }
+                    
+                }
+            }
         }
     }
 }
+
+
+
 
 func firestoreUpdate_data(docRef_string:String, dataToUpdate:[String:Any], completion: @escaping (Any) -> Void, showDetails: Bool = false){
     
@@ -46,45 +79,4 @@ func firestoreUpdate_data(docRef_string:String, dataToUpdate:[String:Any], compl
             completion(true)
         }
     }
-}
-
-//func uploadMedia(completion: @escaping (_ url: String?) -> Void) {
-//    let storageRef = Storage.storage().reference().child("myImage.png")
-//    if let imageData = image.jpegData(compressionQuality: 1){
-//        storageRef.put(uploadData, metadata: nil) { (metadata, error) in
-//            if error != nil {
-//                print("error")
-//                completion(nil)
-//            } else {
-//                completion((metadata?.downloadURL()?.absoluteString)!))
-//                // your uploaded photo url.
-//            }
-//       }
-// }
-
-func uploadImage(_ referenceString:String, image:UIImage, completion: @escaping (Any) -> Void, showDetails: Bool = false){
-    if let imageData = image.jpegData(compressionQuality: 1){
-
-        FirebaseStorageManager().uploadImageData(data: imageData, serverFileName: "myimage.png") { (isSuccess, url) in
-                     print("uploadImageData: \(isSuccess), \(url)")
-                     completion(url)
-               }
-
-//        let storage = Storage.storage()
-//        storage.reference().child(referenceString).putData(imageData, metadata: nil){
-//            (strgMtdta, err) in
-//
-//            if let err = err {
-//                print("an error has occurred - \(err.localizedDescription)")
-//
-//            } else {
-//                print("image uploaded successfully")
-//            }
-//        }
-    } else {
-        print("couldn't unwrap image as data")
-        completion(true)
-    }
-
-
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct DiaryPostView: View {
     
@@ -15,13 +16,14 @@ struct DiaryPostView: View {
     var passed_diaryWeight: Double
     var passed_diaryMuscle: Double
     var passed_diaryFat: Double
-//    var passed_diaryImage: Image
+    var passed_diaryImage: URL
     
     var body: some View {
         VStack{
             Text("\(passed_diaryDate)")
                 
-            Image("body2")
+            //URI로 이미지 보여주도록 수정
+            AnimatedImage(url: passed_diaryImage)
                 .resizable()
                 .frame(width: UIScreen.main.bounds.width, height: 300, alignment: .trailing)
                 .padding(.leading)
@@ -79,7 +81,9 @@ struct DiaryPostView: View {
 }
 
 struct DiaryPostView_Previews: PreviewProvider {
+    
+    
     static var previews: some View {
-        DiaryPostView(passed_diaryDate: getDate(num: 0), passed_diaryFull: "공복", passed_diaryShare: "공개", passed_diaryWeight: 62.4, passed_diaryMuscle: 25.1, passed_diaryFat: 23)
+        DiaryPostView(passed_diaryDate: getDate(num: 0), passed_diaryFull: "공복", passed_diaryShare: "공개", passed_diaryWeight: 62.4, passed_diaryMuscle: 25.1, passed_diaryFat: 23, passed_diaryImage: URL(string: "http://www.example.com/image.jpg")!)
     }
 }

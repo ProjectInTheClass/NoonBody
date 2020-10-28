@@ -15,7 +15,7 @@ class NoonBodyViewModel: ObservableObject {
   private var db = Firestore.firestore()
 
   func fetchData() {
-    db.collection("noonbodywrite").addSnapshotListener { (querySnapshot, error) in
+    db.collection("NoonbodyWrite").addSnapshotListener { (querySnapshot, error) in
       guard let documents = querySnapshot?.documents else {
         print("No documents")
         return
@@ -29,9 +29,10 @@ class NoonBodyViewModel: ObservableObject {
         let diaryWeight = data["diaryWeight"] as? Double ?? 0
         let diaryMuscle = data["diaryMuscle"] as? Double ?? 0
         let diaryFat = data["diaryFat"] as? Double ?? 0
+        let diaryImage = data["noonbodyPic"] as? URL ?? URL(string: "http://www.example.com/image.jpg")
 
         self.isWrite = true
-        return DiaryPost(id: .init(), diaryDate: diaryDate, diaryFull: diaryFull, diaryShare: diaryShare, diaryWeight: diaryWeight, diaryMuscle: diaryMuscle, diaryFat: diaryFat)
+        return DiaryPost(id: .init(), diaryDate: diaryDate, diaryFull: diaryFull, diaryShare: diaryShare, diaryWeight: diaryWeight, diaryMuscle: diaryMuscle, diaryFat: diaryFat, diaryImage: diaryImage!)
       }
     }
   }

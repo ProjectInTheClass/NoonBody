@@ -91,7 +91,7 @@ struct DiaryPost: Identifiable {
     var diaryWeight: Double
     var diaryMuscle: Double
     var diaryFat: Double
-//    var diaryImage: URL
+    var diaryImage: URL
     
     var dictionary: [String: Any]{
         return[
@@ -101,8 +101,33 @@ struct DiaryPost: Identifiable {
             "diaryShare" : diaryShare,
             "diaryWeight" : diaryWeight,
             "diaryMuscle" : diaryMuscle,
-            "diaryFat" : diaryFat
-//            "diaryImage" : diaryImage
+            "diaryFat" : diaryFat,
+            "diaryImage" : diaryImage
+            
+        ]
+    }
+}
+
+struct DiaryPostSubmit: Identifiable {
+    var id = UUID()
+    
+    var diaryDate: String
+    var diaryFull: String
+    var diaryShare: String
+    var diaryWeight: Double
+    var diaryMuscle: Double
+    var diaryFat: Double
+    var diaryImage: Image
+    
+    var dictionary: [String: Any]{
+        return[
+            "id" : id.uuidString,
+            "diaryDate" : diaryDate,
+            "diaryFull" : diaryFull,
+            "diaryShare" : diaryShare,
+            "diaryWeight" : diaryWeight,
+            "diaryMuscle" : diaryMuscle,
+            "diaryFat" : diaryFat,
             
         ]
     }
