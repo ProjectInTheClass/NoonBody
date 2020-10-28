@@ -12,7 +12,7 @@ import FirebaseStorage
 import Firebase
 
 //funtion to submit data
-func FirebaseDataSubmit(storageRef_string:String, docRef_string:String, diaryDate:String, diaryFull:String, diaryShare:String, diaryWeight:Double, diaryMuscle:Double, diaryFat:Double, image : UIImage, completion : @escaping (Any)-> Void, showDetails: Bool = false){
+func FirebaseDataSubmit(storageRef_string:String, docRef_string:String, diaryDate:String, diaryFull:String, diaryShare:String, diaryWeight:Double, diaryMuscle:Double, diaryFat:Double, image : UIImage, completion : @escaping (Any)-> Void, showDetails: Bool = true){
     
     let db = Firestore.firestore()
     

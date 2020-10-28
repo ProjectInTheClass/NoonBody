@@ -91,7 +91,7 @@ struct DiaryPost: Identifiable {
     var diaryWeight: Double
     var diaryMuscle: Double
     var diaryFat: Double
-    var diaryImage: URL
+    var diaryImage: String
     
     var dictionary: [String: Any]{
         return[

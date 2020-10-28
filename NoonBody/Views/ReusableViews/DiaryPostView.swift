@@ -16,14 +16,14 @@ struct DiaryPostView: View {
     var passed_diaryWeight: Double
     var passed_diaryMuscle: Double
     var passed_diaryFat: Double
-    var passed_diaryImage: URL
+    var passed_diaryImage: String
     
     var body: some View {
         VStack{
             Text("\(passed_diaryDate)")
                 
             //URI로 이미지 보여주도록 수정
-            AnimatedImage(url: passed_diaryImage)
+            AnimatedImage(url: URL(string: passed_diaryImage)!)
                 .resizable()
                 .frame(width: UIScreen.main.bounds.width, height: 300, alignment: .trailing)
                 .padding(.leading)
@@ -84,7 +84,7 @@ struct DiaryPostView_Previews: PreviewProvider {
     
     
     static var previews: some View {
-        DiaryPostView(passed_diaryDate: getDate(num: 0), passed_diaryFull: "공복", passed_diaryShare: "공개", passed_diaryWeight: 62.4, passed_diaryMuscle: 25.1, passed_diaryFat: 23, passed_diaryImage: URL(string: "https://firebasestorage.googleapis.com/v0/b/noonbody-9af0d.appspot.com/o/NoonbodyWriteImages%2F66D155D9-1338-4A6B-A4AE-B30E449D8F44%2F2020.%2010.%2028.?alt=media&token=c57c94e5-d8f2-4048-b048-8d261866f595")!)
+        DiaryPostView(passed_diaryDate: getDate(num: 0), passed_diaryFull: "공복", passed_diaryShare: "공개", passed_diaryWeight: 62.4, passed_diaryMuscle: 25.1, passed_diaryFat: 23, passed_diaryImage: "https://firebasestorage.googleapis.com/v0/b/noonbody-9af0d.appspot.com/o/NoonbodyWriteImages%2F66D155D9-1338-4A6B-A4AE-B30E449D8F44%2F2020.%2010.%2028.?alt=media&token=c57c94e5-d8f2-4048-b048-8d261866f595")
     }
 }
 
