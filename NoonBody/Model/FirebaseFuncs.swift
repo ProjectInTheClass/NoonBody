@@ -12,13 +12,11 @@ import FirebaseStorage
 import Firebase
 
 //funtion to submit data
-func FirebaseDataSubmit(storageRef_string:String, docRef_string:String, dataToSave:[String:Any], image : UIImage, completion : @escaping (Any)-> Void, showDetails: Bool = false){
+func FirebaseDataSubmit(storageRef_string:String, docRef_string:String, diaryDate:String, diaryFull:String, diaryShare:String, diaryWeight:Double, diaryMuscle:Double, diaryFat:Double, image : UIImage, completion : @escaping (Any)-> Void, showDetails: Bool = false){
     
     let db = Firestore.firestore()
     
     let storage = Storage.storage().reference()
-    
-    let uid = GlobalEnvironment().currentUser.establishedID
     
     if let imageData = image.jpegData(compressionQuality: 1){
     
@@ -38,7 +36,7 @@ func FirebaseDataSubmit(storageRef_string:String, docRef_string:String, dataToSa
                     return
                 }
                 
-                db.document(docRef_string).setData(["dataToSave":dataToSave, "noonbodyPic":"\(url!)", "uid":uid]) { (err) in
+                db.document(docRef_string).setData(["diaryDate":diaryDate, "diaryFull":diaryFull, "diaryShare":diaryShare, "diaryWeight":diaryWeight, "diaryMuscle":diaryMuscle, "diaryFat":diaryFat, "noonbodyPic":"\(url!)"]) { (err) in
                     
                     if err != nil{
                         
@@ -49,7 +47,7 @@ func FirebaseDataSubmit(storageRef_string:String, docRef_string:String, dataToSa
                     else{
                         print("data uploaded successfully")
                         if showDetails{
-                            print("dataUploaded = \(dataToSave)")
+                            print("dataUploaded = \(diaryDate), \(diaryFull), \(diaryShare), \(diaryWeight), \(diaryMuscle), \(diaryFat), \(url)")
                         }
                         completion(true)
                     }
@@ -59,7 +57,6 @@ func FirebaseDataSubmit(storageRef_string:String, docRef_string:String, dataToSa
         }
     }
 }
-
 
 
 

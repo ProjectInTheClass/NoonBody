@@ -84,6 +84,8 @@ struct DiaryPostView_Previews: PreviewProvider {
     
     
     static var previews: some View {
-        DiaryPostView(passed_diaryDate: getDate(num: 0), passed_diaryFull: "공복", passed_diaryShare: "공개", passed_diaryWeight: 62.4, passed_diaryMuscle: 25.1, passed_diaryFat: 23, passed_diaryImage: URL(string: "http://www.example.com/image.jpg")!)
+        DiaryPostView(passed_diaryDate: getDate(num: 0), passed_diaryFull: "공복", passed_diaryShare: "공개", passed_diaryWeight: 62.4, passed_diaryMuscle: 25.1, passed_diaryFat: 23, passed_diaryImage: URL(string: "https://firebasestorage.googleapis.com/v0/b/noonbody-9af0d.appspot.com/o/NoonbodyWriteImages%2F66D155D9-1338-4A6B-A4AE-B30E449D8F44%2F2020.%2010.%2028.?alt=media&token=c57c94e5-d8f2-4048-b048-8d261866f595")!)
     }
 }
+
+
