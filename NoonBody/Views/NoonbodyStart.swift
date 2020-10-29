@@ -103,6 +103,7 @@ struct NoonbodyStart: View {
                                                 name: document.data()["name"] as? String ?? "",
                                                 email: document.data()["email"] as? String ?? "",
                                                 publishedNoonBodys: document.data()["publishedNoonBodys"] as? [String] ?? [],
+                                                publishedDiets: document.data()["publishedDiets"] as? [String] ?? [],
                                                 document.documentID
                                             )
                                             

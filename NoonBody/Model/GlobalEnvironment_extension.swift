@@ -54,6 +54,7 @@ extension GlobalEnvironment{
                         name: thisData["name"] as? String ?? "",
                         email: thisData["email"] as? String ?? "",
                         publishedNoonBodys: thisData["publishedNoonBodys"] as? [String] ?? [],
+                        publishedDiets: thisData["publishedDiets"] as? [String] ?? [],
                         document.documentID
                     )
                     
