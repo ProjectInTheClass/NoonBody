@@ -220,7 +220,7 @@ struct NoonBodyWrite: View {
             
             self.env.currentUser.publishedNoonBodys.append(thisNoonBodyPost.id.uuidString)
             
-            FirebaseDataSubmit(storageRef_string: "NoonbodyWriteImages/\(thisNoonBodyPost.id)", docRef_string: "NoonbodyWrite/\(thisNoonBodyPost.id)", diaryDate: getDate(num: 0), diaryFull: isFullString, diaryShare: isShowString, diaryWeight: Double(weight) ?? 0, diaryMuscle: Double(muscle) ?? 0, diaryFat: Double(fat) ?? 0, image: thisImage, completion: {_ in
+            FirebaseNoonBodyDataSubmit(storageRef_string: "NoonbodyWriteImages/\(thisNoonBodyPost.id)", docRef_string: "NoonbodyWrite/\(thisNoonBodyPost.id)", diaryDate: getDate(num: 0), diaryFull: isFullString, diaryShare: isShowString, diaryWeight: Double(weight) ?? 0, diaryMuscle: Double(muscle) ?? 0, diaryFat: Double(fat) ?? 0, image: thisImage, completion: {_ in
                 
                 actionsCompleted += 1
                 check_success()
