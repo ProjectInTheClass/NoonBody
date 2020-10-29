@@ -191,11 +191,11 @@ struct DietWrite: View {
             self.env.currentUser.publishedDiets.append(thisDietPost.id.uuidString)
             
             
-            FirebaseDietDataSubmit(storageRef_string: "DietWriteImages/\(thisDietPost.id)", docRef_string: "DietWrite/\(thisDietPost.id)", diaryDate: getDate(num: 0), dietWhen: timeIndex, dietTime: timeIndex, dietText: textField1_val, image: thisImage, completion: {_ in
-                   
-                   actionsCompleted += 1
-                   check_success()
-               })
+            FirebaseDietDataSubmit(storageRef_string: "DietWriteImages/\(thisDietPost.id)", docRef_string: "DietWrite/\(thisDietPost.id)", diaryDate: getDate(num: 0), dietWhen: time[timeIndex], dietTime: time[timeIndex], dietText: textField1_val, image: thisImage, completion: {_ in
+                
+                actionsCompleted += 1
+                check_success()
+            })
             
             firestoreUpdate_data(docRef_string: "users/\(self.env.currentUser.establishedID)", dataToUpdate: ["publishedDiets": self.env.currentUser.publishedDiets], completion: {_ in
                 actionsCompleted += 1
