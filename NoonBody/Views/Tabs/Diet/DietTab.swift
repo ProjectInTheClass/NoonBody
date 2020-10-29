@@ -60,62 +60,75 @@ struct DietTab: View {
                         HStack(alignment: .center){
                         Spacer().frame(width:10)
                         
-                        Text("2020. 10. 29")
-                            .padding()
-                            .font(.system(size:20, weight:.bold))
-                            .foregroundColor(.white)
-                            .background(Color("primaryOrange"))
-                            .background(Color(myColor))
-                            .cornerRadius(12)
+//                        Text("2020. 10. 29.")
+//                            .padding()
+//                            .font(.system(size:20, weight:.bold))
+//                            .foregroundColor(.white)
+//                            .background(Color("primaryOrange"))
+//                            .background(Color(myColor))
+//                            .cornerRadius(12)
+//
+//
+//                            .onTapGesture(count: 1, perform: {
+//                                choosedDate = "2020. 10. 29"
+//
+//                                self.isChoosed.toggle()
+//
+//                                if isChoosed{
+//                                    self.myColor = "primaryOrange"
+//                                }else{
+//                                    self.myColor = "secondaryOrange"
+//                                }
+//                            })
+//                        Text("2020. 10. 30.")
+//                            .padding()
+//                            .font(.system(size:20, weight:.bold))
+//                            .foregroundColor(.white)
+//                            .background(Color("primaryOrange"))
+//                            .background(Color(myColor))
+//                            .cornerRadius(12)
+//                            .onTapGesture(count: 1, perform: {
+//                                choosedDate = "2020. 10. 30"
+//
+//                                self.isChoosed.toggle()
+//
+//                                if isChoosed{
+//                                    self.myColor = "primaryOrange"
+//                                }else{
+//                                    self.myColor = "secondaryOrange"
+//                                }
+//                            })
+//                        Text("2020. 10. 31.")
+//                            .padding()
+//                            .font(.system(size:20, weight:.bold))
+//                            .foregroundColor(.white)
+//                            .background(Color("primaryOrange"))
+//                            .background(Color(myColor))
+//                            .cornerRadius(12)
+//                            .onTapGesture(count: 1, perform: {
+//                                choosedDate = "2020. 10. 31"
+//
+//                                self.isChoosed.toggle()
+//
+//                                if isChoosed{
+//                                    self.myColor = "primaryOrange"
+//                                }else{
+//                                    self.myColor = "secondaryOrange"
+//                                }
+//                            })
                             
-                            
-                            .onTapGesture(count: 1, perform: {
-                                choosedDate = "2020. 10. 29"
-
-//                                self.isChoosed.toggle()
-//
-//                                if isChoosed{
-//                                    self.myColor = "primaryOrange"
-//                                }else{
-//                                    self.myColor = "secondaryOrange"
-//                                }
-                            })
-                        Text("2020. 10. 30")
-                            .padding()
-                            .font(.system(size:20, weight:.bold))
-                            .foregroundColor(.white)
-                            .background(Color("primaryOrange"))
-                            .background(Color(myColor))
-                            .cornerRadius(12)
-                            .onTapGesture(count: 1, perform: {
-                                choosedDate = "2020. 10. 30"
-
-//                                self.isChoosed.toggle()
-//
-//                                if isChoosed{
-//                                    self.myColor = "primaryOrange"
-//                                }else{
-//                                    self.myColor = "secondaryOrange"
-//                                }
-                            })
-                        Text("2020. 10. 31")
-                            .padding()
-                            .font(.system(size:20, weight:.bold))
-                            .foregroundColor(.white)
-                            .background(Color("primaryOrange"))
-                            .background(Color(myColor))
-                            .cornerRadius(12)
-                            .onTapGesture(count: 1, perform: {
-                                choosedDate = "2020. 10. 31"
-
-//                                self.isChoosed.toggle()
-//
-//                                if isChoosed{
-//                                    self.myColor = "primaryOrange"
-//                                }else{
-//                                    self.myColor = "secondaryOrange"
-//                                }
-                            })
+                            ForEach(viewModel.dietPosts, id: \.id){ post in
+                                Text(post.dietDate)
+                                    .padding()
+                                    .font(.system(size:20, weight:.bold))
+                                    .foregroundColor(.white)
+                                    .background(Color("primaryOrange"))
+                                    .background(Color(myColor))
+                                    .cornerRadius(12)
+                                    .onTapGesture(count: 1, perform: {
+                                        choosedDate = "\(post.dietDate)"
+                                    })
+                            }
                         
 //                        ForEach(DietLists, id: \.id){ post in
 //
@@ -128,13 +141,9 @@ struct DietTab: View {
 //                            }
 //
 //                            }
-//
-//                        ForEach(0..<DietLists.count){_ in
-//                            dateString = "\(DietLists[0].dietDate)"
-//
-//                        }
+
                         
-//
+
                         Spacer().frame(width:10)
                     }.frame(height: 80)
                         .onAppear {
