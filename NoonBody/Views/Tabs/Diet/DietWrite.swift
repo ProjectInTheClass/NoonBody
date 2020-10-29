@@ -32,6 +32,9 @@ struct DietWrite: View {
     @State private var timeIndex = 0
     var time = ["아침", "점심", "저녁", "간식"]
     
+    @State var textField_placeholder = "소감 한마디! (선택)"
+    @State var textField1_val = ""
+    
     @State private var content: String = ""
     
     @State private var showGreeting = true
@@ -94,17 +97,25 @@ struct DietWrite: View {
                     
                 }.padding()
                     
-                
-                    TextView("소감 한마디! (선택)", text: $content)
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        //context 속성은 published 특성으로 선언했으므로
-                        //속성에 저장된 값이 업데이트되면 padding도 함께 업데이트 됨
-                        .padding(.keyboard)
-                        .animation(.easeInOut(duration: 0.3))
-                        .onTapGesture {
-                                    self.endEditing(true)
-                                    
-                                 }
+                TextField("\(self.textField_placeholder)", text: self.$textField1_val)
+                    .padding(10)
+                    .background(
+                        Rectangle()
+                            .cornerRadius(10)
+                            .foregroundColor(Color.init(red: 0.95, green: 0.95, blue: 0.95))
+                    )
+                    .padding(20)
+
+//                    TextView("소감 한마디! (선택)", text: $content)
+//                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+//                        //context 속성은 published 특성으로 선언했으므로
+//                        //속성에 저장된 값이 업데이트되면 padding도 함께 업데이트 됨
+//                        .padding(.keyboard)
+//                        .animation(.easeInOut(duration: 0.3))
+//                        .onTapGesture {
+//                                    self.endEditing(true)
+//
+//                                 }
                     
                     
                     
@@ -156,21 +167,21 @@ struct DietWrite: View {
             }
         }
         
-        func isFullShowCheck(){
-            if isShow{
-                isShowString = "공개"
-            }else{
-                isShowString = "비공개"
-            }
-            
-        }
+//        func isFullShowCheck(){
+//            if isShow{
+//                isShowString = "공개"
+//            }else{
+//                isShowString = "비공개"
+//            }
+//
+//        }
         
         if let thisImage = self.image {
-            isFullShowCheck()
+//            isFullShowCheck()
             let thisDietPost = DietPostSubmit(dietDate: getDate(num: 0),
-                                              dietWhen: timeIndex,
-                                              dietTime: timeIndex,
-                                              dietText: "content",
+                                              dietWhen: time[timeIndex],
+                                              dietTime: time[timeIndex],
+                                              dietText: textField1_val,
                                               dietImage: Image(uiImage: thisImage)
                                              
             )
@@ -180,7 +191,7 @@ struct DietWrite: View {
             self.env.currentUser.publishedDiets.append(thisDietPost.id.uuidString)
             
             
-            FirebaseDietDataSubmit(storageRef_string: "DietWriteImages/\(thisDietPost.id)", docRef_string: "DietWrite/\(thisDietPost.id)", diaryDate: getDate(num: 0), dietWhen: timeIndex, dietTime: timeIndex, dietText: "content", image: thisImage, completion: {_ in
+            FirebaseDietDataSubmit(storageRef_string: "DietWriteImages/\(thisDietPost.id)", docRef_string: "DietWrite/\(thisDietPost.id)", diaryDate: getDate(num: 0), dietWhen: timeIndex, dietTime: timeIndex, dietText: textField1_val, image: thisImage, completion: {_ in
                    
                    actionsCompleted += 1
                    check_success()

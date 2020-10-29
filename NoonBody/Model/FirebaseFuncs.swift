@@ -59,7 +59,7 @@ func FirebaseNoonBodyDataSubmit(storageRef_string:String, docRef_string:String, 
     }
 }
 
-func FirebaseDietDataSubmit(storageRef_string:String, docRef_string:String, diaryDate:String, dietWhen:String, dietTime:String, dietText:Double, image : UIImage, completion : @escaping (Any)-> Void, showDetails: Bool = true){
+func FirebaseDietDataSubmit(storageRef_string:String, docRef_string:String, diaryDate:String, dietWhen:String, dietTime:String, dietText:String, image : UIImage, completion : @escaping (Any)-> Void, showDetails: Bool = true){
     
     let db = Firestore.firestore()
     
