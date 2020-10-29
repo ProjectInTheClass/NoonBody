@@ -64,19 +64,44 @@ struct MyImagePost: Identifiable {
 struct DietPost: Identifiable {
     var id = UUID()
     
+    var dietDate: String
     var dietWhen: String
     var dietTime: String
     var dietText: String
-    var dietImage: Image
-    var dietDate: String
+    var dietImage: String
+    
     
     var dictionary: [String: Any]{
         return[
             "id" : id.uuidString,
+            "dietDate" : dietDate,
             "dietWhen" : dietWhen,
             "dietTime" : dietTime,
             "dietText" : dietText,
-            "dietDate" : dietDate
+            "dietImage" : dietImage
+            
+        ]
+    }
+}
+
+struct DietPostSubmit: Identifiable {
+    var id = UUID()
+    
+    var dietDate: String
+    var dietWhen: String
+    var dietTime: String
+    var dietText: String
+    var dietImage: Image
+    
+    
+    var dictionary: [String: Any]{
+        return[
+            "id" : id.uuidString,
+            "dietDate" : dietDate,
+            "dietWhen" : dietWhen,
+            "dietTime" : dietTime,
+            "dietText" : dietText
+            
             
         ]
     }

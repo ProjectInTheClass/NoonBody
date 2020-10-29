@@ -12,7 +12,54 @@ import FirebaseStorage
 import Firebase
 
 //funtion to submit data
-func FirebaseDataSubmit(storageRef_string:String, docRef_string:String, diaryDate:String, diaryFull:String, diaryShare:String, diaryWeight:Double, diaryMuscle:Double, diaryFat:Double, image : UIImage, completion : @escaping (Any)-> Void, showDetails: Bool = true){
+func FirebaseNoonBodyDataSubmit(storageRef_string:String, docRef_string:String, diaryDate:String, diaryFull:String, diaryShare:String, diaryWeight:Double, diaryMuscle:Double, diaryFat:Double, image : UIImage, completion : @escaping (Any)-> Void, showDetails: Bool = true){
+    
+    let db = Firestore.firestore()
+    
+    let storage = Storage.storage().reference()
+    
+    if let imageData = image.jpegData(compressionQuality: 1){
+    
+        storage.child(storageRef_string).child(getDate(num: 0)).putData(imageData, metadata: nil) { (_, err) in
+            
+            if err != nil{
+                
+                print((err?.localizedDescription)!)
+                return
+            }
+            
+            storage.child(storageRef_string).child(getDate(num: 0)).downloadURL { (url, err) in
+                
+                if err != nil{
+                    
+                    print((err?.localizedDescription)!)
+                    return
+                }
+            
+                db.document(docRef_string).setData(["diaryDate":diaryDate, "diaryFull":diaryFull, "diaryShare":diaryShare, "diaryWeight":diaryWeight, "diaryMuscle":diaryMuscle, "diaryFat":diaryFat, "noonbodyPic":"\(url!)"]) { (err) in
+                    
+                    if err != nil{
+                        
+                        print((err?.localizedDescription)!)
+                        return
+                    }
+                    
+                    else{
+                        print("noonbody data uploaded successfully")
+                        if showDetails{
+                            print("dataUploaded = \(diaryDate), \(diaryFull), \(diaryShare), \(diaryWeight), \(diaryMuscle), \(diaryFat), \(url)")
+                        }
+                        completion(true)
+                    }
+                    
+                }
+                
+            }
+        }
+    }
+}
+
+func FirebaseDietDataSubmit(storageRef_string:String, docRef_string:String, diaryDate:String, dietWhen:String, dietTime:String, dietText:Double, image : UIImage, completion : @escaping (Any)-> Void, showDetails: Bool = true){
     
     let db = Firestore.firestore()
     
@@ -36,7 +83,8 @@ func FirebaseDataSubmit(storageRef_string:String, docRef_string:String, diaryDat
                     return
                 }
                 
-                db.document(docRef_string).setData(["diaryDate":diaryDate, "diaryFull":diaryFull, "diaryShare":diaryShare, "diaryWeight":diaryWeight, "diaryMuscle":diaryMuscle, "diaryFat":diaryFat, "noonbodyPic":"\(url!)"]) { (err) in
+               
+                db.document(docRef_string).setData(["dietDate":diaryDate, "dietWhen":dietWhen, "dietTime":dietTime, "dietText":dietText, "dietImage":"\(url!)"]) { (err) in
                     
                     if err != nil{
                         
@@ -45,14 +93,16 @@ func FirebaseDataSubmit(storageRef_string:String, docRef_string:String, diaryDat
                     }
                     
                     else{
-                        print("data uploaded successfully")
+                        print("diet data uploaded successfully")
                         if showDetails{
-                            print("dataUploaded = \(diaryDate), \(diaryFull), \(diaryShare), \(diaryWeight), \(diaryMuscle), \(diaryFat), \(url)")
+                            print("dataUploaded = \(diaryDate), \(dietWhen), \(dietTime), \(dietText), \(url)")
                         }
                         completion(true)
                     }
                     
                 }
+                
+                
             }
         }
     }

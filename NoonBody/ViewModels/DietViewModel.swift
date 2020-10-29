@@ -8,31 +8,31 @@
 import Foundation
 import FirebaseFirestore
 
-//class DietViewModel: ObservableObject {
-//  @Published var dietPosts = [DietPost]()
-//
-//    @Published var isWrite: Bool = false
-//  private var db = Firestore.firestore()
-//
-//  func fetchData() {
-//    db.collection("dietwrite").addSnapshotListener { (querySnapshot, error) in
-//      guard let documents = querySnapshot?.documents else {
-//        print("No documents")
-//        return
-//      }
-//
-//      self.dietPosts = documents.map { queryDocumentSnapshot -> DietPost in
-//        let data = queryDocumentSnapshot.data()
-//        let diaryDate = data["diaryDate"] as? String ?? ""
-//        let diaryFull = data["diaryFull"] as? String ?? ""
-//        let diaryShare = data["diaryShare"] as? String ?? ""
-//        let diaryWeight = data["diaryWeight"] as? Double ?? 0
-//        let diaryMuscle = data["diaryMuscle"] as? Double ?? 0
-//        let diaryFat = data["diaryFat"] as? Double ?? 0
-//
-//        self.isWrite = true
-//        return DietPost(id: .init(), diaryDate: diaryDate, diaryFull: diaryFull, diaryShare: diaryShare, diaryWeight: diaryWeight, diaryMuscle: diaryMuscle, diaryFat: diaryFat)
-//      }
-//    }
-//  }
-//}
+class DietViewModel: ObservableObject {
+  @Published var dietPosts = [DietPost]()
+
+    @Published var isWrite: Bool = false
+  private var db = Firestore.firestore()
+
+  func fetchData() {
+    db.collection("dietwrite").addSnapshotListener { (querySnapshot, error) in
+      guard let documents = querySnapshot?.documents else {
+        print("No documents")
+        return
+      }
+
+      self.dietPosts = documents.map { queryDocumentSnapshot -> DietPost in
+        let data = queryDocumentSnapshot.data()
+        let diaryDate = data["diaryDate"] as? String ?? ""
+        let dietWhen = data["dietWhen"] as? String ?? ""
+        let dietTime = data["dietTime"] as? String ?? ""
+        let dietText = data["dietText"] as? String ?? ""
+        let dietImage = data["dietImage"] as? String ?? ""
+
+        self.isWrite = true
+        return DietPost(id: .init(), dietDate: diaryDate, dietWhen: dietWhen, dietTime: dietTime, dietText: dietText, dietImage: dietImage)
+      }
+    }
+  }
+}
+

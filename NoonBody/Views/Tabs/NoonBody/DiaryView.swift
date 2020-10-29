@@ -11,7 +11,7 @@ import Firebase
 struct DiaryView: View {
     
     
-    @ObservedObject var viewModel = NoonBodyViewModel() // (/1)
+    @ObservedObject var viewModel = NoonBodyViewModel()
     
     init() {
         self.viewModel.fetchData()

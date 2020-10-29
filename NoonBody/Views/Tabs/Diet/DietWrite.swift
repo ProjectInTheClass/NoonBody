@@ -7,16 +7,27 @@
 
 import SwiftUI
 import SwiftUIX
+import SPAlert
 
 struct DietWrite: View {
+    
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @EnvironmentObject var env: GlobalEnvironment
+    
     @State private var showSheet:Bool = false
     @State private var showImagePicker:Bool = false
     @State private var sourceType:UIImagePickerController.SourceType = .camera
     
     @State private var image: UIImage?
     
-    @State private var showChooseIndex = 0
-    var showChoose = ["공개", "비공개"]
+//    @State private var showChooseIndex = 0
+//    var showChoose = ["공개", "비공개"]
+    
+    @State var isFull = true
+    @State var isShow = true
+    
+    @State var isFullString = ""
+    @State var isShowString = ""
     
     @State private var timeIndex = 0
     var time = ["아침", "점심", "저녁", "간식"]
@@ -64,41 +75,26 @@ struct DietWrite: View {
                     
 
                     
-                    VStack {
-    //                    Toggle(isOn: $showGreeting) {
-    //                                    Text("공개")
-    //                                }.padding()
-    //
-    //                                if showGreeting {
-    ////                                    Text("공개")
-    //                                }
-                        
-                        Picker(selection: $showChooseIndex, label: Text("What is your favorite color?")) {
-                            ForEach(0..<showChoose.count) { index in
-                                Text(self.showChoose[index]).tag(index)
-                            }
-                        }.pickerStyle(SegmentedPickerStyle())
-                        .padding(.leading)
-                        .padding(.trailing)
-                        .padding(.top)
-
-    //                    Text("Value: \(showChoose[showChooseIndex])")
+                VStack {
+                    Divider()
+                    Toggle(isOn: $isShow) {
+                        Text("공개여부")
                     }
-                    
                     Divider()
                     
-                    VStack {
-                        Picker(selection: $timeIndex, label: Text("What is your favorite color?")) {
-                            ForEach(0..<time.count) { index in
-                                Text(self.time[index]).tag(index)
-                            }
-                        }.pickerStyle(SegmentedPickerStyle())
-
-    //                    Text("Value: \(time[timeIndex])")
-                    }
+                    Picker(selection: $timeIndex, label: Text("What is your favorite color?")) {
+                        ForEach(0..<time.count) { index in
+                            Text(self.time[index]).tag(index)
+                        }
+                    }.pickerStyle(SegmentedPickerStyle())
                     
                     Divider()
+
+//                    Text("Value: \(time[timeIndex])")
                     
+                }.padding()
+                    
+                
                     TextView("소감 한마디! (선택)", text: $content)
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         //context 속성은 published 특성으로 선언했으므로
@@ -121,7 +117,13 @@ struct DietWrite: View {
     //            }
                 
                 .navigationBarTitle("식단 기록하기", displayMode: .inline)
-                .navigationBarItems(trailing: Text("저장"))
+                .navigationBarItems(trailing: Button(action: {
+                    
+                    DietSubmitFirebase()
+                    
+                }, label: {
+                    Text("저장")
+                }))
                 
             .sheet(isPresented: $showImagePicker, content: {
                 VStack{
@@ -136,7 +138,69 @@ struct DietWrite: View {
         })
         }.background(Color("secondaryOrange"))
     }
+    
+    func DietSubmitFirebase(){
+        let actionsToComplete = 1
+        var actionsCompleted = 0
+        
+        
+        func check_success(){
+            print("\(actionsCompleted)/\(actionsToComplete)")
+            if actionsCompleted == actionsToComplete {
+                //Add a function to clear all the data on this page
+                let alertView = SPAlertView(title: "식단 작성 완료", message: "식단이 성공적으로 작성되었습니다!", preset: SPAlertPreset.done)
+                alertView.duration = 3
+                alertView.present()
+                self.presentationMode.wrappedValue.dismiss()
+                
+            }
+        }
+        
+        func isFullShowCheck(){
+            if isShow{
+                isShowString = "공개"
+            }else{
+                isShowString = "비공개"
+            }
+            
+        }
+        
+        if let thisImage = self.image {
+            isFullShowCheck()
+            let thisDietPost = DietPostSubmit(dietDate: getDate(num: 0),
+                                              dietWhen: timeIndex,
+                                              dietTime: timeIndex,
+                                              dietText: "content",
+                                              dietImage: Image(uiImage: thisImage)
+                                             
+            )
+            
+            print(thisDietPost.dictionary)
+            
+            self.env.currentUser.publishedDiets.append(thisDietPost.id.uuidString)
+            
+            
+            FirebaseDietDataSubmit(storageRef_string: "DietWriteImages/\(thisDietPost.id)", docRef_string: "DietWrite/\(thisDietPost.id)", diaryDate: getDate(num: 0), dietWhen: timeIndex, dietTime: timeIndex, dietText: "content", image: thisImage, completion: {_ in
+                   
+                   actionsCompleted += 1
+                   check_success()
+               })
+            
+            firestoreUpdate_data(docRef_string: "users/\(self.env.currentUser.establishedID)", dataToUpdate: ["publishedDiets": self.env.currentUser.publishedDiets], completion: {_ in
+                actionsCompleted += 1
+                check_success()
+            })
+            
+            
+        } else {
+            let alertView = SPAlertView(title: "사진을 추가하세요", message: "식단을 입력하기 위해서는 사진이 필요합니다.", preset: SPAlertPreset.error)
+            alertView.duration = 3
+            alertView.present()
+        }
+    }
 }
+
+
 
 struct DietWrite_Previews: PreviewProvider {
     static var previews: some View {

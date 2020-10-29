@@ -9,16 +9,16 @@ import SwiftUI
 
 struct DietTab: View {
     
-    @State var DietLists: [DietPost] = [
-        DietPost(dietWhen: "아침", dietTime: "9시 30분", dietText: "아침 맛있었당", dietImage: Image("food1"), dietDate: "2020. 10. 24"),
-        DietPost(dietWhen: "점심", dietTime: "12시 30분", dietText: "점심은 배부르게~", dietImage: Image("food2"), dietDate: "2020. 10. 24"),
-        DietPost(dietWhen: "저녁", dietTime: "6시 30분", dietText: "저녁에 이렇게 많이 먹으면 안되는데...ㅠ", dietImage: Image("food3"), dietDate: "2020. 10. 24"),
-        DietPost(dietWhen: "아침", dietTime: "10시 10분", dietText: "아침을 늦게 먹었어...", dietImage: Image("food4"), dietDate: "2020. 10. 23"),
-        DietPost(dietWhen: "점심", dietTime: "13시 00분", dietText: "아침을 늦게 먹었더니 점심에 너무 배부르다", dietImage: Image("food5"), dietDate: "2020. 10. 23"),
-        DietPost(dietWhen: "저녁", dietTime: "8시 30분", dietText: "저녁에 치킨 먹어버렸어....ㅠㅠ", dietImage: Image("치킨"), dietDate: "2020. 10. 23"),
-        DietPost(dietWhen: "아침", dietTime: "8시 30분", dietText: "아침부터 많이 먹었네", dietImage: Image("food7"), dietDate: "2020. 10. 22"),
-        DietPost(dietWhen: "저녁", dietTime: "4시 00분", dietText: "점심 겸 저녁이 되어버린 식사", dietImage: Image("food8"), dietDate: "2020. 10. 22")
-    ]
+//    @State var DietLists: [DietPost] = [
+//        DietPost(dietWhen: "아침", dietTime: "9시 30분", dietText: "아침 맛있었당", dietImage: Image("food1"), dietDate: "2020. 10. 24"),
+//        DietPost(dietWhen: "점심", dietTime: "12시 30분", dietText: "점심은 배부르게~", dietImage: Image("food2"), dietDate: "2020. 10. 24"),
+//        DietPost(dietWhen: "저녁", dietTime: "6시 30분", dietText: "저녁에 이렇게 많이 먹으면 안되는데...ㅠ", dietImage: Image("food3"), dietDate: "2020. 10. 24"),
+//        DietPost(dietWhen: "아침", dietTime: "10시 10분", dietText: "아침을 늦게 먹었어...", dietImage: Image("food4"), dietDate: "2020. 10. 23"),
+//        DietPost(dietWhen: "점심", dietTime: "13시 00분", dietText: "아침을 늦게 먹었더니 점심에 너무 배부르다", dietImage: Image("food5"), dietDate: "2020. 10. 23"),
+//        DietPost(dietWhen: "저녁", dietTime: "8시 30분", dietText: "저녁에 치킨 먹어버렸어....ㅠㅠ", dietImage: Image("치킨"), dietDate: "2020. 10. 23"),
+//        DietPost(dietWhen: "아침", dietTime: "8시 30분", dietText: "아침부터 많이 먹었네", dietImage: Image("food7"), dietDate: "2020. 10. 22"),
+//        DietPost(dietWhen: "저녁", dietTime: "4시 00분", dietText: "점심 겸 저녁이 되어버린 식사", dietImage: Image("food8"), dietDate: "2020. 10. 22")
+//    ]
     
     @State var date = Date()
     @State var show = false
@@ -36,7 +36,9 @@ struct DietTab: View {
     @State var myColor: String = "secondaryOrange"
     @State var isChoosed: Bool = false
 
+    @ObservedObject var viewModel = DietViewModel()
     
+
     
     init(){
         UITableView.appearance().backgroundColor = .clear
@@ -44,6 +46,8 @@ struct DietTab: View {
         
         let secondaryOrange = UIColor.init(netHex: 0xFFEFEA)
         UINavigationBar.appearance().backgroundColor = secondaryOrange
+        
+        self.viewModel.fetchData()
         
         }
     
@@ -56,7 +60,7 @@ struct DietTab: View {
                         HStack(alignment: .center){
                         Spacer().frame(width:10)
                         
-                        Text("2020. 10. 22")
+                        Text("2020. 10. 29")
                             .padding()
                             .font(.system(size:20, weight:.bold))
                             .foregroundColor(.white)
@@ -66,7 +70,7 @@ struct DietTab: View {
                             
                             
                             .onTapGesture(count: 1, perform: {
-                                choosedDate = "2020. 10. 22"
+                                choosedDate = "2020. 10. 29"
 
 //                                self.isChoosed.toggle()
 //
@@ -76,7 +80,7 @@ struct DietTab: View {
 //                                    self.myColor = "secondaryOrange"
 //                                }
                             })
-                        Text("2020. 10. 23")
+                        Text("2020. 10. 30")
                             .padding()
                             .font(.system(size:20, weight:.bold))
                             .foregroundColor(.white)
@@ -84,7 +88,7 @@ struct DietTab: View {
                             .background(Color(myColor))
                             .cornerRadius(12)
                             .onTapGesture(count: 1, perform: {
-                                choosedDate = "2020. 10. 23"
+                                choosedDate = "2020. 10. 30"
 
 //                                self.isChoosed.toggle()
 //
@@ -94,7 +98,7 @@ struct DietTab: View {
 //                                    self.myColor = "secondaryOrange"
 //                                }
                             })
-                        Text("2020. 10. 24")
+                        Text("2020. 10. 31")
                             .padding()
                             .font(.system(size:20, weight:.bold))
                             .foregroundColor(.white)
@@ -102,7 +106,7 @@ struct DietTab: View {
                             .background(Color(myColor))
                             .cornerRadius(12)
                             .onTapGesture(count: 1, perform: {
-                                choosedDate = "2020. 10. 24"
+                                choosedDate = "2020. 10. 31"
 
 //                                self.isChoosed.toggle()
 //
@@ -144,9 +148,12 @@ struct DietTab: View {
                 
                 VStack{
                         List {
-                            ForEach(DietLists, id: \.id){ post in
+                            ForEach(viewModel.dietPosts, id: \.id){ post in
                                 if post.dietDate == choosedDate{
-                                    DietPostView(passed_dietWhen: post.dietWhen, passed_dietTime: post.dietTime, passed_dietText: post.dietText, passed_dietImage: post.dietImage)
+                                    DietPostView(passed_dietWhen: post.dietWhen,
+                                                 passed_dietTime: post.dietTime,
+                                                 passed_dietText: post.dietText,
+                                                 passed_dietImage: post.dietImage)
                                         .listRowBackground(Color("secondaryOrange"))
                                 }
                                 
@@ -156,8 +163,6 @@ struct DietTab: View {
                         }.background(Color.clear)
                     
                 }
-                
-                
                 
                     
             }.background(Color("secondaryOrange"))
@@ -173,7 +178,7 @@ struct DietTab: View {
     
     func delete(at offsets: IndexSet){
         if let first = offsets.first{
-            DietLists.remove(at: first)
+//            DietLists.remove(at: first)
         }
     }
     
