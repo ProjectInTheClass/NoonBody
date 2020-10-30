@@ -49,7 +49,7 @@ struct FriendsPost: Identifiable {
 struct MyImagePost: Identifiable {
     var id = UUID()
     
-    var myImage: Image
+    var myImage: String
     var myWeight: Double
     
     var dictionary: [String: Any]{

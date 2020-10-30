@@ -11,6 +11,8 @@ struct CollectionView: View {
     
     @State var date = Date()
     
+    @ObservedObject var viewModel = NoonBodyViewModel()
+    
     //Formatter 속성을 추가
     //store 속성과 마찬가지로 view가 생성되는 시점에 자동으로 초기화 됨
     @EnvironmentObject var formatter: DateFormatter
@@ -18,6 +20,10 @@ struct CollectionView: View {
     @State private var choosedImage1: UIImage?
     
     @State private var isChoosed = false
+    
+    init() {
+        self.viewModel.fetchData()
+    }
     
     var body: some View {
 
@@ -154,14 +160,16 @@ var datas = [
 struct showImages: View {
     @State private var choosedImage1: UIImage?
     
-    var MyImagePosts: [MyImagePost] = [
-        MyImagePost(myImage: Image("body1").resizable(), myWeight: 61.57),
-        MyImagePost(myImage: Image("body2").resizable(), myWeight: 61.56),
-        MyImagePost(myImage: Image("body3").resizable(), myWeight: 61.55),
-        MyImagePost(myImage: Image("body4").resizable(), myWeight: 61.54),
-        MyImagePost(myImage: Image("body5").resizable(), myWeight: 61.53),
-        MyImagePost(myImage: Image("body6").resizable(), myWeight: 61.52)
-    ]
+    @ObservedObject var viewModel = NoonBodyViewModel()
+    
+//    var MyImagePosts: [MyImagePost] = [
+//        MyImagePost(myImage: Image("body1").resizable(), myWeight: 61.57),
+//        MyImagePost(myImage: Image("body2").resizable(), myWeight: 61.56),
+//        MyImagePost(myImage: Image("body3").resizable(), myWeight: 61.55),
+//        MyImagePost(myImage: Image("body4").resizable(), myWeight: 61.54),
+//        MyImagePost(myImage: Image("body5").resizable(), myWeight: 61.53),
+//        MyImagePost(myImage: Image("body6").resizable(), myWeight: 61.52)
+//    ]
     
     private var columns: [GridItem] = [
             GridItem(.fixed(100), spacing: 80),
@@ -178,9 +186,10 @@ struct showImages: View {
                             spacing: 20,
                             pinnedViews: [.sectionHeaders, .sectionFooters]
                         ) {
-                            ForEach(MyImagePosts, id: \.id){ post in
-                                MyImageView(passed_myImage: post.myImage, passed_myWeight: post.myWeight)
+                            ForEach(viewModel.diaryPosts, id: \.id){ post in
+                                MyImageView(passed_myImage: post.diaryImage, passed_myWeight: post.diaryWeight)
                             }
+                            
                         }
                     }.background(Color.clear)
         }
