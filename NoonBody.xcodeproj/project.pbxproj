@@ -26,6 +26,8 @@
 		45324158253E889700AD1199 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45324157253E889700AD1199 /* FriendsView.swift */; };
 		453363B3253EE42400DC2FDB /* CompareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453363B2253EE42400DC2FDB /* CompareView.swift */; };
 		453363B6253EE82800DC2FDB /* MyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453363B5253EE82800DC2FDB /* MyImageView.swift */; };
+		455330F4254E527100B2AE7E /* CommunityPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455330F3254E527100B2AE7E /* CommunityPostViewModel.swift */; };
+		455330F6254E528400B2AE7E /* CommunityFriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455330F5254E528400B2AE7E /* CommunityFriendsViewModel.swift */; };
 		45666F82253FF629000B5516 /* GetDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45666F81253FF629000B5516 /* GetDate.swift */; };
 		45666F85253FF780000B5516 /* DietPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45666F84253FF780000B5516 /* DietPostView.swift */; };
 		45666F88253FFBE3000B5516 /* DiaryPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45666F87253FFBE3000B5516 /* DiaryPostView.swift */; };
@@ -96,6 +98,8 @@
 		45324157253E889700AD1199 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
 		453363B2253EE42400DC2FDB /* CompareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareView.swift; sourceTree = "<group>"; };
 		453363B5253EE82800DC2FDB /* MyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImageView.swift; sourceTree = "<group>"; };
+		455330F3254E527100B2AE7E /* CommunityPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityPostViewModel.swift; sourceTree = "<group>"; };
+		455330F5254E528400B2AE7E /* CommunityFriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityFriendsViewModel.swift; sourceTree = "<group>"; };
 		45666F81253FF629000B5516 /* GetDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDate.swift; sourceTree = "<group>"; };
 		45666F84253FF780000B5516 /* DietPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPostView.swift; sourceTree = "<group>"; };
 		45666F87253FFBE3000B5516 /* DiaryPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryPostView.swift; sourceTree = "<group>"; };
@@ -289,6 +293,8 @@
 			children = (
 				45A484962547BEA00027BCA1 /* NoonBodyViewModel.swift */,
 				45A484B02547FCB50027BCA1 /* DietViewModel.swift */,
+				455330F3254E527100B2AE7E /* CommunityPostViewModel.swift */,
+				455330F5254E528400B2AE7E /* CommunityFriendsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -511,6 +517,7 @@
 				450A92262536AC830082B5EF /* DateFormatter.swift in Sources */,
 				45696798254281C600663FB7 /* SettingsProfile.swift in Sources */,
 				45F941052539A2EF000D4AE0 /* Post_structs.swift in Sources */,
+				455330F4254E527100B2AE7E /* CommunityPostViewModel.swift in Sources */,
 				4569679B254281C600663FB7 /* SettingsNotification.swift in Sources */,
 				459FAA3E25452EBC00C1E838 /* User_Class.swift in Sources */,
 				45024C462532EBA200D619C5 /* DietTab.swift in Sources */,
@@ -539,6 +546,7 @@
 				459FAA4125452EEA00C1E838 /* Custom_Colors.swift in Sources */,
 				45024C392532EB0F00D619C5 /* TabbedRootView.swift in Sources */,
 				45DDD8F425344285004C18FE /* NoonBodyWrite.swift in Sources */,
+				455330F6254E528400B2AE7E /* CommunityFriendsViewModel.swift in Sources */,
 				4569679C254281C600663FB7 /* NoonBodySettings.swift in Sources */,
 				45C6E41E253487D400C3012B /* UIColor.swift in Sources */,
 				45FCC335253C7C64006E47CC /* LoginView.swift in Sources */,

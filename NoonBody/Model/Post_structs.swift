@@ -14,14 +14,16 @@ struct CommunityPost: Identifiable {
     var postingUser: String
     var description: String
     var numberOfLikes: Int
-    var image: Image
+    var image: String
     
     var dictionary: [String: Any]{
         return[
             "id" : id.uuidString,
             "postingUser" : postingUser,
             "description" : description,
-            "numberOfLikes" : numberOfLikes
+            "numberOfLikes" : numberOfLikes,
+            "image" : image
+            
             
         ]
     }
@@ -33,15 +35,15 @@ struct FriendsPost: Identifiable {
     var friendName: String
     var friendDescription: String
     var friendNumberOfLikes: Int
-    var friendImage: Image
+    var friendImage: String
     
     var dictionary: [String: Any]{
         return[
             "id" : id.uuidString,
             "friendName" : friendName,
             "friendDescription" : friendDescription,
-            "friendNumberOfLikes" : friendNumberOfLikes
-            
+            "friendNumberOfLikes" : friendNumberOfLikes,
+            "friendImage" : friendImage
         ]
     }
 }
