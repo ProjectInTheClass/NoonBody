@@ -20,10 +20,9 @@ struct PostView: View {
         VStack{
             //URI로 이미지 보여주도록 수정
             AnimatedImage(url: URL(string: passed_image))
-                .resizable()
-                .frame(width: UIScreen.main.bounds.width, height: 300)
-                .scaledToFit()
+                .frame(height: 300)
                 .background(Color.init(red: 0.95, green: 0.95, blue: 0.95).opacity(0.6))
+                
             VStack {
                 HStack{
                     Image(systemName: "flame.fill")
@@ -50,7 +49,7 @@ struct PostView: View {
 //            .background(Color.orange)
             
             
-        }.frame(width: UIScreen.main.bounds.size.width, height: .infinity)
+        }.frame(width: UIScreen.main.bounds.size.width)
         .padding()
 //        .background(Color.yellow)
     }
