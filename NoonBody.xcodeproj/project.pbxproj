@@ -228,12 +228,12 @@
 			path = NoonBodyUITests;
 			sourceTree = "<group>";
 		};
-		45024C9B2532F01B00D619C5 /* View */ = {
+		45024C9B2532F01B00D619C5 /* TextView */ = {
 			isa = PBXGroup;
 			children = (
 				45024C9C2532F01B00D619C5 /* TextView.swift */,
 			);
-			path = View;
+			path = TextView;
 			sourceTree = "<group>";
 		};
 		45024CAF2532F09900D619C5 /* Views */ = {
@@ -244,7 +244,7 @@
 				45024CB32532F0F600D619C5 /* Tabs */,
 				45F940F12539A1D6000D4AE0 /* ReusableViews */,
 				459FAA4425452FEF00C1E838 /* Login */,
-				45024C9B2532F01B00D619C5 /* View */,
+				45024C9B2532F01B00D619C5 /* TextView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
