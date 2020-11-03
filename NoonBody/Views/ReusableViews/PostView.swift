@@ -19,7 +19,7 @@ struct PostView: View {
         
         VStack{
             //URI로 이미지 보여주도록 수정
-            AnimatedImage(url: URL(string: passed_image)!)
+            AnimatedImage(url: URL(string: passed_image))
                 .resizable()
                 .frame(width: UIScreen.main.bounds.width, height: 300)
                 .scaledToFit()
