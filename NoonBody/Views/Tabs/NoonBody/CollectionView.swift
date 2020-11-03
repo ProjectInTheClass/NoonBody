@@ -21,6 +21,11 @@ struct CollectionView: View {
     
     @State private var isChoosed = false
     
+    private var columns: [GridItem] = [
+            GridItem(.fixed(100), spacing: 80),
+            GridItem(.fixed(100), spacing: 80)
+        ]
+    
     init() {
         self.viewModel.fetchData()
     }
@@ -59,7 +64,23 @@ struct CollectionView: View {
                         
                         
                         //과거 사진 이미지들
-                        showImages()
+//                        showImages()
+                        VStack{
+                            
+                            ScrollView {
+                                        LazyVGrid(
+                                            columns: columns,
+                                            alignment: .center,
+                                            spacing: 20,
+                                            pinnedViews: [.sectionHeaders, .sectionFooters]
+                                        ) {
+                                            ForEach(viewModel.diaryPosts, id: \.id){ post in
+                                                MyImageView(passed_myImage: post.diaryImage, passed_myWeight: post.diaryWeight)
+                                            }
+                                            
+                                        }
+                                    }.background(Color.clear)
+                        }
                         
                         
                     }
@@ -92,6 +113,26 @@ struct CollectionView_Previews: PreviewProvider {
         CollectionView()
     }
 }
+
+//Sample Datas
+
+struct type: Identifiable {
+    
+    var id: Int
+    var weight: CGFloat
+    var day: String
+}
+
+var datas = [
+    type(id: 0, weight: 50, day: "8월 3주"),
+    type(id: 1, weight: 48.2, day: "8월 4주"),
+    type(id: 2, weight: 47.9, day: "9월 1주"),
+    type(id: 3, weight: 46.4, day: "9월 2주"),
+    type(id: 4, weight: 46, day: "9월 3주"),
+    type(id: 5, weight: 45.5, day: "9월 4주"),
+    type(id: 6, weight: 45.3, day: "10월 1주")
+]
+
 
 struct Bar: View {
     
@@ -136,64 +177,37 @@ struct Bar: View {
     }
 }
 
-//Sample Datas
-
-struct type: Identifiable {
-    
-    var id: Int
-    var weight: CGFloat
-    var day: String
-}
-
-var datas = [
-    type(id: 0, weight: 50, day: "8월 3주"),
-    type(id: 1, weight: 48.2, day: "8월 4주"),
-    type(id: 2, weight: 47.9, day: "9월 1주"),
-    type(id: 3, weight: 46.4, day: "9월 2주"),
-    type(id: 4, weight: 46, day: "9월 3주"),
-    type(id: 5, weight: 45.5, day: "9월 4주"),
-    type(id: 6, weight: 45.3, day: "10월 1주")
-]
 
 //사진 불러오기
 
-struct showImages: View {
-    @State private var choosedImage1: UIImage?
-    
-    @ObservedObject var viewModel = NoonBodyViewModel()
-    
-//    var MyImagePosts: [MyImagePost] = [
-//        MyImagePost(myImage: Image("body1").resizable(), myWeight: 61.57),
-//        MyImagePost(myImage: Image("body2").resizable(), myWeight: 61.56),
-//        MyImagePost(myImage: Image("body3").resizable(), myWeight: 61.55),
-//        MyImagePost(myImage: Image("body4").resizable(), myWeight: 61.54),
-//        MyImagePost(myImage: Image("body5").resizable(), myWeight: 61.53),
-//        MyImagePost(myImage: Image("body6").resizable(), myWeight: 61.52)
-//    ]
-    
-    private var columns: [GridItem] = [
-            GridItem(.fixed(100), spacing: 80),
-            GridItem(.fixed(100), spacing: 80)
-        ]
-    
-    var body: some View{
-        VStack{
-            
-            ScrollView {
-                        LazyVGrid(
-                            columns: columns,
-                            alignment: .center,
-                            spacing: 20,
-                            pinnedViews: [.sectionHeaders, .sectionFooters]
-                        ) {
-                            ForEach(viewModel.diaryPosts, id: \.id){ post in
-                                MyImageView(passed_myImage: post.diaryImage, passed_myWeight: post.diaryWeight)
-                            }
-                            
-                        }
-                    }.background(Color.clear)
-        }
-    }
-
-
-}
+//struct showImages: View {
+//    @State private var choosedImage1: UIImage?
+//
+//    @ObservedObject var viewModel = NoonBodyViewModel()
+//
+//    private var columns: [GridItem] = [
+//            GridItem(.fixed(100), spacing: 80),
+//            GridItem(.fixed(100), spacing: 80)
+//        ]
+//
+//    var body: some View{
+//        VStack{
+//
+//            ScrollView {
+//                        LazyVGrid(
+//                            columns: columns,
+//                            alignment: .center,
+//                            spacing: 20,
+//                            pinnedViews: [.sectionHeaders, .sectionFooters]
+//                        ) {
+//                            ForEach(viewModel.diaryPosts, id: \.id){ post in
+//                                MyImageView(passed_myImage: post.diaryImage, passed_myWeight: post.diaryWeight)
+//                            }
+//
+//                        }
+//                    }.background(Color.clear)
+//        }
+//    }
+//
+//
+//}
