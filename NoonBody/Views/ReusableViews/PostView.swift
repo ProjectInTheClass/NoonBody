@@ -20,8 +20,9 @@ struct PostView: View {
         VStack{
             //URI로 이미지 보여주도록 수정
             AnimatedImage(url: URL(string: passed_image)!)
-                .frame(height: 300)
-                .frame(minWidth: 0, maxWidth: .infinity)
+                .resizable()
+                .frame(width: UIScreen.main.bounds.width, height: 300)
+                .scaledToFit()
                 .background(Color.init(red: 0.95, green: 0.95, blue: 0.95).opacity(0.6))
             VStack {
                 HStack{
@@ -49,7 +50,7 @@ struct PostView: View {
 //            .background(Color.orange)
             
             
-        }
+        }.padding()
 //        .background(Color.yellow)
     }
 }

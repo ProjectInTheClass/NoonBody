@@ -19,8 +19,10 @@ struct FriendsView: View {
         HStack{
             //URI로 이미지 보여주도록 수정
             AnimatedImage(url: URL(string: passed_friendImage)!)
+                .resizable()
                 .frame(width:50, height: 50)
                 .clipShape(Circle())
+                .scaledToFit()
                 .background(Color.init(red: 0.95, green: 0.95, blue: 0.95).opacity(0.6))
             
             VStack {
