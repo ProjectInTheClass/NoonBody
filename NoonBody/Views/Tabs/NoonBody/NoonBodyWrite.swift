@@ -127,18 +127,18 @@ struct NoonBodyWrite: View {
                     
                     Divider()
                     
-                    TextView("소감 한마디! (선택)", text: $content)
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        //context 속성은 published 특성으로 선언했으므로
-                        //속성에 저장된 값이 업데이트되면 padding도 함께 업데이트 됨
-                        .padding(.keyboard)
-                        .padding(.init(top: 10, leading: 10, bottom: 0, trailing: 10))
-                        .animation(.easeInOut(duration: 0.3))
-                        .onTapGesture {
-                                    self.endEditing(true)
-                            
-                                    
-                                 }
+//                    TextView("소감 한마디! (선택)", text: $content)
+//                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+//                        //context 속성은 published 특성으로 선언했으므로
+//                        //속성에 저장된 값이 업데이트되면 padding도 함께 업데이트 됨
+//                        .padding(.keyboard)
+//                        .padding(.init(top: 10, leading: 10, bottom: 0, trailing: 10))
+//                        .animation(.easeInOut(duration: 0.3))
+//                        .onTapGesture {
+//                                    self.endEditing(true)
+//
+//
+//                                 }
     //                    .onTapGesture {
     //                                hideKeyboard()
     //                            }
