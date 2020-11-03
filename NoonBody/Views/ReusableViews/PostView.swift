@@ -6,18 +6,20 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct PostView: View {
     
     var passed_postingUser: String
     var passed_description: String
     var passed_numberOfLikes: Int
-    var passed_image: Image
+    var passed_image: String
     
     var body: some View {
         
         VStack{
-            passed_image
+            //URI로 이미지 보여주도록 수정
+            AnimatedImage(url: URL(string: passed_image)!)
                 .frame(height: 300)
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .background(Color.init(red: 0.95, green: 0.95, blue: 0.95).opacity(0.6))
@@ -54,6 +56,6 @@ struct PostView: View {
 
 struct PostView_Previews: PreviewProvider {
     static var previews: some View {
-        PostView(passed_postingUser: "chris", passed_description: "this is a description for this post.this is a description for this post.this is a description for this post.this is a description for this post.this is a description for this post.", passed_numberOfLikes: 1000, passed_image: Image(systemName: "heart.fill"))
+        PostView(passed_postingUser: "chris", passed_description: "this is a description for this post.this is a description for this post.this is a description for this post.this is a description for this post.this is a description for this post.", passed_numberOfLikes: 1000, passed_image: "")
     }
 }
