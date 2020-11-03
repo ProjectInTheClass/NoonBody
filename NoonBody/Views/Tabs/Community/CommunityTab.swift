@@ -9,7 +9,7 @@ import SwiftUI
 import SlidingTabView
 
 struct CommunityTab: View {
-    @State private var selectedTabIndex = 0 // slider tab state
+    @State private var selectedTabIndex = 0
     
     init(){
                 UITableView.appearance().backgroundColor = .clear
@@ -18,7 +18,7 @@ struct CommunityTab: View {
     
     var body: some View {
         NavigationView {
-//            ScrollView() { // hides  arrow
+
                 
                 Section {
                     VStack(alignment: .leading) {
@@ -35,7 +35,7 @@ struct CommunityTab: View {
                 }
                 
            
-//            } // Scroll View Ends
+
             .background(Color("secondaryOrange"))
             .navigationBarTitle("커뮤니티")
             }.navigationBarTitle("").navigationBarHidden(true)
