@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseFirestore
 
-class CommunityFreindsViewModel: ObservableObject {
+class CommunityFriendsViewModel: ObservableObject {
   @Published var friendPosts = [FriendsPost]()
 
     @Published var isWrite: Bool = false
