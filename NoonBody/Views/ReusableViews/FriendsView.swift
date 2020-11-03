@@ -6,17 +6,19 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct FriendsView: View {
     var passed_friendUser: String
     var passed_friendDescription: String
     var passed_friendNumberOfLikes: Int
-    var passed_friendImage: Image
+    var passed_friendImage: String
     
     var body: some View {
         
         HStack{
-            passed_friendImage
+            //URI로 이미지 보여주도록 수정
+            AnimatedImage(url: URL(string: passed_friendImage)!)
                 .frame(width:50, height: 50)
                 .clipShape(Circle())
                 .background(Color.init(red: 0.95, green: 0.95, blue: 0.95).opacity(0.6))
@@ -47,6 +49,6 @@ struct FriendsView: View {
 
 struct FriendsView_Previews: PreviewProvider {
     static var previews: some View {
-        FriendsView(passed_friendUser: "지현", passed_friendDescription: "나는 지현", passed_friendNumberOfLikes: 1000, passed_friendImage: Image(systemName: "heart.fill"))
+        FriendsView(passed_friendUser: "지현", passed_friendDescription: "나는 지현", passed_friendNumberOfLikes: 1000, passed_friendImage: "")
     }
 }
