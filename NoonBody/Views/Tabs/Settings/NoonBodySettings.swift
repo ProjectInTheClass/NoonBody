@@ -38,7 +38,7 @@ struct NoonBodySettings: View {
                 VStack{
                     Form {
                         Section {
-                            NavigationLink(destination: SettingsProfile()) {
+                            NavigationLink(destination: SettingsAbout()) {
                                 HStack {
                                     Image(systemName: "person.circle.fill")
                                         .font(.system(size: 65))
@@ -87,36 +87,11 @@ struct NoonBodySettings: View {
                             
                             
                             
-    //                        NavigationLink(destination: SettingsNotification()) {
-    //                            HStack {
-    //                                ZStack {
-    //                                    Image(systemName: "app.badge").font(.callout)
-    //                                }.frame(width: 28, height: 28).background(Color.white).cornerRadius(6)
-    //                                Text("알림 설정")
-    //                            }
-    //                        }
+    
                             
                             ContentView()
                             
-    //                        NavigationLink(destination: SettingsPhoto()) {
-    //                            HStack {
-    //                                ZStack {
-    //                                    Image(systemName: "camera").font(.callout)
-    //                                }.frame(width: 28, height: 28).background(Color.white).cornerRadius(6)
-    //                                Text("사진 자동 저장")
-    //                            }
-    //                        }
-                            
-                           
-                            
-    //                        NavigationLink(destination: SettingsAbout()) {
-    //                            HStack {
-    //                                ZStack {
-    //                                    Image(systemName: "gear").font(.callout)
-    //                                }.frame(width: 28, height: 28).background(Color.white).cornerRadius(6)
-    //                                Text("눈바디 1.0")
-    //                            }
-    //                        }
+   
                         }
                     }.background(Color("secondaryOrange"))
                     .navigationTitle("마이페이지")
