@@ -19,7 +19,7 @@ struct DietTab: View {
     
     @State var day: Int = 0
     
-    @State var choosedDate: String = "2020. 10. 24"
+    @State var choosedDate: String = ""
     
     @State var dateString: String = ""
     
