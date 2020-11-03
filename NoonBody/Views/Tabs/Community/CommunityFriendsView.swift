@@ -27,7 +27,7 @@ struct CommunityFriendsView: View {
                     .onDelete(perform: delete)
                 }.background(Color.clear)
             
-        }
+        }.frame(width: UIScreen.main.bounds.size.width)
 
     }
     

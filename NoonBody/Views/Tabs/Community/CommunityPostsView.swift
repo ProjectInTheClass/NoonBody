@@ -28,7 +28,7 @@ struct CommunityPostsView: View {
                 
                 
             }.background(Color.clear)
-        }
+        }.frame(width: UIScreen.main.bounds.size.width)
     }
 }
 
