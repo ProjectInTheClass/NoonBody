@@ -50,7 +50,8 @@ struct PostView: View {
 //            .background(Color.orange)
             
             
-        }.padding()
+        }.frame(width: UIScreen.main.bounds.size.width, height: .infinity)
+        .padding()
 //        .background(Color.yellow)
     }
 }
