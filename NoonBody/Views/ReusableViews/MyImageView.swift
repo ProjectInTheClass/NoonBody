@@ -9,7 +9,7 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct MyImageView: View {
-    @State var myColor: String = "primaryGray"
+    @State var myColor: String = "primaryBlack"
     @State var isChoosed: Bool = false
     @State var choosedCount: Int = 0
     var passed_myImage: String
@@ -28,6 +28,7 @@ struct MyImageView: View {
             ZStack{
                 Rectangle()
                     .frame(width: 170, height: 50)
+                    .foregroundColor(Color(myColor))
                     .overlay(Rectangle().stroke(Color(myColor), lineWidth:3))
                 
                 Text("\(passed_myWeight, specifier: "%.2f")kg")
@@ -42,7 +43,7 @@ struct MyImageView: View {
                 self.myColor = "primaryOrange"
             }else{
                 self.choosedCount -= 1
-                self.myColor = "primaryGray"
+                self.myColor = "primaryBlack"
             }
         })
         
