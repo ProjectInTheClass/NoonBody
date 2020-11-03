@@ -23,6 +23,7 @@
 		4509A6E62546F44C005A0D50 /* FirebaseFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4509A6E52546F44C005A0D50 /* FirebaseFuncs.swift */; };
 		450A92262536AC830082B5EF /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A92252536AC830082B5EF /* DateFormatter.swift */; };
 		450B6CAD2548F12300054605 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 450B6CAC2548F12300054605 /* SDWebImageSwiftUI */; };
+		452F685F255143CF005FD3F7 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45024C9C2532F01B00D619C5 /* TextView.swift */; };
 		45324158253E889700AD1199 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45324157253E889700AD1199 /* FriendsView.swift */; };
 		453363B3253EE42400DC2FDB /* CompareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453363B2253EE42400DC2FDB /* CompareView.swift */; };
 		453363B6253EE82800DC2FDB /* MyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453363B5253EE82800DC2FDB /* MyImageView.swift */; };
@@ -228,14 +229,6 @@
 			path = NoonBodyUITests;
 			sourceTree = "<group>";
 		};
-		45024C9B2532F01B00D619C5 /* TextView */ = {
-			isa = PBXGroup;
-			children = (
-				45024C9C2532F01B00D619C5 /* TextView.swift */,
-			);
-			path = TextView;
-			sourceTree = "<group>";
-		};
 		45024CAF2532F09900D619C5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,7 +237,6 @@
 				45024CB32532F0F600D619C5 /* Tabs */,
 				45F940F12539A1D6000D4AE0 /* ReusableViews */,
 				459FAA4425452FEF00C1E838 /* Login */,
-				45024C9B2532F01B00D619C5 /* TextView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -343,6 +335,7 @@
 		45DDD8DC25341FBB004C18FE /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				45024C9C2532F01B00D619C5 /* TextView.swift */,
 				45DDD8D425341F8D004C18FE /* MyButtonStyle.swift */,
 				45DDD8E325342524004C18FE /* ButtonSelected.swift */,
 				45DDD8E825342543004C18FE /* ButtonNonSelected.swift */,
@@ -517,6 +510,7 @@
 				45666F85253FF780000B5516 /* DietPostView.swift in Sources */,
 				45DDD8E925342543004C18FE /* ButtonNonSelected.swift in Sources */,
 				45A484972547BEA00027BCA1 /* NoonBodyViewModel.swift in Sources */,
+				452F685F255143CF005FD3F7 /* TextView.swift in Sources */,
 				45696799254281C600663FB7 /* SettingsAbout.swift in Sources */,
 				45024C512532EBB000D619C5 /* ImagePicker.swift in Sources */,
 				45DDD89725341106004C18FE /* CollectionView.swift in Sources */,
