@@ -8,10 +8,13 @@
 import SwiftUI
 import SDWebImageSwiftUI
 
+
 struct MyImageView: View {
+    
+    @ObservedObject var choosedCount = ChoosedCount()
+    
     @State var myColor: String = "primaryBlack"
     @State var isChoosed: Bool = false
-    @State var choosedCount: Int = 0
     var passed_myImage: String
     var passed_myWeight: Double
     
@@ -39,12 +42,13 @@ struct MyImageView: View {
             self.isChoosed.toggle()
             
             if isChoosed{
-                self.choosedCount += 1
+                self.choosedCount.count += 1
                 self.myColor = "primaryOrange"
             }else{
-                self.choosedCount -= 1
+                self.choosedCount.count -= 1
                 self.myColor = "primaryBlack"
             }
+            print("\(choosedCount.count)")
         })
         
         
