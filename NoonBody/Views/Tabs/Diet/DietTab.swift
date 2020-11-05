@@ -28,6 +28,9 @@ struct DietTab: View {
 
     @ObservedObject var viewModel = DietViewModel()
     
+    @State var DateLists = [String]()
+    @State var duplicationRemovedArray = [String]()
+    
 
     
     init(){
@@ -38,6 +41,8 @@ struct DietTab: View {
         UINavigationBar.appearance().backgroundColor = secondaryOrange
         
         self.viewModel.fetchData()
+        
+        
         
         }
     
@@ -52,8 +57,9 @@ struct DietTab: View {
                         
 
                             
-                            ForEach(viewModel.dietPosts, id: \.id){ post in
-                                Text(post.dietDate)
+                            ForEach(duplicationRemovedArray, id: \.self){ post in
+                                
+                                Text(post)
                                     .padding()
                                     .font(.system(size:20, weight:.bold))
                                     .foregroundColor(.white)
@@ -61,7 +67,7 @@ struct DietTab: View {
                                     .background(Color(myColor))
                                     .cornerRadius(12)
                                     .onTapGesture(count: 1, perform: {
-                                        choosedDate = "\(post.dietDate)"
+                                        choosedDate = "\(post)"
                                     })
                             }
 
@@ -98,6 +104,18 @@ struct DietTab: View {
                 
                     
             }.background(Color("secondaryOrange"))
+            .onAppear(){
+                self.viewModel.fetchData()
+                
+                for post in viewModel.dietPosts {
+//                    print(post.dietDate)
+                    DateLists.append(post.dietDate)
+//                    print(DateLists)
+                    let set = Set(DateLists)
+                    duplicationRemovedArray = Array(set)
+                    print(duplicationRemovedArray)
+                }
+            }
             
             
                 
@@ -113,7 +131,6 @@ struct DietTab: View {
 //            DietLists.remove(at: first)
         }
     }
-    
 
 }
 
