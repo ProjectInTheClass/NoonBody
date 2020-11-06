@@ -111,8 +111,17 @@ struct DietTab: View {
 //                    print(post.dietDate)
                     DateLists.append(post.dietDate)
 //                    print(DateLists)
-                    let set = Set(DateLists)
-                    duplicationRemovedArray = Array(set)
+                    duplicationRemovedArray = DateLists
+                    for index in 0 ... duplicationRemovedArray.count-1 {
+                        if index + 1 <= duplicationRemovedArray.count-1 {
+                            if duplicationRemovedArray[index] == duplicationRemovedArray[index+1] {
+                                duplicationRemovedArray.remove(at: index)
+                            }
+                        }
+                    }
+                    
+//                    let set = Set(DateLists)
+//                    duplicationRemovedArray = Array(set)
                     print(duplicationRemovedArray)
                     choosedDate = duplicationRemovedArray[duplicationRemovedArray.count-1]
                 }
