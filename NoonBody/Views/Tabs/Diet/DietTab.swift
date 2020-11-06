@@ -114,6 +114,7 @@ struct DietTab: View {
                     let set = Set(DateLists)
                     duplicationRemovedArray = Array(set)
                     print(duplicationRemovedArray)
+                    choosedDate = duplicationRemovedArray[duplicationRemovedArray.count-1]
                 }
             }
             
