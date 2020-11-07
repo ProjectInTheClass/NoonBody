@@ -59,8 +59,8 @@ struct CollectionView: View {
             ScrollView {
                 VStack(spacing: 10) {
                     self.chartView()
-                    self.controlsView()
-                    .navigationBarTitle(Text("BarChart"))
+//                    self.controlsView()
+                    
                 }
                 .padding(5)
             }
@@ -146,6 +146,8 @@ struct CollectionView: View {
             
         }
     
+    
+    // MARK: - BarChart Functions
     func selectionIndicatorView() -> some View {
         Group {
             if self.selectedEntry != nil && self.selectedBarTopCentreLocation != nil {
@@ -159,14 +161,17 @@ struct CollectionView: View {
         .frame(height: 60)
     }
     
+    //chart를 그리는 부분
     func chartView() -> some View {
         ZStack {
             // Drop shadow rectangle
-            RoundedRectangle(cornerRadius: 5)
-                .foregroundColor(.white)
-                .padding(5)
-                .shadow(color: .black, radius: 5)
+//            RoundedRectangle(cornerRadius: 5)
+//                .foregroundColor(.white)
+//                .padding(5)
+//                .shadow(color: .black, radius: 5)
+            
                 Text("No data").opacity(self.entries.isEmpty ? 1.0 : 0.0)
+            
             VStack(alignment: .leading, spacing: 0) {
                 self.selectionIndicatorView()
                 SelectableBarChartView<SelectionLine>(config: self.config)
@@ -209,40 +214,41 @@ struct CollectionView: View {
         }.frame(height: self.chartHeight)
     }
     
-    func controlsView() -> some View {
-        Group {
-            VStack(spacing: 0) {
-                Stepper(value: self.$maxEntriesCount, in: 0...30) {
-                    Text("Max entries count: \(self.maxEntriesCount)")
-                }.padding(15)
-                Button(action: {
-                    let newEntries = self.randomEntries()
-                    self.entries = newEntries
-                    self.config.data.entries = newEntries
-                }) {
-                    Text("Generate entries")
-                }.randomButtonStyle()
-            }
-            HStack {
-                Button(action: {
-                    self.config.data.color = Color.random
-                }) {
-                    Text("Generate color")
-                }.randomButtonStyle()
-                Button(action: {
-                    self.config.data.gradientColor = GradientColor(start: Color.random, end: Color.random)
-                }) {
-                    Text("Generate gradient")
-                }.randomButtonStyle()
-            }
-            Stepper(value: self.$xAxisTicksIntervalValue, in: 1...4) {
-                Text("X axis ticks interval: \(Int(self.xAxisTicksIntervalValue))")
-            }.padding(15)
-            Toggle(isOn: self.$isXAxisTicksHidden, label: {
-                Text("X axis ticks is hidden")
-            }).padding(15)
-        }
-    }
+    //데이터 추가, 색상 변경 등 control을 다루는 화면을 그리는 부분 -> 추후에는 필요 없음
+//    func controlsView() -> some View {
+//        Group {
+//            VStack(spacing: 0) {
+//                Stepper(value: self.$maxEntriesCount, in: 0...30) {
+//                    Text("Max entries count: \(self.maxEntriesCount)")
+//                }.padding(15)
+//                Button(action: {
+//                    let newEntries = self.randomEntries()
+//                    self.entries = newEntries
+//                    self.config.data.entries = newEntries
+//                }) {
+//                    Text("Generate entries")
+//                }.randomButtonStyle()
+//            }
+//            HStack {
+//                Button(action: {
+//                    self.config.data.color = Color.random
+//                }) {
+//                    Text("Generate color")
+//                }.randomButtonStyle()
+//                Button(action: {
+//                    self.config.data.gradientColor = GradientColor(start: Color.random, end: Color.random)
+//                }) {
+//                    Text("Generate gradient")
+//                }.randomButtonStyle()
+//            }
+//            Stepper(value: self.$xAxisTicksIntervalValue, in: 1...4) {
+//                Text("X axis ticks interval: \(Int(self.xAxisTicksIntervalValue))")
+//            }.padding(15)
+//            Toggle(isOn: self.$isXAxisTicksHidden, label: {
+//                Text("X axis ticks is hidden")
+//            }).padding(15)
+//        }
+//    }
     
     // MARK: - Random Helpers
     
@@ -260,36 +266,31 @@ struct CollectionView: View {
     }
 
 
-extension Color {
-    static var random: Color {
-        return Color(red: .random(in: 0...1),
-                     green: .random(in: 0...1),
-                     blue: .random(in: 0...1))
-    }
-}
+//extension Color {
+//    static var random: Color {
+//        return Color(red: .random(in: 0...1),
+//                     green: .random(in: 0...1),
+//                     blue: .random(in: 0...1))
+//    }
+//}
 
-// MARK: - Modifers
+//// MARK: - Modifers
+//
+//struct RandomButtonStyle: ViewModifier {
+//    func body(content: Content) -> some View {
+//        content
+//            .padding(10)
+//            .background(Color.gray.opacity(0.2))
+//            .cornerRadius(8)
+//    }
+//}
+//
+//extension View {
+//    func randomButtonStyle() -> some View {
+//        self.modifier(RandomButtonStyle())
+//    }
+//}
 
-struct RandomButtonStyle: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .padding(10)
-            .background(Color.gray.opacity(0.2))
-            .cornerRadius(8)
-    }
-}
-
-extension View {
-    func randomButtonStyle() -> some View {
-        self.modifier(RandomButtonStyle())
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
 
 struct CollectionView_Previews: PreviewProvider {
     static var previews: some View {
