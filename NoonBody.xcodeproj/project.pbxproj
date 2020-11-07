@@ -321,6 +321,7 @@
 		45DDD8772533F5DE004C18FE /* NoonBody */ = {
 			isa = PBXGroup;
 			children = (
+				457C0BBE25567E9300E1961B /* BarChart */,
 				45DDD88C25340CF2004C18FE /* NoonBodyTab.swift */,
 				45DDD891253410F8004C18FE /* DiaryView.swift */,
 				45DDD89625341106004C18FE /* CollectionView.swift */,
@@ -351,7 +352,6 @@
 		45DDD8DC25341FBB004C18FE /* Style */ = {
 			isa = PBXGroup;
 			children = (
-				457C0BBE25567E9300E1961B /* BarChart */,
 				45024C9C2532F01B00D619C5 /* TextView.swift */,
 				45DDD8D425341F8D004C18FE /* MyButtonStyle.swift */,
 				45DDD8E325342524004C18FE /* ButtonSelected.swift */,
