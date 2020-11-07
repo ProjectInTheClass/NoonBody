@@ -34,6 +34,8 @@
 		45666F88253FFBE3000B5516 /* DiaryPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45666F87253FFBE3000B5516 /* DiaryPostView.swift */; };
 		45696799254281C600663FB7 /* SettingsAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45696794254281C600663FB7 /* SettingsAbout.swift */; };
 		4569679C254281C600663FB7 /* NoonBodySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45696797254281C600663FB7 /* NoonBodySettings.swift */; };
+		457C0BC025567EAA00E1961B /* SelectionIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C0BBF25567EAA00E1961B /* SelectionIndicator.swift */; };
+		457C0BC225567EC400E1961B /* SelectionLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C0BC125567EC400E1961B /* SelectionLine.swift */; };
 		458138FA253D873100745975 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 458138F9253D873100745975 /* GoogleService-Info.plist */; };
 		459FAA3E25452EBC00C1E838 /* User_Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459FAA3D25452EBC00C1E838 /* User_Class.swift */; };
 		459FAA4125452EEA00C1E838 /* Custom_Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459FAA4025452EEA00C1E838 /* Custom_Colors.swift */; };
@@ -104,6 +106,8 @@
 		45666F87253FFBE3000B5516 /* DiaryPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryPostView.swift; sourceTree = "<group>"; };
 		45696794254281C600663FB7 /* SettingsAbout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsAbout.swift; sourceTree = "<group>"; };
 		45696797254281C600663FB7 /* NoonBodySettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoonBodySettings.swift; sourceTree = "<group>"; };
+		457C0BBF25567EAA00E1961B /* SelectionIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionIndicator.swift; sourceTree = "<group>"; };
+		457C0BC125567EC400E1961B /* SelectionLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionLine.swift; sourceTree = "<group>"; };
 		458138F9253D873100745975 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		459FAA3D25452EBC00C1E838 /* User_Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User_Class.swift; sourceTree = "<group>"; };
 		459FAA4025452EEA00C1E838 /* Custom_Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom_Colors.swift; sourceTree = "<group>"; };
@@ -264,6 +268,15 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		457C0BBE25567E9300E1961B /* BarChart */ = {
+			isa = PBXGroup;
+			children = (
+				457C0BBF25567EAA00E1961B /* SelectionIndicator.swift */,
+				457C0BC125567EC400E1961B /* SelectionLine.swift */,
+			);
+			path = BarChart;
+			sourceTree = "<group>";
+		};
 		459FAA4425452FEF00C1E838 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +351,7 @@
 		45DDD8DC25341FBB004C18FE /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				457C0BBE25567E9300E1961B /* BarChart */,
 				45024C9C2532F01B00D619C5 /* TextView.swift */,
 				45DDD8D425341F8D004C18FE /* MyButtonStyle.swift */,
 				45DDD8E325342524004C18FE /* ButtonSelected.swift */,
@@ -515,6 +529,7 @@
 				45A484972547BEA00027BCA1 /* NoonBodyViewModel.swift in Sources */,
 				452F685F255143CF005FD3F7 /* TextView.swift in Sources */,
 				45696799254281C600663FB7 /* SettingsAbout.swift in Sources */,
+				457C0BC025567EAA00E1961B /* SelectionIndicator.swift in Sources */,
 				45024C512532EBB000D619C5 /* ImagePicker.swift in Sources */,
 				45DDD89725341106004C18FE /* CollectionView.swift in Sources */,
 				45666F88253FFBE3000B5516 /* DiaryPostView.swift in Sources */,
@@ -535,6 +550,7 @@
 				4569679C254281C600663FB7 /* NoonBodySettings.swift in Sources */,
 				45C6E41E253487D400C3012B /* UIColor.swift in Sources */,
 				45FCC335253C7C64006E47CC /* LoginView.swift in Sources */,
+				457C0BC225567EC400E1961B /* SelectionLine.swift in Sources */,
 				45DDD892253410F8004C18FE /* DiaryView.swift in Sources */,
 				45B2DB182552A56E006580BA /* ObserverbleObjects.swift in Sources */,
 				45D996B32541A26C005741FD /* GlobalEnvironment_extension.swift in Sources */,

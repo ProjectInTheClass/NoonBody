@@ -6,8 +6,30 @@
 //
 
 import SwiftUI
+import BarChart
 
 struct CollectionView: View {
+    
+    //BarChart Start
+    let orientationChanged = NotificationCenter.default.publisher(for: UIDevice.orientationDidChangeNotification)
+        .makeConnectable()
+        .autoconnect()
+    
+    // MARK: - Chart Properties
+    
+    let chartHeight: CGFloat = 400
+    let config = ChartConfiguration()
+    @State var entries = [ChartDataEntry]()
+    @State var selectedBarTopCentreLocation: CGPoint?
+    @State var selectedEntry: ChartDataEntry?
+    
+    // MARK: - Controls Properties
+    
+    @State var maxEntriesCount: Int = 0
+    @State var xAxisTicksIntervalValue: Double = 1
+    @State var isXAxisTicksHidden: Bool = false
+    
+    //BarChart End
     
     @State var date = Date()
     
@@ -33,23 +55,35 @@ struct CollectionView: View {
     var body: some View {
 
         VStack{
-            ScrollView(.horizontal, showsIndicators: false){
-                
-                ScrollViewReader{ value in
-//                    value.scrollTo(datas.count)
-                    
-                    HStack(alignment: .bottom){
-                        ForEach(datas){ i in
-                            
-                            Bar(weight: i.weight, day: i.day)
-                        }
-                    }.frame(height: 150)
-                    .padding(.leading, 20)
-                    .padding(.trailing, 20)
+            
+            ScrollView {
+                VStack(spacing: 10) {
+                    self.chartView()
+                    self.controlsView()
+                    .navigationBarTitle(Text("BarChart"))
                 }
-                
-                
+                .padding(5)
             }
+            
+//            ScrollView(.horizontal, showsIndicators: false){
+//
+//                ScrollViewReader{ value in
+////                    value.scrollTo(datas.count)
+//
+//                    HStack(alignment: .bottom){
+//                        ForEach(datas){ i in
+//
+//                            Bar(weight: i.weight, day: i.day)
+//                        }
+//                    }.frame(height: 150)
+//                    .padding(.leading, 20)
+//                    .padding(.trailing, 20)
+//                }
+//
+//
+//            }
+            
+            
             
             ZStack{
                 ScrollView {
@@ -76,6 +110,12 @@ struct CollectionView: View {
                                         ) {
                                             ForEach(viewModel.diaryPosts, id: \.id){ post in
                                                 MyImageView(passed_myImage: post.diaryImage, passed_myWeight: post.diaryWeight)
+                                                    .gesture(
+                                                        TapGesture()
+                                                            .onEnded { _ in
+                                                                print("\(post.diaryWeight)")
+                                                            }
+                                                    )
                                             }
                                             
                                         }
@@ -105,8 +145,151 @@ struct CollectionView: View {
         
             
         }
+    
+    func selectionIndicatorView() -> some View {
+        Group {
+            if self.selectedEntry != nil && self.selectedBarTopCentreLocation != nil {
+                SelectionIndicator(entry: self.selectedEntry!,
+                                   location: self.selectedBarTopCentreLocation!.x,
+                                   infoRectangleColor: Color(red: 241/255, green: 242/255, blue: 245/255))
+            } else {
+                Rectangle().foregroundColor(.clear)
+            }
+        }
+        .frame(height: 60)
+    }
+    
+    func chartView() -> some View {
+        ZStack {
+            // Drop shadow rectangle
+            RoundedRectangle(cornerRadius: 5)
+                .foregroundColor(.white)
+                .padding(5)
+                .shadow(color: .black, radius: 5)
+                Text("No data").opacity(self.entries.isEmpty ? 1.0 : 0.0)
+            VStack(alignment: .leading, spacing: 0) {
+                self.selectionIndicatorView()
+                SelectableBarChartView<SelectionLine>(config: self.config)
+                .onBarSelection { entry, location in
+                    self.selectedBarTopCentreLocation = location
+                    self.selectedEntry = entry
+                }
+                .selectionView {
+                    SelectionLine(location: self.selectedBarTopCentreLocation,
+                                  height: 295)
+                }
+                .onAppear() {
+                    let labelsFont = CTFontCreateWithName(("SFProText-Regular" as CFString), 10, nil)
+                    self.config.data.entries = self.randomEntries()
+                    self.config.data.color = .red
+                    self.config.xAxis.labelsColor = .gray
+                    self.config.xAxis.ticksColor = .gray
+                    self.config.labelsCTFont = labelsFont
+                    self.config.xAxis.ticksDash = [2, 4]
+                    self.config.yAxis.labelsColor = .gray
+                    self.config.yAxis.ticksColor = .gray
+                    self.config.yAxis.ticksDash = [2, 4]
+                    self.config.yAxis.minTicksSpacing = 30.0
+                    self.config.yAxis.formatter = { (value, decimals) in
+                        let format = value == 0 ? "" : "b"
+                        return String(format: " %.\(decimals)f\(format)", value)
+                    }
+                }
+                .animation(.easeInOut)
+                .onReceive([self.isXAxisTicksHidden].publisher.first()) { (value) in
+                    self.config.xAxis.ticksColor = value ? .clear : .gray
+                }
+                .onReceive([self.xAxisTicksIntervalValue].publisher.first()) { (value) in
+                    self.config.xAxis.ticksInterval = Int(value)
+                }
+                .onReceive(self.orientationChanged) { _ in
+                    self.config.objectWillChange.send()
+                }
+            }.padding(15)
+        }.frame(height: self.chartHeight)
+    }
+    
+    func controlsView() -> some View {
+        Group {
+            VStack(spacing: 0) {
+                Stepper(value: self.$maxEntriesCount, in: 0...30) {
+                    Text("Max entries count: \(self.maxEntriesCount)")
+                }.padding(15)
+                Button(action: {
+                    let newEntries = self.randomEntries()
+                    self.entries = newEntries
+                    self.config.data.entries = newEntries
+                }) {
+                    Text("Generate entries")
+                }.randomButtonStyle()
+            }
+            HStack {
+                Button(action: {
+                    self.config.data.color = Color.random
+                }) {
+                    Text("Generate color")
+                }.randomButtonStyle()
+                Button(action: {
+                    self.config.data.gradientColor = GradientColor(start: Color.random, end: Color.random)
+                }) {
+                    Text("Generate gradient")
+                }.randomButtonStyle()
+            }
+            Stepper(value: self.$xAxisTicksIntervalValue, in: 1...4) {
+                Text("X axis ticks interval: \(Int(self.xAxisTicksIntervalValue))")
+            }.padding(15)
+            Toggle(isOn: self.$isXAxisTicksHidden, label: {
+                Text("X axis ticks is hidden")
+            }).padding(15)
+        }
+    }
+    
+    // MARK: - Random Helpers
+    
+    func randomEntries() -> [ChartDataEntry] {
+        var entries = [ChartDataEntry]()
+        guard self.maxEntriesCount > 0 else { return [] }
+        for data in 0..<self.maxEntriesCount {
+            let randomDouble = Double.random(in: -15...50)
+            let newEntry = ChartDataEntry(x: "\(2000+data)", y: randomDouble)
+            entries.append(newEntry)
+        }
+        return entries
+    }
         
     }
+
+
+extension Color {
+    static var random: Color {
+        return Color(red: .random(in: 0...1),
+                     green: .random(in: 0...1),
+                     blue: .random(in: 0...1))
+    }
+}
+
+// MARK: - Modifers
+
+struct RandomButtonStyle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .padding(10)
+            .background(Color.gray.opacity(0.2))
+            .cornerRadius(8)
+    }
+}
+
+extension View {
+    func randomButtonStyle() -> some View {
+        self.modifier(RandomButtonStyle())
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
 
 struct CollectionView_Previews: PreviewProvider {
     static var previews: some View {
