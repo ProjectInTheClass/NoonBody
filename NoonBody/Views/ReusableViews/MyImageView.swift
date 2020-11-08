@@ -11,7 +11,7 @@ import SDWebImageSwiftUI
 
 struct MyImageView: View {
     
-    @ObservedObject var choosedCount = ChoosedCount()
+    @EnvironmentObject var choosedCount: ChoosedCount
     
     @State var myColor: String = "primaryBlack"
 //    @State var isChoosed: Bool = false
