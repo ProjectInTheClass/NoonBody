@@ -14,9 +14,8 @@ struct MyImageView: View {
     @EnvironmentObject var choosedCount: ChoosedCount
     
     @State var myColor: String = "primaryBlack"
-//    @State var isChoosed: Bool = false
-    @State var isChoosed1: Bool = false
-    @State var isChoosed2: Bool = false
+    @State var isChoosed: Bool = true
+
     var passed_myImage: String
     var passed_myWeight: Double
     
@@ -42,37 +41,25 @@ struct MyImageView: View {
             
         }.onTapGesture(count: 1, perform: {
             
-//           self.isChoosed.toggle()
-//
-//           if isChoosed{
-//               self.choosedCount.count += 1
-//               self.myColor = "primaryOrange"
-//           }else{
-//               self.choosedCount.count -= 1
-//               self.myColor = "primaryBlack"
+            print("\(choosedCount.count)")
             
-            if isChoosed1 == false && isChoosed2 == false{
-                self.isChoosed1.toggle()
-                
-                if isChoosed1{
+            if isChoosed{
+                if choosedCount.count < 2{
+                    self.isChoosed.toggle()
                     self.choosedCount.count += 1
                     self.myColor = "primaryOrange"
-                }else{
-                    self.choosedCount.count -= 1
-                    self.myColor = "primaryBlack"
                 }
-            }else if isChoosed1 == true && isChoosed2 == false{
-                self.isChoosed2.toggle()
                 
-                if isChoosed2{
-                    self.choosedCount.count += 1
-                    self.myColor = "primaryOrange"
-                }else{
+            }else{
+                if choosedCount.count > 0{
+                    self.isChoosed.toggle()
                     self.choosedCount.count -= 1
                     self.myColor = "primaryBlack"
                 }
             }
+            
             print("\(choosedCount.count)")
+            
         })
         
         
