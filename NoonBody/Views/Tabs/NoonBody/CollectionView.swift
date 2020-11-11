@@ -75,7 +75,7 @@ struct CollectionView: View {
                                             pinnedViews: [.sectionHeaders, .sectionFooters]
                                         ) {
                                             ForEach(viewModel.diaryPosts, id: \.id){ post in
-                                                MyImageView(passed_myImage: post.diaryImage, passed_myWeight: post.diaryWeight)
+                                                MyImageView(passed_myImage: post.diaryImage, passed_myWeight: post.diaryWeight, passed_myMuscle: post.diaryMuscle, passed_myFat: post.diaryFat)
                                             }
                                             
                                         }

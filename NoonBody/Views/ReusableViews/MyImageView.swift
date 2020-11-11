@@ -18,6 +18,8 @@ struct MyImageView: View {
 
     var passed_myImage: String
     var passed_myWeight: Double
+    var passed_myMuscle: Double
+    var passed_myFat: Double
     
     var body: some View {
         
@@ -48,6 +50,8 @@ struct MyImageView: View {
                     self.isChoosed.toggle()
                     self.choosedCount.count += 1
                     self.myColor = "primaryOrange"
+                    print("\(passed_myMuscle)")
+                    print("\(passed_myFat)")
                 }
                 
             }else{
@@ -66,8 +70,8 @@ struct MyImageView: View {
     }
 }
 
-struct MyImageView_Previews: PreviewProvider {
-    static var previews: some View {
-        MyImageView(passed_myImage: "", passed_myWeight: 60)
-    }
-}
+//struct MyImageView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MyImageView(passed_myImage: "", passed_myWeight: 60)
+//    }
+//}
