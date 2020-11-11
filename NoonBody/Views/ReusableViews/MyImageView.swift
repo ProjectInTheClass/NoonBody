@@ -11,11 +11,12 @@ import SDWebImageSwiftUI
 
 struct MyImageView: View {
     
-    @EnvironmentObject var choosedCount: ChoosedCount
+    @EnvironmentObject var choosedContent: ChoosedContent
     
     @State var myColor: String = "primaryBlack"
     @State var isChoosed: Bool = true
 
+    var passed_myDate: String
     var passed_myImage: String
     var passed_myWeight: Double
     var passed_myMuscle: Double
@@ -43,26 +44,48 @@ struct MyImageView: View {
             
         }.onTapGesture(count: 1, perform: {
             
-            print("\(choosedCount.count)")
+            print("\(choosedContent.count)")
             
             if isChoosed{
-                if choosedCount.count < 2{
+                if choosedContent.count < 2{
                     self.isChoosed.toggle()
-                    self.choosedCount.count += 1
+                    self.choosedContent.count += 1
                     self.myColor = "primaryOrange"
-                    print("\(passed_myMuscle)")
-                    print("\(passed_myFat)")
+                    
+                    self.choosedContent.date = passed_myDate
+                    self.choosedContent.image = passed_myImage
+                    self.choosedContent.weight = passed_myWeight
+                    self.choosedContent.muscle = passed_myMuscle
+                    self.choosedContent.fat = passed_myFat
+                    
+                    print("\(choosedContent.date)")
+                    print("\(choosedContent.image)")
+                    print("\(choosedContent.weight)")
+                    print("\(choosedContent.muscle)")
+                    print("\(choosedContent.fat)")
                 }
                 
             }else{
-                if choosedCount.count > 0{
+                if choosedContent.count > 0{
                     self.isChoosed.toggle()
-                    self.choosedCount.count -= 1
+                    self.choosedContent.count -= 1
                     self.myColor = "primaryBlack"
+                    
+                    self.choosedContent.date = ""
+                    self.choosedContent.image = ""
+                    self.choosedContent.weight = 0
+                    self.choosedContent.muscle = 0
+                    self.choosedContent.fat = 0
+                    
+                    print("\(choosedContent.date)")
+                    print("\(choosedContent.image)")
+                    print("\(choosedContent.weight)")
+                    print("\(choosedContent.muscle)")
+                    print("\(choosedContent.fat)")
                 }
             }
             
-            print("\(choosedCount.count)")
+            print("\(choosedContent.count)")
             
         })
         
