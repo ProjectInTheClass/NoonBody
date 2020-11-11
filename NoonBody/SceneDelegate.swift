@@ -29,7 +29,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             //DateFormatter를 custom 공유데이터에 추가
             .environmentObject(DateFormatter.memoDateFormatter)
             .environmentObject(GlobalEnvironment())
-            .environmentObject(ChoosedContent())
+            .environmentObject(ChoosedCount())
+            .environmentObject(ChoosedContent1())
+            .environmentObject(ChoosedContent2())
         
 
         // Use a UIHostingController as window root view controller.

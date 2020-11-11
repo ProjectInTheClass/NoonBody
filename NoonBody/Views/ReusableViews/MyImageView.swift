@@ -11,7 +11,9 @@ import SDWebImageSwiftUI
 
 struct MyImageView: View {
     
-    @EnvironmentObject var choosedContent: ChoosedContent
+    @EnvironmentObject var choosedCount: ChoosedCount
+    @EnvironmentObject var choosedContent1: ChoosedContent1
+    @EnvironmentObject var choosedContent2: ChoosedContent2
     
     @State var myColor: String = "primaryBlack"
     @State var isChoosed: Bool = true
@@ -44,48 +46,78 @@ struct MyImageView: View {
             
         }.onTapGesture(count: 1, perform: {
             
-            print("\(choosedContent.count)")
+            print("\(choosedCount.count)")
             
             if isChoosed{
-                if choosedContent.count < 2{
+                if choosedCount.count < 2{
                     self.isChoosed.toggle()
-                    self.choosedContent.count += 1
+                    self.choosedCount.count += 1
                     self.myColor = "primaryOrange"
                     
-                    self.choosedContent.date = passed_myDate
-                    self.choosedContent.image = passed_myImage
-                    self.choosedContent.weight = passed_myWeight
-                    self.choosedContent.muscle = passed_myMuscle
-                    self.choosedContent.fat = passed_myFat
+                    if choosedCount.count == 1{
+                        self.choosedContent1.date1 = passed_myDate
+                        self.choosedContent1.image1 = passed_myImage
+                        self.choosedContent1.weight1 = passed_myWeight
+                        self.choosedContent1.muscle1 = passed_myMuscle
+                        self.choosedContent1.fat1 = passed_myFat
+                        
+                        print("date1 = \(choosedContent1.date1)")
+                        print("image1 = \(choosedContent1.image1)")
+                        print("weight1 = \(choosedContent1.weight1)")
+                        print("muscle1 = \(choosedContent1.muscle1)")
+                        print("fat1 = \(choosedContent1.fat1)")
+                    }else if choosedCount.count == 2{
+                        self.choosedContent2.date2 = passed_myDate
+                        self.choosedContent2.image2 = passed_myImage
+                        self.choosedContent2.weight2 = passed_myWeight
+                        self.choosedContent2.muscle2 = passed_myMuscle
+                        self.choosedContent2.fat2 = passed_myFat
+                        
+                        print("date2 = \(choosedContent2.date2)")
+                        print("image2 = \(choosedContent2.image2)")
+                        print("weight2 = \(choosedContent2.weight2)")
+                        print("weight2 = \(choosedContent2.muscle2)")
+                        print("fat2 = \(choosedContent2.fat2)")
+                    }
                     
-                    print("\(choosedContent.date)")
-                    print("\(choosedContent.image)")
-                    print("\(choosedContent.weight)")
-                    print("\(choosedContent.muscle)")
-                    print("\(choosedContent.fat)")
                 }
                 
             }else{
-                if choosedContent.count > 0{
+                if choosedCount.count > 0{
                     self.isChoosed.toggle()
-                    self.choosedContent.count -= 1
+                    self.choosedCount.count -= 1
                     self.myColor = "primaryBlack"
                     
-                    self.choosedContent.date = ""
-                    self.choosedContent.image = ""
-                    self.choosedContent.weight = 0
-                    self.choosedContent.muscle = 0
-                    self.choosedContent.fat = 0
+                    if self.choosedContent1.image1 == passed_myImage{
+                        self.choosedContent1.date1 = ""
+                        self.choosedContent1.image1 = ""
+                        self.choosedContent1.weight1 = 0
+                        self.choosedContent1.muscle1 = 0
+                        self.choosedContent1.fat1 = 0
+                        
+                        print("date1 = \(choosedContent1.date1)")
+                        print("image1 = \(choosedContent1.image1)")
+                        print("weight1 = \(choosedContent1.weight1)")
+                        print("muscle1 = \(choosedContent1.muscle1)")
+                        print("fat1 = \(choosedContent1.fat1)")
+                    }else{
+                        self.choosedContent2.date2 = ""
+                        self.choosedContent2.image2 = ""
+                        self.choosedContent2.weight2 = 0
+                        self.choosedContent2.muscle2 = 0
+                        self.choosedContent2.fat2 = 0
+                        
+                        print("date2 = \(choosedContent2.date2)")
+                        print("image2 = \(choosedContent2.image2)")
+                        print("weight2 = \(choosedContent2.weight2)")
+                        print("weight2 = \(choosedContent2.muscle2)")
+                        print("fat2 = \(choosedContent2.fat2)")
+                    }
                     
-                    print("\(choosedContent.date)")
-                    print("\(choosedContent.image)")
-                    print("\(choosedContent.weight)")
-                    print("\(choosedContent.muscle)")
-                    print("\(choosedContent.fat)")
                 }
             }
             
-            print("\(choosedContent.count)")
+            print("\(choosedCount.count)")
             
         })
         

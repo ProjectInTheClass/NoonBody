@@ -6,23 +6,28 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct CompareView: View {
+    
+    @EnvironmentObject var choosedContent1: ChoosedContent1
+    @EnvironmentObject var choosedContent2: ChoosedContent2
+    
     var body: some View {
         VStack{
             HStack{
                     VStack{
-                        Text(getDate(num: 1))
+                        Text("\(choosedContent1.date1)")
                             
-                        Image("body1")
+                        AnimatedImage(url: URL(string: choosedContent1.image1))
                             .resizable()
                             .frame(width: 180, height: 300, alignment: .trailing)
                         
                     }
                     VStack{
-                        Text(getDate(num: 0))
+                        Text("\(choosedContent2.date2)")
                             
-                        Image("body2")
+                        AnimatedImage(url: URL(string: choosedContent2.image2))
                             .resizable()
                             .frame(width: 180, height: 300, alignment: .trailing)
                         
@@ -33,11 +38,11 @@ struct CompareView: View {
             VStack(alignment: .leading){
                 HStack{
                     
-                    Text("0.00kg")
+                    Text("\(choosedContent1.weight1, specifier: "%.2f")kg")
                     Spacer()
                     Text("몸무게")
                     Spacer()
-                    Text("0.00kg")
+                    Text("\(choosedContent2.weight2, specifier: "%.2f")kg")
 //                        TextField("0.00kg", text: $weight)
 //                            .frame(width: 70)
                 }
@@ -46,11 +51,11 @@ struct CompareView: View {
                 
                 HStack{
                     
-                    Text("0.00kg")
+                    Text("\(choosedContent1.muscle1, specifier: "%.2f")kg")
                     Spacer()
                     Text("골격근량")
                     Spacer()
-                    Text("0.00kg")
+                    Text("\(choosedContent2.muscle2, specifier: "%.2f")kg")
 //                        TextField("0.00kg", text: $muscle)
 //                            .frame(width: 70)
                 }
@@ -58,11 +63,11 @@ struct CompareView: View {
                 Divider()
                 
                 HStack{
-                    Text("0.00kg")
+                    Text("\(choosedContent1.fat1, specifier: "%.2f")kg")
                     Spacer()
                     Text("체지방량")
                     Spacer()
-                    Text("0.00kg")
+                    Text("\(choosedContent2.fat2, specifier: "%.2f")kg")
 //                        TextField("0.00kg", text: $fat)
 //                            .frame(width: 70)
                 }

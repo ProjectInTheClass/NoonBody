@@ -8,14 +8,28 @@
 import SwiftUI
 
 
-class ChoosedContent: ObservableObject {
+class ChoosedCount: ObservableObject {
     @Published var count: Int = 0
     
-    @Published var date: String = ""
-    @Published var image: String = ""
-    @Published var weight: Double = 0
-    @Published var muscle: Double = 0
-    @Published var fat: Double = 0
+}
+
+class ChoosedContent1: ObservableObject {
+    
+    @Published var date1: String = ""
+    @Published var image1: String = ""
+    @Published var weight1: Double = 0
+    @Published var muscle1: Double = 0
+    @Published var fat1: Double = 0
+
+}
+
+class ChoosedContent2: ObservableObject {
+    
+    @Published var date2: String = ""
+    @Published var image2: String = ""
+    @Published var weight2: Double = 0
+    @Published var muscle2: Double = 0
+    @Published var fat2: Double = 0
 }
 
 
