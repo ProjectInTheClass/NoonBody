@@ -29,6 +29,7 @@
 		453363B6253EE82800DC2FDB /* MyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453363B5253EE82800DC2FDB /* MyImageView.swift */; };
 		455330F4254E527100B2AE7E /* CommunityPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455330F3254E527100B2AE7E /* CommunityPostViewModel.swift */; };
 		455330F6254E528400B2AE7E /* CommunityFriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455330F5254E528400B2AE7E /* CommunityFriendsViewModel.swift */; };
+		4564F51D255D378C001304D3 /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4564F51C255D378C001304D3 /* BarChart.swift */; };
 		45666F82253FF629000B5516 /* GetDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45666F81253FF629000B5516 /* GetDate.swift */; };
 		45666F85253FF780000B5516 /* DietPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45666F84253FF780000B5516 /* DietPostView.swift */; };
 		45666F88253FFBE3000B5516 /* DiaryPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45666F87253FFBE3000B5516 /* DiaryPostView.swift */; };
@@ -99,6 +100,7 @@
 		453363B5253EE82800DC2FDB /* MyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImageView.swift; sourceTree = "<group>"; };
 		455330F3254E527100B2AE7E /* CommunityPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityPostViewModel.swift; sourceTree = "<group>"; };
 		455330F5254E528400B2AE7E /* CommunityFriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityFriendsViewModel.swift; sourceTree = "<group>"; };
+		4564F51C255D378C001304D3 /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
 		45666F81253FF629000B5516 /* GetDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDate.swift; sourceTree = "<group>"; };
 		45666F84253FF780000B5516 /* DietPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPostView.swift; sourceTree = "<group>"; };
 		45666F87253FFBE3000B5516 /* DiaryPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryPostView.swift; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 				453363B5253EE82800DC2FDB /* MyImageView.swift */,
 				45666F84253FF780000B5516 /* DietPostView.swift */,
 				45666F87253FFBE3000B5516 /* DiaryPostView.swift */,
+				4564F51C255D378C001304D3 /* BarChart.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 				45DDD8A0253412E1004C18FE /* CommunityTab.swift in Sources */,
 				45DDD8E425342524004C18FE /* ButtonSelected.swift in Sources */,
 				45024BFB2532EA0B00D619C5 /* AppDelegate.swift in Sources */,
+				4564F51D255D378C001304D3 /* BarChart.swift in Sources */,
 				45DDD88D25340CF2004C18FE /* NoonBodyTab.swift in Sources */,
 				45666F85253FF780000B5516 /* DietPostView.swift in Sources */,
 				45DDD8E925342543004C18FE /* ButtonNonSelected.swift in Sources */,
