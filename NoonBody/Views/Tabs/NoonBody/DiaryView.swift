@@ -20,27 +20,31 @@ struct DiaryView: View {
     
     var body: some View {
         VStack{
-
-
-            if viewModel.isWrite == true{
-            ScrollView (.horizontal, showsIndicators:false){
-                
-                    HStack(spacing:0){
-                        
-                        ForEach(viewModel.diaryPosts, id: \.id){ post in
-                            DiaryPostView(passed_diaryDate: post.diaryDate, passed_diaryFull: post.diaryFull, passed_diaryShare: post.diaryShare, passed_diaryWeight: post.diaryWeight, passed_diaryMuscle: post.diaryMuscle, passed_diaryFat: post.diaryFat, passed_diaryImage: post.diaryImage)
-                        }
-                    }
-                    
-            }
             
-            }else{
-                Text("오늘의 눈바디를 기록하세요")
-                    .onTapGesture(count: 1, perform: {
-                        self.viewModel.fetchData()
-                    })
+            ScrollView{
+                if viewModel.isWrite == true{
+                ScrollView (.horizontal, showsIndicators:false){
                     
+                        HStack(spacing:0){
+                            
+                            ForEach(viewModel.diaryPosts, id: \.id){ post in
+                                DiaryPostView(passed_diaryDate: post.diaryDate, passed_diaryFull: post.diaryFull, passed_diaryShare: post.diaryShare, passed_diaryWeight: post.diaryWeight, passed_diaryMuscle: post.diaryMuscle, passed_diaryFat: post.diaryFat, passed_diaryImage: post.diaryImage)
+                            }
+                        }
+                        
+                }
+                
+                }else{
+                    Text("오늘의 눈바디를 기록하세요")
+                        .onTapGesture(count: 1, perform: {
+                            self.viewModel.fetchData()
+                        })
+                        
+                }
             }
+
+
+            
             
             
         }.onAppear(){
