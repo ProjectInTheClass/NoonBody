@@ -24,7 +24,7 @@ struct BarChart: View {
                 VStack(alignment: .leading, spacing: 25) {
                     
                     
-                    HStack{
+                    HStack(alignment: .bottom){
                         
                         ForEach(workout_Data){work in
                             
