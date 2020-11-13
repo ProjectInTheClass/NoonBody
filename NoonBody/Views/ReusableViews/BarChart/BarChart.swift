@@ -24,7 +24,7 @@ struct BarChart: View {
                 VStack(alignment: .leading, spacing: 25) {
                     
                     
-                    HStack(spacing: 15){
+                    HStack{
                         
                         ForEach(workout_Data){work in
                             
@@ -44,7 +44,7 @@ struct BarChart: View {
                                     //max height = 200
                                         .frame(height: getHeight(value: work.weight))
                                 }
-                                .frame(height: 220)
+                                
                                 .onTapGesture {
                                     
                                     withAnimation(.easeOut){
