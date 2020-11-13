@@ -33,23 +33,7 @@ struct CollectionView: View {
     var body: some View {
 
         VStack{
-            ScrollView(.horizontal, showsIndicators: false){
-                
-                ScrollViewReader{ value in
-//                    value.scrollTo(datas.count)
-                    
-                    HStack(alignment: .bottom){
-                        ForEach(datas){ i in
-                            
-                            BarChart(weight: i.weight, day: i.day)
-                        }
-                    }.frame(height: 150)
-                    .padding(.leading, 20)
-                    .padding(.trailing, 20)
-                }
-                
-                
-            }
+            BarChart()
             
             ZStack{
                 ScrollView {
