@@ -11,7 +11,10 @@ struct CollectionView: View {
     
     @State var date = Date()
     
+    
     @ObservedObject var viewModel = NoonBodyViewModel()
+    
+    @EnvironmentObject var selectedDay: SelectedDay
     
     //Formatter 속성을 추가
     //store 속성과 마찬가지로 view가 생성되는 시점에 자동으로 초기화 됨
@@ -40,8 +43,9 @@ struct CollectionView: View {
                     VStack(alignment: .leading){
                         
                         HStack{
-                            Text("9월 3주차")
+                            Text("\(self.selectedDay.day)")
                                 .font(.system(size: 20))
+                            
                                 
                         }
                         .padding(.leading, 20)
@@ -59,7 +63,11 @@ struct CollectionView: View {
                                             pinnedViews: [.sectionHeaders, .sectionFooters]
                                         ) {
                                             ForEach(viewModel.diaryPosts, id: \.id){ post in
-                                                MyImageView(passed_myDate: post.diaryDate, passed_myImage: post.diaryImage, passed_myWeight: post.diaryWeight, passed_myMuscle: post.diaryMuscle, passed_myFat: post.diaryFat)
+                                                if post.diaryDate == self.selectedDay.day{
+                                                    MyImageView(passed_myDate: post.diaryDate, passed_myImage: post.diaryImage, passed_myWeight: post.diaryWeight, passed_myMuscle: post.diaryMuscle, passed_myFat: post.diaryFat)
+                                                }
+                                                
+                                                
                                             }
                                             
                                         }

@@ -32,6 +32,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             .environmentObject(ChoosedCount())
             .environmentObject(ChoosedContent1())
             .environmentObject(ChoosedContent2())
+            .environmentObject(SelectedDay())
         
 
         // Use a UIHostingController as window root view controller.
