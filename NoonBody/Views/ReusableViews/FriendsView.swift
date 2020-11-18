@@ -22,7 +22,7 @@ struct FriendsView: View {
                 .resizable()
                 .frame(width:50, height: 50)
                 .clipShape(Circle())
-                .scaledToFit()
+                .aspectRatio(contentMode: .fit)
                 .background(Color.init(red: 0.95, green: 0.95, blue: 0.95).opacity(0.6))
             
             VStack {

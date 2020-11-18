@@ -22,7 +22,7 @@ struct SignUp: View {
         ZStack {
             Image("fadeCarousel_2_blur")
                 .resizable()
-                .scaledToFill()
+                .aspectRatio(contentMode: .fill)
                 .frame(width: UIScreen.main.bounds.width)
                 .edgesIgnoringSafeArea(.all)
             ZStack{
@@ -33,7 +33,7 @@ struct SignUp: View {
             VStack(spacing:0){
                 Image("recipeat_logo")
                     .resizable()
-                    .scaledToFit()
+                    .aspectRatio(contentMode: .fit)
                     .shadow(radius: 5, y: 5)
                 Spacer().frame(height:50)
 
