@@ -23,16 +23,17 @@ struct DiaryView: View {
             
             ScrollView{
                 if viewModel.isWrite == true{
-                ScrollView (.horizontal, showsIndicators:false){
+                    TabView{
                     
-                        HStack(spacing:0){
+                        
                             
                             ForEach(viewModel.diaryPosts, id: \.id){ post in
                                 DiaryPostView(passed_diaryDate: post.diaryDate, passed_diaryFull: post.diaryFull, passed_diaryShare: post.diaryShare, passed_diaryWeight: post.diaryWeight, passed_diaryMuscle: post.diaryMuscle, passed_diaryFat: post.diaryFat, passed_diaryImage: post.diaryImage)
                             }
-                        }
                         
-                }
+                        
+                } //: TAB
+                    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                 
                 }else{
                     Text("오늘의 눈바디를 기록하세요")
