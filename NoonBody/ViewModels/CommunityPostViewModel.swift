@@ -11,7 +11,7 @@ import FirebaseFirestore
 class CommunityPostViewModel: ObservableObject {
   @Published var communityPosts = [CommunityPost]()
 
-    @Published var isWrite: Bool = false
+    
   private var db = Firestore.firestore()
 
   func fetchData() {
@@ -28,7 +28,7 @@ class CommunityPostViewModel: ObservableObject {
         let numberOfLikes = data["numberOfLikes"] as? Int ?? 0
         let image = data["image"] as? String ?? ""
 
-        self.isWrite = true
+        
         return CommunityPost(id: .init(), postingUser: postingUser, description: description, numberOfLikes: numberOfLikes, image: image)
       }
     }

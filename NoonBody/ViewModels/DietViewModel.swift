@@ -11,7 +11,7 @@ import FirebaseFirestore
 class DietViewModel: ObservableObject {
   @Published var dietPosts = [DietPost]()
 
-    @Published var isWrite: Bool = false
+    
   private var db = Firestore.firestore()
 
   func fetchData() {
@@ -29,7 +29,7 @@ class DietViewModel: ObservableObject {
         let dietText = data["dietText"] as? String ?? ""
         let dietImage = data["dietImage"] as? String ?? ""
 
-        self.isWrite = true
+        
         return DietPost(id: .init(), dietDate: dietDate, dietWhen: dietWhen, dietTime: dietTime, dietText: dietText, dietImage: dietImage)
       }
     }
