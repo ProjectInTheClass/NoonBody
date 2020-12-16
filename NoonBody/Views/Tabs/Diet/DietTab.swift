@@ -53,10 +53,8 @@ struct DietTab: View {
                 ScrollView(.horizontal, showsIndicators:false){
                     ScrollViewReader { value in
                         HStack(alignment: .center){
-                        Spacer().frame(width:10)
+                            Spacer().frame(width:10)
                         
-
-                            
                             ForEach(duplicationRemovedArray, id: \.self){ post in
                                 
                                 Text(post)
@@ -70,14 +68,15 @@ struct DietTab: View {
                                         choosedDate = "\(post)"
                                     })
                             }
+                            .onAppear {
+                                value.scrollTo(duplicationRemovedArray.count, anchor: .trailing)
+                            }
 
                         
 
                         Spacer().frame(width:10)
                     }.frame(height: 80)
-                        .onAppear {
-                            value.scrollTo(3, anchor: .trailing)
-                        }
+                        
                     }
                     
                 }.background(Color.clear)
@@ -108,23 +107,27 @@ struct DietTab: View {
                 self.viewModel.fetchData()
                 
                 for post in viewModel.dietPosts {
-//                    print(post.dietDate)
+                    print(post.dietDate)
                     DateLists.append(post.dietDate)
-//                    print(DateLists)
-                    duplicationRemovedArray = DateLists
-                    for index in 0 ... duplicationRemovedArray.count-1 {
-                        if index + 1 <= duplicationRemovedArray.count-1 {
-                            if duplicationRemovedArray[index] == duplicationRemovedArray[index+1] {
-                                duplicationRemovedArray.remove(at: index)
-                            }
+                    
+                    
+                    
+                }
+                print("DateLists: \(DateLists)")
+                duplicationRemovedArray = DateLists
+                for index in 0 ... duplicationRemovedArray.count-1 {
+                    if index + 1 <= duplicationRemovedArray.count-1 {
+                        //이 부분 수정 필요 for문 사용
+                        if duplicationRemovedArray[index] == duplicationRemovedArray[index+1] {
+                            duplicationRemovedArray.remove(at: index)
                         }
                     }
-                    
+                }
+                
 //                    let set = Set(DateLists)
 //                    duplicationRemovedArray = Array(set)
-                    print(duplicationRemovedArray)
-                    choosedDate = duplicationRemovedArray[duplicationRemovedArray.count-1]
-                }
+                print(duplicationRemovedArray)
+                choosedDate = duplicationRemovedArray[duplicationRemovedArray.count-1]
             }
             
             
