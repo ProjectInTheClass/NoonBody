@@ -17,7 +17,7 @@ struct CompareView: View {
     
     var body: some View {
 
-        NavigationView{
+//        NavigationView{
             
             VStack{
                 
@@ -89,7 +89,7 @@ struct CompareView: View {
                 .padding(.trailing)
                 
                 
-                Spacer().frame(height: 150)
+                Spacer().frame(height: 70)
                 
                 
                 Button(action: {
@@ -107,7 +107,7 @@ struct CompareView: View {
                 .cornerRadius(25)
                 .padding()
                 
-                            
+                
             } // ultimate V Stack Ends
             
             
@@ -123,7 +123,7 @@ struct CompareView: View {
             )
             
             
-        } // Nav View Ends
+//        } // Nav View Ends
     } //some View ENds
     
     func shareButton() {
