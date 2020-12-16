@@ -160,6 +160,13 @@ struct DiaryPostSubmit: Identifiable {
     }
 }
 
+struct CommentModel: Identifiable{
+
+    let id = UUID()
+    
+    var commentor: String
+    var comment_content: String
+}
 
 
 

@@ -10,16 +10,36 @@ import SDWebImageSwiftUI
 
 struct PostView: View {
     
+    @State var CommentList: [CommentModel] = [
+        
+        CommentModel(commentor: "현아98", comment_content: "늦은시간에 미안... 참을 수 없었어.."),
+        CommentModel(commentor: "소니12", comment_content: "ㅋㅋㅋㅋㅋㅋㅋ"),
+        CommentModel(commentor: "뚜비니", comment_content: "정신차려"),
+        CommentModel(commentor: "소니12", comment_content: "ㅋㅋㅋㅋㅋㅋㅋ")
+    ]
+    
     var passed_postingUser: String
     var passed_description: String
     var passed_numberOfLikes: Int
     var passed_image: String
     
     var body: some View {
-        
         VStack{
-            //URI로 이미지 보여주도록 수정
+            HStack {
+                Spacer().frame(width:20)
+                Image("body1")
+                    .resizable()
+                    .clipShape(Circle())
+                    .frame(width:40, height:40)
+                Spacer().frame(width:20)
+                Text("\(passed_postingUser)님의 눈바디")
+                Spacer()
+                Text("11:41PM")
+                Spacer().frame(width:20)
+            }
+            
             AnimatedImage(url: URL(string: passed_image))
+                .resizable()
                 .frame(height: 300)
                 .background(Color.init(red: 0.95, green: 0.95, blue: 0.95).opacity(0.6))
                 
@@ -27,31 +47,39 @@ struct PostView: View {
                 HStack{
                     Image(systemName: "flame.fill")
                     Image(systemName: "message")
+                    Text("\(passed_numberOfLikes)명이 응원해요!")
+                        .font(.system(size: 15))
+                        .foregroundColor(.gray)
                     Spacer()
 //                    Image(systemName: "bookmark")
                 }.padding(.bottom, 3)
                 
-                HStack{
-                    Text("\(passed_postingUser)")
-                        .font(.system(size: 20))
-                    Text("\(passed_numberOfLikes) likes")
-                        .font(.system(size: 15))
-                        .foregroundColor(.gray)
-                    Spacer()
-                }.font(.system(size: 12, weight: .bold))
+
                 
                 HStack{
                     Text("\(passed_description)")
                         .font(.system(size: 15))
                     Spacer()
-                }.font(.system(size: 12, weight: .regular))
+                }
             }.padding()
 //            .background(Color.orange)
+        
+            HStack {
+                VStack (alignment: .leading){
+                    ForEach(CommentList, id: \.id){ comment in
+                        CommunityCommentView(commentor: comment.commentor, comment_content: comment.comment_content)
+                        
+                    }
+ 
+                }.font(.system(size: 15))
+                
+                Spacer()
+            }.padding(.leading)
+            
             
             
         }.frame(width: UIScreen.main.bounds.size.width)
         .padding()
-//        .background(Color.yellow)
     }
 }
 
