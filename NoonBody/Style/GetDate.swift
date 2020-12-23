@@ -17,5 +17,5 @@ func getDate(num:Int) -> String {
     formatter.locale = Locale(identifier: "Ko_KR")
     formatter.dateFormat = "YYYY.MM.DD"
     formatter.dateStyle = .medium
-    return formatter.string(from: Day) //Output is "March 6, 2020
+    return formatter.string(from: Day)
 }
