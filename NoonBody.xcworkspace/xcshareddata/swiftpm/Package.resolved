@@ -2,15 +2,6 @@
   "object": {
     "pins": [
       {
-        "package": "BarChart",
-        "repositoryURL": "https://github.com/dawigr/BarChart.git",
-        "state": {
-          "branch": "master",
-          "revision": "07c082fd7ddb369766220e203947a3aa06a7eea7",
-          "version": null
-        }
-      },
-      {
         "package": "SDWebImage",
         "repositoryURL": "https://github.com/SDWebImage/SDWebImage.git",
         "state": {

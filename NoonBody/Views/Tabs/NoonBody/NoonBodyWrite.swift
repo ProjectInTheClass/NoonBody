@@ -207,13 +207,14 @@ struct NoonBodyWrite: View {
         if let thisImage = self.image {
             isFullShowCheck()
             let thisNoonBodyPost = DiaryPostSubmit(diaryDate: getDate(num: 0),
-                                                 diaryFull: isFullString,
-                                                 diaryShare: isShowString,
-                                                 diaryWeight: Double(weight) ?? 0,
-                                                 diaryMuscle: Double(muscle) ?? 0,
-                                                 diaryFat: Double(fat) ?? 0,
-                                                 diaryImage: Image(uiImage: thisImage)
-                                             
+                                                   diaryMonth: getMonth(num: 0),
+                                                   diaryFull: isFullString,
+                                                   diaryShare: isShowString,
+                                                   diaryWeight: Double(weight) ?? 0,
+                                                   diaryMuscle: Double(muscle) ?? 0,
+                                                   diaryFat: Double(fat) ?? 0,
+                                                   diaryImage: Image(uiImage: thisImage)
+                                                   
             )
             
             print(thisNoonBodyPost.dictionary)

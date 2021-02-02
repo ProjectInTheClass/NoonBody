@@ -113,6 +113,7 @@ struct DiaryPost: Identifiable {
     var id = UUID()
     
     var diaryDate: String
+    var diaryMonth: String
     var diaryFull: String
     var diaryShare: String
     var diaryWeight: Double
@@ -124,6 +125,7 @@ struct DiaryPost: Identifiable {
         return[
             "id" : id.uuidString,
             "diaryDate" : diaryDate,
+            "diaryMonth" : diaryMonth,
             "diaryFull" : diaryFull,
             "diaryShare" : diaryShare,
             "diaryWeight" : diaryWeight,
@@ -139,6 +141,7 @@ struct DiaryPostSubmit: Identifiable {
     var id = UUID()
     
     var diaryDate: String
+    var diaryMonth: String
     var diaryFull: String
     var diaryShare: String
     var diaryWeight: Double
@@ -150,6 +153,7 @@ struct DiaryPostSubmit: Identifiable {
         return[
             "id" : id.uuidString,
             "diaryDate" : diaryDate,
+            "diaryMonth" : diaryMonth,
             "diaryFull" : diaryFull,
             "diaryShare" : diaryShare,
             "diaryWeight" : diaryWeight,

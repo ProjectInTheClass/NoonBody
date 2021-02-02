@@ -11,7 +11,7 @@ import FirebaseFirestore
 class NoonBodyViewModel: ObservableObject {
   @Published var diaryPosts = [DiaryPost]()
 
-    @Published var isWrite: Bool = false
+  @Published var isWrite: Bool = false
   private var db = Firestore.firestore()
 
   func fetchData() {
@@ -24,6 +24,7 @@ class NoonBodyViewModel: ObservableObject {
       self.diaryPosts = documents.map { queryDocumentSnapshot -> DiaryPost in
         let data = queryDocumentSnapshot.data()
         let diaryDate = data["diaryDate"] as? String ?? ""
+        let diaryMonth = data["diaryMonth"] as? String ?? ""
         let diaryFull = data["diaryFull"] as? String ?? ""
         let diaryShare = data["diaryShare"] as? String ?? ""
         let diaryWeight = data["diaryWeight"] as? Double ?? 0
@@ -32,7 +33,7 @@ class NoonBodyViewModel: ObservableObject {
         let diaryImage = data["noonbodyPic"] as? String ?? ""
 
         self.isWrite = true
-        return DiaryPost(id: .init(), diaryDate: diaryDate, diaryFull: diaryFull, diaryShare: diaryShare, diaryWeight: diaryWeight, diaryMuscle: diaryMuscle, diaryFat: diaryFat, diaryImage: diaryImage)
+        return DiaryPost(id: .init(), diaryDate: diaryDate, diaryMonth: diaryMonth, diaryFull: diaryFull, diaryShare: diaryShare, diaryWeight: diaryWeight, diaryMuscle: diaryMuscle, diaryFat: diaryFat, diaryImage: diaryImage)
       }
     }
   }

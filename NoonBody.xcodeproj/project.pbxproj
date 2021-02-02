@@ -19,7 +19,6 @@
 		45024C462532EBA200D619C5 /* DietTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45024C452532EBA200D619C5 /* DietTab.swift */; };
 		45024C512532EBB000D619C5 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45024C4F2532EBB000D619C5 /* ImagePicker.swift */; };
 		45024C582532EC0F00D619C5 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 45024C572532EC0F00D619C5 /* SwiftUIX */; };
-		4509A65C25467258005A0D50 /* BarChart in Frameworks */ = {isa = PBXBuildFile; productRef = 4509A65B25467258005A0D50 /* BarChart */; };
 		4509A6E62546F44C005A0D50 /* FirebaseFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4509A6E52546F44C005A0D50 /* FirebaseFuncs.swift */; };
 		450A92262536AC830082B5EF /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A92252536AC830082B5EF /* DateFormatter.swift */; };
 		450B6CAD2548F12300054605 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 450B6CAC2548F12300054605 /* SDWebImageSwiftUI */; };
@@ -152,7 +151,6 @@
 				45DDD8EF25343CC6004C18FE /* SlidingTabView in Frameworks */,
 				45024C582532EC0F00D619C5 /* SwiftUIX in Frameworks */,
 				0729C0A208BB6160D148E5C9 /* Pods_NoonBody.framework in Frameworks */,
-				4509A65C25467258005A0D50 /* BarChart in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,7 +409,6 @@
 			packageProductDependencies = (
 				45024C572532EC0F00D619C5 /* SwiftUIX */,
 				45DDD8EE25343CC6004C18FE /* SlidingTabView */,
-				4509A65B25467258005A0D50 /* BarChart */,
 				450B6CAC2548F12300054605 /* SDWebImageSwiftUI */,
 			);
 			productName = NoonBody;
@@ -444,7 +441,6 @@
 			packageReferences = (
 				45024C562532EC0F00D619C5 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 				45DDD8ED25343CC5004C18FE /* XCRemoteSwiftPackageReference "SlidingTabView" */,
-				4509A65A25467258005A0D50 /* XCRemoteSwiftPackageReference "BarChart" */,
 				450B6CAB2548F12300054605 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 45024BF82532EA0B00D619C5 /* Products */;
@@ -771,14 +767,6 @@
 				kind = branch;
 			};
 		};
-		4509A65A25467258005A0D50 /* XCRemoteSwiftPackageReference "BarChart" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/dawigr/BarChart.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		450B6CAB2548F12300054605 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
@@ -802,11 +790,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 45024C562532EC0F00D619C5 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
 			productName = SwiftUIX;
-		};
-		4509A65B25467258005A0D50 /* BarChart */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4509A65A25467258005A0D50 /* XCRemoteSwiftPackageReference "BarChart" */;
-			productName = BarChart;
 		};
 		450B6CAC2548F12300054605 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;

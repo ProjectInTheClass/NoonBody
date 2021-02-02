@@ -19,3 +19,15 @@ func getDate(num:Int) -> String {
     formatter.dateStyle = .medium
     return formatter.string(from: Day)
 }
+
+func getMonth(num:Int) -> String {
+    var dayComponent = DateComponents()
+    dayComponent.day = -num
+    let calendar = Calendar.current
+    let Day =  calendar.date(byAdding: dayComponent, to: Date())!
+    let formatter = DateFormatter()
+    formatter.locale = Locale(identifier: "Ko_KR")
+    formatter.dateFormat = "MM"
+    formatter.dateStyle = .medium
+    return formatter.string(from: Day)
+}

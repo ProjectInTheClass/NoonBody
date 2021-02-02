@@ -14,7 +14,7 @@ struct BarChart: View {
     
     var colors = [Color("primaryOrange")]
     
-    @EnvironmentObject var selectedDay: SelectedDay
+    @EnvironmentObject var selectedMonth: SelectedMonth
     
     
     var body: some View{
@@ -54,7 +54,7 @@ struct BarChart: View {
                                     withAnimation(.easeOut){
                                         
                                         selected = work.id
-                                        self.selectedDay.day = work.day
+                                        self.selectedMonth.month = work.day
                                         
                                     }
                                 }
@@ -96,13 +96,8 @@ struct Week: Identifiable {
 }
 
 var workout_Data = [
-    Week(id: 0, weight: 50, day: "2020. 10. 28."),
-    Week(id: 1, weight: 48.2, day: "2020. 11. 3."),
-    Week(id: 2, weight: 47.9, day: "2020. 11. 14."),
-    Week(id: 3, weight: 46.4, day: "9월 2주"),
-    Week(id: 4, weight: 46, day: "9월 3주"),
-    Week(id: 5, weight: 45.5, day: "9월 4주"),
-    Week(id: 6, weight: 45.3, day: "10월 1주")
+    Week(id: 0, weight: 50, day: "11"),
+    Week(id: 1, weight: 48.2, day: "12")
 ]
 
 

@@ -32,6 +32,6 @@ class ChoosedContent2: ObservableObject {
     @Published var fat2: Double = 0
 }
 
-class SelectedDay: ObservableObject {
-    @Published var day: String = "9월 3주"
+class SelectedMonth: ObservableObject {
+    @Published var month: String = ""
 }

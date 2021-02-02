@@ -9,7 +9,7 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 
-struct MyImageView: View {
+struct MyImageView : View {
     
     @EnvironmentObject var choosedCount: ChoosedCount
     @EnvironmentObject var choosedContent1: ChoosedContent1
