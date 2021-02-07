@@ -10,7 +10,7 @@ import Charts
 
 struct BarChart: View {
     
-    lazy var barChart : BarChartView = {
+    var barChart : BarChartView = {
         let barChartView = BarChartView()
         barChartView.backgroundColor = .systemBlue
         
@@ -33,17 +33,14 @@ struct BarChart: View {
         
         barChartView.doubleTapToZoomEnabled = false
         
-        // X축 레이블 포맷 지정
-//        barChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: workout_Data)
-        
-        // X축 레이블 갯수 최대로 설정 (이 코드 안쓸 시 Jan Mar May 이런식으로 띄엄띄엄 조금만 나옴)
-        barChartView.xAxis.setLabelCount(workout_Data.count, force: false)
-        
         //chart animation
         barChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
         
         return barChartView
     }()
+    
+    var categorys: [String] = ["민주당", "국민의힘", "열린민주당", "정의당"]
+    var percents: [Double] = [55.0, 33.0, 6.0, 7.0]
 
     @State var selected = 0
     
@@ -103,6 +100,8 @@ struct BarChart: View {
                 
                 
             }
+        }.onAppear(){
+            setBarChartData(dataPoints: categorys, values: percents)
         }
         
     }
@@ -117,6 +116,37 @@ struct BarChart: View {
         let hrs = CGFloat(200 / 100 * value)
         
         return hrs
+    }
+    
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        print(entry)
+    }
+    
+    //MARK: - BarChart
+    func setBarChartData(dataPoints: [String], values: [Double]){
+        // 데이터 생성
+        var dataEntries: [BarChartDataEntry] = []
+        for i in 0..<dataPoints.count {
+            let dataEntry = BarChartDataEntry(x: Double(i), y: values[i])
+            dataEntries.append(dataEntry)
+        }
+        
+        let chartDataSet = BarChartDataSet(entries: dataEntries, label: "정당")
+        
+        chartDataSet.colors = ChartColorTemplates.joyful()
+        
+        // X축 레이블 포맷 지정
+        barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: categorys)
+        
+        // X축 레이블 갯수 최대로 설정 (이 코드 안쓸 시 Jan Mar May 이런식으로 띄엄띄엄 조금만 나옴)
+        barChart.xAxis.setLabelCount(workout_Data.count, force: false)
+
+        
+        let data = BarChartData(dataSet: chartDataSet)
+        //data 숫자 제거
+        data.setValueFont(.boldSystemFont(ofSize: 15))
+        data.setValueTextColor(.white)
+        barChart.data = data
     }
     
    
