@@ -39,8 +39,8 @@ struct BarChart: View {
         return barChartView
     }()
     
-    var categorys: [String] = ["민주당", "국민의힘", "열린민주당", "정의당"]
-    var percents: [Double] = [55.0, 33.0, 6.0, 7.0]
+    var months: [String] = []
+    var percents: [Double] = []
 
     @State var selected = 0
     
@@ -101,7 +101,7 @@ struct BarChart: View {
                 
             }
         }.onAppear(){
-            setBarChartData(dataPoints: categorys, values: percents)
+            setBarChartData(dataPoints: months, values: percents)
         }
         
     }
@@ -136,7 +136,7 @@ struct BarChart: View {
         chartDataSet.colors = ChartColorTemplates.joyful()
         
         // X축 레이블 포맷 지정
-        barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: categorys)
+        barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: months)
         
         // X축 레이블 갯수 최대로 설정 (이 코드 안쓸 시 Jan Mar May 이런식으로 띄엄띄엄 조금만 나옴)
         barChart.xAxis.setLabelCount(workout_Data.count, force: false)
