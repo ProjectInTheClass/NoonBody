@@ -52,54 +52,7 @@ struct BarChart: View {
     var body: some View{
         
         ScrollView(.horizontal, showsIndicators: false){
-            VStack(spacing:0){
-                
-                
-                //Bar Chart...
-                
-                VStack(alignment: .leading, spacing: 25) {
-                    
-                    
-                    HStack(alignment: .bottom){
-                        
-                        ForEach(workout_Data){work in
-                            
-                            //Bars
-                            VStack{
-                                
-                                VStack{
-                                    
-                                    
-                                    Text("\(work.weight, specifier: "%.2f")")
-                                        .foregroundColor(Color("Color"))
-                                        
-                                    
-                                    Rectangle()
-                                        .fill(LinearGradient(gradient: .init(colors: selected == work.id ? colors : [Color.black.opacity(0.06)]), startPoint: .top, endPoint: .bottom))
-                                    
-                                    //max height = 200
-                                        .frame(height: getHeight(value: work.weight))
-                                }
-                                
-                                .onTapGesture {
-                                    
-                                    withAnimation(.easeOut){
-                                        
-                                        selected = work.id
-                                        self.selectedMonth.month = work.day
-                                        
-                                    }
-                                }
-                                
-                                Text(work.day)
-                                    .foregroundColor(.black)
-                            }
-                        }
-                    }
-                }
-                
-                
-            }
+            
         }.onAppear(){
             setBarChartData(dataPoints: months, values: percents)
         }
