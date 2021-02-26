@@ -59,18 +59,6 @@ struct BarChart: View {
         
     }
     
-    //calculating Hrs For Height
-    func getHeight(value: CGFloat) -> CGFloat{
-        
-        //the value in minutes
-        //24 hrs in min = 1440
-        
-        //getting height
-        let hrs = CGFloat(200 / 100 * value)
-        
-        return hrs
-    }
-    
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
         print(entry)
     }
