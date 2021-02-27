@@ -50,9 +50,6 @@ struct CollectionView: View {
                         }
                         .padding(.leading, 20)
                         
-                        
-                        //과거 사진 이미지들
-//                        showImages()
                         VStack{
                             
                             ScrollView {
@@ -105,40 +102,3 @@ struct CollectionView_Previews: PreviewProvider {
         CollectionView()
     }
 }
-
-
-
-
-//사진 불러오기
-
-//struct showImages: View {
-//    @State private var choosedImage1: UIImage?
-//
-//    @ObservedObject var viewModel = NoonBodyViewModel()
-//
-//    private var columns: [GridItem] = [
-//            GridItem(.fixed(100), spacing: 80),
-//            GridItem(.fixed(100), spacing: 80)
-//        ]
-//
-//    var body: some View{
-//        VStack{
-//
-//            ScrollView {
-//                        LazyVGrid(
-//                            columns: columns,
-//                            alignment: .center,
-//                            spacing: 20,
-//                            pinnedViews: [.sectionHeaders, .sectionFooters]
-//                        ) {
-//                            ForEach(viewModel.diaryPosts, id: \.id){ post in
-//                                MyImageView(passed_myImage: post.diaryImage, passed_myWeight: post.diaryWeight)
-//                            }
-//
-//                        }
-//                    }.background(Color.clear)
-//        }
-//    }
-//
-//
-//}
