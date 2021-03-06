@@ -19,7 +19,7 @@ struct NoonbodyCardView: View {
     var body: some View {
         ZStack {
             VStack(spacing: 20) {
-                // FRUIT: IMAGE
+                
                 Image(noonbody.image)
                     .resizable()
                     .scaledToFit()
@@ -27,14 +27,14 @@ struct NoonbodyCardView: View {
                     .scaleEffect(isAnimating ? 1.0 : 0.6)
                 
                 
-                // FRUIT: TITLE
+                
                 Text(noonbody.title)
                     .foregroundColor(Color.white)
                     .font(.title)
                     .fontWeight(.heavy)
                     .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15), radius: 2, x: 2, y: 2)
                 
-                // FRUIT: HEADLIN
+                
                 Text(noonbody.headline)
                     .foregroundColor(Color.white)
                     .multilineTextAlignment(.center)

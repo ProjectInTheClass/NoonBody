@@ -44,6 +44,11 @@
 		45BE23462589BE8100D039E3 /* CommunityCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BE23452589BE8100D039E3 /* CommunityCommentView.swift */; };
 		45C6E41E253487D400C3012B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C6E41D253487D400C3012B /* UIColor.swift */; };
 		45D996B32541A26C005741FD /* GlobalEnvironment_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D996B22541A26C005741FD /* GlobalEnvironment_extension.swift */; };
+		45D9CF7325F3B721003CD133 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D9CF6B25F3B721003CD133 /* OnboardingView.swift */; };
+		45D9CF7425F3B721003CD133 /* NoonbodyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D9CF6D25F3B721003CD133 /* NoonbodyModel.swift */; };
+		45D9CF7525F3B721003CD133 /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D9CF6F25F3B721003CD133 /* StartButtonView.swift */; };
+		45D9CF7625F3B721003CD133 /* NoonbodyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D9CF7025F3B721003CD133 /* NoonbodyCardView.swift */; };
+		45D9CF7725F3B721003CD133 /* NoonbodyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D9CF7225F3B721003CD133 /* NoonbodyData.swift */; };
 		45DDD88D25340CF2004C18FE /* NoonBodyTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD88C25340CF2004C18FE /* NoonBodyTab.swift */; };
 		45DDD892253410F8004C18FE /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD891253410F8004C18FE /* DiaryView.swift */; };
 		45DDD89725341106004C18FE /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDD89625341106004C18FE /* CollectionView.swift */; };
@@ -117,6 +122,11 @@
 		45BE23452589BE8100D039E3 /* CommunityCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCommentView.swift; sourceTree = "<group>"; };
 		45C6E41D253487D400C3012B /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		45D996B22541A26C005741FD /* GlobalEnvironment_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalEnvironment_extension.swift; sourceTree = "<group>"; };
+		45D9CF6B25F3B721003CD133 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		45D9CF6D25F3B721003CD133 /* NoonbodyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoonbodyModel.swift; sourceTree = "<group>"; };
+		45D9CF6F25F3B721003CD133 /* StartButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
+		45D9CF7025F3B721003CD133 /* NoonbodyCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoonbodyCardView.swift; sourceTree = "<group>"; };
+		45D9CF7225F3B721003CD133 /* NoonbodyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoonbodyData.swift; sourceTree = "<group>"; };
 		45DDD88C25340CF2004C18FE /* NoonBodyTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBodyTab.swift; sourceTree = "<group>"; };
 		45DDD891253410F8004C18FE /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 		45DDD89625341106004C18FE /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
@@ -238,6 +248,7 @@
 		45024CAF2532F09900D619C5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				45D9CF6925F3B721003CD133 /* OnBoarding */,
 				45024C402532EB9B00D619C5 /* NoonbodyStart.swift */,
 				45024C382532EB0F00D619C5 /* TabbedRootView.swift */,
 				45024CB32532F0F600D619C5 /* Tabs */,
@@ -294,6 +305,43 @@
 				455330F5254E528400B2AE7E /* CommunityFriendsViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		45D9CF6925F3B721003CD133 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				45D9CF6C25F3B721003CD133 /* Model */,
+				45D9CF6E25F3B721003CD133 /* View */,
+				45D9CF7125F3B721003CD133 /* Data */,
+			);
+			name = OnBoarding;
+			path = NoonBody/OnBoarding;
+			sourceTree = SOURCE_ROOT;
+		};
+		45D9CF6C25F3B721003CD133 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				45D9CF6D25F3B721003CD133 /* NoonbodyModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		45D9CF6E25F3B721003CD133 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				45D9CF6B25F3B721003CD133 /* OnboardingView.swift */,
+				45D9CF6F25F3B721003CD133 /* StartButtonView.swift */,
+				45D9CF7025F3B721003CD133 /* NoonbodyCardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		45D9CF7125F3B721003CD133 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				45D9CF7225F3B721003CD133 /* NoonbodyData.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		45DDD85B2533F0F8004C18FE /* Model */ = {
@@ -519,21 +567,26 @@
 				455330F4254E527100B2AE7E /* CommunityPostViewModel.swift in Sources */,
 				459FAA3E25452EBC00C1E838 /* User_Class.swift in Sources */,
 				45024C462532EBA200D619C5 /* DietTab.swift in Sources */,
+				45D9CF7425F3B721003CD133 /* NoonbodyModel.swift in Sources */,
 				45DDD8A0253412E1004C18FE /* CommunityTab.swift in Sources */,
 				45DDD8E425342524004C18FE /* ButtonSelected.swift in Sources */,
 				45024BFB2532EA0B00D619C5 /* AppDelegate.swift in Sources */,
 				4564F51D255D378C001304D3 /* BarChart.swift in Sources */,
 				45DDD88D25340CF2004C18FE /* NoonBodyTab.swift in Sources */,
+				45D9CF7625F3B721003CD133 /* NoonbodyCardView.swift in Sources */,
 				45666F85253FF780000B5516 /* DietPostView.swift in Sources */,
 				45DDD8E925342543004C18FE /* ButtonNonSelected.swift in Sources */,
 				45A484972547BEA00027BCA1 /* NoonBodyViewModel.swift in Sources */,
 				452F685F255143CF005FD3F7 /* TextView.swift in Sources */,
 				45696799254281C600663FB7 /* SettingsAbout.swift in Sources */,
 				45024C512532EBB000D619C5 /* ImagePicker.swift in Sources */,
+				45D9CF7725F3B721003CD133 /* NoonbodyData.swift in Sources */,
 				45DDD89725341106004C18FE /* CollectionView.swift in Sources */,
 				45666F88253FFBE3000B5516 /* DiaryPostView.swift in Sources */,
 				45DDD8D525341F8D004C18FE /* MyButtonStyle.swift in Sources */,
+				45D9CF7525F3B721003CD133 /* StartButtonView.swift in Sources */,
 				45F940FB2539A29A000D4AE0 /* CommunityPostsView.swift in Sources */,
+				45D9CF7325F3B721003CD133 /* OnboardingView.swift in Sources */,
 				45DDD8F92534447A004C18FE /* DietWrite.swift in Sources */,
 				45024C412532EB9B00D619C5 /* NoonbodyStart.swift in Sources */,
 				45F940F32539A1EC000D4AE0 /* PostView.swift in Sources */,
