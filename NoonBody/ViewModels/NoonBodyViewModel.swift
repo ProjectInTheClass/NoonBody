@@ -16,7 +16,8 @@ class NoonBodyViewModel: ObservableObject {
 
   func fetchData() {
     //db에 postinguser 추가? 또는 작성자 확인 방법 체크하고, in에 들어갈 것으로 appstorage로 user 지정할 것
-    db.collection("NoonbodyWrite").whereField("postingUser", in: "").addSnapshotListener { (querySnapshot, error) in
+//    db.collection("NoonbodyWrite").whereField("postingUser", in: "").addSnapshotListener { (querySnapshot, error) in
+    db.collection("NoonbodyWrite").addSnapshotListener { (querySnapshot, error) in
       guard let documents = querySnapshot?.documents else {
         print("No documents")
         return
