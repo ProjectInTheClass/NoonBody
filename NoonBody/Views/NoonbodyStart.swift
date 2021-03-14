@@ -31,8 +31,16 @@ struct NoonbodyStart: View {
     
     @State var isHidden: Bool = false
     
+    @AppStorage("isOnboarding") var isOnboarding: Bool = true
+    
     var body: some View {
         NavigationView{
+            
+            if isOnboarding {
+                OnboardingView()
+            } else {
+            }
+            
             VStack{
                 Color("secondaryOrange")
                 .overlay(

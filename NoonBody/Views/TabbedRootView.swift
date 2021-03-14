@@ -9,8 +9,6 @@ import SwiftUI
 
 struct TabbedRootView: View {
     
-    @AppStorage("isOnboarding") var isOnboarding: Bool = true
-    
     @EnvironmentObject var env: GlobalEnvironment
     @State var isHidden: Bool = false
     var body: some View {
@@ -25,10 +23,6 @@ struct TabbedRootView: View {
             .edgesIgnoringSafeArea([.top, .bottom])
             .navigationBarBackButtonHidden(true)
             
-            
-            if isOnboarding {
-                OnboardingView()
-            } else {
                 
                 TabView{
                     NoonBodyTab()
@@ -58,7 +52,7 @@ struct TabbedRootView: View {
                         }
                 }
                 
-            }
+            
             
         }
         
