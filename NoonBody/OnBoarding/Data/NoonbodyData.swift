@@ -16,9 +16,7 @@ let illustrationsData: [Illustration] = [
     
     Illustration(title: "동기 부여가 필요하다면?", headline: "혼자하는 다이어트가 외롭거나 지루하셨나요? 눈바디 속 다이어터 회원들과 함께해요!", image: "image1", gradientColors: [Color("primaryOrange"), Color("primaryOrange")]),
     
-    Illustration(title: "다이어트를 더 건강하게", headline: "눈바디와 함께 건강한 다이어트를 시작해요", image: "image1", gradientColors: [Color("primaryOrange"), Color("primaryOrange")]),
-    
-    Illustration(title: "5!", headline: "headline5.", image: "image1", gradientColors: [Color("primaryOrange"), Color("primaryOrange")]),
+    Illustration(title: "다이어트를 더 건강하게", headline: "눈바디와 함께 건강한 다이어트를 시작해요", image: "image1", gradientColors: [Color("primaryOrange"), Color("primaryOrange")])
     
     
 
