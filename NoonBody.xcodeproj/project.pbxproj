@@ -26,6 +26,7 @@
 		45324158253E889700AD1199 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45324157253E889700AD1199 /* FriendsView.swift */; };
 		453363B3253EE42400DC2FDB /* CompareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453363B2253EE42400DC2FDB /* CompareView.swift */; };
 		453363B6253EE82800DC2FDB /* MyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453363B5253EE82800DC2FDB /* MyImageView.swift */; };
+		4537564C26217DB100E65BE5 /* LoginFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4537564B26217DB100E65BE5 /* LoginFunction.swift */; };
 		455330F4254E527100B2AE7E /* CommunityPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455330F3254E527100B2AE7E /* CommunityPostViewModel.swift */; };
 		455330F6254E528400B2AE7E /* CommunityFriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455330F5254E528400B2AE7E /* CommunityFriendsViewModel.swift */; };
 		4564F51D255D378C001304D3 /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4564F51C255D378C001304D3 /* BarChart.swift */; };
@@ -104,6 +105,7 @@
 		45324157253E889700AD1199 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
 		453363B2253EE42400DC2FDB /* CompareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareView.swift; sourceTree = "<group>"; };
 		453363B5253EE82800DC2FDB /* MyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImageView.swift; sourceTree = "<group>"; };
+		4537564B26217DB100E65BE5 /* LoginFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFunction.swift; sourceTree = "<group>"; };
 		455330F3254E527100B2AE7E /* CommunityPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityPostViewModel.swift; sourceTree = "<group>"; };
 		455330F5254E528400B2AE7E /* CommunityFriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityFriendsViewModel.swift; sourceTree = "<group>"; };
 		4564F51C255D378C001304D3 /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 			children = (
 				45FCC334253C7C64006E47CC /* LoginView.swift */,
 				45FCC339253C7C6D006E47CC /* SignUp.swift */,
+				4537564B26217DB100E65BE5 /* LoginFunction.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -606,6 +609,7 @@
 				45FCC335253C7C64006E47CC /* LoginView.swift in Sources */,
 				45DDD892253410F8004C18FE /* DiaryView.swift in Sources */,
 				45B2DB182552A56E006580BA /* ObserverbleObjects.swift in Sources */,
+				4537564C26217DB100E65BE5 /* LoginFunction.swift in Sources */,
 				45D996B32541A26C005741FD /* GlobalEnvironment_extension.swift in Sources */,
 				45666F82253FF629000B5516 /* GetDate.swift in Sources */,
 				45024BFD2532EA0B00D619C5 /* SceneDelegate.swift in Sources */,
