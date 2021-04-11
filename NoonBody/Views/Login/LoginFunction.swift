@@ -8,9 +8,20 @@
 import Foundation
 import Firebase
 import SPAlert
+import SwiftUI
 
 
 private func Login(){
+    
+    //login
+    @EnvironmentObject var env: GlobalEnvironment
+    
+    @State private var signUp_visible = false
+    
+    
+    @State private var isLoggedIn = false
+    
+    @State var isHidden: Bool = false
     
     //login
     Firestore.firestore().collection("users").whereField("username", isEqualTo: "test\(number)").getDocuments(){ (querySnapshot, err) in
