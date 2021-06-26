@@ -40,7 +40,7 @@
 		45A484972547BEA00027BCA1 /* NoonBodyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A484962547BEA00027BCA1 /* NoonBodyViewModel.swift */; };
 		45A484B12547FCB50027BCA1 /* DietViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A484B02547FCB50027BCA1 /* DietViewModel.swift */; };
 		45B2DB182552A56E006580BA /* ObserverbleObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B2DB172552A56E006580BA /* ObserverbleObjects.swift */; };
-		45BDB858268702FF00815D93 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45BDB856268702FF00815D93 /* Model.xcdatamodeld */; };
+		45BDB858268702FF00815D93 /* Diet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45BDB856268702FF00815D93 /* Diet.xcdatamodeld */; };
 		45BDB85C2687034F00815D93 /* NoonBodyCoreDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BDB85B2687034F00815D93 /* NoonBodyCoreDataViewModel.swift */; };
 		45BDB85E2687035C00815D93 /* DietCoreDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BDB85D2687035C00815D93 /* DietCoreDataViewModel.swift */; };
 		45BE23442589BCF600D039E3 /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BE23432589BCF600D039E3 /* Share.swift */; };
@@ -209,6 +209,7 @@
 		45024BF92532EA0B00D619C5 /* NoonBody */ = {
 			isa = PBXGroup;
 			children = (
+				45BDB85F2687069600815D93 /* Helper */,
 				45BDB855268702EE00815D93 /* CoreData */,
 				45024BFA2532EA0B00D619C5 /* AppDelegate.swift */,
 				45024BFC2532EA0B00D619C5 /* SceneDelegate.swift */,
@@ -220,7 +221,6 @@
 				45024C082532EA0B00D619C5 /* LaunchScreen.storyboard */,
 				458138F9253D873100745975 /* GoogleService-Info.plist */,
 				45024C0B2532EA0B00D619C5 /* Info.plist */,
-				45024C002532EA0B00D619C5 /* NoonBody.xcdatamodeld */,
 				45024C052532EA0B00D619C5 /* Preview Content */,
 			);
 			path = NoonBody;
@@ -315,7 +315,8 @@
 		45BDB855268702EE00815D93 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				45BDB856268702FF00815D93 /* Model.xcdatamodeld */,
+				45024C002532EA0B00D619C5 /* NoonBody.xcdatamodeld */,
+				45BDB856268702FF00815D93 /* Diet.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -338,6 +339,15 @@
 				45BDB85D2687035C00815D93 /* DietCoreDataViewModel.swift */,
 			);
 			path = CoreDataViewModels;
+			sourceTree = "<group>";
+		};
+		45BDB85F2687069600815D93 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				45D996B22541A26C005741FD /* GlobalEnvironment_extension.swift */,
+				4509A6E52546F44C005A0D50 /* FirebaseFuncs.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		45D9CF6925F3B721003CD133 /* OnBoarding */ = {
@@ -382,8 +392,6 @@
 			children = (
 				45F941042539A2EF000D4AE0 /* Post_structs.swift */,
 				459FAA3D25452EBC00C1E838 /* User_Class.swift */,
-				45D996B22541A26C005741FD /* GlobalEnvironment_extension.swift */,
-				4509A6E52546F44C005A0D50 /* FirebaseFuncs.swift */,
 				45B2DB172552A56E006580BA /* ObserverbleObjects.swift */,
 			);
 			path = Model;
@@ -602,7 +610,7 @@
 				45024C462532EBA200D619C5 /* DietTab.swift in Sources */,
 				45D9CF7425F3B721003CD133 /* NoonbodyModel.swift in Sources */,
 				45DDD8A0253412E1004C18FE /* CommunityTab.swift in Sources */,
-				45BDB858268702FF00815D93 /* Model.xcdatamodeld in Sources */,
+				45BDB858268702FF00815D93 /* Diet.xcdatamodeld in Sources */,
 				45DDD8E425342524004C18FE /* ButtonSelected.swift in Sources */,
 				45024BFB2532EA0B00D619C5 /* AppDelegate.swift in Sources */,
 				4564F51D255D378C001304D3 /* BarChart.swift in Sources */,
@@ -903,13 +911,13 @@
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
-		45BDB856268702FF00815D93 /* Model.xcdatamodeld */ = {
+		45BDB856268702FF00815D93 /* Diet.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				45BDB857268702FF00815D93 /* Model.xcdatamodel */,
 			);
 			currentVersion = 45BDB857268702FF00815D93 /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
+			path = Diet.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
