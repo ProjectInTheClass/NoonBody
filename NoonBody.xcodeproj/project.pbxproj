@@ -253,9 +253,9 @@
 		45024CAF2532F09900D619C5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				45D9CF6925F3B721003CD133 /* OnBoarding */,
 				45024C402532EB9B00D619C5 /* NoonbodyStart.swift */,
 				45024C382532EB0F00D619C5 /* TabbedRootView.swift */,
+				45D9CF6925F3B721003CD133 /* OnBoarding */,
 				45024CB32532F0F600D619C5 /* Tabs */,
 				45F940F12539A1D6000D4AE0 /* ReusableViews */,
 				459FAA4425452FEF00C1E838 /* Login */,
@@ -266,7 +266,6 @@
 		45024CB32532F0F600D619C5 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
-				45DDD8A7253413FB004C18FE /* WriteContents */,
 				45DDD8772533F5DE004C18FE /* NoonBody */,
 				45DDD8762533F5B7004C18FE /* Diet */,
 				45DDD89E253412CC004C18FE /* Community */,
@@ -341,6 +340,7 @@
 		45BDB85F2687069600815D93 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				45024C4F2532EBB000D619C5 /* ImagePicker.swift */,
 				45D996B22541A26C005741FD /* GlobalEnvironment_extension.swift */,
 				4509A6E52546F44C005A0D50 /* FirebaseFuncs.swift */,
 			);
@@ -425,14 +425,6 @@
 				45F940FF2539A2A7000D4AE0 /* CommunityFriendsView.swift */,
 			);
 			path = Community;
-			sourceTree = "<group>";
-		};
-		45DDD8A7253413FB004C18FE /* WriteContents */ = {
-			isa = PBXGroup;
-			children = (
-				45024C4F2532EBB000D619C5 /* ImagePicker.swift */,
-			);
-			path = WriteContents;
 			sourceTree = "<group>";
 		};
 		45DDD8DC25341FBB004C18FE /* Style */ = {
