@@ -39,11 +39,11 @@ struct TabbedRootView: View {
                             Text("식단")
                         }
                     
-                    CommunityTab()
-                        .tabItem {
-                            Image(systemName: "person.3.fill")
-                            Text("커뮤니티")
-                        }
+//                    CommunityTab()
+//                        .tabItem {
+//                            Image(systemName: "person.3.fill")
+//                            Text("커뮤니티")
+//                        }
                     
                     NoonBodySettings()
                         .tabItem {
