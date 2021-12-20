@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		452F9209276742E2006BD906 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452F9208276742E2006BD906 /* OnboardingView.swift */; };
+		458EC6AC27704ACD0067578C /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EC6AB27704ACD0067578C /* OnboardingData.swift */; };
+		458EC6AF27704AFE0067578C /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EC6AE27704AFE0067578C /* OnboardingModel.swift */; };
 		4590675F2765AF9F0071B2CE /* TabRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4590675E2765AF9F0071B2CE /* TabRootView.swift */; };
 		4590960A276C9CBB00CFAAD8 /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45909609276C9CBB00CFAAD8 /* StartButtonView.swift */; };
 		4590960C276C9CE000CFAAD8 /* OnboardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4590960B276C9CE000CFAAD8 /* OnboardingCardView.swift */; };
@@ -42,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		452F9208276742E2006BD906 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		458EC6AB27704ACD0067578C /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
+		458EC6AE27704AFE0067578C /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		4590675E2765AF9F0071B2CE /* TabRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabRootView.swift; sourceTree = "<group>"; };
 		45909609276C9CBB00CFAAD8 /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
 		4590960B276C9CE000CFAAD8 /* OnboardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCardView.swift; sourceTree = "<group>"; };
@@ -88,9 +92,27 @@
 		452F9207276742BB006BD906 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
+				458EC6AD27704AED0067578C /* Model */,
+				458EC6AA27704ABB0067578C /* Data */,
 				4590960D276C9D0800CFAAD8 /* View */,
 			);
 			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		458EC6AA27704ABB0067578C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				458EC6AB27704ACD0067578C /* OnboardingData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		458EC6AD27704AED0067578C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				458EC6AE27704AFE0067578C /* OnboardingModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		4590960D276C9D0800CFAAD8 /* View */ = {
@@ -305,9 +327,11 @@
 				4590960C276C9CE000CFAAD8 /* OnboardingCardView.swift in Sources */,
 				45D265E4275CBF7D00796604 /* Persistence.swift in Sources */,
 				45D265E7275CBF7D00796604 /* NoonBody.xcdatamodeld in Sources */,
+				458EC6AF27704AFE0067578C /* OnboardingModel.swift in Sources */,
 				4590675F2765AF9F0071B2CE /* TabRootView.swift in Sources */,
 				45D265DD275CBF7C00796604 /* ContentView.swift in Sources */,
 				45D265DB275CBF7C00796604 /* NoonBodyApp.swift in Sources */,
+				458EC6AC27704ACD0067578C /* OnboardingData.swift in Sources */,
 				4590960A276C9CBB00CFAAD8 /* StartButtonView.swift in Sources */,
 				45E9EAE52764A3FF00856DAB /* NoonBodyStart.swift in Sources */,
 				452F9209276742E2006BD906 /* OnboardingView.swift in Sources */,
