@@ -21,7 +21,6 @@ fileprivate struct WriteButton: View{
             }.frame(minWidth: 0, maxWidth: 250)
             .padding()
             .foregroundColor(Color("primaryOrange"))
-//            .background(Color("primaryOrange"))
             .cornerRadius(40)
         }
     
