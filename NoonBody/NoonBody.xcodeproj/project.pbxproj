@@ -113,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				4511B9F827732D0000D4922B /* NoonBodyTab.swift */,
-				4511B9FA27732D4A00D4922B /* WriteButton.swift */,
 				4511B9FC27732DAB00D4922B /* NoonBodyWrite.swift */,
 				45473C3127769A93006E34EC /* NoonBodyView.swift */,
 			);
@@ -233,6 +232,14 @@
 			path = NoonBodyUITests;
 			sourceTree = "<group>";
 		};
+		45D5550B27A88F750098878D /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				4511B9FA27732D4A00D4922B /* WriteButton.swift */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
 		45E9EAE12764A3C500856DAB /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +247,7 @@
 				45E9EAE42764A3FF00856DAB /* NoonBodyStart.swift */,
 				4590675E2765AF9F0071B2CE /* TabRootView.swift */,
 				4511B9F627732CB500D4922B /* Tabs */,
+				45D5550B27A88F750098878D /* ReusableViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
