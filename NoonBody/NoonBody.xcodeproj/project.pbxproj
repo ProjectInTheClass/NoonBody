@@ -19,6 +19,7 @@
 		4590675F2765AF9F0071B2CE /* TabRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4590675E2765AF9F0071B2CE /* TabRootView.swift */; };
 		4590960A276C9CBB00CFAAD8 /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45909609276C9CBB00CFAAD8 /* StartButtonView.swift */; };
 		4590960C276C9CE000CFAAD8 /* OnboardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4590960B276C9CE000CFAAD8 /* OnboardingCardView.swift */; };
+		4597357B27ABAE0E008DB314 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597357A27ABAE0E008DB314 /* CollectionView.swift */; };
 		4599C0EB27AA86F200D0CB6C /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4599C0EA27AA86F200D0CB6C /* DiaryView.swift */; };
 		45D265DB275CBF7C00796604 /* NoonBodyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D265DA275CBF7C00796604 /* NoonBodyApp.swift */; };
 		45D265DD275CBF7C00796604 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D265DC275CBF7C00796604 /* ContentView.swift */; };
@@ -62,6 +63,7 @@
 		4590675E2765AF9F0071B2CE /* TabRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabRootView.swift; sourceTree = "<group>"; };
 		45909609276C9CBB00CFAAD8 /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
 		4590960B276C9CE000CFAAD8 /* OnboardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCardView.swift; sourceTree = "<group>"; };
+		4597357A27ABAE0E008DB314 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		4599C0EA27AA86F200D0CB6C /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 		45D265D7275CBF7C00796604 /* NoonBody.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoonBody.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D265DA275CBF7C00796604 /* NoonBodyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoonBodyApp.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				4511B9F827732D0000D4922B /* NoonBodyTab.swift */,
 				4511B9FC27732DAB00D4922B /* NoonBodyWrite.swift */,
 				4599C0EA27AA86F200D0CB6C /* DiaryView.swift */,
+				4597357A27ABAE0E008DB314 /* CollectionView.swift */,
 				45473C3127769A93006E34EC /* NoonBodyView.swift */,
 			);
 			path = NoonBodyTab;
@@ -391,6 +394,7 @@
 				45473C3427769ADE006E34EC /* Colors.swift in Sources */,
 				45D265E7275CBF7D00796604 /* NoonBody.xcdatamodeld in Sources */,
 				4511B9FB27732D4A00D4922B /* WriteButton.swift in Sources */,
+				4597357B27ABAE0E008DB314 /* CollectionView.swift in Sources */,
 				4511B9F927732D0000D4922B /* NoonBodyTab.swift in Sources */,
 				4511B9FD27732DAB00D4922B /* NoonBodyWrite.swift in Sources */,
 				458EC6AF27704AFE0067578C /* OnboardingModel.swift in Sources */,
