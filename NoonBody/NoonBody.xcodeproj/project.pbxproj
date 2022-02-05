@@ -17,6 +17,7 @@
 		458EC6AC27704ACD0067578C /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EC6AB27704ACD0067578C /* OnboardingData.swift */; };
 		458EC6AF27704AFE0067578C /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EC6AE27704AFE0067578C /* OnboardingModel.swift */; };
 		4590675F2765AF9F0071B2CE /* TabRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4590675E2765AF9F0071B2CE /* TabRootView.swift */; };
+		45907D6727AEB75900C51FF6 /* ShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45907D6627AEB75900C51FF6 /* ShareButton.swift */; };
 		4590960A276C9CBB00CFAAD8 /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45909609276C9CBB00CFAAD8 /* StartButtonView.swift */; };
 		4590960C276C9CE000CFAAD8 /* OnboardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4590960B276C9CE000CFAAD8 /* OnboardingCardView.swift */; };
 		4597357B27ABAE0E008DB314 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597357A27ABAE0E008DB314 /* CollectionView.swift */; };
@@ -62,6 +63,7 @@
 		458EC6AB27704ACD0067578C /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 		458EC6AE27704AFE0067578C /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		4590675E2765AF9F0071B2CE /* TabRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabRootView.swift; sourceTree = "<group>"; };
+		45907D6627AEB75900C51FF6 /* ShareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareButton.swift; sourceTree = "<group>"; };
 		45909609276C9CBB00CFAAD8 /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
 		4590960B276C9CE000CFAAD8 /* OnboardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCardView.swift; sourceTree = "<group>"; };
 		4597357A27ABAE0E008DB314 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				4511B9FA27732D4A00D4922B /* WriteButton.swift */,
+				45907D6627AEB75900C51FF6 /* ShareButton.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45907D6727AEB75900C51FF6 /* ShareButton.swift in Sources */,
 				45473C3227769A93006E34EC /* NoonBodyView.swift in Sources */,
 				4590960C276C9CE000CFAAD8 /* OnboardingCardView.swift in Sources */,
 				45D265E4275CBF7D00796604 /* Persistence.swift in Sources */,
